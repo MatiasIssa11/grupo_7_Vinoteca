@@ -1,0 +1,1 @@
+Integrante numero 3 Matias Issa del grupo Vinoteca, nuestra area de trabajo seran los vinos de calidad media alta.
