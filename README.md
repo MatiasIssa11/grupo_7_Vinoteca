@@ -12,7 +12,12 @@ Mi nombre es Agustin, tengo 35 años , hincha de San Lorenzo y actualmente vivo 
 Soy Ingeniero Mecanico y actualmente trabajo en una petrolera.
 Me gusta y practico futbol, natacion, videojuegos, viajar y comer con amigos y familia.
 
-Matías Issa:
+Matías Issa: Mi nombre es Matias,tengo 20 años, vivo en Devoto ,CABA.
+Soy un estudiante de programacion y mi carrera deseada es Ingenieria en Informatica.
+Me gusta la bateria,el bajo electrico y juego league of legends.
 
 Matías Alonso:
 
+
+
+url Mati : https://www.bodegasmainque.com.ar/tienda/
