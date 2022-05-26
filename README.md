@@ -12,4 +12,6 @@
 
 ## [Marca](/design/marca.md)
 
+## [Tipografias](/design/tipografias.md)
+
 ## [Boceto](/design/boceto.md)
