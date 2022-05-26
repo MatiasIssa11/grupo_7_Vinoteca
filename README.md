@@ -11,3 +11,5 @@
 ## [Colores](/design/colores.md)
 
 ## [Marca](/design/marca.md)
+
+## [Boceto](/design/boceto.md)
