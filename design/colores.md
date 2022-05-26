@@ -6,7 +6,7 @@
 #2B0336
 #1C0333
 
-![ColoresCava]('/design/AdobeColor-Cava Wines.png')
+![ColoresCava](/design/AdobeColor-Cava-Wines.png)
 
 
 
