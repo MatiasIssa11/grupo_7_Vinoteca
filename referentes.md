@@ -18,4 +18,5 @@ Carrito de compras.
 https://www.vinoteca.com/oporto-taylors-20-anos-750ml/p
 Forma de mostrar los productos.
 
-url Mati : https://www.bodegasmainque.com.ar/tienda/
+https://www.bodegasmainque.com.ar/tienda/
+Paleta de colores
