@@ -1,4 +1,4 @@
 ## Logo:
 
-![Logo principal](/design/logo-principal.jpg)
+![Logo principal](/design/logo-principal.png)
  
