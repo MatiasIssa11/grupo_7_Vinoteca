@@ -1,7 +1,7 @@
 ## Logo:
 
-Logo blanco y negro
-![Logo blanco y negro ](/design/CAVA-WINES-LOGO-GRANDE-BN.svg)
+Logo grande con fondo
+![Logo blanco y negro ](/design/CAVA-WINES-LOGO-GRANDE-BN-FONDO.svg)
 
-Logo chico blanco y negro
-![Logo chico blanco y negro ](/design/CAVA-WINES-LOGO-CHICO-BN.svg)
+Logo chico con fondo
+![Logo chico blanco y negro ](/design/CAVA-WINES-LOGO-CHICO-BN-FONDO.svg)
