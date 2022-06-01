@@ -1,3 +1,3 @@
 ## Wireframe:
 
-https://www.figma.com/file/zDA5XRrkhzS78THi3bUe5h/Vinoteca---PC?node-id=0%3A1
+https://www.figma.com/file/Ky2f8EGnmUlnG3XUbUWnAO/Vinoteca---PC-Correccion?node-id=0%3A1

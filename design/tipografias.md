@@ -1,7 +1,9 @@
 ## Wireframe:
 
-Julius Sans One:
-https://fonts.google.com/specimen/Julius+Sans+One?query=Julius+Sans+One
+Titulos y logo:
 
-Jost:
-https://fonts.google.com/specimen/Jost?query=Jost
+Alegreya Sans
+https://fonts.google.com/specimen/Alegreya+Sans
+
+Textos largos:
+TBD
