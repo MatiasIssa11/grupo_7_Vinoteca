@@ -1,6 +1,6 @@
 ## Temática
 
-#### ¿Qué productos o servicios brindará nuestro sitio
+#### ¿Qué productos o servicios brindará nuestro sitio?
 Nuestro sitio ofrecera vinos orgánicos de bodegas boutique argentinas.
 
 #### ¿Quién será nuestra audiencia objetivo?
