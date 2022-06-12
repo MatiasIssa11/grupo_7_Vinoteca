@@ -29,7 +29,35 @@
     <title>Cava Wines</title>
   </head>
   <body>
-    <header></header>
+    <header>
+            <img
+              id="logo-grande"
+              src="/logo/CAVA-WINES-LOGO-CHICO-BN.svg"
+              alt="CW Cava Wines"
+            />
+            <form id="search-bar" action="/search" method="post">  
+                <input
+                    id="recuado-search-bar"  
+                    type="text"
+                    name="usuario"
+                    placeholder="Busca tus vinos!"
+                />
+                <i id="icono-lupa" class="fa-solid fa-magnifying-glass"></i>               
+            </form>
+            <nav id="iconos-header">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </nav>
+            <nav id="main-navbar">
+                <a href="http://localhost:3000/home">Inicio</a>
+                <a href="http://localhost:3000/productos">Productos</a>
+                <a href="http://localhost:3000/contacto">Contacto</a>
+            </nav>
+    </header>
+
+
+
+
     <main>
       <section>
         <article class="articulos">
