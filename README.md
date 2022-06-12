@@ -16,4 +16,4 @@
 
 ## [Boceto](/design/boceto.md)
 
-## [Trello](/design/trello.md)
+## [Trello](/trello.md)
