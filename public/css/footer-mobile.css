@@ -1,0 +1,75 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #401909;
+  text-align: center;
+  margin: auto;
+  padding: 0 2.5%;
+  align-items: center;
+}
+
+#logo-chico {
+  background-color: #fff;
+  width: 80%;
+  margin: 10px 0;
+}
+
+#sitebar-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px 0;
+  align-items: center;
+  color: #fff;
+}
+
+#sitebar-footer a {
+  width: 100%;
+}
+
+#contacto-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#contacto-footer h4 {
+  width: 100%;
+  color: #fff;
+}
+
+#contacto-footer a {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+#redes-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#redes-footer h4 {
+  width: 100%;
+  color: #fff;
+}
+
+#redes-footer a {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+}

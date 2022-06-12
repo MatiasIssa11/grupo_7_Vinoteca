@@ -13,3 +13,7 @@
 .violetaClaro {
   color: #742d1c;
 }
+
+a {
+    color: inherit
+}
