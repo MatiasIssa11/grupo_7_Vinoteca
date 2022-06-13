@@ -1,0 +1,35 @@
+@media (min-width: 769px) {
+  footer {
+    flex-direction: row;
+  }
+
+  #logo-chico {
+    width: 150px;
+  }
+
+  #sitebar-footer a {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  #contacto-footer h4 {
+    font-size: 20px;
+  }
+
+  #contacto-footer a {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  #redes-footer h4 {
+    font-size: 20px;
+  }
+
+  #redes-footer a {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}

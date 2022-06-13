@@ -8,12 +8,14 @@ footer {
   margin: auto;
   padding: 0 2.5%;
   align-items: center;
+  font-family: Alegreya Sans, sans-serif;
 }
 
 #logo-chico {
   background-color: #fff;
   width: 80%;
   margin: 10px 0;
+  max-width: 200px;
 }
 
 #sitebar-footer {
@@ -23,10 +25,12 @@ footer {
   margin: 10px 0;
   align-items: center;
   color: #fff;
+  font-weight: 500;
 }
 
 #sitebar-footer a {
   width: 100%;
+  font-size: 20px;
 }
 
 #contacto-footer {
@@ -34,11 +38,13 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 5px 0;
 }
 
 #contacto-footer h4 {
   width: 100%;
-  color: #fff;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 #contacto-footer a {
@@ -56,11 +62,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 5px 0;
 }
 
 #redes-footer h4 {
   width: 100%;
   color: #fff;
+  font-weight: 500;
 }
 
 #redes-footer a {
