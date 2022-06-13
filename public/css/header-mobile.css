@@ -15,29 +15,31 @@ header {
 
 #search-bar {
   display: flex;
-  align-items: center;
-  font-size: 12px;
-  background-color: white;
-  height: 25px;
-  width: 30%;
-  border-radius: 10px;
+  font-size: 14px;
+}
+
+#item-form-search-bar {
+  display: flex;
+  position: relative;
 }
 
 #recuadro-search-bar {
-  display: flex;
-  flex-grow: 1;
+  border-radius: 15px;
+  height: 25px;
+  width: 270px;
   text-align: center;
   border: none;
 }
 
 #icono-lupa {
   color: #401909;
-  width: 20px;
+  position: absolute;
+  left: 245px;
+  top: 25%;
 }
 
 #iconos-header {
   display: flex;
-
   color: white;
   font-size: 1.5em;
   width: 30%;

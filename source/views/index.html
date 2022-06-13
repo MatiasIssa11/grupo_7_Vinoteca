@@ -35,14 +35,16 @@
         src="/logo/CAVA-WINES-LOGO-GRANDE-BN.svg"
         alt="CW Cava Wines"
       />
-      <form id="search-bar" action="/search" method="post">
+      <form id="search-bar" action="/search" method="get">
+        <div id="item-form-search-bar">
         <input
-          id="recuado-search-bar"
+          id="recuadro-search-bar"
           type="text"
-          name="usuario"
-          placeholder="Busca tus vinos!"
+          name="search"
+          placeholder="¡Busca tus vinos!"
         />
         <i id="icono-lupa" class="fa-solid fa-magnifying-glass"></i>
+      </div>
       </form>
       <nav id="iconos-header">
         <i class="fa-solid fa-cart-shopping"></i>
