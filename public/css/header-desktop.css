@@ -1,5 +1,21 @@
 @media (min-width: 769px) {
   
+   #logo-grande {
+      height: 60px;
+   }
+
+   #search-bar {
+      padding: 10px 0 15px 0;
+   }
+   
+   #recuadro-search-bar {
+      width: 380px;
+   }
+
+   #icono-lupa {
+      left: 355px;
+   }
+
    #header-navbar {
       order: 1;
       width: 100px;
@@ -16,24 +32,6 @@
       justify-content: center;
    }
    
-   #recuadro-search-bar {
-      width: 380px;
-   }
-   
-   #icono-lupa {
-      left: 355px;
-   }
-
-   #logo-grande {
-      height: 60px;
-   }
-
-   #search-bar {
-      padding: 10px 0 15px 0;
-   }
-   
-  
-
    #iconos-header a{
       padding: 5px 0 0 0;
    }
