@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header-mobile.css" />
+    <link rel="stylesheet" href="css/header-tablet.css" />
+    <link rel="stylesheet" href="css/header-desktop.css" />
+    <link rel="stylesheet" href="css/register-mobile.css" />
+    <link rel="stylesheet" href="css/register-tablet.css" />
+    <link rel="stylesheet" href="css/register-desktop.css" />
+    <link rel="stylesheet" href="css/footer-mobile.css" />
+    <link rel="stylesheet" href="css/footer-desktop.css" />
+    <title>Cava Wines</title>
+    <link rel="shortcut icon" href="logo/CAVA-WINES-LOGO-CHICO-BN.svg" />
+  </head>
+  <body>
+    <header>
+      <section id="header-superior">
+        <img
+          id="logo-grande"
+          src="/logo/CAVA-WINES-LOGO-GRANDE-BN.svg"
+          alt="CW Cava Wines"
+        />
+
+        <form id="search-bar" action="/search" method="get">
+          <div id="search-bar-items">
+            <input
+              id="recuadro-search-bar"
+              type="text"
+              name="search"
+              placeholder="¡Busca tus vinos!"
+            />
+            <i id="icono-lupa" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+
+        <nav id="header-navbar">
+          <div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="http://localhost:3000/carrito">Mi Carrito</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-user"></i>
+            <a href="http://localhost:3000/user">Mi Cuenta</a>
+          </div>
+        </nav>
+      </section>
+
+      <nav id="main-navbar">
+        <a href="/home.">Inicio</a>
+        <a href="/productos">Productos</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 id="titulo-registro">REGISTRO</h1>
+      <form class="register" action="/register" method="post">
+        <article>
+          <label for="nombre" class="texto">Nombre: </label>
+          <input type="text" name="nombre" class="recuadro-register" />
+        </article>
+
+        <article>
+          <label for="apellido" class="texto">Apellido: </label>
+          <input type="text" name="apellido" class="recuadro-register" />
+        </article>
+
+        <article>
+          <label for="email" class="texto">E-Mail: </label>
+          <input type="text" name="email" class="recuadro-register" />
+        </article>
+
+        <article>
+          <label for="clave" class="texto">Contraseña: </label>
+          <input type="password" name="clave" class="recuadro-register" />
+        </article>
+
+        <article>
+          <label for="clave-confirmada" class="texto"
+            >Confirmar contraseña:
+          </label>
+          <input
+            type="password"
+            name="clave-confirmada"
+            class="recuadro-register"
+          />
+        </article>
+
+        <article>
+          <label for="fechaUser" class="texto">Fecha de nacimiento: </label>
+          <input
+            type="date"
+            name="fechaUser"
+            id="fechaUser"
+            class="recuadro-register"
+          />
+        </article>
+
+        <article id="botonera">
+          <button id="crear-cuenta" type="button">
+            <a class="boton-principal" href=" ">Crear cuenta</a>
+          </button>
+
+          <button id="iniciar-sesion" type="reset">Iniciar sesion</button>
+        </article>
+      </form>
+    </main>
+
+    <footer>
+      <img
+        src="/logo/CAVA-WINES-LOGO-CHICO-BN.svg"
+        alt="logo-chico"
+        id="logo-chico"
+      />
+      <nav id="sitebar-footer">
+        <a href="">Inicio</a>
+        <a href="">Productos</a>
+      </nav>
+      <nav id="contacto-footer">
+        <h4>Contactos</h4>
+        <a href="/contacto"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/contacto"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="/contacto"><i class="fa-solid fa-phone"></i></a>
+      </nav>
+      <nav id="redes-footer">
+        <h4>Redes</h4>
+        <a href="/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="/"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="/"><i class="fa-brands fa-twitter"></i></a>
+      </nav>
+    </footer>
+  </body>
+</html>
