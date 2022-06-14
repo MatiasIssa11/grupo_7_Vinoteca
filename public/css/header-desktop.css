@@ -1,8 +1,19 @@
 @media (min-width: 769px) {
   
-   #iconos-header {
+   #header-navbar {
       order: 1;
       width: 100px;
+   }
+
+   #header-navbar i{
+      padding: 0 18px 0 18px;
+   }
+
+   #header-navbar a{
+      display: flex;
+      font-size: 10px;
+      padding: 5px;
+      justify-content: center;
    }
    
    #recuadro-search-bar {
@@ -13,4 +24,17 @@
       left: 355px;
    }
 
+   #logo-grande {
+      height: 60px;
+   }
+
+   #search-bar {
+      padding: 10px 0 15px 0;
+   }
+   
+  
+
+   #iconos-header a{
+      padding: 5px 0 0 0;
+   }
  }

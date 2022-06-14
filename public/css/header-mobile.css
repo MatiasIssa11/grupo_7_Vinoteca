@@ -42,7 +42,7 @@
   top: 25%;
 }
 
-#iconos-header {
+#header-navbar {
   display: flex;
   color: white;
   font-size: 1.5em;
@@ -51,9 +51,13 @@
   
 }
 
-#iconos-header i{
+#header-navbar i{
   display: flex;
   padding: 0 12px 0 12px;
+}
+
+#header-navbar a{
+  display: none;
 }
 
 #main-navbar {

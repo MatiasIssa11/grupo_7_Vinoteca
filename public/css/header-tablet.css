@@ -1,13 +1,23 @@
 @media (min-width: 650px) {
    
-   #iconos-header {
+   #header-navbar {
       order: 1;
       width: auto;
    }
    
+   #header-navbar a{
+      display: flex;
+      font-size: 10px;
+      padding: 5px;
+      justify-content: center;
+   }
+
    #search-bar {
       width: 270px;
+      padding: 10px 0 15px 0;
   }
+
+
 
 }
  
