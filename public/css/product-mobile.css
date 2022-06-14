@@ -1,12 +1,74 @@
 main {
-    text-align: center;
-    font-family: Alegreya Sans, sans-serif;
-  }
-  
-  #banner {
-    margin: 0;
-    width: 100vw;
-    height: 15vw;
-    object-fit: cover;
-    object-position: 0% 27%;
-  }
+  text-align: center;
+  font-family: Bitter, serif;
+}
+
+#banner {
+  margin: 0;
+  width: 100vw;
+  height: 15vw;
+  object-fit: cover;
+  object-position: 0% 27%;
+}
+
+#productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto 5%;
+  /*padding: 0 5%;*/
+}
+
+#productos img {
+  height: 100vw;
+  width: 100%;
+  border: 1px solid #000;
+  object-fit: contain;
+}
+
+#nombreProducto {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+#compra {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2px;
+  width: 100%;
+}
+
+#precio {
+  margin: 2px 0;
+}
+
+#precio {
+  width: 100%;
+}
+#carrito {
+  font-size: 20px;
+}
+
+#botonAgregarCarrito {
+  display: none;
+}
+
+#sumaResta {
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+#textoProductos {
+  margin: 5px 0;
+}
+
+#textoProductos h4 {
+  margin: 5px 0;
+}

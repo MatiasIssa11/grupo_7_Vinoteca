@@ -1,4 +1,4 @@
-@media (min-width: 369px) {
+@media (min-width: 361px) {
   .grilla {
     grid-template-columns: 1fr 1fr;
   }

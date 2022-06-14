@@ -1,0 +1,30 @@
+@media (min-width: 361px) {
+  #productos {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #productos img {
+    width: 45%;
+    height: 50vw;
+  }
+
+  #compra {
+    width: 45%;
+  }
+
+  #sumaResta {
+    width: 100%;
+    margin: 0 10%;
+  }
+
+  #botonAgregarCarrito {
+    display: block;
+    width: 80%;
+    color: #fff;
+    background-color: #742d1c;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+}
