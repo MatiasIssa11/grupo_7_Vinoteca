@@ -1,0 +1,16 @@
+@media (min-width: 769px) {
+  
+   #iconos-header {
+      order: 1;
+      width: 100px;
+   }
+   
+   #recuadro-search-bar {
+      width: 380px;
+   }
+   
+   #icono-lupa {
+      left: 355px;
+   }
+
+ }
