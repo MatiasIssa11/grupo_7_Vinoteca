@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/header-mobile.css" />
     <link rel="stylesheet" href="css/header-tablet.css" />
     <link rel="stylesheet" href="css/header-desktop.css" />
-    <link rel="stylesheet" href="css/register-mobile.css" />
-    <link rel="stylesheet" href="css/register-tablet.css" />
-    <link rel="stylesheet" href="css/register-desktop.css" />
+    <link rel="stylesheet" href="css/product-mobile.css" />
+    <link rel="stylesheet" href="css/product-tablet.css" />
+    <link rel="stylesheet" href="css/product-desktop.css" />
     <link rel="stylesheet" href="css/footer-mobile.css" />
     <link rel="stylesheet" href="css/footer-desktop.css" />
     <title>Cava Wines</title>
@@ -70,59 +70,19 @@
     </header>
 
     <main>
-      <h1 id="titulo-registro">REGISTRO</h1>
-      <form id="register" action="/register" method="post">
-        <section>
-          <article>
-            <label for="nombre" class="texto">Nombre: </label>
-            <input type="text" name="nombre" class="recuadro-register" />
-          </article>
-
-          <article>
-            <label for="apellido" class="texto">Apellido: </label>
-            <input type="text" name="apellido" class="recuadro-register" />
-          </article>
-
-          <article>
-            <label for="email" class="texto">E-Mail: </label>
-            <input type="text" name="email" class="recuadro-register" />
-          </article>
-
-          <article>
-            <label for="clave" class="texto">Contraseña: </label>
-            <input type="password" name="clave" class="recuadro-register" />
-          </article>
-
-          <article>
-            <label for="clave-confirmada" class="texto"
-              >Confirmar contraseña:
-            </label>
-            <input
-              type="password"
-              name="clave-confirmada"
-              class="recuadro-register"
-            />
-          </article>
-
-          <article>
-            <label for="fechaUser" class="texto">Fecha de nacimiento: </label>
-            <input
-              type="date"
-              name="fechaUser"
-              id="fechaUser"
-              class="recuadro-register"
-            />
-          </article>
-        </section>
-
-        <section id="botonera">
-          <button id="crear-cuenta" type="button">
-            <a class="boton-principal" href=" ">Crear cuenta</a>
-          </button>
-
-          <button id="iniciar-sesion" type="reset">Iniciar sesion</button>
-        </section>
-      </form>
+      <img src="images/banner.jpg" alt="banner" id="banner" />
+      <section class="grilla">
+        <h2>OFERTAS</h2>
+        <article class="articulos">
+          <img src="images/malbec-roble.jpg" alt="malbec roble" />
+          <section class="textoProductos">
+            <h4 class="nombreProducto">Terravita Malbec Roble</h4>
+            <h4 class="precio">$6087</h4>
+            <a href="" class="botonArticulo">Comprar</a>
+            <a href="" class="botonArticulo">+Info</a>
+          </section>
+        </article>
+      </section>
     </main>
 
     <footer>

@@ -1,13 +1,13 @@
 @media (min-width: 769px) {
-    .grilla {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  
-    .grilla h2 {
-      grid-column: 1/5;
-    }
-  
-    .articulos img {
-      height: 20vw;
-    }
+  .grilla {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .grilla h2 {
+    grid-column: 1/5;
+  }
+
+  .articulos img {
+    height: 20vw;
+  }
+}

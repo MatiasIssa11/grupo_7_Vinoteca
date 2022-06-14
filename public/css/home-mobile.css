@@ -8,7 +8,7 @@ main {
   width: 100vw;
   height: 15vw;
   object-fit: cover;
-  object-position: 0% 27% ;
+  object-position: 0% 27%;
 }
 
 .grilla {
@@ -19,7 +19,6 @@ main {
   row-gap: 10px;
   margin-bottom: 10px;
   margin: auto;
-
 }
 
 .grilla h2 {
