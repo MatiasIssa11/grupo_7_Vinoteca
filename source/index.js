@@ -25,10 +25,6 @@ app.get("/search", (req, res) =>
   res.sendFile(path.resolve(__dirname, "./views/search.html"))
 );
 
-app.get("/search", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/search.html"))
-);
-
 app.get("/cart", (req, res) =>
   res.sendFile(path.resolve(__dirname, "./views/cart.html"))
 );
