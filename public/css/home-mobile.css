@@ -30,6 +30,9 @@ main {
   border: 1px solid #000;
   font-family: Bitter, serif;
   margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .articulos img {
@@ -43,6 +46,7 @@ main {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  flex-grow: 1;
 }
 
 .textoProductos h4 {

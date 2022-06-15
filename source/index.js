@@ -21,5 +21,21 @@ app.get("/product", (req, res) =>
   res.sendFile(path.resolve(__dirname, "./views/product.html"))
 );
 
+app.get("/search", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/search.html"))
+);
+
+app.get("/search", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/search.html"))
+);
+
+app.get("/cart", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/cart.html"))
+);
+
+app.get("/agecheck", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/agecheck.html"))
+);
+
 const public = path.resolve(__dirname, "../public");
 app.use(express.static(public));
