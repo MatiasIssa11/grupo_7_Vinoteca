@@ -1,8 +1,8 @@
 # Grupo 7 - Vinoteca - CAVA WINES
 
-## [Equipo](/equipo.md)
+## [Equipo](/markdown/equipo.md)
 
-## [Tematica](/tematica.md)
+## [Tematica](/markdown/tematica.md)
 
 ## [Referentes](/referentes.md)
 
@@ -10,11 +10,11 @@
 
 ## [Colores](/design/colores.md)
 
-## [Marca](/design/marca.md)
+## [Marca](/public/design/marca.md)
 
 ## [Tipografias](/design/tipografias.md)
 
-## [Boceto](/design/boceto.md)
+## [Boceto](/public/design/boceto.md)
 
-## [Trello](/trello.md)
+## [Trello](/markdown/trello.md)
 
