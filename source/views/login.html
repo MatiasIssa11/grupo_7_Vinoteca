@@ -74,10 +74,10 @@
 
         <h1 id="caja-login-titulo">INGRESAR</h1>
 
-        <form id="login" action="/login" method="post">
+        <section id="caja-login-cuerpo">
 
-          <section id="form-login">
-
+        <form id="formulario-acceso" action="/login" method="post">
+            <section id="campos">
             <article>
               <label for="nombre" class="texto">E-mail: </label>
               <input type="text" name="nombre" class="campo-login" />
@@ -96,6 +96,7 @@
               />
               <label id="texto-checkbox">Recordar contraseña</label>
             </article>
+          </section>
 
             <article id="botonera">
               <button id="ingresar" type="button">
@@ -103,20 +104,23 @@
               <button id="crear-cuenta" type="button">Crear cuenta</button>
             </article>
 
-          </section>
+          </form>
 
           <section id="texto-crear-cuenta">
+          <section id="frase" >
             <p>
               Te invitamos a crear una cuenta en nuestro sitio para poder
               comprar, hacer un seguimiento de pedidos, recibir novedades y
               mucho más!
             </p>
-            <article id="botonera">
-            <button id="crear-cuenta-tablet" type="button">Crear cuenta</button>
-         </article>
+            
           </section>
-
-        </form>
+          <article id="botonera">
+            <button id="crear-cuenta-tablet" type="button">Crear cuenta</button>
+            </article>
+          </section>
+        </section>
+        
 
       </section>
 
