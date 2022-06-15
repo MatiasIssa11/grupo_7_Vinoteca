@@ -69,6 +69,16 @@ article {
    display: flex;
 }
 
+#texto-olvidaste-contraseña {
+   display: flex;
+   justify-content: center;
+   color: white;
+   width: 100%;
+   font-size: 12px;
+   padding: 0 0 10px 0;
+   font-family: Alegreya Sans, sans-serif;
+}
+
 #texto-checkbox {
    display: flex;
    color: white;

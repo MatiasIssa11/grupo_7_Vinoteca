@@ -62,4 +62,17 @@
   main {
     height: 480px;
   }
+
+  .campo-login{
+    width: 100%;
+  }
+
+  #texto-olvidaste-contraseña {
+    justify-content: right;
+    padding: 0;
+  }
+
+  #recordar-contraseña {
+    justify-content: right;
+  }
 }
