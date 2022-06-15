@@ -4,15 +4,15 @@
 
 ## [Tematica](/markdown/tematica.md)
 
-## [Referentes](/referentes.md)
+## [Referentes](/markdown/referentes.md)
 
 ## [Wireframe](public/design/wireframe.md)
 
-## [Colores](/design/colores.md)
+## [Colores](/public/design/colores.md)
 
 ## [Marca](/public/design/marca.md)
 
-## [Tipografias](/design/tipografias.md)
+## [Tipografias](/public/design/tipografias.md)
 
 ## [Boceto](/public/design/boceto.md)
 
