@@ -1,0 +1,7 @@
+#banner {
+    margin: 0;
+    width: 100vw;
+    height: 15vw;
+    object-fit: cover;
+    object-position: 0% 27%;
+  }
