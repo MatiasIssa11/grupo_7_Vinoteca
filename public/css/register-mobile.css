@@ -1,27 +1,31 @@
-.main {
+#caja-register{
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
 }
 
-#titulo-registro {
+#caja-register-titulo {
    background-color: #401909;
    color: white;
-   width: 95%;
-   margin: 20px 5px 0 5px;
+   margin: 20px 0 0 0;
    text-align: center;
    font-size: 25px;
    font-weight: normal;
    border: solid 1px black;
    font-family: Alegreya Sans, sans-serif;
+   width: 90%;
 }
 
 #register {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
    background-color: #742d1c;
-   width: 95%;
    padding: 10px;
-   margin: 0 5px 20px 5px;
+   margin: 0 0 20px 0;
    border: solid 1px black;
    font-size: 12px;
+   width: 90%;
 }
 
 article {
@@ -30,9 +34,9 @@ article {
    justify-content: center;
 }
 
-.recuadro-register {
+.campo-register {
    border-radius: 10px;
-   width: 325px;
+   width: 250px;
    height: 25px;
    text-align: center;
    border: none;
@@ -42,7 +46,7 @@ article {
    display: flex;
    color: white;
    font-size: 15px;
-   padding: 0 0 3px 0;
+   
    font-family: Alegreya Sans, sans-serif;
 }
 

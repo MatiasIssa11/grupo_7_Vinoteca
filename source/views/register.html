@@ -70,27 +70,28 @@
     </header>
 
     <main>
-      <h1 id="titulo-registro">REGISTRO</h1>
+      <section id="caja-register">
+      <h1 id="caja-register-titulo">REGISTRO</h1>
       <form id="register" action="/register" method="post">
         <section>
           <article>
             <label for="nombre" class="texto">Nombre: </label>
-            <input type="text" name="nombre" class="recuadro-register" />
+            <input type="text" name="nombre" class="campo-register" />
           </article>
 
           <article>
             <label for="apellido" class="texto">Apellido: </label>
-            <input type="text" name="apellido" class="recuadro-register" />
+            <input type="text" name="apellido" class="campo-register" />
           </article>
 
           <article>
             <label for="email" class="texto">E-Mail: </label>
-            <input type="text" name="email" class="recuadro-register" />
+            <input type="text" name="email" class="campo-register" />
           </article>
 
           <article>
             <label for="clave" class="texto">Contraseña: </label>
-            <input type="password" name="clave" class="recuadro-register" />
+            <input type="password" name="clave" class="campo-register" />
           </article>
 
           <article>
@@ -100,7 +101,7 @@
             <input
               type="password"
               name="clave-confirmada"
-              class="recuadro-register"
+              class="campo-register"
             />
           </article>
 
@@ -110,19 +111,19 @@
               type="date"
               name="fechaUser"
               id="fechaUser"
-              class="recuadro-register"
+              class="campo-register"
             />
           </article>
-        </section>
 
-        <section id="botonera">
-          <button id="crear-cuenta" type="button">
-            <a class="boton-principal" href=" ">Crear cuenta</a>
-          </button>
-
-          <button id="iniciar-sesion" type="reset">Iniciar sesion</button>
+          <section id="botonera">
+            <button id="crear-cuenta" type="button">
+              <a class="boton-principal" href=" ">Crear cuenta</a>
+            </button>
+            <button id="iniciar-sesion" type="reset">Iniciar sesion</button>
+          </section>
         </section>
       </form>
+    </section>
     </main>
 
     <footer>
