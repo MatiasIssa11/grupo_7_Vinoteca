@@ -6,7 +6,7 @@
 
 ## [Referentes](/referentes.md)
 
-## [Wireframe](/design/wireframe.md)
+## [Wireframe](public/design/wireframe.md)
 
 ## [Colores](/design/colores.md)
 
@@ -17,3 +17,4 @@
 ## [Boceto](/design/boceto.md)
 
 ## [Trello](/trello.md)
+
