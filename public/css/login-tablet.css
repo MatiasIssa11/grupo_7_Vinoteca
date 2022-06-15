@@ -1,64 +1,65 @@
 @media (min-width: 650px) {
 
-   article {
+  article {
      display: flex;
      padding: 10px 0 10px 0;
-    
-   }
+  }
  
-   .texto {
+  .texto {
      width: 140px;
-   }
+  }
  
-   #caja-register-titulo {
+  #caja-register-titulo {
      width: 60%;
-   }
+  }
  
-   #register {
+  #register {
      width: 60%;
-   }
+  }
  
-   .campo-register {
+  .campo-register {
      width: 230px;
-   }
+  }
 
-   #texto-crear-cuenta {
+  #texto-crear-cuenta {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       width: 50%;
-   }
+  }
 
-   #login {
+  #login {
       flex-wrap: nowrap;
       justify-content: space-between;
       height: 250px;
-   }
+  }
 
-   #form-login {
+  #form-login {
       width: 50%;
       height: 100px;
-   }
+  }
 
-   #crear-cuenta {
+  #boton-crear-cuenta {
       display: none;
-   }
+  }
 
-   #crear-cuenta-tablet {
+  #boton-crear-cuenta-tablet {
       display: block;
-    
-   }
+  }
 
-   #ingresar {
+  #ingresar {
     width: 50%;
-   }
+  }
 
-   #botonera {
+  #botonera {
     height: 100px;
-   }
+  }
 
-   #campos {
+  #campos {
     display: block;
-   }
+  }
 
- }
+  main {
+    height: 480px;
+  }
+}

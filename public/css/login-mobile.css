@@ -1,3 +1,9 @@
+article {
+   display: block;
+   padding: 0 0 10px 0;
+   justify-content: center;
+}
+
 #caja-login{
    display: flex;
    flex-wrap: wrap;
@@ -28,30 +34,27 @@
    width: 90%;
 }
 
-#formulario-acceso {
+#formulario-login {
    display: flex;
-   flex-wrap: wrap;
-   
+   flex-wrap: wrap; 
    background-color: #742d1c;
    font-size: 12px;
    width: 50%;
 }
 
-#texto-crear-cuenta {
-   display: none;
+#campos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   height: 150px;
+}
+
+.texto {
+   display: flex;
    color: white;
    font-size: 15px;
    font-family: Alegreya Sans, sans-serif;
-   text-align: center;
-   width: 60%;
-   
-  
-}
-
-article {
-   display: block;
-   padding: 0 0 10px 0;
-   justify-content: center;
 }
 
 .campo-login {
@@ -62,10 +65,15 @@ article {
    border: none;
 }
 
-.texto {
+#recordar-contraseña {
+   display: flex;
+}
+
+#texto-checkbox {
    display: flex;
    color: white;
-   font-size: 15px;
+   font-size: 12px;
+   padding: 0 0 0 5px;
    font-family: Alegreya Sans, sans-serif;
 }
 
@@ -73,8 +81,7 @@ article {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   width: 100%;
-   
+   width: 100%; 
 }
 
 #ingresar {
@@ -88,9 +95,8 @@ article {
    font-family: Alegreya Sans, sans-serif;
 }
 
-#crear-cuenta {
+#boton-crear-cuenta {
    width: 70%;
-  
    font-size: 15px;
    border-radius: 5px;
    font-weight: bold;
@@ -98,7 +104,22 @@ article {
    font-family: Alegreya Sans, sans-serif;
 }
 
-#crear-cuenta-tablet {
+#texto-crear-cuenta {
+   display: none;
+   color: white;
+   font-size: 15px;
+   font-family: Alegreya Sans, sans-serif;
+   text-align: center;
+   width: 60%;  
+}
+
+#frase {
+   display: flex;
+   height: 150px;
+   padding: 50px 30px 10px 30px;
+}
+
+#boton-crear-cuenta-tablet {
    display: none;
    width: 50%;
    padding: 10px;
@@ -108,41 +129,5 @@ article {
    border-radius: 5px;
    border: none;
    font-family: Alegreya Sans, sans-serif;
-}
-
-#recordar-contraseña {
-   display: flex;
-   
-
-}
-
-#texto-checkbox {
-   display: flex;
-   color: white;
-   font-size: 12px;
-   padding: 0 0 0 5px;
-   font-family: Alegreya Sans, sans-serif;
-}
-
-
-
-#form-login {
-   
-   width: auto;
-}
-
-#campos {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 100%;
-   height: 150px;
-}
-
-#frase {
-   display: flex;
-   height: 150px;
-   padding: 50px 30px 10px 30px;
-   
 }
 
