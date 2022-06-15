@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/header-mobile.css" />
     <link rel="stylesheet" href="css/header-tablet.css" />
     <link rel="stylesheet" href="css/header-desktop.css" />
-    <link rel="stylesheet" href="css/register-mobile.css" />
-    <link rel="stylesheet" href="css/register-tablet.css" />
-    <link rel="stylesheet" href="css/register-desktop.css" />
+    <link rel="stylesheet" href="css/login-mobile.css" />
+    <link rel="stylesheet" href="css/login-tablet.css" />
+    <link rel="stylesheet" href="css/login-desktop.css" />
     <link rel="stylesheet" href="css/footer-mobile.css" />
     <link rel="stylesheet" href="css/footer-desktop.css" />
     <title>Cava Wines</title>
@@ -70,60 +70,56 @@
     </header>
 
     <main>
-      <section id="caja-register">
-        <h1 id="caja-register-titulo">REGISTRO</h1>
-        <form id="register" action="/register" method="post">
-          <section>
-            <article>
-              <label for="nombre" class="texto">Nombre: </label>
-              <input type="text" name="nombre" class="campo-register" />
-            </article>
+      <section id="caja-login">
+
+        <h1 id="caja-login-titulo">INGRESAR</h1>
+
+        <form id="login" action="/login" method="post">
+
+          <section id="form-login">
 
             <article>
-              <label for="apellido" class="texto">Apellido: </label>
-              <input type="text" name="apellido" class="campo-register" />
-            </article>
-
-            <article>
-              <label for="email" class="texto">E-Mail: </label>
-              <input type="text" name="email" class="campo-register" />
+              <label for="nombre" class="texto">E-mail: </label>
+              <input type="text" name="nombre" class="campo-login" />
             </article>
 
             <article>
               <label for="clave" class="texto">Contraseña: </label>
-              <input type="password" name="clave" class="campo-register" />
+              <input type="password" name="clave" class="campo-login" />
             </article>
 
-            <article>
-              <label for="clave-confirmada" class="texto"
-                >Confirmar contraseña:
-              </label>
+            <article id="recordar-contraseña">
               <input
-                type="password"
-                name="clave-confirmada"
-                class="campo-register"
+                type="checkbox"
+                name="recordar-contraseña"
+                value="recordar-contraseña"
               />
+              <label id="texto-checkbox">Recordar contraseña</label>
             </article>
 
-            <article>
-              <label for="fechaUser" class="texto">Fecha de nacimiento: </label>
-              <input
-                type="date"
-                name="fechaUser"
-                id="fechaUser"
-                class="campo-register"
-              />
+            <article id="botonera">
+              <button id="ingresar" type="button">
+                <a class="boton-principal" href=" ">Ingresar</a>
+              <button id="crear-cuenta" type="button">Crear cuenta</button>
             </article>
 
-            <section id="botonera">
-              <button id="crear-cuenta" type="button">
-                <a class="boton-principal" href=" ">Crear cuenta</a>
-              </button>
-              <button id="iniciar-sesion" type="reset">Iniciar sesion</button>
-            </section>
           </section>
+
+          <section id="texto-crear-cuenta">
+            <p>
+              Te invitamos a crear una cuenta en nuestro sitio para poder
+              comprar, hacer un seguimiento de pedidos, recibir novedades y
+              mucho más!
+            </p>
+            <article id="botonera">
+            <button id="crear-cuenta-tablet" type="button">Crear cuenta</button>
+         </article>
+          </section>
+
         </form>
+
       </section>
+
     </main>
 
     <footer>

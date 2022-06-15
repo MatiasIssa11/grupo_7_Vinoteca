@@ -1,0 +1,113 @@
+#caja-login{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#caja-login-titulo {
+   background-color: #401909;
+   color: white;
+   margin: 20px 0 0 0;
+   text-align: center;
+   font-size: 25px;
+   font-weight: normal;
+   border: solid 1px black;
+   font-family: Alegreya Sans, sans-serif;
+   width: 90%;
+}
+
+#login {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   background-color: #742d1c;
+   padding: 10px;
+   margin: 0 0 20px 0;
+   border: solid 1px black;
+   font-size: 12px;
+   width: 90%;
+}
+
+article {
+   display: block;
+   padding: 0 0 10px 0;
+   justify-content: center;
+}
+
+.campo-login {
+   border-radius: 10px;
+   width: 250px;
+   height: 25px;
+   text-align: center;
+   border: none;
+}
+
+.texto {
+   display: flex;
+   color: white;
+   font-size: 15px;
+   font-family: Alegreya Sans, sans-serif;
+}
+
+#botonera {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#ingresar {
+   width: 80%;
+   padding: 10px;
+   margin: 20px 0 25px 0;
+   font-size: 20px;
+   font-weight: bold;
+   border-radius: 5px;
+   border: none;
+   font-family: Alegreya Sans, sans-serif;
+}
+
+#crear-cuenta {
+   width: 50%;
+   font-size: 15px;
+   border-radius: 5px;
+   border: none;
+   font-family: Alegreya Sans, sans-serif;
+}
+
+#crear-cuenta-tablet {
+   display: none;
+   width: 50%;
+   font-size: 15px;
+   border-radius: 5px;
+   border: none;
+   font-family: Alegreya Sans, sans-serif;
+}
+
+#recordar-contraseña {
+   display: flex;
+   justify-content: start;
+   padding: 0;
+}
+
+#texto-checkbox {
+   display: flex;
+   color: white;
+   font-size: 12px;
+   padding: 0 0 0 5px;
+   font-family: Alegreya Sans, sans-serif;
+}
+
+#texto-crear-cuenta {
+   display: none;
+   color: white;
+   font-size: 15px;
+   font-family: Alegreya Sans, sans-serif;
+   text-align: center;
+   width: 60%;
+   padding: 0px 30px 0px 30px;
+}
+
+#form-login {
+   
+   width: auto;
+}
