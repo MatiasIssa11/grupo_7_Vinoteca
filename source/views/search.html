@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/header-mobile.css" />
     <link rel="stylesheet" href="css/header-tablet.css" />
     <link rel="stylesheet" href="css/header-desktop.css" />
-    <link rel="stylesheet" href="css/home-mobile.css" />
-    <link rel="stylesheet" href="css/home-tablet.css" />
-    <link rel="stylesheet" href="css/home-desktop.css" />
+    <link rel="stylesheet" href="css/search-mobile.css" />
+    <link rel="stylesheet" href="css/search-tablet.css" />
+    <link rel="stylesheet" href="css/search-desktop.css" />
     <link rel="stylesheet" href="css/footer-mobile.css" />
     <link rel="stylesheet" href="css/footer-desktop.css" />
     <title>Cava Wines</title>
@@ -70,9 +70,74 @@
     </header>
 
     <main>
-      <img src="images/banner.jpg" alt="banner" id="banner" />
+      <section id="buscador">
+        <article class="parametros-busqueda">
+          <div id="form-ordenar">
+          <form action="/orden" method="GET">
+            <lebel class="titulos-buscador"> Ordenar segun: </lebel>
+            <select class="ordenar" name="orden">
+              <option value="precio">Precio</option>
+              <option value="marca">Marca</option>
+              <option value="categoria">Categoria</option>
+            </select>
+          </form>
+        </div>
+        </article>
+
+        <article class="parametros-busqueda">
+          <p class="titulos-buscador">Mostrar:</p>
+
+          <div class="mostrar">
+            <input type="radio" name="grilla" value="grilla" />
+            <label for="grilla"> Grilla </label>
+          </div>
+
+          <div class="mostrar">
+            <input type="radio" name="lista" value="lista" />
+            <label for="lista"> Lista </label>
+          </div>
+        </article>
+
+        <article class="parametros-busqueda">
+          <p class="titulos-buscador">Categorias</p>
+
+          <div class="categorias">
+            <input id="catergorias" type="checkbox"name="categoria"value="malbec"/>
+            <label for="lista"> Malbec </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox"name="categoria" value="cabernet-sauvignon"/>
+            <label for="lista"> Cabernet Sauvignon </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="cabernet-franc" />
+            <label for="lista"> Cabernet Franc</label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="malbec" />
+            <label for="lista"> Merlot </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="syrah" />
+            <label for="lista"> Syrah </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="pinot-noir" />
+            <label for="lista"> Pinot Noir </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="chardonnay" />
+            <label for="lista"> Chardonnay </label>
+          </div>
+          <div class="categorias">
+            <input type="checkbox" name="categoria" value="sauvignon-blanc" />
+            <label for="lista"> Sauvignon Blanc </label>
+          </div>
+        </article>
+      </section>
+
       <section class="grilla">
-        <h2>OFERTAS</h2>
+        <h2>PRODUCTOS</h2>
         <article class="articulos">
           <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
           <section class="textoProductos">
