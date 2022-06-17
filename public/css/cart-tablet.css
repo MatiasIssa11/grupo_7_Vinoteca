@@ -1,0 +1,22 @@
+@media screen and (min-width: 400px) {
+  .articulos {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .textoProductos {
+    text-align: left;
+    padding: 2px 3px;
+    flex-grow: 1;
+  }
+
+  .sumaResta {
+    margin: 5px 20%;
+  }
+
+  .precio {
+    align-self: flex-end;
+    padding: 4px 15px;
+  }
+}
