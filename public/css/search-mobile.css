@@ -1,5 +1,5 @@
 main {
-   display: flex;
+  
    text-align: center;
    font-family: Alegreya Sans, sans-serif;
  }
@@ -20,7 +20,7 @@ main {
    row-gap: 10px;
    margin-bottom: 10px;
    margin: auto;
-   padding-top: 15px;
+   padding-top: 0px;
  }
  
  .grilla h2 {
@@ -108,3 +108,21 @@ main {
 #form-ordenar {
    width: 100%;
  }
+
+.secundary-navbar-busqueda {
+   background-color: white;
+   padding: 5px 0 5px 0;
+}
+
+#burgerMenu {
+   display: flex;
+   background-color: #742d1c;
+   color: white;
+   display: block;
+   width: 25px;
+   height: 25px;
+   padding: 6.7px 5px 5px 5px;
+   text-align: center;
+   font-size: 7px;
+   margin: auto;
+}

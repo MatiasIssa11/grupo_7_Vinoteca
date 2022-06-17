@@ -1,7 +1,13 @@
 @media (min-width: 650px) {
+
+   main {
+      display: flex;
+   }
+
    .grilla {
      grid-template-columns: 1fr 1fr;
      margin: 0 15px 15px 0;
+     padding-top: 15px;
    }
  
    .grilla h2 {
@@ -14,6 +20,10 @@
 
    #buscador {
       display: block;
+   }
+
+   .secundary-navbar-busqueda {
+      display: none;
    }
 
  }
