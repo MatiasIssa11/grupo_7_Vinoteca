@@ -1,7 +1,95 @@
 #banner {
-    margin: 0;
-    width: 100vw;
-    height: 15vw;
-    object-fit: cover;
-    object-position: 0% 27%;
-  }
+  margin: 0;
+  width: 100vw;
+  height: 15vw;
+  object-fit: cover;
+  object-position: 0% 27%;
+}
+
+#carrito {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: Alegreya Sans, sans-serif;
+}
+
+#carrito h2 {
+  background-color: #401909;
+  color: #fff;
+}
+
+.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+  position: relative;
+  font-family: Bitter, serif;
+  padding: 5px;
+}
+
+.articulos img {
+  border: 1px solid #000;
+  height: 15vw;
+  flex-basis: 15%;
+  border: 1px solid #000;
+  object-fit: contain;
+}
+
+.textoProductos {
+  text-align: left;
+}
+
+.nombreProducto {
+  font-size: 18px;
+}
+
+.precio {
+  align-self: flex-end;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.tachoProductos {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#compraTotal {
+  border: 1px solid #000;
+  font-family: Bitter, serif;
+}
+
+#compraTotal h3 {
+  background-color: #401909;
+  color: #fff;
+  font-family: Alegreya Sans, sans-serif;
+}
+
+#envio {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+}
+
+#envio label {
+  flex-grow: 1;
+}
+
+#totalCompra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#total {
+  font-size: 38px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 20%;
+}
