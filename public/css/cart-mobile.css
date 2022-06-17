@@ -84,12 +84,17 @@
 
 #envio {
   border: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+#envio section {
+  flex-basis: 100%;
 }
 
 #selector {
-  text-align: left;
   font-weight: 500;
-  width: 100%;
 }
 
 #envio label {
