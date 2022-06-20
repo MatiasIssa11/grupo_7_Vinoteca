@@ -33,6 +33,7 @@
   width: 270px;
   text-align: center;
   border: none;
+  flex-grow: 0.7;
 }
 
 #icono-lupa {
@@ -48,15 +49,14 @@
   font-size: 1.5em;
   width: 30%;
   justify-content: flex-end;
-  
 }
 
-#header-navbar i{
+#header-navbar i {
   display: flex;
   padding: 0 12px 0 12px;
 }
 
-#header-navbar a{
+#header-navbar a {
   display: none;
 }
 

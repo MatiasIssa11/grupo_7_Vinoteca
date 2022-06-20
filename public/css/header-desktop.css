@@ -1,38 +1,37 @@
 @media (min-width: 769px) {
-  
-   #logo-grande {
-      height: 60px;
-   }
+  #logo-grande {
+    height: 60px;
+  }
 
-   #search-bar {
-      padding: 10px 0 15px 0;
-   }
-   
-   #recuadro-search-bar {
-      width: 380px;
-   }
+  #search-bar {
+    padding: 10px 0 15px 0;
+  }
 
-   #icono-lupa {
-      left: 355px;
-   }
+  #recuadro-search-bar {
+    width: 380px;
+  }
 
-   #header-navbar {
-      order: 1;
-      width: 100px;
-   }
+  #icono-lupa {
+    left: 355px;
+  }
 
-   #header-navbar i{
-      padding: 0 18px 0 18px;
-   }
+  #header-navbar {
+    order: 1;
+    width: 100px;
+  }
 
-   #header-navbar a{
-      display: flex;
-      font-size: 10px;
-      padding: 5px;
-      justify-content: center;
-   }
-   
-   #iconos-header a{
-      padding: 5px 0 0 0;
-   }
- }
+  #header-navbar i {
+    padding: 0 18px 0 18px;
+  }
+
+  #header-navbar a {
+    display: flex;
+    font-size: 10px;
+    padding: 5px;
+    justify-content: center;
+  }
+
+  #iconos-header a {
+    padding: 5px 0 0 0;
+  }
+}
