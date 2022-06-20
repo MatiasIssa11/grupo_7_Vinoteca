@@ -1,24 +1,28 @@
 @media (min-width: 720px) {
+  article {
+    display: flex;
+    padding: 10px 0 10px 0;
+    justify-content: space-around;
+  }
 
-   article {
-     display: flex;
-     padding: 10px 0 10px 0;
-     justify-content: space-around;
-   }
- 
-   .texto {
-     width: 140px;
-   }
- 
-   #caja-register-titulo {
-     width: 60%;
-   }
- 
-   #register {
-     width: 60%;
-   }
- 
-   .campo-register {
-     width: 280px;
-   }
- }
+  .texto {
+    width: 160px;
+  }
+
+  #caja-register-titulo {
+    width: 60%;
+  }
+
+  #register {
+    width: 60%;
+  }
+
+  .campo-register {
+    width: 280px;
+  }
+
+  #caja-register {
+    max-width: 1000px;
+    margin: auto;
+  }
+}

@@ -4,18 +4,16 @@
   text-decoration: none;
 }
 
-
-
-.verde {
-  color: #423e03;
-}
-.violetaOscuro {
-  color: #401909;
-}
-.violetaClaro {
-  color: #742d1c;
-}
+/*Colores a usar 
+verde: #423e03
+violetaOscuro: #401909;
+violetaClaro: #742d1c;
+}*/
 
 a {
   color: inherit;
+}
+
+button {
+  background-color: #fff;
 }

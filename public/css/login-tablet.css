@@ -1,50 +1,53 @@
 @media (min-width: 650px) {
-
   article {
-     display: flex;
-     padding: 10px 0 10px 0;
+    display: flex;
+    padding: 10px 0 10px 0;
   }
- 
+
   .texto {
-     width: 140px;
+    width: 140px;
   }
- 
+
+  #caja-login {
+    max-width: 800px;
+  }
+
   #caja-register-titulo {
-     width: 60%;
+    width: 60%;
   }
- 
+
   #register {
-     width: 60%;
+    width: 60%;
   }
- 
+
   .campo-register {
-     width: 230px;
+    width: 230px;
   }
 
   #texto-crear-cuenta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
   }
 
   #login {
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      height: 250px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 250px;
   }
 
   #form-login {
-      width: 50%;
-      height: 100px;
+    width: 50%;
+    height: 100px;
   }
 
   #boton-crear-cuenta {
-      display: none;
+    display: none;
   }
 
   #boton-crear-cuenta-tablet {
-      display: block;
+    display: block;
   }
 
   #ingresar {
@@ -63,7 +66,7 @@
     height: 480px;
   }
 
-  .campo-login{
+  .campo-login {
     width: 100%;
   }
 
