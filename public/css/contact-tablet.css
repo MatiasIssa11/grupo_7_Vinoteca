@@ -1,0 +1,21 @@
+@media screen and (min-width: 600px) {
+  #caja-contacto {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #caja-contacto-separador {
+    width: 2px;
+    height: 50px;
+  }
+
+  #caja-contacto-datos {
+    flex-basis: 48%;
+  }
+
+  #caja-contacto-redes {
+    flex-basis: 48%;
+  }
+
+
+}

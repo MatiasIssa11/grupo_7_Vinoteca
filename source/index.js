@@ -33,5 +33,9 @@ app.get("/agecheck", (req, res) =>
   res.sendFile(path.resolve(__dirname, "./views/agecheck.html"))
 );
 
+app.get("/contact", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/contact.html"))
+);
+
 const public = path.resolve(__dirname, "../public");
 app.use(express.static(public));

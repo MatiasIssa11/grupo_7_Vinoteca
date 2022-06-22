@@ -18,7 +18,6 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto 5%;
-  /*padding: 0 5%;*/
 }
 
 #productos img {
