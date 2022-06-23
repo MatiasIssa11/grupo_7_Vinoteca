@@ -1,0 +1,16 @@
+@media screen and (min-width: 500px) {
+  #titulo {
+    width: 450px;
+    margin: 10px auto;
+  }
+
+  #botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  img {
+    width: 450px;
+  }
+}

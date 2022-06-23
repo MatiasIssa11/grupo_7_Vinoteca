@@ -1,0 +1,33 @@
+main {
+  margin: auto;
+  padding: 0 5%;
+  font-family: Bitter, serif;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+#titulo {
+  background-color: #423e03;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.boton {
+  background-color: #423e03;
+  color: #fff;
+  margin: 10px 0;
+  font-family: Bitter, serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
