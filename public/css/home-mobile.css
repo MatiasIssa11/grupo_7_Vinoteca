@@ -3,15 +3,16 @@ main {
   font-family: Alegreya Sans, sans-serif;
 }
 
-#banner {
+#main_banner {
   margin: 0;
   width: 100vw;
   height: 15vw;
   object-fit: cover;
   object-position: 0% 27%;
+  max-width: 100%;
 }
 
-.grilla {
+.main_grilla {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr;
@@ -21,46 +22,44 @@ main {
   margin: auto;
 }
 
-.grilla h2 {
+.main_grilla h2 {
   color: #fff;
   background-color: #401909;
 }
 
-.articulos {
+.main_articulos {
   border: 1px solid #000;
   font-family: Bitter, serif;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #423e03;
+  column-gap: 10%;
 }
 
-.articulos img {
+.main_articulos figure {
+  width: 100%;
+  background-color: #fff;
+}
+
+.main_articulos img {
   height: 100vw;
 }
 
-.textoProductos {
-  background-color: #423e03;
-  color: #fff;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.textoProductos h4 {
+.main_articulos-texto {
   width: 100%;
   padding: 4px 0;
+  color: #fff;
 }
 
-.textoProductos a {
+.articulos_boton {
   background-color: #fff;
-  color: #000;
   border-radius: 6px;
   font-weight: 700;
   padding: 5px;
   width: 80px;
   margin-bottom: 6px;
   border: 1px solid #000;
+  font-family: Bitter, serif;
 }
