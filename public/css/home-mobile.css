@@ -20,11 +20,13 @@ main {
   row-gap: 10px;
   margin-bottom: 10px;
   margin: auto;
+  max-width: 300px;
 }
 
 .main_grilla h2 {
   color: #fff;
   background-color: #401909;
+  font-size: 20px;
 }
 
 .main_articulos {
@@ -45,6 +47,7 @@ main {
 
 .main_articulos img {
   height: 100vw;
+  max-height: 300px;
 }
 
 .main_articulos-texto {
