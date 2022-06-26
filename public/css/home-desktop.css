@@ -10,4 +10,17 @@
   .main_articulos img {
     height: 20vw;
   }
+
+  .articulos_boton {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  .articulos_boton:hover {
+    transform: scale(1.1);
+  }
+
+  .articulos_boton:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
 }
