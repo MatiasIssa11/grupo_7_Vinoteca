@@ -2,6 +2,27 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  padding: 0;
+  border: none;
+}
+
+* button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #fff;
+}
+
+* fieldset {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+* a {
+  color: inherit;
 }
 
 /*Colores a usar 
@@ -9,11 +30,3 @@ verde: #423e03
 violetaOscuro: #401909;
 violetaClaro: #742d1c;
 }*/
-
-a {
-  color: inherit;
-}
-
-button {
-  background-color: #fff;
-}

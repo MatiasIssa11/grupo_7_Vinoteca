@@ -3,71 +3,88 @@ main {
   font-family: Bitter, serif;
 }
 
-#banner {
+#main_banner {
   margin: 0;
   width: 100vw;
   height: 15vw;
   object-fit: cover;
   object-position: 0% 27%;
+  max-width: 100%;
 }
 
-#productos {
+#main_producto {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: auto 5%;
+  margin: 10px 5%;
 }
 
-#productos img {
-  height: 100vw;
+#main_producto figure {
   width: 100%;
   border: 1px solid #000;
-  object-fit: contain;
 }
 
-#nombreProducto {
-  margin: 5px 0;
-  font-size: 20px;
+#main_producto img {
+  height: 100vw;
 }
 
-#compra {
+#producto_compra {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   margin: 2px;
-  width: 100%;
+  width: 80%;
 }
 
-#precio {
-  margin: 2px 0;
-}
-
-#precio {
-  width: 100%;
-}
-#carrito {
+#producto_compra-nombre {
+  margin: 5px 0;
   font-size: 20px;
 }
 
-#botonAgregarCarrito {
+#producto_compra-precio {
+  margin: 2px 0;
+  width: 100%;
+}
+
+#producto_compra-boton-sumaResta {
+  font-size: 20px;
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0px;
+  margin: 5px auto;
+}
+
+#producto_compra-boton-sumaResta input {
+  background-color: transparent;
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#producto_compra-boton-cantidad {
+  text-align: center;
+  width: 80%;
+}
+
+#producto_compra-boton-carrito-mobile {
+  font-size: 20px;
+  text-align: center;
+  padding: 2px 10%;
+}
+
+#producto_compra-boton-carrito-texto {
   display: none;
 }
 
-#sumaResta {
-  font-size: 20px;
-  text-align: center;
-  width: 50%;
-  border: 1px solid #000;
-  border-radius: 10px;
+#producto_compra-descripcion {
+  margin: 10px 0;
 }
 
-#textoProductos {
-  margin: 5px 0;
-}
-
-#textoProductos h4 {
+#producto_compra-descripcion h4 {
   margin: 5px 0;
 }
