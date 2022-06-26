@@ -1,5 +1,5 @@
 main {
-  margin: auto;
+  margin: 10vh auto;
   padding: 0 5%;
   font-family: Bitter, serif;
   color: #fff;
@@ -7,20 +7,21 @@ main {
   display: flex;
   flex-flow: wrap column;
   justify-content: center;
+  row-gap: 10px;
 }
 
 img {
   width: 100%;
 }
 
-#titulo {
+#main_titulo {
   background-color: #423e03;
   margin: 10px 0;
   padding: 10px;
   border-radius: 10px;
 }
 
-.boton {
+.main_botones-boton {
   background-color: #423e03;
   color: #fff;
   margin: 10px 0;

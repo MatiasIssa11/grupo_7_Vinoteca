@@ -1,10 +1,10 @@
 @media screen and (min-width: 500px) {
-  #titulo {
+  #main_titulo {
     width: 450px;
     margin: 10px auto;
   }
 
-  #botones {
+  #main_botones {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

@@ -1,5 +1,5 @@
 @media screen and (min-width: 850px) {
-  #botones {
+  #main_botones {
     max-width: 750px;
     margin: 20px auto;
     column-gap: 70px;
