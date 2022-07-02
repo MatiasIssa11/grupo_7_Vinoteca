@@ -11,8 +11,12 @@
 
   #header-navbar a {
     display: flex;
-    font-size: 10px;
     padding: 5px;
     justify-content: center;
   }
+
+  #texto-icono-header {
+    display: flex;
+  }
+
 }

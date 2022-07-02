@@ -55,9 +55,7 @@
   padding: 0 12px 0 12px;
 }
 
-#header-navbar a {
-  display: none;
-}
+
 
 #main-navbar {
   display: flex;
@@ -67,4 +65,9 @@
   width: 100%;
   justify-content: space-around;
   font-family: Alegreya Sans, sans-serif;
+}
+
+#texto-icono-header {
+  font-size: 10px;
+  display: none;
 }
