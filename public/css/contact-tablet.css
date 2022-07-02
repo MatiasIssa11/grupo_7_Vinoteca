@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0 30px 0;
   }
   #caja-contacto-separador {
     width: 2px;
@@ -17,6 +16,4 @@
   #caja-contacto-redes {
     flex-basis: 48%;
   }
-
-
 }

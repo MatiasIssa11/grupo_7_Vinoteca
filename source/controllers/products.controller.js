@@ -36,4 +36,28 @@ module.exports = {
       data: data,
     });
   },
-};
+
+  upload: (req, res) => {
+    return res.render("./products/upload", {
+      title: "Cava Wines-Carga Producto",
+      styles: [
+        "/products/upload-mobile",
+        "/products/upload-tablet",
+        "/products/upload-desktop",
+      ],
+      data: data,
+    });
+  },
+
+  edit: (req, res) => {
+    return res.render("./products/edit", {
+      title: "Cava Wines-Edicion Producto",
+      styles: [
+        "/products/edit-mobile",
+        "/products/edit-tablet",
+        "/products/edit-desktop",
+      ],
+      data: data,
+    });
+  }
+}
