@@ -1,48 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head.ejs') %>
-
   <body>
-    <header>
-      <section id="header-superior">
-        <figure>
-          <img
-            id="logo-grande"
-            src="/logo/CAVA-WINES-LOGO-GRANDE-BLANCO.svg"
-            alt="CW Cava Wines blanco"
-          />
-        </figure>
-        <form id="search-bar" action="/search" method="get">
-          <div id="search-bar-items">
-            <input
-              id="recuadro-search-bar"
-              type="text"
-              name="search"
-              placeholder="¡Busca tus vinos!"
-            />
-            <i id="icono-lupa" class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </form>
-
-        <nav id="header-navbar">
-          <div>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a href="/cart">Mi Carrito</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-user"></i>
-            <a href="/login">Mi Cuenta</a>
-          </div>
-        </nav>
-      </section>
-
-      <nav id="main-navbar">
-        <a href="/">Inicio</a>
-        <a href="/search">Productos</a>
-        <a href="/contact">Contacto</a>
-      </nav>
-    </header>
-
+    <%- include('../partials/header.ejs') %>
     <main>
       <figure><img src="images/banner.jpg" alt="banner" id="banner" /></figure>
       <section id="carrito">
@@ -127,32 +87,6 @@
         </section>
       </section>
     </main>
-
-    <footer>
-      <figure>
-        <img
-          src="/logo/CAVA-WINES-LOGO-CHICO-BLANCO.svg"
-          alt="logo-chico"
-          id="logo-chico"
-        />
-      </figure>
-      <nav id="sitebar-footer">
-        <a href="/">Inicio</a>
-        <a href="/search">Productos</a>
-      </nav>
-      <nav id="contacto-footer">
-        <h4>Contactos</h4>
-        <a href="/contact"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/contact"><i class="fa-solid fa-location-dot"></i></a>
-        <a href="/contact"><i class="fa-solid fa-phone"></i></a>
-      </nav>
-      <nav id="redes-footer">
-        <h4>Redes</h4>
-        <a href="/contact"><i class="fa-brands fa-facebook"></i></a>
-        <a href="/contact"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="/contact"><i class="fa-brands fa-instagram"></i></a>
-        <a href="/contact"><i class="fa-brands fa-twitter"></i></a>
-      </nav>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
   </body>
 </html>
