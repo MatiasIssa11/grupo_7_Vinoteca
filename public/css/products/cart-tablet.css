@@ -1,22 +1,27 @@
 @media screen and (min-width: 400px) {
-  .articulos {
+  .cart_products {
     flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
-  .textoProductos {
+  .cart_products figure {
+    width: 20%;
+  }
+
+  .cart_products_text {
     text-align: left;
-    padding: 2px 3px;
-    flex-grow: 1;
+    padding: 2px 3px 2px 5%;
+    width: 50%;
   }
 
   .sumaResta {
     margin: 5px 20%;
   }
 
-  .precio {
+  .cart_products-price {
     align-self: flex-end;
     padding: 4px 15px;
+    width: 30%;
   }
 }
