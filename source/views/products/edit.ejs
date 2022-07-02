@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+      <section id="caja-register">
+        <h1 id="caja-register-titulo">REGISTRO</h1>
+        <form id="register" action="/register" method="post">
+          <section>
+            <article>
+              <label for="nombre" class="texto">Nombre: </label>
+              <input
+                type="text"
+                name="nombre"
+                class="campo-register"
+                minlength="4"
+              />
+            </article>
+
+            <article>
+              <label for="apellido" class="texto">Apellido: </label>
+              <input
+                type="text"
+                name="apellido"
+                class="campo-register"
+                minlength="4"
+              />
+            </article>
+
+            <article>
+              <label for="email" class="texto">E-Mail: </label>
+              <input
+                type="text"
+                name="email"
+                class="campo-register"
+                minlength="6"
+              />
+            </article>
+
+            <article>
+              <label for="clave" class="texto">Contraseña: </label>
+              <input
+                type="password"
+                name="clave"
+                class="campo-register"
+                minlength="8"
+              />
+            </article>
+
+            <article>
+              <label for="clave-confirmada" class="texto"
+                >Confirmar contraseña:
+              </label>
+              <input
+                type="password"
+                name="clave-confirmada"
+                class="campo-register"
+                minlength="8"
+              />
+            </article>
+
+            <article>
+              <label for="fechaUser" class="texto">Fecha de nacimiento: </label>
+              <input
+                type="date"
+                name="fechaUser"
+                id="fechaUser"
+                class="campo-register"
+              />
+            </article>
+
+            <section id="botonera">
+              <button id="crear-cuenta" type="button">
+                <a class="boton-principal" href=" ">Crear cuenta</a>
+              </button>
+              <button id="iniciar-sesion" type="reset"><a href="/login">Iniciar sesion</a></button>
+            </section>
+          </section>
+        </form>
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
