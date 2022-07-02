@@ -1,41 +1,16 @@
 const express = require("express");
 const app = express();
-const path = require("path");
-const port = process.env.PORT || 3000;
+const { resolve } = require("path");
+const public = require("./modules/public");
+const { port, callback } = require("./modules/port");
 
-app.listen(port, () => console.log("Server is running on LocalHost:" + port));
+app.listen(port, callback);
 
-app.get("/", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/index.html"))
-);
+app.set("views", resolve(__dirname, "views"));
+app.set("view engine", "ejs");
 
-app.get("/register", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/register.html"))
-);
+app.use(require("./routes/main.routes"));
+app.use(require("./routes/products.routes"));
+app.use(require("./routes/users.routes"));
 
-app.get("/login", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/login.html"))
-);
-
-app.get("/product", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/product.html"))
-);
-
-app.get("/search", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/search.html"))
-);
-
-app.get("/cart", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/cart.html"))
-);
-
-app.get("/agecheck", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/agecheck.html"))
-);
-
-app.get("/contact", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/contact.html"))
-);
-
-const public = path.resolve(__dirname, "../public");
-app.use(express.static(public));
+app.use(public);
