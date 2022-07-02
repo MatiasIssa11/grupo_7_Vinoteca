@@ -1,3 +1,5 @@
+const data = require("../modules/data");
+
 module.exports = {
   product: (req, res) => {
     return res.render("./products/product", {
@@ -7,6 +9,7 @@ module.exports = {
         "products/product-tablet",
         "products/product-desktop",
       ],
+      data: data,
     });
   },
 
@@ -18,6 +21,7 @@ module.exports = {
         "products/cart-tablet",
         "products/cart-desktop",
       ],
+      data: data,
     });
   },
 
@@ -29,6 +33,7 @@ module.exports = {
         "/products/search-tablet",
         "/products/search-desktop",
       ],
+      data: data,
     });
   },
 };

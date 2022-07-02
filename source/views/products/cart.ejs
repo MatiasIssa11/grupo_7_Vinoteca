@@ -9,19 +9,24 @@
         <h2>CARRITO DE COMPRAS</h2>
         <!--Productos del carrito de compras-->
         <section id="productos">
+          <% data.forEach(element => { %>
           <article class="articulos">
             <figure>
-              <img src="images/malbec-roble.jpg" alt="malbec roble" />
+              <img src="<%= element.image %>" alt="malbec roble" />
             </figure>
             <section class="textoProductos">
-              <h4 class="nombreProducto">Terravita Malbec Roble Organico</h4>
-              <p>Malbec Roble</p>
-              <p>Maipu Mendoza</p>
+              <h4 class="nombreProducto"><%= element.title %></h4>
+              <p><%= element.type %></p>
+              <p><%= element.description %></p>
               <a href="" id="sumaResta">- 1 +</a>
             </section>
             <a href=""><i class="fa-solid fa-trash-can tachoProductos"></i></a>
-            <h4 class="precio">$6087</h4>
+            <h4 class="precio">$<%= element.price %></h4>
           </article>
+          <% }) %>
+        </section>
+
+        <!-- 
           <article class="articulos">
             <figure>
               <img
@@ -49,7 +54,8 @@
             <a href=""><i class="fa-solid fa-trash-can tachoProductos"></i></a>
             <h4 class="precio">$5072</h4>
           </article>
-        </section>
+
+        -->
         <!--Ventana con el total de la compra-->
         <section id="compraTotal">
           <h3 id="nombreProducto">RESUMEN DE COMPRAS</h3>
