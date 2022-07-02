@@ -9,12 +9,13 @@
       </figure>
       <section class="main_grilla">
         <h2>OFERTAS</h2>
+        <% data.forEach(element => { %>
         <article class="main_articulos">
           <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
+            <img src="<%= element.image %> " />
           </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
+          <h4 class="main_articulos-texto"><%= element.title %></h4>
+          <h4 class="main_articulos-texto">$<%= element.price %></h4>
           <form action="/cart" method="get">
             <button class="articulos_boton">Comprar</button>
           </form>
@@ -22,55 +23,15 @@
             <button class="articulos_boton">+Info</button>
           </form>
         </article>
-
-        <!--A CONTINUACION REPETICION QUE NO VALE LA PENA MODIFICAR -->
-
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
+        <% }) %>
         <h2>NOVEDADES</h2>
+        <% data.forEach(element => { %>
         <article class="main_articulos">
           <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
+            <img src="<%= element.image %> " />
           </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
+          <h4 class="main_articulos-texto"><%= element.title %></h4>
+          <h4 class="main_articulos-texto">$<%= element.price %></h4>
           <form action="/cart" method="get">
             <button class="articulos_boton">Comprar</button>
           </form>
@@ -78,45 +39,7 @@
             <button class="articulos_boton">+Info</button>
           </form>
         </article>
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
-        <article class="main_articulos">
-          <figure>
-            <img src="images/cabernet-sauvignon.jpg" alt="cabernet sauvignon" />
-          </figure>
-          <h4 class="main_articulos-texto">Terravita Cabernet Sauvignon</h4>
-          <h4 class="main_articulos-texto">$5072</h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
-          </form>
-          <form action="/product" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-        </article>
+        <% }) %>
       </section>
     </main>
     <%- include('./partials/footer.ejs') %>
