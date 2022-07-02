@@ -8,6 +8,7 @@ module.exports = {
   cart: (req, res) => {
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
+      styles: ['/products/cart-mobile','/products/cart-tablet','/products/cart-desktop']
     });
   },
 
