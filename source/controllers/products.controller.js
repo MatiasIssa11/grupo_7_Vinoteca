@@ -3,9 +3,9 @@ module.exports = {
     return res.render("./products/product", {
       title: "Cava Wines-Producto",
       styles: [
-        "/products/product-mobile",
-        "/products/product-tablet",
-        "/products/product-desktop",
+        "products/product-mobile",
+        "products/product-tablet",
+        "products/product-desktop",
       ],
     });
   },
@@ -14,9 +14,9 @@ module.exports = {
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
       styles: [
-        "/products/cart-mobile",
-        "/products/cart-tablet",
-        "/products/cart-desktop",
+        "products/cart-mobile",
+        "products/cart-tablet",
+        "products/cart-desktop",
       ],
     });
   },
