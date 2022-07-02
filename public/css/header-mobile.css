@@ -1,4 +1,4 @@
-#header-superior {
+#header_superior {
   display: flex;
   flex-wrap: wrap;
   background-color: #401909;
@@ -7,12 +7,12 @@
   padding: 10px 5px 5px 5px;
 }
 
-#logo-grande {
+#header_logo-grande {
   height: 50px;
   text-align: left;
 }
 
-#search-bar {
+#header_searchbar {
   display: flex;
   font-size: 14px;
   padding: 10px 0 5px 0;
@@ -21,12 +21,12 @@
   order: 1;
 }
 
-#search-bar-items {
+#header_searchbar-items {
   display: flex;
   position: relative;
 }
 
-#recuadro-search-bar {
+#header_searchbar-recuadro {
   border-radius: 15px;
   height: 25px;
   width: 270px;
@@ -35,14 +35,14 @@
   flex-grow: 0.7;
 }
 
-#icono-lupa {
+#header_searchbar-icono {
   color: #401909;
   position: absolute;
   left: 245px;
   top: 25%;
 }
 
-#header-navbar {
+#header_navbar {
   display: flex;
   color: white;
   font-size: 1.5em;
@@ -50,14 +50,12 @@
   justify-content: flex-end;
 }
 
-#header-navbar i {
+#header_navbar i {
   display: flex;
   padding: 0 12px 0 12px;
 }
 
-
-
-#main-navbar {
+#main_navbar {
   display: flex;
   background-color: #742d1c;
   color: white;
@@ -67,7 +65,7 @@
   font-family: Alegreya Sans, sans-serif;
 }
 
-#texto-icono-header {
+#header_icono-texto {
   font-size: 10px;
   display: none;
 }

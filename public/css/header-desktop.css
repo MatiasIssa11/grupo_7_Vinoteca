@@ -1,45 +1,44 @@
 @media (min-width: 769px) {
-  #logo-grande {
+  #header_logo-grande {
     height: 60px;
   }
 
-  #search-bar {
+  #header_searchbar {
     padding: 10px 0 15px 0;
   }
 
-  #recuadro-search-bar {
+  #header_searchbar-recuadro {
     width: 380px;
   }
 
-  #icono-lupa {
+  #header_searchbar-icono {
     left: 355px;
   }
 
-  #header-navbar {
+  #header_navbar {
     order: 1;
     width: 100px;
   }
 
-  #header-navbar i {
+  #header_navbar i {
     padding: 0 18px 0 18px;
   }
 
-  #header-navbar a {
+  #header_navbar a {
     text-align: center;
     padding: 5px;
     justify-content: center;
   }
 
-  #iconos-header a {
+  #header_icono a {
     padding: 5px 0 0 0;
   }
 
-  #main-navbar {
+  #main_navbar {
     font-size: 20px;
   }
 
-  #texto-icono-header {
+  #header_icono-texto {
     display: flex;
   }
-
 }

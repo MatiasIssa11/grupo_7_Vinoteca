@@ -1,22 +1,21 @@
 @media (min-width: 650px) {
-  #search-bar {
+  #header_searchbar {
     width: 270px;
     padding: 10px 0 15px 0;
   }
 
-  #header-navbar {
+  #header_navbar {
     order: 1;
     width: auto;
   }
 
-  #header-navbar a {
+  #header_navbar a {
     display: flex;
     padding: 5px;
     justify-content: center;
   }
 
-  #texto-icono-header {
+  #header_icono-texto {
     display: flex;
   }
-
 }
