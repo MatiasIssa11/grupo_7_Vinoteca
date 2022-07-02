@@ -117,7 +117,6 @@ article {
 
 #texto-crear-cuenta {
   display: none;
-  color: white;
   font-size: 15px;
   font-family: Alegreya Sans, sans-serif;
   text-align: center;
@@ -126,6 +125,7 @@ article {
 
 #frase {
   display: flex;
+  color: white;
   height: 150px;
   padding: 50px 30px 10px 30px;
 }
