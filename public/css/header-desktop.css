@@ -25,7 +25,7 @@
   }
 
   #header-navbar a {
-    display: flex;
+    
     text-align: center;
     padding: 5px;
     justify-content: center;
@@ -38,4 +38,10 @@
   #main-navbar {
     font-size: 20px;
   }
+
+  #texto-icono-header {
+    
+    display: flex;
+  }
+
 }

@@ -55,10 +55,7 @@
   padding: 0 12px 0 12px;
 }
 
-#header-navbar a {
-  display: none;
 
-}
 
 #main-navbar {
   display: flex;
@@ -72,4 +69,5 @@
 
 #texto-icono-header {
   font-size: 10px;
+  display: none;
 }
