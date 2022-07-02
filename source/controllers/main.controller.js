@@ -9,12 +9,14 @@ module.exports = {
   ageCheck: (req, res) => {
     return res.render("agecheck", {
       title: "Cava Wines-Verificación de edad",
+      styles: ["age-mobile", "age-tablet", "age-desktop"]
     });
   },
 
   contact: (req, res) => {
     return res.render("contact", {
       title: "Cava Wines-Contacto",
+      styles: ["contact-mobile", "contact-tablet", "contact-desktop"]
     });
   },
 };
