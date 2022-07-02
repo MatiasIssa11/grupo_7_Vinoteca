@@ -2,6 +2,9 @@ const data = require("../modules/data");
 
 module.exports = {
   product: (req, res) => {
+    let idProduct = parseInt(req.params.id);
+    idProduct = !idProduct ? 1 : idProduct; //PAra asegurarme de que tenga un valor el Idpodruct
+
     return res.render("./products/product", {
       title: "Cava Wines-Producto",
       styles: [
@@ -9,7 +12,7 @@ module.exports = {
         "products/product-tablet",
         "products/product-desktop",
       ],
-      data: data,
+      data: data.find((element) => element.id === idProduct),
     });
   },
 
@@ -59,5 +62,5 @@ module.exports = {
       ],
       data: data,
     });
-  }
-}
+  },
+};
