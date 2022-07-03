@@ -14,12 +14,12 @@
           <figure>
             <img src="<%= element.image %> " />
           </figure>
-          <h4 class="main_articulos-texto"><%= element.title %></h4>
+          <h4 class="main_articulos-texto"><%= element.name %></h4>
           <h4 class="main_articulos-texto">$<%= element.price %></h4>
           <form action="/cart" method="get">
             <button class="articulos_boton">Comprar</button>
           </form>
-          <form action="/product" method="get">
+          <form action="/<%= element.id %>" method="get">
             <button class="articulos_boton">+Info</button>
           </form>
         </article>
@@ -30,12 +30,12 @@
           <figure>
             <img src="<%= element.image %> " />
           </figure>
-          <h4 class="main_articulos-texto"><%= element.title %></h4>
+          <h4 class="main_articulos-texto"><%= element.name %></h4>
           <h4 class="main_articulos-texto">$<%= element.price %></h4>
           <form action="/cart" method="get">
             <button class="articulos_boton">Comprar</button>
           </form>
-          <form action="/product" method="get">
+          <form action="/<%= element.id %>" method="get">
             <button class="articulos_boton">+Info</button>
           </form>
         </article>

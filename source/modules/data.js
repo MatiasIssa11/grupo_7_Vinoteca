@@ -2,7 +2,7 @@ module.exports = [
   {
     id: 1,
     price: 6087,
-    title: "Terravita Malbec Roble Organico",
+    name: "Terravita Malbec Roble Organico",
     type: "Malbec Roble Organico",
     description: "Maipu Mendoza",
     image: "images/malbec-roble.jpg",
@@ -10,7 +10,7 @@ module.exports = [
   {
     id: 2,
     price: 5072,
-    title: "Terravita Cabernet Sauvignon",
+    name: "Terravita Cabernet Sauvignon",
     type: "Cabernet Sauvignon",
     description: "Maipu Mendoza",
     image: "images/cabernet-Sauvignon.jpg",
@@ -18,7 +18,7 @@ module.exports = [
   {
     id: 3,
     price: 5072,
-    title: "Terravita Malbec",
+    name: "Terravita Malbec",
     type: "Malbec",
     description: "Maipu Mendoza",
     image: "images/malbec.jpg",
@@ -26,7 +26,7 @@ module.exports = [
   {
     id: 4,
     price: 5072,
-    title: "Terravita Malbec sin Sulfito",
+    name: "Terravita Malbec sin Sulfito",
     type: "Malbec sin Sulfito",
     description: "Maipu Mendoza",
     image: "images/malbec-sin-sulfito.jpg",
