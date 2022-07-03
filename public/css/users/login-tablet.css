@@ -12,7 +12,7 @@
     max-width: 800px;
   }
 
-  #login_texto-crear-cuenta {
+  #login_crear-cuenta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -61,7 +61,7 @@
     width: 100%;
   }
 
-  #login_texto-olvidaste-contraseña {
+  #login_olvidaste-contraseña {
     justify-content: right;
     padding: 0;
   }

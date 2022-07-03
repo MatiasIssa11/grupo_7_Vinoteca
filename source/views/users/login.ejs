@@ -9,9 +9,9 @@
   </header>
   <main>
     <section id="login_caja">
-      <h1 id="login_caja-titulo">INGRESAR</h1>
+      <h1 id="login_caja-titulo">INICIAR SESION</h1>
       <div id="login_caja-cuerpo">
-        <form id="login_formulario" action="/login" method="post">
+        <form id="login_formulario-ingreso" action="/login" method="post">
           <section id="login_campos">
             <div class="login_linea-form">
               <label for="nombre" class="login_texto">E-mail: </label>
@@ -21,10 +21,10 @@
               <label for="clave" class="login_texto">Contraseña: </label>
               <input type="password" name="clave" class="login_campo"/>
             </div>
-            <a id="login_texto-olvidaste-contraseña" href="/">Olvidaste tu contraseña?</a>
+            <a id="login_olvidaste-contraseña" href="/">Olvidaste tu contraseña?</a>
             <div id="login_recordar-contraseña">
               <input type="checkbox" name="recordar-contraseña" value="recordar-contraseña"/>
-              <label id="login_texto-checkbox">Recordar contraseña</label>
+              <label id="login_checkbox-recordar-user">Recordar contraseña</label>
             </div>
           </section>
           <div id="login_botonera">
@@ -33,7 +33,7 @@
           </div>
         </form>
 
-        <section id="login_texto-crear-cuenta">
+        <section id="login_crear-cuenta">
             <p id="login_frase">
               Te invitamos a crear una cuenta en nuestro sitio para poder
               comprar, hacer un seguimiento de pedidos, recibir novedades 

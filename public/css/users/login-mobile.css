@@ -35,7 +35,7 @@
   width: 90%;
 }
 
-#login_formulario {
+#login_formulario-ingreso {
   display: flex;
   flex-wrap: wrap;
   background-color: #742d1c;
@@ -70,7 +70,7 @@
   display: flex;
 }
 
-#login_texto-olvidaste-contraseña {
+#login_olvidaste-contraseña {
   display: flex;
   justify-content: center;
   color: white;
@@ -80,7 +80,7 @@
   font-family: Alegreya Sans, sans-serif;
 }
 
-#login_texto-checkbox {
+#login_checkbox-recordar-user {
   display: flex;
   color: white;
   font-size: 12px;
@@ -117,7 +117,7 @@
   text-align: center;
 }
 
-#login_texto-crear-cuenta {
+#login_crear-cuenta {
   display: none;
   font-size: 15px;
   font-family: Alegreya Sans, sans-serif;
