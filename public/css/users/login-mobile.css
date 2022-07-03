@@ -1,17 +1,17 @@
-article {
+.login_linea-form {
   display: block;
   padding: 0 0 10px 0;
   justify-content: center;
 }
 
-#caja-login {
+#login_caja {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 }
 
-#caja-login-titulo {
+#login_caja-titulo {
   background-color: #401909;
   color: white;
   margin: 20px 0 0 0;
@@ -23,7 +23,7 @@ article {
   width: 90%;
 }
 
-#caja-login-cuerpo {
+#login_caja-cuerpo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,7 +35,7 @@ article {
   width: 90%;
 }
 
-#formulario-login {
+#login_formulario {
   display: flex;
   flex-wrap: wrap;
   background-color: #742d1c;
@@ -43,7 +43,7 @@ article {
   width: 50%;
 }
 
-#campos {
+#login_campos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,14 +51,14 @@ article {
   height: 150px;
 }
 
-.texto {
+.login_texto {
   display: flex;
   color: white;
   font-size: 15px;
   font-family: Alegreya Sans, sans-serif;
 }
 
-.campo-login {
+.login_campo {
   border-radius: 10px;
   width: 250px;
   height: 25px;
@@ -66,21 +66,21 @@ article {
   border: none;
 }
 
-#recordar-contraseña {
+#login_recordar-contraseña {
   display: flex;
 }
 
-#texto-olvidaste-contraseña {
+#login_texto-olvidaste-contraseña {
   display: flex;
   justify-content: center;
   color: white;
   width: 100%;
   font-size: 12px;
-  padding: 0 0 10px 0;
+  margin: 5px 0 10px 0;
   font-family: Alegreya Sans, sans-serif;
 }
 
-#texto-checkbox {
+#login_texto-checkbox {
   display: flex;
   color: white;
   font-size: 12px;
@@ -88,14 +88,14 @@ article {
   font-family: Alegreya Sans, sans-serif;
 }
 
-#botonera {
+#login_botonera {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
-#ingresar {
+#login_botonera-ingresar {
   width: 100%;
   padding: 10px;
   margin: 20px 0 25px 0;
@@ -106,16 +106,18 @@ article {
   font-family: Alegreya Sans, sans-serif;
 }
 
-#boton-crear-cuenta {
+#login_botonera-crear-cuenta {
   width: 70%;
   font-size: 15px;
   border-radius: 5px;
   font-weight: bold;
   border: none;
   font-family: Alegreya Sans, sans-serif;
+  background-color: white;
+  text-align: center;
 }
 
-#texto-crear-cuenta {
+#login_texto-crear-cuenta {
   display: none;
   font-size: 15px;
   font-family: Alegreya Sans, sans-serif;
@@ -123,17 +125,17 @@ article {
   width: 60%;
 }
 
-#frase {
+#login_frase {
   display: flex;
   color: white;
   height: 150px;
   padding: 50px 30px 10px 30px;
 }
 
-#boton-crear-cuenta-tablet {
+#login_botonera-crear-cuenta-tablet {
   display: none;
   width: 50%;
-  padding: 10px;
+  padding: 15px;
   margin: 20px 0 25px 0;
   font-size: 20px;
   font-weight: bold;

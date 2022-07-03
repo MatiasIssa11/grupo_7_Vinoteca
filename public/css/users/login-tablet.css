@@ -1,30 +1,18 @@
 @media (min-width: 650px) {
-  article {
+  .login_linea-form {
     display: flex;
     padding: 10px 0 10px 0;
   }
 
-  .texto {
+  .login_texto {
     width: 140px;
   }
 
-  #caja-login {
+  #login_caja {
     max-width: 800px;
   }
 
-  #caja-register-titulo {
-    width: 60%;
-  }
-
-  #register {
-    width: 60%;
-  }
-
-  .campo-register {
-    width: 230px;
-  }
-
-  #texto-crear-cuenta {
+  #login_texto-crear-cuenta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,28 +25,31 @@
     height: 250px;
   }
 
-  #form-login {
+  #login_form {
     width: 50%;
     height: 100px;
   }
 
-  #boton-crear-cuenta {
+  #login_botonera-crear-cuenta {
     display: none;
   }
 
-  #boton-crear-cuenta-tablet {
+  #login_botonera-crear-cuenta-tablet {
     display: block;
+    background-color: white;
+    text-align: center;
+    height: 55px;
   }
 
-  #ingresar {
+  #login_botonera-ingresar {
     width: 50%;
   }
 
-  #botonera {
+  #login_botonera {
     height: 100px;
   }
 
-  #campos {
+  #login_campos {
     display: block;
   }
 
@@ -66,18 +57,16 @@
     height: 480px;
   }
 
-  .campo-login {
+  .login_campos {
     width: 100%;
   }
 
-  #texto-olvidaste-contraseña {
+  #login_texto-olvidaste-contraseña {
     justify-content: right;
     padding: 0;
   }
 
-  #recordar-contraseña {
+  #login_recordar-contraseña {
     justify-content: right;
   }
-
-
 }
