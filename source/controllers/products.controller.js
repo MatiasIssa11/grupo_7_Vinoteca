@@ -3,7 +3,7 @@ const data = require("../modules/data");
 module.exports = {
   product: (req, res) => {
     let idProduct = parseInt(req.query.id);
-    idProduct = !idProduct ? 1 : idProduct; //PAra asegurarme de que tenga un valor el Idpodruct
+    idProduct = !idProduct ? 1 : idProduct; //Para asegurarme de que tenga un valor el IdPrduct
 
     return res.render("./products/product", {
       title: "Cava Wines-Producto",

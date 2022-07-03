@@ -1,10 +1,10 @@
-#caja-register {
+#register_caja {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#caja-register-titulo {
+#register_caja-titulo {
   background-color: #401909;
   color: white;
   margin: 20px 0 0 0;
@@ -29,14 +29,14 @@
   font-family: Bitter, serif;
 }
 
-article {
+.register_caja-linea-form {
   display: block;
   padding: 0 0 10px 0;
   justify-content: center;
   align-items: center;
 }
 
-.campo-register {
+.register_campo {
   border-radius: 10px;
   width: 250px;
   height: 25px;
@@ -44,20 +44,20 @@ article {
   border: none;
 }
 
-.texto {
+.register_texto {
   display: flex;
   color: #fff;
   font-size: 15px;
   font-family: Bitter, serif;
 }
 
-#botonera {
+#register_botonera {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#crear-cuenta {
+#register_botonera-crear-cuenta {
   width: 80%;
   padding: 10px;
   margin: 20px 0 25px 0;
@@ -68,10 +68,13 @@ article {
   font-family: Alegreya Sans, sans-serif;
 }
 
-#iniciar-sesion {
+#register_botonera-iniciar-sesion {
   width: 50%;
   font-size: 15px;
+  font-weight: bold;
   border-radius: 5px;
   border: none;
   font-family: Alegreya Sans, sans-serif;
+  background-color: white;
+  text-align: center;
 }

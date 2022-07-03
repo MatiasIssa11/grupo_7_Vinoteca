@@ -1,85 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
   <%- include('../partials/head.ejs') %>
-  <body>
+</head>
+
+<body>
+  <header>
     <%- include('../partials/header.ejs') %>
-    <main>
-      <section id="caja-register">
-        <h1 id="caja-register-titulo">REGISTRO</h1>
-        <form id="register" action="/register" method="post">
-          <section>
-            <article>
-              <label for="nombre" class="texto">Nombre: </label>
-              <input
-                type="text"
-                name="nombre"
-                class="campo-register"
-                minlength="4"
-              />
-            </article>
-
-            <article>
-              <label for="apellido" class="texto">Apellido: </label>
-              <input
-                type="text"
-                name="apellido"
-                class="campo-register"
-                minlength="4"
-              />
-            </article>
-
-            <article>
-              <label for="email" class="texto">E-Mail: </label>
-              <input
-                type="text"
-                name="email"
-                class="campo-register"
-                minlength="6"
-              />
-            </article>
-
-            <article>
-              <label for="clave" class="texto">Contraseña: </label>
-              <input
-                type="password"
-                name="clave"
-                class="campo-register"
-                minlength="8"
-              />
-            </article>
-
-            <article>
-              <label for="clave-confirmada" class="texto"
-                >Confirmar contraseña:
-              </label>
-              <input
-                type="password"
-                name="clave-confirmada"
-                class="campo-register"
-                minlength="8"
-              />
-            </article>
-
-            <article>
-              <label for="fechaUser" class="texto">Fecha de nacimiento: </label>
-              <input
-                type="date"
-                name="fechaUser"
-                id="fechaUser"
-                class="campo-register"
-              />
-            </article>
-
-            <section id="botonera">
-              <button id="crear-cuenta" type="button">
-                <a class="boton-principal" href=" ">Crear cuenta</a>
-              </button>
-              <button id="iniciar-sesion" type="reset"><a href="/login">Iniciar sesion</a></button>
-            </section>
-          </section>
-        </form>
-      </section>
-    </main>
-    <%- include('../partials/footer.ejs') %>
-  </body>
+  </header>
+  <main>
+    <section id="register_caja">
+      <h1 id="register_caja-titulo">REGISTRO</h1>
+      <form id="register" action="/register" method="post">
+        <div>
+          <div class="register_caja-linea-form">
+            <label for="nombre" class="register_texto">Nombre: </label>
+            <input type="text" name="nombre" class="register_campo" minlength="4"/>
+          </div>
+          <div class="register_caja-linea-form">
+            <label for="apellido" class="register_texto">Apellido: </label>
+            <input type="text" name="apellido" class="register_campo" minlength="4"/>
+          </div>
+          <div class="register_caja-linea-form">
+            <label for="email" class="register_texto">E-Mail: </label>
+            <input type="text" name="email" class="register_campo" minlength="6"/>
+          </div>
+          <div class="register_caja-linea-form">
+            <label for="clave" class="register_texto">Contraseña: </label>
+            <input type="password" name="clave" class="register_campo" minlength="8"/>
+          </div>
+          <div class="register_caja-linea-form">
+            <label for="clave-confirmada" class="register_texto">Confirmar contraseña: </label>
+            <input type="password" name="clave-confirmada" class="register_campo" minlength="8"/>
+          </div>
+          <div class="register_caja-linea-form">
+            <label for="fecha-nacimiento" class="register_texto">Fecha de nacimiento: </label>
+            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="register_campo"/>
+          </div>
+          <div id="register_botonera">
+            <button id="register_botonera-crear-cuenta" type="button"> Crear cuenta </button>
+            <a id="register_botonera-iniciar-sesion" href="/login"> Iniciar sesion </a>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+      <%- include('../partials/footer.ejs') %>
+  </footer>
+</body>
 </html>

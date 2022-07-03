@@ -1,15 +1,15 @@
 @media (min-width: 720px) {
-  article {
+  .register_caja-linea-form {
     display: flex;
     padding: 10px 0 10px 0;
     justify-content: space-around;
   }
 
-  .texto {
+  .register_texto {
     width: 160px;
   }
 
-  #caja-register-titulo {
+  #register_caja-titulo {
     width: 60%;
   }
 
@@ -17,11 +17,11 @@
     width: 60%;
   }
 
-  .campo-register {
+  .register_campo {
     width: 280px;
   }
 
-  #caja-register {
+  #register_caja {
     max-width: 1000px;
     margin: auto;
   }
