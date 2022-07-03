@@ -2,7 +2,7 @@ const data = require("../modules/data");
 
 module.exports = {
   product: (req, res) => {
-    let idProduct = parseInt(req.params.id);
+    let idProduct = parseInt(req.query.id);
     idProduct = !idProduct ? 1 : idProduct; //PAra asegurarme de que tenga un valor el Idpodruct
 
     return res.render("./products/product", {
