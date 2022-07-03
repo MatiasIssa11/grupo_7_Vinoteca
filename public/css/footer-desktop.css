@@ -3,31 +3,31 @@
     flex-direction: row;
   }
 
-  #logo-chico {
+  #footer_logo {
     width: 150px;
   }
 
-  #sitebar-footer a {
+  #footer_sitebar a {
     width: 100%;
     font-size: 22px;
     font-weight: 600;
   }
 
-  #contacto-footer h4 {
+  #footer_contacto h4 {
     font-size: 20px;
   }
 
-  #contacto-footer a {
+  #footer_contacto a {
     width: 35px;
     height: 35px;
     font-size: 20px;
   }
 
-  #redes-footer h4 {
+  #footer_redes h4 {
     font-size: 20px;
   }
 
-  #redes-footer a {
+  #footer_redes a {
     width: 35px;
     height: 35px;
     font-size: 20px;
