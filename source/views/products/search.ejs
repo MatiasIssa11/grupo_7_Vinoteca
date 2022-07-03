@@ -70,21 +70,9 @@
       </section>
     </aside>
 
-      <section class="grilla">
-        <h2>PRODUCTOS</h2>
-        <% data.forEach(element => { %>         
-        <article class="articulos">
-          <img src="<%= element.image %>" />
-          <section class="textoProductos">
-            <h4 class="nombreProducto"><%= element.name %> </h4>
-            <h4 class="precio">$<%= element.price %> </h4>
-            <a href="" class="botonArticulo">Comprar</a>
-            <a href="/product" class="botonArticulo">+Info</a>
-          </section>
-        </article>
-        <% }) %>
-        
-        <h2>NOVEDADES</h2>
+    <section class="grilla">
+      
+      <h2>PRODUCTOS</h2>
         <% data.forEach(element => { %>         
           <article class="articulos">
             <img src="<%= element.image %>" />
@@ -95,9 +83,23 @@
               <a href="/product" class="botonArticulo">+Info</a>
             </section>
           </article>
-          <% }) %>
-      </section>
-    </main>
+        <% }) %>
+        
+      <h2>NOVEDADES</h2>
+        <% data.forEach(element => { %>         
+          <article class="articulos">
+            <img src="<%= element.image %>" />
+            <section class="textoProductos">
+              <h4 class="nombreProducto"><%= element.name %> </h4>
+              <h4 class="precio">$<%= element.price %> </h4>
+              <a href="" class="botonArticulo">Comprar</a>
+              <a href="/product" class="botonArticulo">+Info</a>
+            </section>
+          </article>
+        <% }) %>
+
+    </section>
+  </main>
   <footer>
     <%- include('../partials/footer.ejs') %>
   </footer>

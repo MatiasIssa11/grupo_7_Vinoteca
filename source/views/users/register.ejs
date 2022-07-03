@@ -3,49 +3,49 @@
 <head>
   <%- include('../partials/head.ejs') %>
 </head>
-<body>
-  <header>
-    <%- include('../partials/header.ejs') %>
-  </header>
-  <main>
-    <section id="register_caja">
-      <h1 id="register_caja-titulo">REGISTRO DE USUARIO</h1>
-      <form id="register" action="/register" method="post">
-        <div>
-          <div class="register_caja-linea-form">
-            <label for="nombre" class="register_texto">Nombre: </label>
-            <input type="text" name="nombre" class="register_campo" minlength="4"/>
+  <body>
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
+    <main>
+      <section id="register_caja">
+        <h1 id="register_caja-titulo">REGISTRO DE USUARIO</h1>
+        <form id="register" action="/register" method="post">
+          <div>
+            <div class="register_caja-linea-form">
+              <label for="nombre" class="register_texto">Nombre: </label>
+              <input type="text" name="nombre" class="register_campo" minlength="4"/>
+            </div>
+            <div class="register_caja-linea-form">
+              <label for="apellido" class="register_texto">Apellido: </label>
+              <input type="text" name="apellido" class="register_campo" minlength="4"/>
+            </div>
+            <div class="register_caja-linea-form">
+              <label for="email" class="register_texto">E-Mail: </label>
+              <input type="text" name="email" class="register_campo" minlength="6"/>
+            </div>
+            <div class="register_caja-linea-form">
+              <label for="clave" class="register_texto">Contraseña: </label>
+              <input type="password" name="clave" class="register_campo" minlength="8"/>
+            </div>
+            <div class="register_caja-linea-form">
+              <label for="clave-confirmada" class="register_texto">Confirmar contraseña: </label>
+              <input type="password" name="clave-confirmada" class="register_campo" minlength="8"/>
+            </div>
+            <div class="register_caja-linea-form">
+              <label for="fecha-nacimiento" class="register_texto">Fecha de nacimiento: </label>
+              <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="register_campo"/>
+            </div>
+            <div id="register_botonera">
+              <button id="register_botonera-crear-cuenta" type="button"> Crear cuenta </button>
+              <a id="register_botonera-iniciar-sesion" href="/login"> Iniciar sesion </a>
+            </div>
           </div>
-          <div class="register_caja-linea-form">
-            <label for="apellido" class="register_texto">Apellido: </label>
-            <input type="text" name="apellido" class="register_campo" minlength="4"/>
-          </div>
-          <div class="register_caja-linea-form">
-            <label for="email" class="register_texto">E-Mail: </label>
-            <input type="text" name="email" class="register_campo" minlength="6"/>
-          </div>
-          <div class="register_caja-linea-form">
-            <label for="clave" class="register_texto">Contraseña: </label>
-            <input type="password" name="clave" class="register_campo" minlength="8"/>
-          </div>
-          <div class="register_caja-linea-form">
-            <label for="clave-confirmada" class="register_texto">Confirmar contraseña: </label>
-            <input type="password" name="clave-confirmada" class="register_campo" minlength="8"/>
-          </div>
-          <div class="register_caja-linea-form">
-            <label for="fecha-nacimiento" class="register_texto">Fecha de nacimiento: </label>
-            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="register_campo"/>
-          </div>
-          <div id="register_botonera">
-            <button id="register_botonera-crear-cuenta" type="button"> Crear cuenta </button>
-            <a id="register_botonera-iniciar-sesion" href="/login"> Iniciar sesion </a>
-          </div>
-        </div>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <%- include('../partials/footer.ejs') %>
-  </footer>
-</body>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <%- include('../partials/footer.ejs') %>
+    </footer>
+  </body>
 </html>
