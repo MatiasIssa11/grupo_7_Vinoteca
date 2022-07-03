@@ -11,7 +11,9 @@ main {
    object-fit: cover;
    object-position: 0% 27%;
  }
- 
+
+ /* PRODUCTOS */
+
  .grilla {
    width: 90%;
    display: grid;
@@ -66,7 +68,9 @@ main {
    border: 1px solid #000;
  }
 
- #buscador {
+ /* BUSCADOR */
+
+ #search_lateral {
    display: none;
    background-color: #401909;
    color: white;
@@ -76,45 +80,46 @@ main {
    padding: 10px
  }
  
- .parametros-busqueda {
+ .search_parametros {
    display: flex;
    flex-wrap: wrap;
    padding: 10px 0 10px 0;
    width: 100%;
  }
 
-.ordenar {
+.search_ordenar {
    width: 100%;
    padding: 5px 0 5px 0;
    border: none;
    border-radius: 5px;
  }
 
-.mostrar {
+.search_mostrar {
    width: 100%;
    padding: 5px 0 5px 10px;
  }
 
-.categorias {
+.search_categorias {
    width: 100%;
    padding: 5px 0 5px 10px;
  }
 
-.titulos-buscador{
+.search_titulos {
    font-size: 20px;
-   padding-bottom: 5px;
+   padding: 0 0 5px 0;
+   font-weight: normal;
  }
 
-#form-ordenar {
+#search_ordenar {
    width: 100%;
  }
 
-.secundary-navbar-busqueda {
+.search_secundary-navbar {
    background-color: white;
    padding: 5px 0 5px 0;
 }
 
-#burgerMenu {
+#search_burgermenu {
    display: flex;
    background-color: #742d1c;
    color: white;

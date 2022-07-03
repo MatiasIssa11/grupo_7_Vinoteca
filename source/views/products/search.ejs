@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <%- include('../partials/head.ejs') %>
-  </head>
-  <body>
+</head>
+<body>
+  <header>
     <%- include('../partials/header.ejs') %>
-    <main>
-      <nav class="secundary-navbar-busqueda">
-        <p id="burgerMenu"><i class="fa fa-bars fa-2x"></i></p>
-      </nav>
-
-      <section id="buscador">
-        <article class="parametros-busqueda">
-          <div id="form-ordenar">
-            <form action="/orden" method="GET">
-              <lebel class="titulos-buscador"> Ordenar segun: </lebel>
-              <select class="ordenar" name="orden">
-                <option value="precio">Precio</option>
-                <option value="marca">Marca</option>
-                <option value="categoria">Categoria</option>
-              </select>
-            </form>
-          </div>
-        </article>
-
-        <article class="parametros-busqueda">
-          <p class="titulos-buscador">Mostrar:</p>
-
-          <div class="mostrar">
-            <input type="radio" name="mostrar" value="grilla" />
-            <label for="grilla"> Grilla </label>
-          </div>
-          <div class="mostrar">
-            <input type="radio" name="mostrar" value="lista" />
-            <label for="lista"> Lista </label>
-          </div>
-        </article>
-
-        <article class="parametros-busqueda">
-          <p class="titulos-buscador">Categorias</p>
-
-          <div class="categorias">
+  </header>
+  <main>
+    <nav class="search_secundary-navbar">
+      <p id="search_burgermenu"><i class="fa fa-bars fa-2x"></i></p>
+    </nav>
+    <aside id="search_lateral">
+      <section class="search_parametros">
+        <form  action="/orden" method="GET">
+          <lebel class="search_titulos"> Ordenar segun: </lebel>
+            <select class="search_ordenar" name="orden">
+            <option value="precio">Precio</option>
+            <option value="marca">Marca</option>
+            <option value="categoria">Categoria</option>
+          </select>
+        </form>
+      </section>
+      <section class="search_parametros">
+        <h3 class="search_titulos">Mostrar:</h3>
+        <div class="search_mostrar">
+          <input type="radio" name="mostrar" value="grilla" />
+          <label for="grilla"> Grilla </label>
+        </div>
+        <div class="search_mostrar">
+          <input type="radio" name="mostrar" value="lista" />
+          <label for="lista"> Lista </label>
+        </div>
+      </section>
+      <section class="search_parametros">
+          <h3 class="search_titulos">Categorias</h3>
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="malbec" />
             <label for="lista"> Malbec </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="cabernet-sauvignon" />
             <label for="lista"> Cabernet Sauvignon </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="cabernet-franc" />
             <label for="lista"> Cabernet Franc</label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="malbec" />
             <label for="lista"> Merlot </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="syrah" />
             <label for="lista"> Syrah </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="pinot-noir" />
             <label for="lista"> Pinot Noir </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="chardonnay" />
             <label for="lista"> Chardonnay </label>
           </div>
-          <div class="categorias">
+          <div class="search_categorias">
             <input type="radio" name="categoria" value="sauvignon-blanc" />
             <label for="lista"> Sauvignon Blanc </label>
           </div>
-        </article>
       </section>
+    </aside>
 
       <section class="grilla">
         <h2>PRODUCTOS</h2>
@@ -102,6 +98,8 @@
           <% }) %>
       </section>
     </main>
+  <footer>
     <%- include('../partials/footer.ejs') %>
-  </body>
+  </footer>
+</body>
 </html>

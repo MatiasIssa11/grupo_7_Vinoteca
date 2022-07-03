@@ -18,11 +18,11 @@
      height: 40vw;
    }
 
-   #buscador {
+   #search_lateral {
       display: block;
    }
 
-   .secundary-navbar-busqueda {
+   .search_secundary-navbar {
       display: none;
    }
 
