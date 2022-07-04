@@ -1,10 +1,10 @@
-#caja-register {
+#upload_caja {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#caja-register-titulo {
+#upload_caja-titulo {
   background-color: #401909;
   color: white;
   margin: 20px 0 0 0;
@@ -16,7 +16,7 @@
   width: 90%;
 }
 
-#register {
+#upload {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,14 +29,14 @@
   font-family: Bitter, serif;
 }
 
-article {
+#upload-linea-form {
   display: block;
   padding: 0 0 10px 0;
   justify-content: center;
   align-items: center;
 }
 
-.campo-register {
+.upload_campo {
   border-radius: 10px;
   width: 250px;
   height: 25px;
@@ -44,7 +44,7 @@ article {
   border: none;
 }
 
-.campo-register-descripcion {
+.upload_campo-descripcion {
   border-radius: 10px;
   width: 250px;
   height: 50px;
@@ -52,27 +52,27 @@ article {
   border: none;
 }
 
-.campo-register-imagen {
+.upload_campo-imagen {
     width: 280px;
   height: 25px;
   text-align: center;
   border: none;
 }
 
-.texto {
+.upload_texto {
   display: flex;
   color: #fff;
   font-size: 15px;
-  font-family: Bitter, serif;
+  font-family: Alegreya Sans, sans-serif;
 }
 
-#botonera {
+#upload_botonera {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#crear-cuenta {
+#upload_crear-cuenta {
   width: 80%;
   padding: 10px;
   margin: 20px 0 25px 0;
@@ -83,7 +83,7 @@ article {
   font-family: Alegreya Sans, sans-serif;
 }
 
-#iniciar-sesion {
+#upload_iniciar-sesion {
   width: 50%;
   font-size: 15px;
   border-radius: 5px;

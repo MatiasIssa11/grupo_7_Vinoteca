@@ -1,31 +1,32 @@
 @media (min-width: 720px) {
-  article {
+
+  #upload-linea-form {
     display: flex;
     padding: 10px 0 10px 0;
     justify-content: space-around;
   }
 
-  .texto {
+  .upload_texto {
     width: 160px;
   }
 
-  #caja-register-titulo {
+  #upload_caja-titulo {
     width: 60%;
   }
 
-  #register {
+  #upload {
     width: 60%;
   }
 
-  .campo-register {
+  .upload_campo {
     width: 280px;
   }
 
-  .campo-register-descripcion {
+  .upload_campo-descripcion {
     width: 280px;
   }
 
-  #caja-register {
+  #upload_caja {
     max-width: 1000px;
     margin: auto;
   }
