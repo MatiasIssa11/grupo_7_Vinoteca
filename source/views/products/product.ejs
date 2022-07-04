@@ -14,7 +14,7 @@
         <section id="producto_compra">
           <h3 id="producto_compra-nombre"><%= data.name %></h3>
           <h2 id="producto_compra-precio">$<%= data.price %></h2>
-          <form action="/product/<%= element.id %>" id="producto_compra-boton">
+          <form action="/product/<%= data.id %>" id="producto_compra-boton">
             <fieldset id="producto_compra-boton-sumaResta">
               <input type="button" value="-" id="producto_compra-boton-resta" />
               <input
