@@ -9,12 +9,16 @@
       </figure>
       <article id="main_producto">
         <figure>
-          <img src="/<%= data.image %> " />
+          <img src="/<%= data.image %>" />
         </figure>
         <section id="producto_compra">
           <h3 id="producto_compra-nombre"><%= data.name %></h3>
           <h2 id="producto_compra-precio">$<%= data.price %></h2>
-          <form action="/product/<%= data.id %>" id="producto_compra-boton">
+          <form
+            action="/product/<%= data.id %>"
+            id="producto_compra-boton"
+            method="post"
+          >
             <fieldset id="producto_compra-boton-sumaResta">
               <input type="button" value="-" id="producto_compra-boton-resta" />
               <input
@@ -26,7 +30,7 @@
               <input type="button" value="+" id="producto_compra-boton-suma" />
             </fieldset>
           </form>
-          <form action="/cart" id="producto_compra-boton-carrito">
+          <form action="/cart" id="producto_compra-boton-carrito" method="post">
             <button id="producto_compra-boton-carrito-mobile">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>

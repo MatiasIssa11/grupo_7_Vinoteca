@@ -22,8 +22,7 @@
 
 .cart_products {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: center;
   border: 1px solid #000;
@@ -61,18 +60,50 @@
   font-size: 26px;
 }
 
-.tachoProductos {
+.cart_products-button {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#producto_compra-precio {
+  margin: 2px 0;
+  width: 100%;
+}
+
+.cart_products-button-substractPlus {
+  font-size: 20px;
+  border: 1px solid #000;
+  width: 80%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0px;
+  margin: 5px auto;
+}
+
+.cart_products-button-substractPlus input {
+  background-color: transparent;
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+.cart_products-button-quantity {
+  text-align: center;
+  width: 80%;
+}
+
+.cart_products-button-cart {
+  font-size: 20px;
+  margin: 5px auto;
+  padding: 4px 6px;
+}
+
+.cart_products-button-trash {
   position: absolute;
   top: 10px;
   right: 10px;
-}
-
-.sumaResta {
-  display: inline-block;
-  padding: 2px 20px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  margin: 5px 0;
 }
 
 #total {
@@ -90,7 +121,7 @@
 #total_send {
   border: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap column;
   margin: 10px 0;
 }
 
@@ -123,13 +154,13 @@
   padding: 5px 15px;
 }
 
-#botonCompra {
+#total_buy-button-checkout {
   padding: 2px 10px;
   border: 1px solid #000;
   border-radius: 5px;
 }
 
-#botonSeguirComprando {
+#total_buy-button-keepBuying {
   padding: 2px 10px;
   border: 1px solid #000;
   border-radius: 5px;

@@ -19,14 +19,11 @@
           </figure>
           <h4 class="main_articulos-texto"><%= element.name %></h4>
           <h4 class="main_articulos-texto">$<%= element.price %></h4>
-          <form action="/cart" method="get">
-            <button class="articulos_boton">Comprar</button>
+          <form action="/cart" method="post">
+            <button class="articulos_boton" value="<%= element.id %>">
+              Comprar
+            </button>
           </form>
-          <!--
-          <form action="/product/<%= element.id %>" method="get">
-            <button class="articulos_boton">+Info</button>
-          </form>
-          -->
           <a href="/product/<%= element.id %>" class="articulos_boton">+Info</a>
         </article>
         <% }) %>
@@ -35,11 +32,11 @@
         <% data.forEach(element=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= element.image %> " />
+            <img src="/<%= element.image %>" />
           </figure>
           <h4 class="main_articulos-texto"><%= element.name %></h4>
           <h4 class="main_articulos-texto">$<%= element.price %></h4>
-          <form action="/cart" method="get">
+          <form action="/cart" method="post">
             <button class="articulos_boton">Comprar</button>
           </form>
           <form action="/product/<%= element.id %>" method="get">

@@ -15,13 +15,16 @@
     width: 50%;
   }
 
-  .sumaResta {
-    margin: 5px 20%;
-  }
-
   .cart_products-price {
     align-self: flex-end;
     padding: 4px 15px;
     width: 30%;
+  }
+  .cart_products-button {
+    flex-direction: row;
+  }
+
+  .cart_products-button-substractPlus {
+    width: 60%;
   }
 }

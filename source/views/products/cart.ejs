@@ -22,9 +22,36 @@
               <h4><%= element.name %></h4>
               <p><%= element.type %></p>
               <p><%= element.location %></p>
-              <a href="" class="sumaResta">- 1 +</a>
+              <form action="/cart" class="cart_products-button" method="post">
+                <fieldset class="cart_products-button-substractPlus">
+                  <input
+                    type="button"
+                    value="-"
+                    class="cart_products-button-substract"
+                  />
+                  <input
+                    type="number"
+                    name="cantidad"
+                    class="cart_products-button-quantity"
+                    placeholder="1"
+                  />
+                  <input
+                    type="button"
+                    value="+"
+                    class="cart_products-button-plus"
+                  />
+                </fieldset>
+                <button class="cart_products-button-cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </form>
             </section>
-            <a href=""><i class="fa-solid fa-trash-can tachoProductos"></i></a>
+            <form action="/cart" method="post">
+              <!-- Proximamente method va a ser delete-->
+              <button>
+                <i class="fa-solid fa-trash-can cart_products-button-trash"></i>
+              </button>
+            </form>
             <h4 class="cart_products-price">$<%= element.price %></h4>
           </article>
           <% }) %>
@@ -39,7 +66,7 @@
               <label for="envio" id="selector"
                 >Seleccione el tipo de envio</label
               >
-              <section>
+              <div>
                 <input
                   type="radio"
                   name="envio"
@@ -47,8 +74,8 @@
                   value="domicilio"
                 />
                 <label for="domicilio">Envio a domicilio</label>
-              </section>
-              <section>
+              </div>
+              <div>
                 <input
                   type="radio"
                   name="envio"
@@ -56,13 +83,19 @@
                   value="domicilio"
                 />
                 <label for="domicilio">Retiro en tienda</label>
-              </section>
+              </div>
             </fieldset>
           </form>
           <section id="total_buy">
             <h4 id="total_buy-title">Total: $21.811</h4>
-            <a href="" id="botonCompra">Iniciar compra</a>
-            <a href="/search" id="botonSeguirComprando">Seguir comprando</a>
+
+            <!-- action a definir-->
+            <form action="" method="post">
+              <button id="total_buy-button-checkout">Iniciar compra</button>
+            </form>
+            <a href="/search" id="total_buy-button-keepBuying"
+              >Seguir comprando
+            </a>
           </section>
         </section>
       </section>
