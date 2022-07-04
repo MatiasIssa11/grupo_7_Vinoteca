@@ -37,20 +37,9 @@
           </form>
           <section id="producto_compra-descripcion">
             <h4>DATOS ANALITICOS</h4>
-            <p>
-              Alcohol: 13,30%<br />
-              Acidez total: 5,50 g/l<br />
-              Azúcar residual: 1,90 g/l
-            </p>
+            <p><%= data.composition %></p>
             <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
-            <p>
-              Vista: Rojo oscuro con reflejos bordó.<br />
-              Nariz: De gran complejidad aromática, se perciben notas a fruta
-              madura que recuerdan a las ciruelas, al agitar la copa aparecen
-              notas a vainilla, caramelo y chocolate.<br />
-              Boca: Vino aterciopelado, con taninos estructurados, de baja
-              acidez, con un retrogusto agradable.
-            </p>
+            <p><%= data.description %></p>
           </section>
         </section>
       </article>
@@ -102,8 +91,7 @@
           </section>
         </section>
       </article>
-    -->
-    </main>
+    --></main>
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>

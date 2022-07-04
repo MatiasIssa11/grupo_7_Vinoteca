@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head.ejs') %>
-</head>
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
   <body>
-  <header>
-    <%- include('../partials/header.ejs') %>
-  </header>
+    <header><%- include('../partials/header.ejs') %></header>
     <main>
       <figure>
         <img src="images/banner.jpg" alt="banner" id="main_banner" />
@@ -23,7 +21,7 @@
             <section class="cart_products_text">
               <h4><%= element.name %></h4>
               <p><%= element.type %></p>
-              <p><%= element.description %></p>
+              <p><%= element.location %></p>
               <a href="" class="sumaResta">- 1 +</a>
             </section>
             <a href=""><i class="fa-solid fa-trash-can tachoProductos"></i></a>
@@ -62,15 +60,13 @@
             </fieldset>
           </form>
           <section id="total_buy">
-            <h4 id="total_buy-title">Total: $16.231</h4>
+            <h4 id="total_buy-title">Total: $21.811</h4>
             <a href="" id="botonCompra">Iniciar compra</a>
             <a href="/search" id="botonSeguirComprando">Seguir comprando</a>
           </section>
         </section>
       </section>
     </main>
-  <footer>
-    <%- include('../partials/footer.ejs') %>
-  </footer>
+    <footer><%- include('../partials/footer.ejs') %></footer>
   </body>
 </html>
