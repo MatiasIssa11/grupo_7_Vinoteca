@@ -2,15 +2,14 @@
 <html lang="en">
   <%- include('../partials/head.ejs') %>
   <body>
-    <%- include('../partials/header.ejs') %>
+    <header><%- include('../partials/header.ejs') %></header>
     <main>
       <figure>
         <img src="images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
-
       <article id="main_producto">
         <figure>
-          <img src="<%= data.image %> " alt="malbec roble" />
+          <img src="<%= data.image %> " />
         </figure>
         <section id="producto_compra">
           <h3 id="producto_compra-nombre"><%= data.name %></h3>
@@ -43,55 +42,7 @@
           </section>
         </section>
       </article>
-
-      <!-- 
-      <article id="main_producto">
-        <figure>
-          <img src="images/malbec-roble.jpg" alt="malbec roble" />
-        </figure>
-        <section id="producto_compra">
-          <h3 id="producto_compra-nombre">Terravita Malbec Roble</h3>
-          <h2 id="producto_compra-precio">$6087</h2>
-          <form action="/product" id="producto_compra-boton">
-            <fieldset id="producto_compra-boton-sumaResta">
-              <input type="button" value="-" id="producto_compra-boton-resta" />
-              <input
-                type="number"
-                name="cantidad"
-                id="producto_compra-boton-cantidad"
-                placeholder="1"
-              />
-              <input type="button" value="+" id="producto_compra-boton-suma" />
-            </fieldset>
-          </form>
-          <form action="/cart" id="producto_compra-boton-carrito">
-            <button id="producto_compra-boton-carrito-mobile">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            <button id="producto_compra-boton-carrito-texto">
-              AGREGAR AL CARRITO
-            </button>
-          </form>
-          <section id="producto_compra-descripcion">
-            <h4>DATOS ANALITICOS</h4>
-            <p>
-              Alcohol: 13,30%<br />
-              Acidez total: 5,50 g/l<br />
-              Azúcar residual: 1,90 g/l
-            </p>
-            <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
-            <p>
-              Vista: Rojo oscuro con reflejos bordó.<br />
-              Nariz: De gran complejidad aromática, se perciben notas a fruta
-              madura que recuerdan a las ciruelas, al agitar la copa aparecen
-              notas a vainilla, caramelo y chocolate.<br />
-              Boca: Vino aterciopelado, con taninos estructurados, de baja
-              acidez, con un retrogusto agradable.
-            </p>
-          </section>
-        </section>
-      </article>
-    --></main>
-    <%- include('../partials/footer.ejs') %>
+    </main>
+    <footer><%- include('../partials/footer.ejs') %></footer>
   </body>
 </html>
