@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head.ejs') %>
-</head>
-<body>
-  <header>
-    <%- include('../partials/header.ejs') %>
-  </header>
-  <main>
-    <nav class="search_secundary-navbar">
-      <p id="search_burgermenu"><i class="fa fa-bars fa-2x"></i></p>
-    </nav>
-    <aside id="search_lateral">
-      <section class="search_parametros">
-        <form  action="/orden" method="GET">
-          <lebel class="search_titulos"> Ordenar segun: </lebel>
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <header><%- include('../partials/header.ejs') %></header>
+    <main>
+      <nav class="search_secundary-navbar">
+        <p id="search_burgermenu"><i class="fa fa-bars fa-2x"></i></p>
+      </nav>
+      <aside id="search_lateral">
+        <section class="search_parametros">
+          <form action="/orden" method="GET">
+            <lebel class="search_titulos"> Ordenar segun: </lebel>
             <select class="search_ordenar" name="orden">
-            <option value="precio">Precio</option>
-            <option value="marca">Marca</option>
-            <option value="categoria">Categoria</option>
-          </select>
-        </form>
-      </section>
-      <section class="search_parametros">
-        <h3 class="search_titulos">Mostrar:</h3>
-        <div class="search_mostrar">
-          <input type="radio" name="mostrar" value="grilla" />
-          <label for="grilla"> Grilla </label>
-        </div>
-        <div class="search_mostrar">
-          <input type="radio" name="mostrar" value="lista" />
-          <label for="lista"> Lista </label>
-        </div>
-      </section>
-      <section class="search_parametros">
+              <option value="precio">Precio</option>
+              <option value="marca">Marca</option>
+              <option value="categoria">Categoria</option>
+            </select>
+          </form>
+        </section>
+        <section class="search_parametros">
+          <h3 class="search_titulos">Mostrar:</h3>
+          <div class="search_mostrar">
+            <input type="radio" name="mostrar" value="grilla" />
+            <label for="grilla"> Grilla </label>
+          </div>
+          <div class="search_mostrar">
+            <input type="radio" name="mostrar" value="lista" />
+            <label for="lista"> Lista </label>
+          </div>
+        </section>
+        <section class="search_parametros">
           <h3 class="search_titulos">Categorias</h3>
           <div class="search_categorias">
             <input type="radio" name="categoria" value="malbec" />
@@ -67,41 +65,37 @@
             <input type="radio" name="categoria" value="sauvignon-blanc" />
             <label for="lista"> Sauvignon Blanc </label>
           </div>
+        </section>
+      </aside>
+
+      <section class="grilla">
+        <h2>PRODUCTOS</h2>
+        <% data.forEach(element => { %>
+        <article class="articulos">
+          <img src="/<%= element.image %>" />
+          <section class="textoProductos">
+            <h4 class="nombreProducto"><%= element.name %></h4>
+            <h4 class="precio">$<%= element.price %></h4>
+            <a href="" class="botonArticulo">Comprar</a>
+            <a href="/product" class="botonArticulo">+Info</a>
+          </section>
+        </article>
+        <% }) %>
+
+        <h2>NOVEDADES</h2>
+        <% data.forEach(element => { %>
+        <article class="articulos">
+          <img src="/<%= element.image %>" />
+          <section class="textoProductos">
+            <h4 class="nombreProducto"><%= element.name %></h4>
+            <h4 class="precio">$<%= element.price %></h4>
+            <a href="" class="botonArticulo">Comprar</a>
+            <a href="/product" class="botonArticulo">+Info</a>
+          </section>
+        </article>
+        <% }) %>
       </section>
-    </aside>
-
-    <section class="grilla">
-      
-      <h2>PRODUCTOS</h2>
-        <% data.forEach(element => { %>         
-          <article class="articulos">
-            <img src="<%= element.image %>" />
-            <section class="textoProductos">
-              <h4 class="nombreProducto"><%= element.name %> </h4>
-              <h4 class="precio">$<%= element.price %> </h4>
-              <a href="" class="botonArticulo">Comprar</a>
-              <a href="/product" class="botonArticulo">+Info</a>
-            </section>
-          </article>
-        <% }) %>
-        
-      <h2>NOVEDADES</h2>
-        <% data.forEach(element => { %>         
-          <article class="articulos">
-            <img src="<%= element.image %>" />
-            <section class="textoProductos">
-              <h4 class="nombreProducto"><%= element.name %> </h4>
-              <h4 class="precio">$<%= element.price %> </h4>
-              <a href="" class="botonArticulo">Comprar</a>
-              <a href="/product" class="botonArticulo">+Info</a>
-            </section>
-          </article>
-        <% }) %>
-
-    </section>
-  </main>
-  <footer>
-    <%- include('../partials/footer.ejs') %>
-  </footer>
-</body>
+    </main>
+    <footer><%- include('../partials/footer.ejs') %></footer>
+  </body>
 </html>

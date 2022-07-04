@@ -5,16 +5,16 @@
     <header><%- include('../partials/header.ejs') %></header>
     <main>
       <figure>
-        <img src="images/banner.jpg" alt="banner" id="main_banner" />
+        <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
       <article id="main_producto">
         <figure>
-          <img src="<%= data.image %> " />
+          <img src="/<%= data.image %> " />
         </figure>
         <section id="producto_compra">
           <h3 id="producto_compra-nombre"><%= data.name %></h3>
           <h2 id="producto_compra-precio">$<%= data.price %></h2>
-          <form action="/product" id="producto_compra-boton">
+          <form action="/product/<%= element.id %>" id="producto_compra-boton">
             <fieldset id="producto_compra-boton-sumaResta">
               <input type="button" value="-" id="producto_compra-boton-resta" />
               <input

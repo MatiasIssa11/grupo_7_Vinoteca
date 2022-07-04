@@ -7,7 +7,7 @@ module.exports = [
     location: "Maipu Mendoza",
     image: "images/malbec-roble.jpg",
     composition:
-      "Alcohol. 13,30%\nAcidez total. 5,50 g/l\nAzúcar residual. 1,90 g/l",
+      "Alcohol. 13,30% \n Acidez total. 5,50 g/l \n Azúcar residual. 1,90 g/l",
     description:
       "Vista: Rojo oscuro con reflejos bordó.\nNariz: De gran complejidad aromática, se perciben notas a fruta madura que recuerdan a las ciruelas, al agitar la copa aparecen notas a vainilla, caramelo y chocolate.\nBoca: Vino aterciopelado, con taninos estructurados, de baja acidez, con un retrogusto agradable.",
   },

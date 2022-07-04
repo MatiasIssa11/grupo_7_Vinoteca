@@ -7,7 +7,7 @@
     <header><%- include('../partials/header.ejs') %></header>
     <main>
       <figure>
-        <img src="images/banner.jpg" alt="banner" id="main_banner" />
+        <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
       <section id="mainSection">
         <h2>CARRITO DE COMPRAS</h2>
@@ -16,7 +16,7 @@
           <% data.forEach(element => { %>
           <article class="cart_products">
             <figure>
-              <img src="<%= element.image %>" />
+              <img src="/<%= element.image %>" />
             </figure>
             <section class="cart_products_text">
               <h4><%= element.name %></h4>
