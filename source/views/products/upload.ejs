@@ -9,30 +9,27 @@
     </header>
     <main>
       <section id="upload_caja">
-        
         <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
         <form id="upload" action="/register" method="post">
           <div>
-            <div id='upload-linea-form'>
+            <div id='upload_linea-form'>
               <label for="name-product" class="upload_texto">Producto: </label>
               <input type="text" name="name-product" class="upload_campo" minlength="4"/>
             </div>
-            <div id='upload-linea-form'>
+            <div id='upload_linea-form'>
               <label for="description" class="upload_texto">Descripcion: </label>
               <textarea type="text" name="description" class="upload_campo-descripcion" minlength="4"> </textarea>
             </div>
-            <div id='upload-linea-form'>
+            <div id='upload_linea-form'>
               <label for="price" class="upload_texto">Precio: </label>
               <input type="text" name="price" class="upload_campo" minlength="4"/>
             </div>
-            <div id='upload-linea-form'>
+            <div id='upload_linea-form'>
               <label for="email" class="upload_texto">Imagen: </label>
               <input  class="upload_campo-imagen" type="file" name="image" accept=".jpg" multiple>
             </div>
             <div id="upload_botonera">
-              <button id="upload_crear-cuenta" type="button">
-                <a class="upload_boton-principal" href=" ">Cargar producto</a>
-              </button>
+              <button id="upload_crear-cuenta" type="button"> Publicar producto </button>
             </div>
           </div>
         </form>

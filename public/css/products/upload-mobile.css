@@ -29,7 +29,7 @@
   font-family: Bitter, serif;
 }
 
-#upload-linea-form {
+#upload_linea-form {
   display: block;
   padding: 0 0 10px 0;
   justify-content: center;
@@ -62,7 +62,7 @@
 .upload_texto {
   display: flex;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   font-family: Alegreya Sans, sans-serif;
 }
 

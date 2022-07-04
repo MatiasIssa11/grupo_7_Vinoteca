@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <%- include('../partials/head.ejs') %>
+</head>
   <body>
-    <%- include('../partials/header.ejs') %>
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
     <main>
-      <section id="caja-register">
-        <h1 id="caja-register-titulo">EDITAR PRODUCTO</h1>
-        <form id="register" action="/register" method="post">
-          <section>
-            <article>
-              <label for="name-product" class="texto">Producto: </label>
-              <input
-                type="text"
-                name="name-product"
-                class="campo-register"
-                minlength="4"
-              />
-            </article>
-
-            <article>
-              <label for="description" class="texto">Descripcion: </label>
-              <textarea type="text" name="description" class="campo-register-descripcion" minlength="4"> </textarea>
-            </article>
-
-            <article>
-               <label for="price" class="texto">Precio: </label>
-               <input
-                 type="text"
-                 name="price"
-                 class="campo-register"
-                 minlength="4"
-               />
-             </article>
-
-             <article>
-               <label for="email" class="texto">Imagen: </label>
-               <input  class="campo-register-imagen" type="file" name="image" accept=".jpg" multiple>
-             </article>
-
-            <section id="botonera">
-              <button id="crear-cuenta" type="button">
-                <a class="boton-principal" href=" ">Confirmar edicion</a>
-              </button>
-             
-            </section>
-          </section>
+      <section id="edit_caja">
+        <h1 id="edit_caja-titulo">EDITAR PRODUCTO</h1>
+        <form id="edit" action="/register" method="post">
+          <div>
+            <div id='edit_linea-form'>
+              <label for="name-product" class="edit_texto">Producto: </label>
+              <input type="text" name="name-product" class="edit_campo" minlength="4"/>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="description" class="edit_texto">Descripcion: </label>
+              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4"> </textarea>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="price" class="edit_texto">Precio: </label>
+              <input type="text" name="price" class="edit_campo" minlength="4"/>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="email" class="edit_texto">Imagen: </label>
+              <input  class="edit_campo-imagen" type="file" name="image" accept=".jpg" multiple>
+            </div>
+            <div id="edit_botonera">
+              <button id="edit_confirmar-edicion" type="button">Confirmar modificaciones</button>
+            </div>
+          </div>
         </form>
       </section>
     </main>
-    <%- include('../partials/footer.ejs') %>
+    <footer>
+      <%- include('../partials/footer.ejs') %>
+    </footer>
   </body>
 </html>

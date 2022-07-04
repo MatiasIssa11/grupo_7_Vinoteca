@@ -1,10 +1,10 @@
-#caja-register {
+#edit_caja {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#caja-register-titulo {
+#edit_caja-titulo {
   background-color: #401909;
   color: white;
   margin: 20px 0 0 0;
@@ -16,7 +16,7 @@
   width: 90%;
 }
 
-#register {
+#edit {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,14 +29,14 @@
   font-family: Bitter, serif;
 }
 
-article {
+#edit_linea-form {
   display: block;
   padding: 0 0 10px 0;
   justify-content: center;
   align-items: center;
 }
 
-.campo-register {
+.edit_campo {
   border-radius: 10px;
   width: 250px;
   height: 25px;
@@ -44,7 +44,7 @@ article {
   border: none;
 }
 
-.campo-register-descripcion {
+.edit_campo-descripcion {
   border-radius: 10px;
   width: 250px;
   height: 50px;
@@ -52,40 +52,32 @@ article {
   border: none;
 }
 
-.campo-register-imagen {
+.edit_campo-imagen {
     width: 280px;
   height: 25px;
   text-align: center;
   border: none;
 }
 
-.texto {
+.edit_texto {
   display: flex;
   color: #fff;
-  font-size: 15px;
-  font-family: Bitter, serif;
+  font-size: 17px;
+  font-family: Alegreya Sans, sans-serif;
 }
 
-#botonera {
+#edit_botonera {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#crear-cuenta {
+#edit_confirmar-edicion {
   width: 80%;
   padding: 10px;
   margin: 20px 0 25px 0;
   font-size: 20px;
   font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  font-family: Alegreya Sans, sans-serif;
-}
-
-#iniciar-sesion {
-  width: 50%;
-  font-size: 15px;
   border-radius: 5px;
   border: none;
   font-family: Alegreya Sans, sans-serif;
