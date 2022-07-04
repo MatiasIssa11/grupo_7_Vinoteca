@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <%- include('../partials/head.ejs') %>
+</head>
   <body>
-    <%- include('../partials/header.ejs') %>
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
     <main>
-      <section id="caja-register">
-        <h1 id="caja-register-titulo">NUEVO PRODUCTO</h1>
-        <form id="register" action="/register" method="post">
-          <section>
-            <article>
-              <label for="name-product" class="texto">Producto: </label>
-              <input
-                type="text"
-                name="name-product"
-                class="campo-register"
-                minlength="4"
-              />
-            </article>
-
-            <article>
-              <label for="description" class="texto">Descripcion: </label>
-              <textarea type="text" name="description" class="campo-register-descripcion" minlength="4"> </textarea>
-            </article>
-
-            <article>
-               <label for="price" class="texto">Precio: </label>
-               <input
-                 type="text"
-                 name="price"
-                 class="campo-register"
-                 minlength="4"
-               />
-             </article>
-
-             <article>
-               <label for="email" class="texto">Imagen: </label>
-               <input  class="campo-register-imagen" type="file" name="image" accept=".jpg" multiple>
-             </article>
-
-            <section id="botonera">
-              <button id="crear-cuenta" type="button">
-                <a class="boton-principal" href=" ">Cargar producto</a>
+      <section id="upload_caja">
+        
+        <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
+        <form id="upload" action="/register" method="post">
+          <div>
+            <div id='upload-linea-form'>
+              <label for="name-product" class="upload_texto">Producto: </label>
+              <input type="text" name="name-product" class="upload_campo" minlength="4"/>
+            </div>
+            <div id='upload-linea-form'>
+              <label for="description" class="upload_texto">Descripcion: </label>
+              <textarea type="text" name="description" class="upload_campo-descripcion" minlength="4"> </textarea>
+            </div>
+            <div id='upload-linea-form'>
+              <label for="price" class="upload_texto">Precio: </label>
+              <input type="text" name="price" class="upload_campo" minlength="4"/>
+            </div>
+            <div id='upload-linea-form'>
+              <label for="email" class="upload_texto">Imagen: </label>
+              <input  class="upload_campo-imagen" type="file" name="image" accept=".jpg" multiple>
+            </div>
+            <div id="upload_botonera">
+              <button id="upload_crear-cuenta" type="button">
+                <a class="upload_boton-principal" href=" ">Cargar producto</a>
               </button>
-             
-            </section>
-          </section>
+            </div>
+          </div>
         </form>
       </section>
     </main>
-    <%- include('../partials/footer.ejs') %>
+    <footer>
+      <%- include('../partials/footer.ejs') %>
+    </footer>
   </body>
 </html>

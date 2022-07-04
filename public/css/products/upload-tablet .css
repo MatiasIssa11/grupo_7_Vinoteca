@@ -1,23 +1,24 @@
 @media (min-width: 650px) {
-  article {
+
+  #upload-linea-form {
     display: flex;
     padding: 10px 0 10px 0;
     justify-content: space-around;
   }
 
-  .texto {
+  .upload_texto {
     width: 150px;
   }
 
-  #caja-register-titulo {
+  #upload_caja-titulo {
     width: 60%;
   }
 
-  #register {
+  #upload {
     width: 60%;
   }
 
-  .campo-register {
+  .upload_campo {
     width: 230px;
   }
 }
