@@ -36,9 +36,13 @@
           </form>
           <section id="producto_compra-descripcion">
             <h4>DATOS ANALITICOS</h4>
-            <p><%= data.composition %></p>
+            <% data.composition.forEach(element => { %>
+            <p><%= element %></p>
+            <% }) %>
             <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
-            <p><%= data.description %></p>
+            <% data.description.forEach(element => { %>
+            <p><%= element %></p>
+            <% }) %>
           </section>
         </section>
       </article>
