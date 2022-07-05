@@ -20,6 +20,7 @@
             </select>
           </form>
         </section>
+
         <section class="search_parametros">
           <h3 class="search_titulos">Mostrar:</h3>
           <div class="search_mostrar">
@@ -31,8 +32,20 @@
             <label for="lista"> Lista </label>
           </div>
         </section>
+
+       
         <section class="search_parametros">
           <h3 class="search_titulos">Categorias</h3>
+          
+         <!--
+          <% searchCategorias.forEach(element => { %>
+          <div class="search_categorias">
+            <input type="radio" name= "<%= element %>" value= "<%= element %>" />
+            <label for="lista"> <%= element %> </label>
+          </div>
+          <% }) %>
+         -->
+          
           <div class="search_categorias">
             <input type="radio" name="categoria" value="malbec" />
             <label for="lista"> Malbec </label>
@@ -65,14 +78,15 @@
             <input type="radio" name="categoria" value="sauvignon-blanc" />
             <label for="lista"> Sauvignon Blanc </label>
           </div>
+          
         </section>
       </aside>
-
+      
       <section class="grilla">
         <h2>PRODUCTOS</h2>
         <% data.forEach(element => { %>
         <article class="articulos">
-          <img src="/<%= element.image %>" />
+          <img src="<%= element.image %>" />
           <section class="textoProductos">
             <h4 class="nombreProducto"><%= element.name %></h4>
             <h4 class="precio">$<%= element.price %></h4>
@@ -85,7 +99,7 @@
         <h2>NOVEDADES</h2>
         <% data.forEach(element => { %>
         <article class="articulos">
-          <img src="/<%= element.image %>" />
+          <img src="<%= element.image %>" />
           <section class="textoProductos">
             <h4 class="nombreProducto"><%= element.name %></h4>
             <h4 class="precio">$<%= element.price %></h4>
@@ -95,6 +109,7 @@
         </article>
         <% }) %>
       </section>
+      
     </main>
     <footer><%- include('../partials/footer.ejs') %></footer>
   </body>

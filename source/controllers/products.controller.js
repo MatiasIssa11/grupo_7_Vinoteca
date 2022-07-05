@@ -1,4 +1,5 @@
 const data = require("../modules/data");
+const searchCategorias = require("../modules/searchCategorias");
 
 module.exports = {
   product: (req, res) => {
@@ -37,6 +38,7 @@ module.exports = {
         "/products/search-desktop",
       ],
       data: data,
+      searchCategorias: searchCategorias,
     });
   },
 
