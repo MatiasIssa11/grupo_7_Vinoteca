@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node source/index.js",
+    "test": "nodemon source/index.js -e json,js,mjs,ejs",
     "start": "node source/index.js"
   },
   "repository": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/elpibe12/grupo_7_Vinoteca#readme",
   "devDependencies": {
-    "nodemon": "^1.3.3"
+    "nodemon": "^2.0.19"
   }
 }
