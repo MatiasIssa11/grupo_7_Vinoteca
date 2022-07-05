@@ -33,55 +33,18 @@
           </div>
         </section>
 
-       
         <section class="search_parametros">
           <h3 class="search_titulos">Categorias</h3>
-          
-         <!--
+
           <% searchCategorias.forEach(element => { %>
           <div class="search_categorias">
-            <input type="radio" name= "<%= element %>" value= "<%= element %>" />
+            <input type="radio" name="<%= element %>" value="<%= element %>" />
             <label for="lista"> <%= element %> </label>
           </div>
           <% }) %>
-         -->
-          
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="malbec" />
-            <label for="lista"> Malbec </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="cabernet-sauvignon" />
-            <label for="lista"> Cabernet Sauvignon </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="cabernet-franc" />
-            <label for="lista"> Cabernet Franc</label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="malbec" />
-            <label for="lista"> Merlot </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="syrah" />
-            <label for="lista"> Syrah </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="pinot-noir" />
-            <label for="lista"> Pinot Noir </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="chardonnay" />
-            <label for="lista"> Chardonnay </label>
-          </div>
-          <div class="search_categorias">
-            <input type="radio" name="categoria" value="sauvignon-blanc" />
-            <label for="lista"> Sauvignon Blanc </label>
-          </div>
-          
         </section>
       </aside>
-      
+
       <section class="grilla">
         <h2>PRODUCTOS</h2>
         <% data.forEach(element => { %>
@@ -109,7 +72,6 @@
         </article>
         <% }) %>
       </section>
-      
     </main>
     <footer><%- include('../partials/footer.ejs') %></footer>
   </body>

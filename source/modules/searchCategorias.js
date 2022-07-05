@@ -1,14 +1,10 @@
 module.exports = [
-  {    
-    categorias: [
-      "Malbec",
-      "Cabernet Sauvignon",
-      "Cabernet Franc",
-      "Merlot",
-      "Syrah",
-      "Pinot Noir",
-      "Chardonnay",
-      "Sauvignon Blanc",      
-    ],
-  },
- ];
+  "Malbec",
+  "Cabernet Sauvignon",
+  "Cabernet Franc",
+  "Merlot",
+  "Syrah",
+  "Pinot Noir",
+  "Chardonnay",
+  "Sauvignon Blanc",
+];
