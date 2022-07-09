@@ -83,12 +83,12 @@ main {
  .search_parametros {
    display: flex;
    flex-wrap: wrap;
-   padding: 10px 0 10px 0;
+ 
    width: 100%;
  }
 
 .search_ordenar {
-   width: 100%;
+   width: 200px;
    padding: 5px 0 5px 0;
    border: none;
    border-radius: 5px;
@@ -106,7 +106,7 @@ main {
 
 .search_titulos {
    font-size: 20px;
-   padding: 0 0 5px 0;
+   padding: 15px 0 10px 0;
    font-weight: normal;
  }
 
