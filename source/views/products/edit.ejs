@@ -8,32 +8,69 @@
       <%- include('../partials/header.ejs') %>
     </header>
     <main>
-      <section id="edit_caja">
+      
+      <fieldset id="edit_caja">
         <h1 id="edit_caja-titulo">EDITAR PRODUCTO</h1>
-        <form id="edit" action="/register" method="post">
+        <form id="edit" action="/edit" method="post">
+
           <div>
             <div id='edit_linea-form'>
-              <label for="name-product" class="edit_texto">Producto: </label>
+              <label for="name-product" class="edit_texto">Marca: </label>
               <input type="text" name="name-product" class="edit_campo" minlength="4"/>
             </div>
             <div id='edit_linea-form'>
-              <label for="description" class="edit_texto">Descripcion: </label>
-              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4"> </textarea>
+              <label for="categoria" class="edit_texto">Categoria: </label>
+              <input type="text" name="categoria" class="edit_campo" minlength="4"/>
             </div>
             <div id='edit_linea-form'>
               <label for="price" class="edit_texto">Precio: </label>
               <input type="text" name="price" class="edit_campo" minlength="4"/>
-            </div>
+            </div>      
             <div id='edit_linea-form'>
               <label for="email" class="edit_texto">Imagen: </label>
               <input  class="edit_campo-imagen" type="file" name="image" accept=".jpg" multiple>
             </div>
-            <div id="edit_botonera">
-              <button id="edit_confirmar-edicion" type="button">Confirmar modificaciones</button>
+
+            <h3 class="edit_titulos"> Datos analiticos: </h3>
+            <div id='edit_linea-form'>
+              <label for="alcohol" class="edit_texto">Alcohol: </label>
+              <textarea type="text" name="alcohol" class="edit_campo" minlength="4"> </textarea>
             </div>
+            <div id='edit_linea-form'>
+              <label for="acidez" class="edit_texto">Acidez total: </label>
+              <textarea type="text" name="acidez" class="edit_campo" minlength="4"> </textarea>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="azucar" class="edit_texto">Azucar residual: </label>
+              <textarea type="text" name="azucar" class="edit_campo" minlength="4"> </textarea>
+            </div>
+
+            <h3 class="edit_titulos"> Caracteristicas degustativas: </h3>
+            <div id='edit_linea-form'>
+              <label for="vista" class="edit_texto">Vista: </label>
+              <textarea type="text" name="vista" class="edit_campo" minlength="4"> </textarea>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="nariz" class="edit_texto">Nariz: </label>
+              <textarea type="text" name="nariz" class="edit_campo" minlength="4"> </textarea>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="boca" class="edit_texto">Boca: </label>
+              <textarea type="text" name="boca" class="edit_campo" minlength="4"> </textarea>
+            </div>
+            <div id='edit_linea-form'>
+              <label for="description" class="edit_texto">Otros: </label>
+              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4"> </textarea>
+            </div>
+           
+            <div id="edit_botonera">
+              <button id="edit_confirmar-edicion" type="button"> Confirmar modificaciones: </button>
+            </div>
+
           </div>
         </form>
-      </section>
+      </fieldset>
+
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>
