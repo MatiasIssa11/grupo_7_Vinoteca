@@ -38,6 +38,24 @@
               AGREGAR AL CARRITO
             </button>
           </form>
+
+          <section id="producto_compra-descripcion">
+
+            <h4>DATOS ANALITICOS</h4>
+          
+            <p>Alcohol: <%= data.alcohol %></p>
+            <p>Acidez total: <%= data.acidez %></p>
+            <p>Azucar total: <%= data.azucar %></p>
+
+            <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
+
+            <p>Vista: <%=  data.vista %></p>
+            <p>Nariz: <%=  data.nariz %></p>
+            <p>Boca: <%=  data.boca %></p>
+
+          </section>
+
+          <!-- 
           <section id="producto_compra-descripcion">
             <h4>DATOS ANALITICOS</h4>
             <% data.composition.forEach(element => { %>
@@ -48,6 +66,8 @@
             <p><%= element %></p>
             <% }) %>
           </section>
+         -->
+
         </section>
       </article>
     </main>
