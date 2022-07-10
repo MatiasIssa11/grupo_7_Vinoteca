@@ -1,4 +1,5 @@
-[{"nombre":"Carley","apellido":"Mushet","email":"cmushet0@adobe.com","fecha-nacimiento":"18.02.1978","clave":"YtICJMDqc8I"},
+[
+{"nombre":"Carley","apellido":"Mushet","email":"cmushet0@adobe.com","fecha-nacimiento":"18.02.1978","clave":"YtICJMDqc8I"},
 {"nombre":"Cesya","apellido":"Kaufman","email":"ckaufman1@tinyurl.com","fecha-nacimiento":"23.11.1967","clave":"RabhYWnt"},
 {"nombre":"Sadye","apellido":"Wheldon","email":"swheldon2@examiner.com","fecha-nacimiento":"26.05.1961","clave":"CzOyQ53sf"},
 {"nombre":"Teodor","apellido":"Truluck","email":"ttruluck3@so-net.ne.jp","fecha-nacimiento":"21.12.1961","clave":"6MxOmq81"},
@@ -97,4 +98,5 @@
 {"nombre":"Gene","apellido":"Marchello","email":"gmarchello2o@mozilla.org","fecha-nacimiento":"14.06.1938","clave":"ylyTQXRTXm9"},
 {"nombre":"Domini","apellido":"Melly","email":"dmelly2p@craigslist.org","fecha-nacimiento":"21.02.1935","clave":"2GeePqvB"},
 {"nombre":"Alisun","apellido":"Pappi","email":"apappi2q@quantcast.com","fecha-nacimiento":"19.09.1943","clave":"D6C1sv10"},
-{"nombre":"Gordy","apellido":"Kinghorne","email":"gkinghorne2r@nasa.gov","fecha-nacimiento":"08.12.1973","clave":"zUHPssYlC"}]
+{"nombre":"Gordy","apellido":"Kinghorne","email":"gkinghorne2r@nasa.gov","fecha-nacimiento":"08.12.1973","clave":"zUHPssYlC"}
+]

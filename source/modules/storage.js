@@ -11,7 +11,8 @@ const storage = directory => diskStorage({
    filename: (req, file, callback) => {
       let fileName = `${file.fieldname}-${Date.now()}_img${extname(file.originalname)}`;
       return callback(null, fileName);
-  }
+   }
+   
 });
 
 module.exports = storage;
