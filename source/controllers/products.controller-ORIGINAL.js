@@ -1,9 +1,8 @@
 const data = require("../modules/data");
-const {index, one, create, write} = require('../models/products.model');
+const {index, one ,create, write} = require('../models/products.model');
 const searchCategorias = require("../modules/searchCategorias");
 
 module.exports = {
-  /*
   product: (req, res) => {
     let idProduct = parseInt(req.params.id);
     idProduct = !idProduct ? 1 : idProduct; //Para asegurarme de que tenga un valor el IdProduct
@@ -11,29 +10,12 @@ module.exports = {
     return res.render("./products/product", {
       title: "Cava Wines-Producto",
       styles: [
-        "products/product-mobile",
-        "products/product-tablet",
-        "products/product-desktop",
-      ],
-      data: data.find((element) => element.id === idProduct),
-    });
-  },*/
-
-  product: (req, res) => {
-    let product = one(parseInt(req.params.id))
-
-    if(!product){
-      return res.redirect('/')
-    }
-    return res.render('products/product', {
-      title: 'Cava Wines-Detalle Producto',
-      styles: [
         "/products/product-mobile",
         "/products/product-tablet",
         "/products/product-desktop",
       ],
-      product:product 
-    })
+      data: data.find((element) => element.id === idProduct),
+    });
   },
 
   cart: (req, res) => {

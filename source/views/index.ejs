@@ -24,7 +24,7 @@
               Comprar
             </button>
           </form>
-          <a href="/product/<%= element.id %>" class="articulos_boton">+Info</a>
+          <a href="/products/<%= element.id %>" class="articulos_boton">+Info</a>
         </article>
         <% }) %>
 
@@ -39,7 +39,7 @@
           <form action="/cart" method="post">
             <button class="articulos_boton">Comprar</button>
           </form>
-          <form action="/product/<%= element.id %>" method="get">
+          <form action="/products/<%= element.id %>" method="get">
             <button class="articulos_boton">+Info</button>
           </form>
         </article>

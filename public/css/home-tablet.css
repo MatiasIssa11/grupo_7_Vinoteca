@@ -2,7 +2,8 @@
   .main_grilla {
     grid-template-columns: 1fr 1fr;
     max-width: none;
-
+    padding: 15px 15px 5px 0;
+  
   }
 
   .main_grilla h2 {

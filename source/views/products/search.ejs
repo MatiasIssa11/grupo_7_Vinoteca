@@ -49,33 +49,42 @@
         </fieldset>
       </aside>
 
-      <section class="grilla">
-        <h2>PRODUCTOS</h2>
-        <% data.forEach(element => { %>
-        <article class="articulos">
-          <img src="<%= element.image %>" />
-          <section class="textoProductos">
-            <h4 class="nombreProducto"><%= element.name %></h4>
-            <h4 class="precio">$<%= element.price %></h4>
-            <a href="" class="botonArticulo">Comprar</a>
-            <a href="/product" class="botonArticulo">+Info</a>
-          </section>
+      <section class="main_grilla">
+        <h2>OFERTAS</h2>
+        <% data.forEach(element=> { %>
+        <article class="main_articulos">
+          <figure>
+            <img src="/<%= element.image %> " />
+          </figure>
+          <h4 class="main_articulos-texto"><%= element.name %></h4>
+          <h4 class="main_articulos-texto">$<%= element.price %></h4>
+          <form action="/cart" method="post">
+            <button class="articulos_boton" value="<%= element.id %>">
+              Comprar
+            </button>
+          </form>
+          <a href="/products/<%= element.id %>" class="articulos_boton">+Info</a>
         </article>
         <% }) %>
 
         <h2>NOVEDADES</h2>
-        <% data.forEach(element => { %>
-        <article class="articulos">
-          <img src="<%= element.image %>" />
-          <section class="textoProductos">
-            <h4 class="nombreProducto"><%= element.name %></h4>
-            <h4 class="precio">$<%= element.price %></h4>
-            <a href="" class="botonArticulo">Comprar</a>
-            <a href="/product" class="botonArticulo">+Info</a>
-          </section>
+        <% data.forEach(element=> { %>
+        <article class="main_articulos">
+          <figure>
+            <img src="/<%= element.image %>" />
+          </figure>
+          <h4 class="main_articulos-texto"><%= element.name %></h4>
+          <h4 class="main_articulos-texto">$<%= element.price %></h4>
+          <form action="/cart" method="post">
+            <button class="articulos_boton">Comprar</button>
+          </form>
+          <form action="/products/<%= element.id %>" method="get">
+            <button class="articulos_boton">+Info</button>
+          </form>
         </article>
         <% }) %>
       </section>
+      
     </main>
     <footer><%- include('../partials/footer.ejs') %></footer>
   </body>
