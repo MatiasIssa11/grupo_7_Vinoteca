@@ -20,11 +20,11 @@ module.exports = {
   },*/
 
   product: (req, res) => {
-    let product = one(parseInt(req.params.id))
+    let product = one(parseInt(req.params.id));
 
-    if(!product){
+    /*if(!product){
       return res.redirect('/')
-    }
+    }*/
     return res.render('products/product', {
       title: 'Cava Wines-Detalle Producto',
       styles: [
@@ -32,7 +32,7 @@ module.exports = {
         "/products/product-tablet",
         "/products/product-desktop",
       ],
-      product:product 
+      product: product,
     })
   },
 

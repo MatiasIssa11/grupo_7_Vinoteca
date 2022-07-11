@@ -9,13 +9,13 @@
       </figure>
       <article id="main_producto">
         <figure>
-          <img src="/<%= data.image %>" />
+          <img src="/<%= product.image %>" />
         </figure>
         <section id="producto_compra">
-          <h3 id="producto_compra-nombre"><%= data.name %></h3>
-          <h2 id="producto_compra-precio">$<%= data.price %></h2>
+          <h3 id="producto_compra-nombre"><%= product.name %></h3>
+          <h2 id="producto_compra-precio">$<%= product.price %></h2>
           <form
-            action="/product/<%= data.id %>"
+            action="/product/<%= product.id %>"
             id="producto_compra-boton"
             method="post"
           >
@@ -39,25 +39,25 @@
             </button>
           </form>
 
-          <!-- 
-
           <section id="producto_compra-descripcion">
                     
             <h4>DATOS ANALITICOS</h4>
           
-            <p>Alcohol: <%= data.alcohol %></p>
-            <p>Acidez total: <%= data.acidez %></p>
-            <p>Azucar total: <%= data.azucar %></p>
+            <!--Se reemplazo todos los data.XXX por product.XXX-->
+
+            <p>Alcohol: <%= product.alcohol %></p>
+            <p>Acidez total: <%= product.acidez %></p>
+            <p>Azucar total: <%= product.azucar %></p>
 
             <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
 
-            <p>Vista: <%=  data.vista %></p>
-            <p>Nariz: <%=  data.nariz %></p>
-            <p>Boca: <%=  data.boca %></p>
+            <p>Vista: <%=  product.vista %></p>
+            <p>Nariz: <%=  product.nariz %></p>
+            <p>Boca: <%=  product.boca %></p>
           
           </section>
-          -->
-
+          
+          <!-- 
           <section id="producto_compra-descripcion">
             <h4>DATOS ANALITICOS</h4>
             <% data.composition.forEach(element => { %>
@@ -68,7 +68,8 @@
             <p><%= element %></p>
             <% }) %>
           </section>
-         
+          -->
+
         </section>
       </article>
     </main>
