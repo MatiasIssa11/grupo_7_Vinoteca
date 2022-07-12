@@ -2,14 +2,16 @@ const { Router } = require("express");
 const routes = Router();
 const { cart, product, search, upload, edit } = require("../controllers/products.controller");
 
-routes.get("/products/:id?", product); 
-routes.get("/cart", cart);
-routes.get("/search", search);
+routes.get("/", search); // Listado de productos
+routes.get("/create", upload); // Formulario de creacion de productos "Create"
+routes.get("/cart", cart); // Carrito de compras
+routes.get("/edit/:id?", edit); // Forulario de edicion de productos
+routes.get("/:id?", product); // Detalle producto particular (id)
 
-routes.get("/upload", upload);
-routes.post("/upload", upload);
+routes.post("/save", upload); // Creacion de producto
 
-routes.get("/edit", edit);
-routes.put("/edit", edit);
+routes.put("/edit/:id?", edit); // Formulario de edicion de productos - Envio
+
+routes.delete("/:id?", edit); // Formulario de edicion de productos - Envio
 
 module.exports = routes;

@@ -22,9 +22,9 @@ module.exports = {
   product: (req, res) => {
     let product = one(parseInt(req.params.id));
 
-    /*if(!product){
+    if(!product){
       return res.redirect('/')
-    }*/
+    }
     return res.render('products/product', {
       title: 'Cava Wines-Detalle Producto',
       styles: [
@@ -65,7 +65,7 @@ module.exports = {
   },
 
   upload: (req, res) => {
-    return res.render("./products/upload", {
+    return res.render("products/upload", {
       title: "Cava Wines-Carga Producto",
       styles: [
         "/products/upload-mobile",

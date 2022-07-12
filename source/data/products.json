@@ -1,9 +1,9 @@
 [
    {
-      "id": "1",
+      "id": 1,
       "nameProduct": "Terravita Malbec Roble Organico",
       "type": "Malbec Roble Organico",
-      "price": "10000",     
+      "price": 10000,     
       "image": "images/malbec-roble.jpg",    
       "alcohol": "13,30%",
       "acidez": "5,50 g/l",
@@ -14,7 +14,7 @@
       "otros": ""
    },
    {
-      "id": "2",
+      "id": 2,
       "nameProduct": "Terravita Cabernet Sauvignon",
       "type": "Cabernet Sauvignon",
       "price": "5072",
@@ -28,10 +28,10 @@
       "otros": ""
    },
    {
-      "id": "3",
+      "id": 3,
       "nameProduct": "Terravita Malbec",
       "type": "Malbec",
-      "price": "5072",
+      "price": 5072,
       "image": "images/malbec.jpg",
       "alcohol": "13,30%",
       "acidez": "5,40 g/l",
@@ -42,10 +42,10 @@
       "otros": ""
    },
    {
-      "id": "4",
+      "id": 4,
       "nameProduct": "Terravita Malbec sin Sulfito",
       "type": "Malbec sin Sulfito",
-      "price": "5580",
+      "price": 5580,
       "image": "images/malbec-sin-sulfito.jpg",
       "alcohol": "14%",
       "acidez": "5,30 g/l",

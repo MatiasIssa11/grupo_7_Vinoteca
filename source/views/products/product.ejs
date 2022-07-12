@@ -12,7 +12,7 @@
           <img src="/<%= product.image %>" />
         </figure>
         <section id="producto_compra">
-          <h3 id="producto_compra-nombre"><%= product.name %></h3>
+          <h3 id="producto_compra-nombre"><%= product.nameProduct %></h3>
           <h2 id="producto_compra-precio">$<%= product.price %></h2>
           <form
             action="/product/<%= product.id %>"
@@ -43,8 +43,6 @@
                     
             <h4>DATOS ANALITICOS</h4>
           
-            <!--Se reemplazo todos los data.XXX por product.XXX-->
-
             <p>Alcohol: <%= product.alcohol %></p>
             <p>Acidez total: <%= product.acidez %></p>
             <p>Azucar total: <%= product.azucar %></p>
@@ -57,19 +55,6 @@
           
           </section>
           
-          <!-- 
-          <section id="producto_compra-descripcion">
-            <h4>DATOS ANALITICOS</h4>
-            <% data.composition.forEach(element => { %>
-            <p><%= element %></p>
-            <% }) %>
-            <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
-            <% data.description.forEach(element => { %>
-            <p><%= element %></p>
-            <% }) %>
-          </section>
-          -->
-
         </section>
       </article>
     </main>
