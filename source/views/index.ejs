@@ -3,48 +3,52 @@
   <head>
     <%- include('./partials/head.ejs') %>
   </head>
-
   <body>
     <header><%- include('./partials/header.ejs') %></header>
     <main>
+
       <figure>
         <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
+
       <section class="main_grilla">
+
         <h2>OFERTAS</h2>
-        <% data.forEach(element=> { %>
+        <% product.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= element.image %> " />
+            <img src="/<%= product.image %> " />
           </figure>
-          <h4 class="main_articulos-texto"><%= element.name %></h4>
-          <h4 class="main_articulos-texto">$<%= element.price %></h4>
+          <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
+          <h4 class="main_articulos-texto">$<%= product.price %></h4>
           <form action="/cart" method="post">
-            <button class="articulos_boton" value="<%= element.id %>">
+            <button class="articulos_boton" value="<%= product.id %>">
               Comprar
             </button>
           </form>
-          <a href="/products/<%= element.id %>" class="articulos_boton">+Info</a>
+          <a href="/products/<%= product.id %>" class="articulos_boton">+Info</a>
         </article>
         <% }) %>
 
         <h2>NOVEDADES</h2>
-        <% data.forEach(element=> { %>
+        <% product.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= element.image %>" />
+            <img src="/<%= product.image %>" />
           </figure>
-          <h4 class="main_articulos-texto"><%= element.name %></h4>
-          <h4 class="main_articulos-texto">$<%= element.price %></h4>
+          <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
+          <h4 class="main_articulos-texto">$<%= product.price %></h4>
           <form action="/cart" method="post">
             <button class="articulos_boton">Comprar</button>
           </form>
-          <form action="/products/<%= element.id %>" method="get">
+          <form action="/products/<%= product.id %>" method="get">
             <button class="articulos_boton">+Info</button>
           </form>
         </article>
         <% }) %>
+
       </section>
+      
     </main>
     <footer><%- include('./partials/footer.ejs') %></footer>
   </body>

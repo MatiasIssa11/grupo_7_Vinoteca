@@ -1,11 +1,13 @@
-const data = require("../modules/data");
+const {index} = require('../models/products.model');
 
 module.exports = {
   home: (req, res) => {
+    let product = index()
+
     return res.render("index", {
       title: "Cava Wines-Home",
       styles: ["home-mobile", "home-tablet", "home-desktop"],
-      data: data,
+      product: product,
     });
   },
 

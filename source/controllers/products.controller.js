@@ -1,23 +1,7 @@
-const data = require("../modules/data");
 const {index, one, create, write} = require('../models/products.model');
 const searchCategorias = require("../modules/searchCategorias");
 
 module.exports = {
-  /*
-  product: (req, res) => {
-    let idProduct = parseInt(req.params.id);
-    idProduct = !idProduct ? 1 : idProduct; //Para asegurarme de que tenga un valor el IdProduct
-
-    return res.render("./products/product", {
-      title: "Cava Wines-Producto",
-      styles: [
-        "products/product-mobile",
-        "products/product-tablet",
-        "products/product-desktop",
-      ],
-      data: data.find((element) => element.id === idProduct),
-    });
-  },*/
 
   product: (req, res) => {
     let product = one(parseInt(req.params.id));
@@ -37,6 +21,8 @@ module.exports = {
   },
 
   cart: (req, res) => {
+    let product = index()
+
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
       styles: [
@@ -44,11 +30,13 @@ module.exports = {
         "/products/cart-tablet",
         "/products/cart-desktop",
       ],
-      data: data,
+      product: product,
     });
   },
 
   search: (req, res) => {
+    let product = index()
+
     return res.render("./products/search", {
       title: "Cava Wines-Buscador",
       styles: [
@@ -59,7 +47,7 @@ module.exports = {
         "/home-tablet",
         "/home-desktop",
       ],
-      data: data,
+      product: product,
       searchCategorias: searchCategorias,
     });
   },
@@ -72,7 +60,6 @@ module.exports = {
         "/products/upload-tablet",
         "/products/upload-desktop",
       ],
-      data: data,
     });
   },
 
@@ -84,7 +71,6 @@ module.exports = {
         "/products/edit-tablet",
         "/products/edit-desktop",
       ],
-      data: data,
     });
   },
 };

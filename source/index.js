@@ -19,8 +19,4 @@ app.use(require("./routes/main.routes"));
 app.use("/products", require("./routes/products.routes"));
 app.use("/users", require("./routes/users.routes"));
 
-/* No hace falta realizar esto:
-app.use("/products", require("./routes/products.routes"));
-app.use("/users", require("./routes/users.routes"));
-*/
 

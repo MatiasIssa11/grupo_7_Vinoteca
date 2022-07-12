@@ -4,9 +4,11 @@
   <body>
     <header><%- include('../partials/header.ejs') %></header>
     <main>
+
       <figure>
         <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
+      
       <article id="main_producto">
         <figure>
           <img src="/<%= product.image %>" />
@@ -40,21 +42,17 @@
           </form>
 
           <section id="producto_compra-descripcion">
-                    
-            <h4>DATOS ANALITICOS</h4>
-          
-            <p>Alcohol: <%= product.alcohol %></p>
-            <p>Acidez total: <%= product.acidez %></p>
-            <p>Azucar total: <%= product.azucar %></p>
+            <h4>DATOS ANALITICOS</h4>         
+              <p>Alcohol: <%= product.alcohol %></p>
+              <p>Acidez total: <%= product.acidez %></p>
+              <p>Azucar total: <%= product.azucar %></p>
 
             <h4>CARACTERISTICAS DEGUSTATIVAS</h4>
+              <p>Vista: <%=  product.vista %></p>
+              <p>Nariz: <%=  product.nariz %></p>
+              <p>Boca: <%=  product.boca %></p>                 
+          </section>    
 
-            <p>Vista: <%=  product.vista %></p>
-            <p>Nariz: <%=  product.nariz %></p>
-            <p>Boca: <%=  product.boca %></p>
-          
-          </section>
-          
         </section>
       </article>
     </main>
