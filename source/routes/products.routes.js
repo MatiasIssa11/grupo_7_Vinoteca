@@ -7,7 +7,8 @@ const {
   create,
   save,
   edit,
-  //destroy,
+  modify,
+  destroy,
 } = require("../controllers/products.controller");
 
 const multer = require("multer");
@@ -22,10 +23,10 @@ routes.post("/save", [upload.any()], save); // Crea el producto en el product.js
 routes.get("/cart", cart); // Carrito de compras
 
 routes.get("/edit/:id", edit); // Forulario de edicion de productos
-routes.put("/edit/:id", edit); // Formulario de edicion de productos - Envio DEFINIR COMO SE VA A LLAMAR EL METODO
+routes.put("/edit/:id", modify); // Formulario de edicion de productos - Envio DEFINIR COMO SE VA A LLAMAR EL METODO
 
 routes.get("/:id", detail); // Detalle producto particular (id)
 
-//routes.delete("/:id", destroy); // Formulario de eliminación de productos - Envio
+routes.delete("/:id", destroy); // Formulario de eliminación de productos - Envio
 
 module.exports = routes;

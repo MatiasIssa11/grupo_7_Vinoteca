@@ -81,4 +81,8 @@ module.exports = {
       ],
     });
   },
+
+  modify: (req, res) => {}, //COMPLETAR
+
+  destroy: (req, res) => {}, //COMPLETAR
 };

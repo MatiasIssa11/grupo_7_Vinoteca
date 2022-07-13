@@ -11,8 +11,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon source/index.js -e json,js,mjs,ejs",
-    "start": "node source/index.js"
+    "test": "nodemon source/app.js -e json,js,mjs,ejs",
+    "start": "node source/app.js"
   },
   "repository": {
     "type": "git",

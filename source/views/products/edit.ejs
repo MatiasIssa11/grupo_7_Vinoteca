@@ -10,57 +10,57 @@
     <main>
       
       <fieldset id="edit_caja">
-        <h1 id="edit_caja-titulo">EDITAR PRODUCTO</h1>
-        <form id="edit" action="/edit" method="post">
+        <h1 id="edit_caja-titulo">EDITAR PRODUCTO <%= element.id %> </h1>
+        <form id="edit" action="products/edit/<%= element.id %>?m=PUT" method="post" enctype="multipart/form-data">
 
           <div>
             <div id='edit_linea-form'>
               <label for="name-product" class="edit_texto">Marca: </label>
-              <input type="text" name="name-product" class="edit_campo" minlength="4"/>
+              <input type="text" name="name-product" class="edit_campo" minlength="4" value="<%= element.nameProduct %>" />
             </div>
             <div id='edit_linea-form'>
               <label for="categoria" class="edit_texto">Categoria: </label>
-              <input type="text" name="categoria" class="edit_campo" minlength="4"/>
+              <input type="text" name="categoria" class="edit_campo" minlength="4" value="<%= element.type %>"/>
             </div>
             <div id='edit_linea-form'>
               <label for="price" class="edit_texto">Precio: </label>
-              <input type="text" name="price" class="edit_campo" minlength="4"/>
+              <input type="text" name="price" class="edit_campo" minlength="4" value="<%= element.price %>"/>
             </div>      
             <div id='edit_linea-form'>
               <label for="email" class="edit_texto">Imagen: </label>
-              <input  class="edit_campo-imagen" type="file" name="image" accept=".jpg" multiple>
+              <input  class="edit_campo-imagen" type="file" name="image" accept=".jpg" multiple >
             </div>
 
             <h3 class="edit_titulos"> Datos analiticos: </h3>
             <div id='edit_linea-form'>
               <label for="alcohol" class="edit_texto">Alcohol: </label>
-              <input type="text" name="alcohol" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="alcohol" class="edit_campo" minlength="4" value="<%= element.alcohol %>"> </input>
             </div>
             <div id='edit_linea-form'>
               <label for="acidez" class="edit_texto">Acidez total: </label>
-              <input type="text" name="acidez" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="acidez" class="edit_campo" minlength="4" value="<%= element.acidez %>"> </input>
             </div>
             <div id='edit_linea-form'>
               <label for="azucar" class="edit_texto">Azucar residual: </label>
-              <input type="text" name="azucar" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="azucar" class="edit_campo" minlength="4" value="<%= element.azucar %>"> </input>
             </div>
 
             <h3 class="edit_titulos"> Caracteristicas degustativas: </h3>
             <div id='edit_linea-form'>
               <label for="vista" class="edit_texto">Vista: </label>
-              <input type="text" name="vista" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="vista" class="edit_campo" minlength="4" value="<%= element.vista %>"> </input>
             </div>
             <div id='edit_linea-form'>
               <label for="nariz" class="edit_texto">Nariz: </label>
-              <input type="text" name="nariz" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="nariz" class="edit_campo" minlength="4" value="<%= element.nariz %>"> </input>
             </div>
             <div id='edit_linea-form'>
               <label for="boca" class="edit_texto">Boca: </label>
-              <input type="text" name="boca" class="edit_campo" minlength="4"> </input>
+              <input type="text" name="boca" class="edit_campo" minlength="4" value="<%= element.boca %>"> </input>
             </div>
             <div id='edit_linea-form'>
               <label for="description" class="edit_texto">Otros: </label>
-              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4"> </textarea>
+              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4" value="<%= element.otros %>"> </textarea>
             </div>
            
             <div id="edit_botonera">
