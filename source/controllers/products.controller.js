@@ -63,7 +63,7 @@ module.exports = {
   },
 
   save: (req, res) => {
-    req.body.image = req.files[0].filename;   // Linea comentada hasta que encontremos el error con las imagenes
+    //req.body.image = req.files[0].filename;   // Linea comentada hasta que encontremos el error con las imagenes
     let newProduct = create(req.body);
     let products = index();
     products.push(newProduct);
