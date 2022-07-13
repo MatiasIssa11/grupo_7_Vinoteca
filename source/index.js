@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: false })); // req.body y el req.query
 app.use(express.json());
-app.use(method("m")); // En la url poner ?m=DELETE
+app.use(method("m")); // En la url poner ?m=PUT ?m=DELETE
 
 app.use(public);
 app.use(require("./routes/main.routes"));

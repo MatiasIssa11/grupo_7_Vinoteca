@@ -8,7 +8,7 @@ module.exports = {
     if (!product) {
       return res.redirect("/");
     }
-    return res.render("products/detail", {
+    return res.render("/products/detail", {
       title: "Cava Wines-Detalle Producto",
       styles: [
         "/products/product-mobile",
@@ -52,7 +52,7 @@ module.exports = {
   },
 
   create: (req, res) => {
-    return res.render("products/create", {
+    return res.render("./products/create", {
       title: "Cava Wines-Carga Producto",
       styles: [
         "/products/upload-mobile",
@@ -63,7 +63,7 @@ module.exports = {
   },
 
   save: (req, res) => {
-    req.body.image = req.files[0].filename;
+    req.body.image = req.files[0].filename;   // Linea comentada hasta que encontremos el error con las imagenes
     let newProduct = create(req.body);
     let products = index();
     products.push(newProduct);

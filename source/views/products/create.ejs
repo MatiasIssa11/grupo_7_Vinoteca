@@ -8,62 +8,62 @@
       <%- include('../partials/header.ejs') %>
     </header>
     <main>
-      <fieldset id="upload_caja">
+      <section id="upload_caja">
         <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
         <form id="upload" action="/products/save" method="post" enctype="multipart/form-data">
-          <div>
-            <div id='upload_linea-form'>
+          <fieldset>
+            <div class='upload_linea-form'>
               <label for="nameProduct" class="upload_texto">Marca: </label>
               <input type="text" name="nameProduct" class="upload_campo" minlength="4"/>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="type" class="upload_texto">Categoria: </label>
               <input type="text" name="type" class="upload_campo" minlength="4"/>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="price" class="upload_texto">Precio: </label>
               <input type="number" name="price" class="upload_campo" minlength="4"/>
             </div>      
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="image" class="upload_texto">Imagen: </label>
-              <input class="upload_campo-imagen" type="file" name="image" accept=".jpg" multiple>
+              <input class="upload_campo-imagen" type="file" name="image" accept=".jpg">
             </div>
             <h3 class="upload_titulos"> Datos analiticos: </h3>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="alcohol" class="upload_texto">Alcohol: </label>
               <input type="text" name="alcohol" class="upload_campo" minlength="4"> </input>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="acidez" class="upload_texto">Acidez total: </label>
               <input type="text" name="acidez" class="upload_campo" minlength="4"> </input>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="azucar" class="upload_texto">Azucar residual: </label>
               <input type="text" name="azucar" class="upload_campo" minlength="4"> </input>
             </div>
             <h3 class="upload_titulos"> Caracteristicas degustativas: </h3>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="vista" class="upload_texto">Vista: </label>
               <input type="text" name="vista" class="upload_campo" minlength="4"> </input>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="nariz" class="upload_texto">Nariz: </label>
               <input type="text" name="nariz" class="upload_campo" minlength="4"> </input>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="boca" class="upload_texto">Boca: </label>
               <input type="text" name="boca" class="upload_campo" minlength="4"> </input>
             </div>
-            <div id='upload_linea-form'>
+            <div class='upload_linea-form'>
               <label for="otros" class="upload_texto">Otros: </label>
               <textarea name="otros" class="upload_campo-descripcion" minlength="4"> </textarea>
             </div>     
-            <div id="upload_botonera">
+            <div class="upload_botonera">
               <button id="upload_crear-cuenta" type="submit"> Publicar producto </button>
             </div>
-          </div>
+          </fieldset>
         </form>
-      </fieldset>
+      </section>
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>
