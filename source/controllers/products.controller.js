@@ -52,8 +52,8 @@ module.exports = {
     });
   },
 
-  upload: (req, res) => {
-    return res.render("products/upload", {
+  create: (req, res) => {
+    return res.render("products/create", {
       title: "Cava Wines-Carga Producto",
       styles: [
         "/products/upload-mobile",
@@ -61,6 +61,15 @@ module.exports = {
         "/products/upload-desktop",
       ],
     });
+  },
+
+  save: (req, res) => {
+    req.body.image = req.files[0].filename
+    let newProduct = create(req.body)
+    let products = index();
+    products.push(newProduct)
+    write(products)
+    return res.redirect('/products/')
   },
 
   edit: (req, res) => {

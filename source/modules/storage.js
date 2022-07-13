@@ -1,18 +1,20 @@
 const {diskStorage} = require('multer');
 const {extname,resolve} = require('path');
 
-const storage = directory => diskStorage({
+const destination = function (folder){
+   return (req, file, callback) => callback(null, '../../public/uploads/')
+};
 
-   destination: (req, file, callback) => {
-      let path = resolve(__dirname, '../../public/uploads/', directory); //Ver ruta
-      return callback(null, path);
-   },
-   
-   filename: (req, file, callback) => {
-      let fileName = `${file.fieldname}-${Date.now()}_img${extname(file.originalname)}`;
-      return callback(null, fileName);
-   }
-   
-});
+const filename = (req, file, callback) => {
+   const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+   callback(null, file.fieldname + '-' + uniqueSuffix + extname(file.originalname));
+}
+
+const storage = function(folder){
+   return diskStorage({
+       destination: destination(folder),
+       filename: filename
+   });
+};
 
 module.exports = storage;

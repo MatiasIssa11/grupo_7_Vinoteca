@@ -35,7 +35,7 @@ create: function (data) {
       boca: data.boca,
       otros: data.otros,
    });
-   },
+   }, // Crea el nuevo producto
  
 write: function (data) {
    let file = resolve(__dirname, "../data", "products.json");

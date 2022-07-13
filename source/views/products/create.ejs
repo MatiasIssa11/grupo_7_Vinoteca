@@ -10,7 +10,7 @@
     <main>
       <fieldset id="upload_caja">
         <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
-        <form id="upload" action="/products/upload" method="POST" enctype="multipart/form-data">
+        <form id="upload" action="/products/save" method="post" enctype="multipart/form-data">
           <div>
             <div id='upload_linea-form'>
               <label for="nameProduct" class="upload_texto">Marca: </label>
@@ -59,7 +59,7 @@
               <textarea name="otros" class="upload_campo-descripcion" minlength="4"> </textarea>
             </div>     
             <div id="upload_botonera">
-              <button id="upload_crear-cuenta" type="button"> Publicar producto </button>
+              <button id="upload_crear-cuenta" type="submit"> Publicar producto </button>
             </div>
           </div>
         </form>
