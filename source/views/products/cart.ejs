@@ -6,7 +6,6 @@
   <body>
     <header><%- include('../partials/header.ejs') %></header>
     <main>
-
       <figure>
         <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
@@ -24,7 +23,11 @@
               <h4><%= product.name %></h4>
               <p><%= product.type %></p>
               <p><%= product.location %></p>
-              <form action="/cart" class="cart_products-button" method="post">
+              <form
+                action="/products/cart"
+                class="cart_products-button"
+                method="post"
+              >
                 <fieldset class="cart_products-button-substractPlus">
                   <input
                     type="button"
@@ -49,7 +52,7 @@
               </form>
             </section>
 
-            <form action="/cart" method="post">
+            <form action="/products/cart" method="post">
               <!-- Proximamente method va a ser delete-->
               <button>
                 <i class="fa-solid fa-trash-can cart_products-button-trash"></i>
@@ -57,7 +60,6 @@
             </form>
 
             <h4 class="cart_products-price">$<%= product.price %></h4>
-
           </article>
           <% }) %>
         </section>
@@ -66,7 +68,7 @@
         <section id="total">
           <h3>RESUMEN DE COMPRAS</h3>
           <!--Elección del tipo de envio-->
-          <form action="/cart" method="get">
+          <form action="/products/cart" method="get">
             <fieldset id="total_send">
               <label for="envio" id="selector"
                 >Seleccione el tipo de envio</label
