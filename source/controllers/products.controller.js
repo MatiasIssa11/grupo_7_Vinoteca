@@ -1,27 +1,26 @@
-const {index, one, create, write} = require('../models/products.model');
+const { index, one, create, write } = require("../models/products.model");
 const searchCategorias = require("../modules/searchCategorias");
 
 module.exports = {
-
-  product: (req, res) => {
+  detail: (req, res) => {
     let product = one(parseInt(req.params.id));
 
-    if(!product){
-      return res.redirect('/')
+    if (!product) {
+      return res.redirect("/");
     }
-    return res.render('products/product', {
-      title: 'Cava Wines-Detalle Producto',
+    return res.render("products/detail", {
+      title: "Cava Wines-Detalle Producto",
       styles: [
         "/products/product-mobile",
         "/products/product-tablet",
         "/products/product-desktop",
       ],
       product: product,
-    })
+    });
   },
 
   cart: (req, res) => {
-    let product = index()
+    let product = index();
 
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
@@ -34,10 +33,10 @@ module.exports = {
     });
   },
 
-  search: (req, res) => {
-    let product = index()
+  products: (req, res) => {
+    let product = index();
 
-    return res.render("./products/search", {
+    return res.render("./products/products", {
       title: "Cava Wines-Buscador",
       styles: [
         "/products/search-mobile",
@@ -64,12 +63,12 @@ module.exports = {
   },
 
   save: (req, res) => {
-    req.body.image = req.files[0].filename
-    let newProduct = create(req.body)
+    req.body.image = req.files[0].filename;
+    let newProduct = create(req.body);
     let products = index();
-    products.push(newProduct)
-    write(products)
-    return res.redirect('/products/')
+    products.push(newProduct);
+    write(products);
+    return res.redirect("/products/");
   },
 
   edit: (req, res) => {
