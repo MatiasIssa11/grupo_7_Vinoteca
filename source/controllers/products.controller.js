@@ -63,7 +63,8 @@ module.exports = {
   },
 
   save: (req, res) => {
-    //req.body.image = req.files[0].filename;   // Linea comentada hasta que encontremos el error con las imagenes
+    //return res.send(req.files);
+    req.body.image = req.files[0].filename; // Linea comentada hasta que encontremos el error con las imagenes
     let newProduct = create(req.body);
     let products = index();
     products.push(newProduct);
@@ -96,7 +97,7 @@ module.exports = {
         p.nameProduct = req.body.nameProduct;
         p.type = req.body.type;
         p.price = parseInt(req.body.price);
-        //p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image; //problema con las imagenes
+        p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image; 
         p.alcohol = req.body.alcohol;
         p.acidez = req.body.acidez;
         p.azucar = req.body.azucar;
@@ -120,5 +121,5 @@ module.exports = {
     let productsDeleted = products.filter((p) => p.id !== product.id);
     write(productsDeleted);
     return res.redirect("/products/");
-  }, //COMPLETAR
+  },
 };
