@@ -11,9 +11,9 @@ module.exports = {
     return res.render("./products/detail", {
       title: "Cava Wines-Detalle Producto",
       styles: [
-        "/products/product-mobile",
-        "/products/product-tablet",
-        "/products/product-desktop",
+        "/products/detail-mobile",
+        "/products/detail-tablet",
+        "/products/detail-desktop",
       ],
       product: product,
     });
@@ -39,9 +39,9 @@ module.exports = {
     return res.render("./products/products", {
       title: "Cava Wines-Buscador",
       styles: [
-        "/products/search-mobile",
-        "/products/search-tablet",
-        "/products/search-desktop",
+        "/products/products-mobile",
+        "/products/products-tablet",
+        "/products/products-desktop",
         "/home-mobile",
         "/home-tablet",
         "/home-desktop",
@@ -55,9 +55,9 @@ module.exports = {
     return res.render("./products/create", {
       title: "Cava Wines-Carga Producto",
       styles: [
-        "/products/upload-mobile",
-        "/products/upload-tablet",
-        "/products/upload-desktop",
+        "/products/create-mobile",
+        "/products/create-tablet",
+        "/products/create-desktop",
       ],
     });
   },
