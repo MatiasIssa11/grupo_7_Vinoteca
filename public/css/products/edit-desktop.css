@@ -1,6 +1,6 @@
 @media (min-width: 720px) {
 
-  #edit_linea-form {
+  .edit_linea-form {
     display: flex;
     padding: 10px 0 10px 0;
     justify-content: space-around;
@@ -22,7 +22,7 @@
     width: 280px;
   }
 
-  .edit_campo-descripcion {
+  #edit_campo-descripcion {
     width: 280px;
   }
 

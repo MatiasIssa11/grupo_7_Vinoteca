@@ -1,79 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head.ejs') %>
-</head>
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
   <body>
-    <header>
-      <%- include('../partials/header.ejs') %>
-    </header>
+    <header><%- include('../partials/header.ejs') %></header>
     <main>
-      
-      <fieldset id="edit_caja">
-        <h1 id="edit_caja-titulo">EDITAR PRODUCTO <%= element.id %> </h1>
-        <form id="edit" action="products/edit/<%= element.id %>?m=PUT" method="post" enctype="multipart/form-data">
-
-          <div>
-            <div id='edit_linea-form'>
-              <label for="name-product" class="edit_texto">Marca: </label>
-              <input type="text" name="name-product" class="edit_campo" minlength="4" value="<%= element.nameProduct %>" />
+      <section id="edit_caja">
+        <h1 id="edit_caja-titulo">EDITAR PRODUCTO ID:<%= product.id %></h1>
+        <form
+          id="edit"
+          action="/products/edit/<%= product.id %>?m=PUT"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <div class="edit_linea-form">
+              <label for="nameProduct" class="edit_texto">Marca: </label>
+              <input
+                type="text"
+                name="nameProduct"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.nameProduct %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
-              <label for="categoria" class="edit_texto">Categoria: </label>
-              <input type="text" name="categoria" class="edit_campo" minlength="4" value="<%= element.type %>"/>
+            <div class="edit_linea-form">
+              <label for="type" class="edit_texto">Categoria: </label>
+              <input
+                type="text"
+                name="type"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.type %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="price" class="edit_texto">Precio: </label>
-              <input type="text" name="price" class="edit_campo" minlength="4" value="<%= element.price %>"/>
-            </div>      
-            <div id='edit_linea-form'>
+              <input
+                type="text"
+                name="price"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.price %>"
+                autocomplete="off"
+              />
+            </div>
+            <div class="edit_linea-form">
               <label for="email" class="edit_texto">Imagen: </label>
-              <input  class="edit_campo-imagen" type="file" name="image" accept=".jpg" multiple >
+              <input
+                id="edit_campo-imagen"
+                type="file"
+                name="image"
+                accept=".jpg"
+                multiple
+                autocomplete="off"
+              />
             </div>
 
-            <h3 class="edit_titulos"> Datos analiticos: </h3>
-            <div id='edit_linea-form'>
+            <h3 class="edit_titulos">Datos analiticos:</h3>
+            <div class="edit_linea-form">
               <label for="alcohol" class="edit_texto">Alcohol: </label>
-              <input type="text" name="alcohol" class="edit_campo" minlength="4" value="<%= element.alcohol %>"> </input>
+              <input
+                type="text"
+                name="alcohol"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.alcohol %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="acidez" class="edit_texto">Acidez total: </label>
-              <input type="text" name="acidez" class="edit_campo" minlength="4" value="<%= element.acidez %>"> </input>
+              <input
+                type="text"
+                name="acidez"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.acidez %> "
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="azucar" class="edit_texto">Azucar residual: </label>
-              <input type="text" name="azucar" class="edit_campo" minlength="4" value="<%= element.azucar %>"> </input>
+              <input
+                type="text"
+                name="azucar"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.azucar %>"
+                autocomplete="off"
+              />
             </div>
 
-            <h3 class="edit_titulos"> Caracteristicas degustativas: </h3>
-            <div id='edit_linea-form'>
+            <h3 class="edit_titulos">Caracteristicas degustativas:</h3>
+            <div class="edit_linea-form">
               <label for="vista" class="edit_texto">Vista: </label>
-              <input type="text" name="vista" class="edit_campo" minlength="4" value="<%= element.vista %>"> </input>
+              <input
+                type="text"
+                name="vista"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.vista %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="nariz" class="edit_texto">Nariz: </label>
-              <input type="text" name="nariz" class="edit_campo" minlength="4" value="<%= element.nariz %>"> </input>
+              <input
+                type="text"
+                name="nariz"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.nariz %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="boca" class="edit_texto">Boca: </label>
-              <input type="text" name="boca" class="edit_campo" minlength="4" value="<%= element.boca %>"> </input>
+              <input
+                type="text"
+                name="boca"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.boca %>"
+                autocomplete="off"
+              />
             </div>
-            <div id='edit_linea-form'>
+            <div class="edit_linea-form">
               <label for="description" class="edit_texto">Otros: </label>
-              <textarea type="text" name="description" class="edit_campo-descripcion" minlength="4" value="<%= element.otros %>"> </textarea>
+              <textarea
+                type="text"
+                name="description"
+                id="edit_campo-descripcion"
+                minlength="4"
+                value="<%= product.otros %>"
+                autocomplete="off"
+              >
+              </textarea>
             </div>
-           
+
             <div id="edit_botonera">
-              <button id="edit_confirmar-edicion" type="button"> Confirmar modificaciones: </button>
+              <button id="edit_confirmar-edicion" type="submit">
+                Confirmar modificaciones
+              </button>
             </div>
-
-          </div>
+          </fieldset>
         </form>
-      </fieldset>
 
+        <form
+          id="edit"
+          action="/products/delete/<%= product.id %>?m=DELETE"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <div id="edit_botonera">
+              <button id="edit_confirmar-edicion" type="submit">
+                Eliminar el producto
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    <footer>
-      <%- include('../partials/footer.ejs') %>
-    </footer>
+    <footer><%- include('../partials/footer.ejs') %></footer>
   </body>
 </html>

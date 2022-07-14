@@ -8,7 +8,7 @@ module.exports = {
     if (!product) {
       return res.redirect("/");
     }
-    return res.render("/products/detail", {
+    return res.render("./products/detail", {
       title: "Cava Wines-Detalle Producto",
       styles: [
         "/products/product-mobile",
@@ -72,6 +72,11 @@ module.exports = {
   },
 
   edit: (req, res) => {
+    let product = one(parseInt(req.params.id));
+
+    if (!product) {
+      return res.redirect("/products/");
+    }
     return res.render("./products/edit", {
       title: "Cava Wines-Edicion Producto",
       styles: [
@@ -79,10 +84,41 @@ module.exports = {
         "/products/edit-tablet",
         "/products/edit-desktop",
       ],
+      product: product,
     });
   },
 
-  modify: (req, res) => {}, //COMPLETAR
+  modify: (req, res) => {
+    let product = one(parseInt(req.params.id));
+    let products = index();
+    let productsModified = products.map((p) => {
+      if (p.id == product.id) {
+        p.nameProduct = req.body.nameProduct;
+        p.type = req.body.type;
+        p.price = parseInt(req.body.price);
+        //p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image; //problema con las imagenes
+        p.alcohol = req.body.alcohol;
+        p.acidez = req.body.acidez;
+        p.azucar = req.body.azucar;
+        p.vista = req.body.vista;
+        p.nariz = req.body.nariz;
+        p.boca = req.body.boca;
+        p.otros = req.body.otros;
+      }
+      return p;
+    });
+    write(productsModified);
+    return res.redirect("/products/" + product.id);
+  },
 
-  destroy: (req, res) => {}, //COMPLETAR
+  destroy: (req, res) => {
+    let product = one(parseInt(req.params.id));
+    if (!product) {
+      return res.redirect("/products/");
+    }
+    let products = index();
+    let productsDeleted = products.filter((p) => p.id !== product.id);
+    write(productsDeleted);
+    return res.redirect("/products/");
+  }, //COMPLETAR
 };

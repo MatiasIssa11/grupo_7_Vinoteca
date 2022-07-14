@@ -23,10 +23,10 @@ routes.post("/save", [upload.any()], save); // Crea el producto en el product.js
 routes.get("/cart", cart); // Carrito de compras
 
 routes.get("/edit/:id", edit); // Forulario de edicion de productos
-routes.put("/edit/:id", modify); // Formulario de edicion de productos - Envio DEFINIR COMO SE VA A LLAMAR EL METODO
+routes.put("/edit/:id", [upload.any()], modify); // Formulario de edicion de productos - Envio
 
 routes.get("/:id", detail); // Detalle producto particular (id)
 
-routes.delete("/:id", destroy); // Formulario de eliminación de productos - Envio
+routes.delete("/delete/:id", destroy); // Formulario de eliminación de productos - Envio
 
 module.exports = routes;

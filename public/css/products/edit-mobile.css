@@ -29,22 +29,19 @@
   font-family: Bitter, serif;
 }
 
-#edit_linea-form {
-  display: block;
-  padding: 0 0 10px 0;
-  justify-content: center;
+.edit_linea-form {
   align-items: center;
 }
 
 .edit_campo {
   border-radius: 10px;
   width: 250px;
-  height: 25px;
+  padding: 5px;
   text-align: center;
   border: none;
 }
 
-.edit_campo-descripcion {
+#edit_campo-descripcion {
   border-radius: 10px;
   width: 250px;
   height: 50px;
@@ -52,8 +49,8 @@
   border: none;
 }
 
-.edit_campo-imagen {
-    width: 280px;
+#edit_campo-imagen {
+  width: 280px;
   height: 25px;
   text-align: center;
   border: none;
