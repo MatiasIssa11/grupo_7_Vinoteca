@@ -1,13 +1,17 @@
-const {index} = require('../models/products.model');
+const { index } = require("../models/products.model");
 
 module.exports = {
   home: (req, res) => {
-    let product = index()
+    let product = index();
+    const comparePrice = (a, b) => a.price - b.price;
+    let sales = product.sort(comparePrice).filter((r, i) => i <= 3);
+    let releases = product.reverse().filter((r, i) => i <= 3);
 
     return res.render("index", {
       title: "Cava Wines-Home",
       styles: ["home-mobile", "home-tablet", "home-desktop"],
-      product: product,
+      sales: sales,
+      releases: releases,
     });
   },
 
