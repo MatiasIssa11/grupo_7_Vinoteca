@@ -15,7 +15,7 @@
         <% sales.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= product.image %> " />
+            <img src="/products/<%= product.image %> " />
           </figure>
           <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
@@ -34,7 +34,7 @@
         <% releases.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= product.image %>" />
+            <img src="/products/<%= product.image %>" />
           </figure>
           <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>

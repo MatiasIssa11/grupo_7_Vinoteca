@@ -3,7 +3,7 @@ const { extname, resolve } = require("path");
 
 let destination = function (folder) {
   return (req, file, callback) =>
-    callback(null, resolve(__dirname, "../../public/images", folder));
+    callback(null, resolve(__dirname, "../../uploads", folder));
 };
 
 let filename = (req, file, callback) => {

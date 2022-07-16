@@ -4,8 +4,8 @@ module.exports = {
   home: (req, res) => {
     let product = index();
     const comparePrice = (a, b) => a.price - b.price;
-    let sales = product.sort(comparePrice).filter((r, i) => i <= 3);
-    let releases = product.reverse().filter((r, i) => i <= 3);
+    let sales = product.sort(comparePrice).filter((r, i) => i <= 3); //Muestra los 4 primeros productos, ordenados por el más barato
+    let releases = product.reverse().filter((r, i) => i <= 3); //Muestra los 4 primeros productos, empezando por el último agregado
 
     return res.render("index", {
       title: "Cava Wines-Home",
