@@ -17,7 +17,7 @@
     "id": 2,
     "nameProduct": "Terravita Cabernet Sauvignon",
     "type": "Cabernet Sauvignon",
-    "price": "5072",
+    "price": 5072,
     "image": "images/cabernet-Sauvignon.jpg",
     "alcohol": "13,30%",
     "acidez": "5,30 g/l",
