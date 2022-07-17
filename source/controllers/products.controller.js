@@ -35,6 +35,37 @@ module.exports = {
 
   products: (req, res) => {
     let product = index();
+    const comparePrice = (a, b) => {
+      a.price - b.price;
+    };
+
+    const compareName = (a, b) => {
+      if (a.nameProduct > b.nameProduct) {
+        return 1;
+      }
+      if (a.nameProduct < b.nameProduct) {
+        return -1;
+      }
+      return 0; // a must be equal to b
+    };
+
+    if (req.query && req.query.orden) {
+      switch (req.query.orden) {
+        case "precioAsc":
+          product = product.sort(comparePrice).reverse();
+          break;
+        case "precioDesc":
+          product = product.sort(comparePrice);
+          break;
+        case "marca":
+          product = product.sort(compareName);
+          break;
+
+        default:
+          product = product;
+          break;
+      }
+    }
 
     return res.render("./products/products", {
       title: "Cava Wines-Buscador",
@@ -97,7 +128,8 @@ module.exports = {
         p.nameProduct = req.body.nameProduct;
         p.type = req.body.type;
         p.price = parseInt(req.body.price);
-        p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image; 
+        p.image =
+          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
         p.alcohol = req.body.alcohol;
         p.acidez = req.body.acidez;
         p.azucar = req.body.azucar;
