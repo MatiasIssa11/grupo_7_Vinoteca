@@ -1,13 +1,14 @@
 const { diskStorage } = require("multer");
-const { extname } = require("path");
+const { extname, resolve } = require("path");
 
 let destination = function (folder) {
-  return (req, file, callback) => callback(null, "../../" + folder);
+  return (req, file, callback) =>
+    callback(null, resolve(__dirname, "../../uploads", folder));
 };
 
 let filename = (req, file, callback) => {
   const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-  callback(
+  return callback(
     null,
     file.fieldname + "-" + uniqueSuffix + extname(file.originalname)
   );

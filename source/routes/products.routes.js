@@ -13,7 +13,7 @@ const {
 
 const multer = require("multer");
 const storage = require("../modules/storage");
-const upload = multer({ storage: storage("public/images/products/") });
+const upload = multer({ storage: storage("products") });
 
 routes.get("/", products); // Listado de productos
 

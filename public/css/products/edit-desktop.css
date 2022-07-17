@@ -1,5 +1,4 @@
 @media (min-width: 720px) {
-
   .edit_linea-form {
     display: flex;
     padding: 10px 0 10px 0;
@@ -22,6 +21,18 @@
     width: 280px;
   }
 
+  #edit_caja-imagen {
+    width: 90%;
+  }
+
+  #edit_caja-imagen img {
+    height: 350px;
+  }
+
+  #edit_caja-imagen p {
+    font-size: 18px;
+  }
+
   #edit_campo-descripcion {
     width: 280px;
   }
@@ -31,4 +42,3 @@
     margin: auto;
   }
 }
-

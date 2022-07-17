@@ -1,5 +1,50 @@
 ## Weekly
 
+### 17/07/2022
+#### ¿Que hiciste esta semana?
+Matías Alonso: Corregimos la carga de archivos, cambié la ubicación de las imagenes y empecé a filtrar y ordenar los productos en la vista index. Dejé funcional el edit y el put.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que problemas encontraste?
+Matías Alonso: Tuvimos problemas con la carga de archivos.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que vamos a hacer esta semana?
+Matías Alonso: Tener el feedback para saber que hay que corregir del sprint 3 y lo que quede pendiente del sprint 4.
+
+Agustín Collados: 
+
+Matías Issa:
+
+
+### 10/07/2022
+#### ¿Que hiciste esta semana?
+Matías Alonso: Arreglé el problema de parametrización de las vistas de detalle y armamos el Trello del sprint 4.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que problemas encontraste?
+Matías Alonso:  Nació mi hijo Manuel el viernes, con lo cual no pude dedicarme mucho.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que vamos a hacer esta semana?
+Matías Alonso: Empezar con las tareas del sprint 4.
+
+Agustín Collados: 
+
+Matías Issa:
+
 ### 03/07/2022
 #### ¿Que hiciste esta semana?
 Matías Alonso: Revisé las vistas index.html y el cart.html con las correcciones del sprint 2. También realicé los ruteadores, controladores y aplicación del formato EJS.

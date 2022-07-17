@@ -6,18 +6,16 @@
   <body>
     <header><%- include('./partials/header.ejs') %></header>
     <main>
-
       <figure>
         <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
 
       <section class="main_grilla">
-
         <h2>OFERTAS</h2>
-        <% product.forEach(product=> { %>
+        <% sales.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= product.image %> " />
+            <img src="/products/<%= product.image %> " />
           </figure>
           <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
@@ -26,15 +24,17 @@
               Comprar
             </button>
           </form>
-          <a href="/products/<%= product.id %>" class="articulos_boton">+Info</a>
+          <a href="/products/<%= product.id %>" class="articulos_boton"
+            >+Info</a
+          >
         </article>
         <% }) %>
 
         <h2>NOVEDADES</h2>
-        <% product.forEach(product=> { %>
+        <% releases.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/<%= product.image %>" />
+            <img src="/products/<%= product.image %>" />
           </figure>
           <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
@@ -46,9 +46,7 @@
           </form>
         </article>
         <% }) %>
-
       </section>
-      
     </main>
     <footer><%- include('./partials/footer.ejs') %></footer>
   </body>
