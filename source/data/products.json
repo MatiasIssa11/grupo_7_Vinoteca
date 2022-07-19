@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nameProduct": "Terravita Malbec Roble Organico",
+    "nameProduct": "Terravita",
     "type": "Malbec Roble Organico",
     "price": 10000,
     "image": "malbec-roble.jpg",
@@ -15,9 +15,9 @@
   },
   {
     "id": 2,
-    "nameProduct": "Terravita Cabernet Sauvignon",
+    "nameProduct": "Terravita",
     "type": "Cabernet Sauvignon",
-    "price": 5072,  
+    "price": 5072,
     "image": "cabernet-Sauvignon.jpg",
     "alcohol": "13,30%",
     "acidez": "5,30 g/l",
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "nameProduct": "Terravita Malbec",
+    "nameProduct": "Terravita",
     "type": "Malbec",
     "price": 5072,
     "image": "malbec.jpg",
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "nameProduct": "Terravita Malbec sin Sulfito",
+    "nameProduct": "Terravita",
     "type": "Malbec sin Sulfito",
     "price": 5580,
     "image": "malbec-sin-sulfito.jpg",
@@ -54,19 +54,5 @@
     "nariz": "Vino fresco, joven, se perciben aromas a fruta fresca que recuerdan a las frutillas, cerezas, ciruelas, con un dejo sutil a rosas.",
     "boca": "Entrada ligera, levemente ácido, evoluciona con el paso del tiempo, en donde se acentúa lo percibido en  nariz.",
     "otros": ""
-  },
-  {
-    "id": 5,
-    "nameProduct": "asdasd",
-    "type": "sadasdad",
-    "price": 22222,
-    "image": "image-1657838562535-844648568.jpg",
-    "alcohol": "asdasd",
-    "acidez": "asdasd",
-    "azucar": "fghhj",
-    "vista": "fghdtyk",
-    "nariz": "sdsfsdf",
-    "boca": "gf jj g",
-    "otros": "              "
   }
 ]

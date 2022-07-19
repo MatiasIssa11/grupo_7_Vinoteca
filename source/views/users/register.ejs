@@ -8,10 +8,10 @@
       <%- include('../partials/header.ejs') %>
     </header>
     <main>
-      <fieldset id="register_caja">
+      <section id="register_caja">
         <h1 id="register_caja-titulo">REGISTRO DE USUARIO</h1>
         <form id="register" action="/register" method="post">
-          <div>
+          <fieldset>
             <div class="register_caja-linea-form">
               <label for="nombre" class="register_texto">Nombre: </label>
               <input type="text" name="nombre" class="register_campo" minlength="4"/>
@@ -40,9 +40,9 @@
               <button id="register_botonera-crear-cuenta" type="button"> Crear cuenta </button>
               <a id="register_botonera-iniciar-sesion" href="/login"> Iniciar sesion </a>
             </div>
-          </div>
+          </fieldset>
         </form>
-      </fieldset>
+      </section>
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>
