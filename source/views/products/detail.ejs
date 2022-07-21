@@ -13,7 +13,7 @@
           <img src="/products/<%= product.image %>" />
         </figure>
         <section id="producto_compra">
-          <h3 id="producto_compra-nombre"><%= product.nameProduct %></h3>
+          <h3 id="producto_compra-nombre"><%= product.nameProduct %> <%= product.type %></h3>
           <h2 id="producto_compra-precio">$<%= product.price %></h2>
           <form
             action="/product/<%= product.id %>"
