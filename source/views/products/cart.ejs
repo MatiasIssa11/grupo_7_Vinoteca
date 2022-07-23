@@ -70,7 +70,7 @@
           <form action="/products/cart" method="get">
             <fieldset id="total_send">
               <label for="envio" id="selector"
-                >Seleccione el tipo de envio</label
+                >Tipo de envio: </label
               >
               <div>
                 <input
@@ -79,7 +79,7 @@
                   id="domicilio"
                   value="domicilio"
                 />
-                <label for="domicilio">Envio a domicilio</label>
+                <label id="domicilio" for="domicilio">Envio a domicilio</label>
               </div>
               <div>
                 <input
@@ -88,18 +88,19 @@
                   id="tienda"
                   value="domicilio"
                 />
-                <label for="domicilio">Retiro en tienda</label>
+                <label id="tienda" for="domicilio">Retiro en tienda</label>
               </div>
             </fieldset>
           </form>
           <section id="total_buy">
-            <h4 id="total_buy-title">Total: $21.811</h4>
+            <p id="selector"> TOTAL: </p>
+            <h4 id="total_buy-title"> $21.811</h4>
             <!-- action a definir-->
             <form action="" method="post">
               <button id="total_buy-button-checkout">Iniciar compra</button>
             </form>
             <a href="/products/" id="total_buy-button-keepBuying"
-              >Seguir comprando
+              >Ver mas productos
             </a>
           </section>
         </section>
