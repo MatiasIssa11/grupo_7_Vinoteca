@@ -29,4 +29,17 @@
     max-width: 1000px;
     margin: auto;
   }
+
+  #upload_crear-producto {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  #upload_crear-producto:hover {
+    transform: scale(1.1);
+  }
+
+  #upload_crear-producto:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
 }

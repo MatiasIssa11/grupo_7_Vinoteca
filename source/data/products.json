@@ -62,12 +62,11 @@
     "price": 6550,
     "image": "image-1658594505254-137864522.jpg",
     "alcohol": "12,60%",
-    "acidez": "5,20g/l",
+    "acidez": "5,20g/l ",
     "azucar": "4g/l",
     "vista": "Rosa",
     "nariz": "De carácter frutal (frutillas y cerezas) con notas florales.",
-    "boca": "Entrada amable. Posee una acidez marcada, pero integrada. Tiene persistencia en el final de boca.",
-    "otros": "              "
+    "boca": "Entrada amable. Posee una acidez marcada, pero integrada. Tiene persistencia en el final de boca."
   },
   {
     "id": 6,

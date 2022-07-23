@@ -83,13 +83,13 @@
   font-family: Alegreya Sans, sans-serif;
 }
 
-#edit_botonera {
+.edit_botonera {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#edit_confirmar-edicion {
+.edit_confirmar-edicion {
   width: 80%;
   padding: 10px;
   margin: 20px 0 25px 0;

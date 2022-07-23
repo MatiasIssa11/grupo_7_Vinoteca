@@ -41,4 +41,16 @@
     max-width: 1000px;
     margin: auto;
   }
+  .edit_confirmar-edicion {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  .edit_confirmar-edicion:hover {
+    transform: scale(1.1);
+  }
+
+  .edit_confirmar-edicion:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
 }
