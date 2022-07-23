@@ -22,17 +22,7 @@
               <option value="categoria">Categoria</option>
             </select>
           </fieldset>
-          <h3 class="search_titulos">Mostrar:</h3>
-          <fieldset class="search_parametros">
-            <div class="search_mostrar">
-              <input type="radio" name="mostrar" value="grilla" />
-              <label for="grilla"> Grilla </label>
-            </div>
-            <div class="search_mostrar">
-              <input type="radio" name="mostrar" value="lista" />
-              <label for="lista"> Lista </label>
-            </div>
-          </fieldset>
+
           <h3 class="search_titulos">Categorias</h3>
           <fieldset class="search_parametros">
             <% searchCategorias.forEach(element => { %>
@@ -42,7 +32,7 @@
             </div>
             <% }) %>
           </fieldset>
-          <button type="submit">Mostrar</button>
+          <button type="submit" id="search_boton">MOSTRAR</button>
         </form>
       </aside>
 

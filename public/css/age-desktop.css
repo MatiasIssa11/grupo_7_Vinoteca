@@ -4,4 +4,17 @@
     margin: 20px auto;
     column-gap: 70px;
   }
+
+  .main_botones-boton {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  .main_botones-boton:hover {
+    transform: scale(1.1);
+  }
+
+  .main_botones-boton:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
 }

@@ -1,133 +1,143 @@
 main {
-  
-   text-align: center;
-   font-family: Alegreya Sans, sans-serif;
- }
- 
- #banner {
-   margin: 0;
-   width: 100vw;
-   height: 15vw;
-   object-fit: cover;
-   object-position: 0% 27%;
- }
+  text-align: center;
+  font-family: Alegreya Sans, sans-serif;
+}
 
- /* PRODUCTOS */
+#banner {
+  margin: 0;
+  width: 100vw;
+  height: 15vw;
+  object-fit: cover;
+  object-position: 0% 27%;
+}
 
- .grilla {
-   width: 90%;
-   display: grid;
-   grid-template-columns: 1fr;
-   column-gap: 10px;
-   row-gap: 10px;
-   margin-bottom: 10px;
-   margin: auto;
-   padding-top: 0px;
- }
- 
- .grilla h2 {
-   color: #fff;
-   background-color: #401909;
- }
- 
- .articulos {
-   border: 1px solid #000;
-   font-family: Bitter, serif;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
- }
- 
- .articulos img {
-   height: 100vw;
- }
- 
- .textoProductos {
-   background-color: #423e03;
-   color: #fff;
-   display: flex;
-   justify-content: space-evenly;
-   flex-wrap: wrap;
-   align-items: center;
-   flex-grow: 1;
- }
- 
- .textoProductos h4 {
-   width: 100%;
-   padding: 4px 0;
- }
- 
- .textoProductos a {
-   background-color: #fff;
-   color: #000;
-   border-radius: 6px;
-   font-weight: 700;
-   padding: 5px;
-   width: 80px;
-   margin-bottom: 6px;
-   border: 1px solid #000;
- }
+/* PRODUCTOS */
 
- /* BUSCADOR */
+.grilla {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 10px;
+  margin: auto;
+  padding-top: 0px;
+}
 
- #search_lateral {
-   display: none;
-   background-color: #401909;
-   color: white;
-   width: 40%;
-   margin: 15px;
-   text-align: left;
-   padding: 10px
- }
- 
- .search_parametros {
-   display: flex;
-   flex-wrap: wrap;
- 
-   width: 100%;
- }
+.grilla h2 {
+  color: #fff;
+  background-color: #401909;
+}
+
+.articulos {
+  border: 1px solid #000;
+  font-family: Bitter, serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.articulos img {
+  height: 100vw;
+}
+
+.textoProductos {
+  background-color: #423e03;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.textoProductos h4 {
+  width: 100%;
+  padding: 4px 0;
+}
+
+.textoProductos a {
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 5px;
+  width: 80px;
+  margin-bottom: 6px;
+  border: 1px solid #000;
+}
+
+/* BUSCADOR */
+
+#search_lateral {
+  display: none;
+  background-color: #401909;
+  border: #000 solid 1px;
+  color: white;
+  width: 40%;
+  max-width: 300px;
+  margin: 15px;
+  text-align: left;
+  padding: 10px;
+}
+
+.search_parametros {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
 
 .search_ordenar {
-   width: 200px;
-   padding: 5px 0 5px 0;
-   border: none;
-   border-radius: 5px;
- }
+  width: 200px;
+  padding: 5px 0 5px 0;
+  border: none;
+  border-radius: 5px;
+}
 
 .search_mostrar {
-   width: 100%;
-   padding: 5px 0 5px 10px;
- }
+  width: 100%;
+  padding: 5px 0 5px 10px;
+}
 
 .search_categorias {
-   width: 100%;
-   padding: 5px 0 5px 10px;
- }
+  width: 100%;
+  padding: 5px 0 5px 10px;
+}
 
 .search_titulos {
-   font-size: 20px;
-   padding: 15px 0 10px 0;
-   font-weight: normal;
- }
+  font-size: 20px;
+  padding: 15px 0 10px 0;
+  font-weight: normal;
+}
 
 #search_ordenar {
-   width: 100%;
- }
+  width: 100%;
+}
 
 .search_secundary-navbar {
-   background-color: white;
-   padding: 5px 0 5px 0;
+  background-color: white;
+  padding: 5px 0 5px 0;
 }
 
 #search_burgermenu {
-   display: flex;
-   background-color: #742d1c;
-   color: white;
-   display: block;
-   width: 25px;
-   height: 25px;
-   padding: 6.7px 5px 5px 5px;
-   text-align: center;
-   font-size: 7px;
-   margin: auto;
+  display: flex;
+  background-color: #742d1c;
+  color: white;
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 6.7px 5px 5px 5px;
+  text-align: center;
+  font-size: 7px;
+  margin: auto;
+}
+
+#search_boton {
+  color: #000;
+  font-weight: 700;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 0.5px #000 solid;
+  border-radius: 10px;
 }
