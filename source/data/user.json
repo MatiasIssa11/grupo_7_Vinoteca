@@ -97,4 +97,8 @@
 {"id":97,"nombre":"Coraline","apellido":"Syne","email":"csyne2o@washington.edu","fechaNacimiento":"10.11.1971","avatar":"user_97.jpg","password":"UXCLDtHO","category":"user"},
 {"id":98,"nombre":"Annie","apellido":"Milby","email":"amilby2p@nsw.gov.au","fechaNacimiento":"11.12.1966","avatar":"user_98.jpg","password":"lEVshY6SO","category":"user"},
 {"id":99,"nombre":"Fredek","apellido":"Josovich","email":"fjosovich2q@who.int","fechaNacimiento":"03.05.1974","avatar":"user_99.jpg","password":"JdRU3Hui","category":"user"},
-{"id":100,"nombre":"Shelton","apellido":"Lugden","email":"slugden2r@wufoo.com","fechaNacimiento":"19.10.1988","avatar":"user_100.jpg","password":"zyMXdL3Yll","category":"user"}]
+{"id":100,"nombre":"Shelton","apellido":"Lugden","email":"slugden2r@wufoo.com","fechaNacimiento":"19.10.1988","avatar":"user_100.jpg","password":"zyMXdL3Yll","category":"user"},
+{"id":101,"nombre":"Agustin","apellido":"Collados","email":"collados_agustin@hotmail.com","fechaNacimiento":"18.06.1986","avatar":"user_101.jpg","password":"123","category":"admin"},
+{"id":102,"nombre":"Matias","apellido":"Alonso","email":"matias.alonso@gmail.com","fechaNacimiento":"01.01.1900","avatar":"user_102.jpg","password":"123","category":"admin"},
+{"id":103,"nombre":"Matias","apellido":"Issa","email":"matias.issa@gmail.com","fechaNacimiento":"01.01.1900","avatar":"user_103.jpg","password":"123","category":"admin"}
+]
