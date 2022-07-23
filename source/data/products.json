@@ -96,5 +96,19 @@
     "nariz": "Es un vino especiado, en donde se perciben notas canela, pimienta negra con dejos a notas frutales como frambuesas y ciruelas.",
     "boca": "Entrada suave, estructurada media, levemente ácido, con taninos amables.",
     "otros": "              "
+  },
+  {
+    "id": 9,
+    "nameProduct": "Terravita",
+    "type": "Malbec sin sulfito",
+    "price": 8700,
+    "image": "image-1658602237101-933239737.jpg",
+    "alcohol": "14,00",
+    "acidez": "5,3 g/l",
+    "azucar": "1,80 g/l",
+    "vista": "Rojo rubí con reflejos violetas.",
+    "nariz": "Vino fresco, joven, se perciben aromas a fruta fresca que recuerdan a las frutillas, cerezas, ciruelas, con un dejo sutil a rosas.",
+    "boca": "Entrada ligera, levemente ácido, evoluciona con el paso del tiempo, en donde se acentúa lo percibido en nariz.",
+    "otros": "SO2 libre: 5,2 mg/l\r\nSO2 total: 14 mg/l"
   }
 ]

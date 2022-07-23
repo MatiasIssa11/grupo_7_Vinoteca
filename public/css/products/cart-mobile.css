@@ -46,23 +46,28 @@
 
 .cart_products_text p {
   margin: 2px 0;
+  font-size: 20px;
+  font-family: Alegreya Sans, sans-serif;
 }
 
 .cart_products_text h4 {
-  font-size: 18px;
+  font-size: 30px;
   margin: 2px 0;
+  font-family: Alegreya Sans, sans-serif;
 }
 
 .cart_products-price {
   border: 1px solid #000;
   border-radius: 5px;
   padding: 4px 10px;
+  margin: 0 0 5px 0;
   font-size: 26px;
 }
 
 .cart_products-button {
   display: flex;
   flex-flow: column wrap;
+  margin: 50px 0 0 0;
   justify-content: space-between;
   align-items: center;
 }
