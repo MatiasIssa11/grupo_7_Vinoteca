@@ -41,9 +41,7 @@
     height: 55px;
   }
 
-  #login_botonera-ingresar {
-    width: 50%;
-  }
+
 
   #login_botonera {
     height: 100px;
@@ -68,5 +66,19 @@
 
   #login_recordar-contraseña {
     justify-content: right;
+  }
+
+  #login_botonera-ingresar:focus {
+    background-color: hsla(56, 91%, 14%, 0.9);
+    color: #ffffff;
+  }
+  
+  #login_botonera-ingresar:hover {
+    transform: scale(1.1);
+  }
+
+  #login_botonera-ingresar {
+    width: 50%;
+    transition: all 0.8s;
   }
 }
