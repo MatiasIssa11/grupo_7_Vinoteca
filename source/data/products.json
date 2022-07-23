@@ -42,20 +42,6 @@
     "otros": ""
   },
   {
-    "id": 4,
-    "nameProduct": "Terravita",
-    "type": "Malbec sin Sulfito",
-    "price": 5580,
-    "image": "malbec-sin-sulfito.jpg",
-    "alcohol": "14%",
-    "acidez": "5,30 g/l",
-    "azucar": "1,80 g/l",
-    "vista": "Rojo rubí con reflejos violetas.",
-    "nariz": "Vino fresco, joven, se perciben aromas a fruta fresca que recuerdan a las frutillas, cerezas, ciruelas, con un dejo sutil a rosas.",
-    "boca": "Entrada ligera, levemente ácido, evoluciona con el paso del tiempo, en donde se acentúa lo percibido en  nariz.",
-    "otros": ""
-  },
-  {
     "id": 5,
     "nameProduct": "Terravita",
     "type": "Rosé",

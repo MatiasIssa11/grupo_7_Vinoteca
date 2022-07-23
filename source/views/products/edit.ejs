@@ -9,7 +9,7 @@
       <section id="edit_caja">
         <h1 id="edit_caja-titulo">EDITAR PRODUCTO ID:<%= product.id %></h1>
         <form
-          id="edit"
+          id="edit_editar-producto"
           action="/products/edit/<%= product.id %>?m=PUT"
           method="post"
           enctype="multipart/form-data"
@@ -155,7 +155,7 @@
         </form>
 
         <form
-          id="edit"
+          id="edit_eliminar-producto"
           action="/products/delete/<%= product.id %>?m=DELETE"
           method="post"
           enctype="multipart/form-data"
