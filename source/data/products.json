@@ -54,5 +54,61 @@
     "nariz": "Vino fresco, joven, se perciben aromas a fruta fresca que recuerdan a las frutillas, cerezas, ciruelas, con un dejo sutil a rosas.",
     "boca": "Entrada ligera, levemente ácido, evoluciona con el paso del tiempo, en donde se acentúa lo percibido en  nariz.",
     "otros": ""
+  },
+  {
+    "id": 5,
+    "nameProduct": "Terravita",
+    "type": "Rosé",
+    "price": 6550,
+    "image": "image-1658594505254-137864522.jpg",
+    "alcohol": "12,60%",
+    "acidez": "5,20g/l",
+    "azucar": "4g/l",
+    "vista": "Rosa",
+    "nariz": "De carácter frutal (frutillas y cerezas) con notas florales.",
+    "boca": "Entrada amable. Posee una acidez marcada, pero integrada. Tiene persistencia en el final de boca.",
+    "otros": "              "
+  },
+  {
+    "id": 6,
+    "nameProduct": "Terravita",
+    "type": "Bonarda",
+    "price": 4860,
+    "image": "image-1658594575603-811150713.jpg",
+    "alcohol": "13,30%",
+    "acidez": "13,30%",
+    "azucar": "2,10 g/l",
+    "vista": "Brillante, rojo rubí con reflejos bordó.",
+    "nariz": "Con notas a frutas rojas frescas que recuerdan a moras, frutillas, cerezas y con un fondo especiado.",
+    "boca": "Un vino agradable con entrada suave, estructurado, con buen balance tánico.",
+    "otros": "              "
+  },
+  {
+    "id": 7,
+    "nameProduct": "Terravita",
+    "type": "Torrontés",
+    "price": 3500,
+    "image": "image-1658594638612-673176849.jpg",
+    "alcohol": "13,8%",
+    "acidez": "6,0 g/l",
+    "azucar": "1,80 g/l",
+    "vista": "De color amarillo verdoso con reflejos acerados.",
+    "nariz": "Se perciben notas a frutas frescas que recuerdan a pomelo, durazno, ananá y lichi, que se combinan perfectamente con dejos a ruda y azahares.",
+    "boca": "Posee una entrada ligera con equilibrada acidez, de buena untuosidad y prolongada duración.",
+    "otros": "              "
+  },
+  {
+    "id": 8,
+    "nameProduct": "Terravita",
+    "type": "Syrah",
+    "price": 9200,
+    "image": "image-1658594700252-144028169.jpg",
+    "alcohol": "13,5%",
+    "acidez": "5,8 g/l",
+    "azucar": "2,4 g/l",
+    "vista": "Rojo rubí con reflejos bordo.",
+    "nariz": "Es un vino especiado, en donde se perciben notas canela, pimienta negra con dejos a notas frutales como frambuesas y ciruelas.",
+    "boca": "Entrada suave, estructurada media, levemente ácido, con taninos amables.",
+    "otros": "              "
   }
 ]
