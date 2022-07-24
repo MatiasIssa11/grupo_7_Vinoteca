@@ -81,4 +81,19 @@
     width: 50%;
     transition: all 0.8s;
   }
+
+  #login_botonera-crear-cuenta-tablet:focus {
+    background-color: hsla(56, 91%, 14%, 0.9);
+    color: #ffffff;
+  }
+  
+  #login_botonera-crear-cuenta-tablet:hover {
+    transform: scale(1.1);
+  }
+
+  #login_botonera-crear-cuenta-tablet {
+    width: 50%;
+    transition: all 0.8s;
+  }
+
 }
