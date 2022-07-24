@@ -17,7 +17,9 @@
           <figure>
             <img src="/products/<%= product.image %> " />
           </figure>
-          <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
+          <h4 class="main_articulos-texto">
+            <%= product.nameProduct %> <%= product.type %>
+          </h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
           <form action="/products/cart" method="post">
             <button class="articulos_boton" value="<%= product.id %>">
