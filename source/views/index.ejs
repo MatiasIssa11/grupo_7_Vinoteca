@@ -19,7 +19,7 @@
           </figure>
           <h4 class="main_articulos-texto"><%= product.nameProduct %></h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
-          <form action="/cart" method="post">
+          <form action="/products/cart" method="post">
             <button class="articulos_boton" value="<%= product.id %>">
               Comprar
             </button>
@@ -40,7 +40,7 @@
             <%= product.nameProduct %> <%= product.type %>
           </h4>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
-          <form action="/cart" method="post">
+          <form action="/products/cart" method="post">
             <button class="articulos_boton">Comprar</button>
           </form>
           <form action="/products/<%= product.id %>" method="get">

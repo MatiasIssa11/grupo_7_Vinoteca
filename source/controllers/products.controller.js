@@ -33,6 +33,10 @@ module.exports = {
     });
   },
 
+  buy: (req, res) => {
+    return res.redirect("/products/cart");
+  },
+
   products: (req, res) => {
     let product = index();
     const comparePrice = (a, b) => {

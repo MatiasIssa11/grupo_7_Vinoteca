@@ -42,7 +42,7 @@
     "otros": ""
   },
   {
-    "id": 5,
+    "id": 4,
     "nameProduct": "Terravita",
     "type": "Rosé",
     "price": 6550,
@@ -52,10 +52,11 @@
     "azucar": "4g/l",
     "vista": "Rosa",
     "nariz": "De carácter frutal (frutillas y cerezas) con notas florales.",
-    "boca": "Entrada amable. Posee una acidez marcada, pero integrada. Tiene persistencia en el final de boca."
+    "boca": "Entrada amable. Posee una acidez marcada, pero integrada. Tiene persistencia en el final de boca.",
+    "otros": ""
   },
   {
-    "id": 6,
+    "id": 5,
     "nameProduct": "Terravita",
     "type": "Bonarda",
     "price": 4860,
@@ -66,10 +67,10 @@
     "vista": "Brillante, rojo rubí con reflejos bordó.",
     "nariz": "Con notas a frutas rojas frescas que recuerdan a moras, frutillas, cerezas y con un fondo especiado.",
     "boca": "Un vino agradable con entrada suave, estructurado, con buen balance tánico.",
-    "otros": "              "
+    "otros": ""
   },
   {
-    "id": 7,
+    "id": 6,
     "nameProduct": "Terravita",
     "type": "Torrontés",
     "price": 3500,
@@ -80,10 +81,10 @@
     "vista": "De color amarillo verdoso con reflejos acerados.",
     "nariz": "Se perciben notas a frutas frescas que recuerdan a pomelo, durazno, ananá y lichi, que se combinan perfectamente con dejos a ruda y azahares.",
     "boca": "Posee una entrada ligera con equilibrada acidez, de buena untuosidad y prolongada duración.",
-    "otros": "              "
+    "otros": ""
   },
   {
-    "id": 8,
+    "id": 7,
     "nameProduct": "Terravita",
     "type": "Syrah",
     "price": 9200,
@@ -94,10 +95,10 @@
     "vista": "Rojo rubí con reflejos bordo.",
     "nariz": "Es un vino especiado, en donde se perciben notas canela, pimienta negra con dejos a notas frutales como frambuesas y ciruelas.",
     "boca": "Entrada suave, estructurada media, levemente ácido, con taninos amables.",
-    "otros": "              "
+    "otros": ""
   },
   {
-    "id": 9,
+    "id": 8,
     "nameProduct": "Terravita",
     "type": "Malbec sin sulfito",
     "price": 8700,
@@ -108,6 +109,6 @@
     "vista": "Rojo rubí con reflejos violetas.",
     "nariz": "Vino fresco, joven, se perciben aromas a fruta fresca que recuerdan a las frutillas, cerezas, ciruelas, con un dejo sutil a rosas.",
     "boca": "Entrada ligera, levemente ácido, evoluciona con el paso del tiempo, en donde se acentúa lo percibido en nariz.",
-    "otros": "SO2 libre: 5,2 mg/l\r\nSO2 total: 14 mg/l"
+    "otros": "SO2 libre: 5,2 mg/l - SO2 total: 14 mg/l"
   }
 ]

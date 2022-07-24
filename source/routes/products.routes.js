@@ -9,6 +9,7 @@ const {
   edit,
   modify,
   destroy,
+  buy,
 } = require("../controllers/products.controller");
 
 const multer = require("multer");
@@ -21,6 +22,7 @@ routes.get("/create", create); // Formulario de creacion de productos "Create"
 routes.post("/save", [upload.any()], save); // Crea el producto en el product.json
 
 routes.get("/cart", cart); // Carrito de compras
+routes.post("/cart", buy); // Comprar con el carrito, por ahora solo redirecciona
 
 routes.get("/edit/:id", edit); // Forulario de edicion de productos
 routes.put("/edit/:id", [upload.any()], modify); // Formulario de edicion de productos - Envio

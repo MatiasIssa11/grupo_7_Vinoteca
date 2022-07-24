@@ -13,7 +13,9 @@
           <img src="/products/<%= product.image %>" />
         </figure>
         <section id="producto_compra">
-          <h3 id="producto_compra-nombre"><%= product.nameProduct %> <%= product.type %></h3>
+          <h3 id="producto_compra-nombre">
+            <%= product.nameProduct %> <%= product.type %>
+          </h3>
           <h2 id="producto_compra-precio">$<%= product.price %></h2>
           <form
             action="/product/<%= product.id %>"
@@ -54,6 +56,9 @@
             <p>Vista: <%= product.vista %></p>
             <p>Nariz: <%= product.nariz %></p>
             <p>Boca: <%= product.boca %></p>
+            <% if (product.otros) { %>
+            <p>Otros: <%= product.otros %></p>
+            <% } %>
           </section>
         </section>
       </article>

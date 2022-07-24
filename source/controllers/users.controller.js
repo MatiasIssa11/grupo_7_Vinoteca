@@ -10,6 +10,10 @@ module.exports = {
     });
   },
 
+  save: (req, res) => {
+    return res.redirect("/users/login");
+  },
+
   login: (req, res) => {
     return res.render("./users/login", {
       title: "Cava Wines-Acceso",
@@ -19,5 +23,9 @@ module.exports = {
         "users/login-desktop",
       ],
     });
+  },
+
+  enter: (req, res) => {
+    return res.redirect("/");
   },
 };
