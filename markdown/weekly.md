@@ -1,5 +1,27 @@
 ## Weekly
 
+### 24/07/2022
+#### ¿Que hiciste esta semana?
+Matías Alonso: Agregué transiciones, corregí todos los post "vacios" para que redireccionen y links. Quedó funcional el delete.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que problemas encontraste?
+Matías Alonso: Tuve problemas con la barra de busquedas, que quedó pendiente para terminar. 
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que vamos a hacer esta semana?
+Matías Alonso: Terminar cualquier detalle pendiente del sprint 4 y preparar el buscador.
+
+Agustín Collados: 
+
+Matías Issa:
+
 ### 17/07/2022
 #### ¿Que hiciste esta semana?
 Matías Alonso: Corregimos la carga de archivos, cambié la ubicación de las imagenes y empecé a filtrar y ordenar los productos en la vista index. Dejé funcional el edit y el put.
