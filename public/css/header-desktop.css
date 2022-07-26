@@ -7,12 +7,12 @@
     padding: 10px 0 15px 0;
   }
 
-  #header_searchbar-recuadro {
-    width: 380px;
+  #header_searchbar-icono {
+    transition: all 0.8s;
   }
 
-  #header_searchbar-icono {
-    left: 355px;
+  #header_searchbar-icono:hover {
+    transform: scale(1.15) rotate(360deg);
   }
 
   #header_navbar {
@@ -38,10 +38,6 @@
     font-size: 20px;
   }
 
-  #header_icono-texto {
-    display: flex;
-  }
-
   #header_inicio:hover {
     transform: scale(1.1);
   }
@@ -65,5 +61,4 @@
   #header_contacto {
     transition: all 0.8s;
   }
-
 }

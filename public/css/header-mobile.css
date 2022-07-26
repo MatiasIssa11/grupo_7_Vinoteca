@@ -7,8 +7,14 @@
   padding: 10px 5px 5px 5px;
 }
 
+#header_superior figure {
+  width: 50%;
+  max-width: 170px;
+}
+
 #header_logo-grande {
-  height: 50px;
+  max-height: 50px;
+  width: 100%;
   text-align: left;
 }
 
@@ -22,13 +28,21 @@
 }
 
 #header_searchbar-items {
-  position: relative;
+  width: 100%;
+  display: flex;
+  max-width: 375px;
+}
+
+#header_searchbar-items button {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 0 15px 15px 0;
 }
 
 #header_searchbar-recuadro {
-  border-radius: 15px;
-  height: 25px;
-  width: 270px;
+  border-radius: 15px 0 0 15px;
+  padding: 5px;
+  width: 100%;
   text-align: center;
   border: none;
   flex-grow: 0.7;
@@ -36,9 +50,6 @@
 
 #header_searchbar-icono {
   color: #401909;
-  position: absolute;
-  left: 245px;
-  top: 25%;
 }
 
 #header_navbar {
@@ -64,7 +75,7 @@
   font-family: Alegreya Sans, sans-serif;
 }
 
-#header_icono-texto {
+.header_icono-texto {
   font-size: 10px;
   display: none;
   font-family: Alegreya Sans, sans-serif;

@@ -1,7 +1,12 @@
-@media (min-width: 650px) {
+@media (min-width: 500px) {
   #header_searchbar {
-    width: 270px;
-    padding: 10px 0 15px 0;
+    padding: 10px 2px 15px 2px;
+    width: 40%;
+    flex-grow: 0.8;
+  }
+
+  #header_searchbar-items {
+    max-width: 450px;
   }
 
   #header_navbar {
@@ -15,7 +20,7 @@
     justify-content: center;
   }
 
-  #header_icono-texto {
+  .header_icono-texto {
     display: flex;
   }
 }
