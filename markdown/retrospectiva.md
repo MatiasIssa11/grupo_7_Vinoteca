@@ -1,5 +1,21 @@
 ## Retrospectiva
 
+#### Sprint 3:
+1. Comenzar a hacer.
+   Identificar todo lo solicitado en el sprint en el "backlog" de Trello.
+
+2. Hacer más.
+   Reuniones en caso de ser necesario para destrabar algun punto en particular.
+ 
+3. Continuar haciendo.
+   Poner responsables en el momento que se colocan las tareas en el Trello.
+
+4. Hacer menos.
+   Olvidar de subir algun commit.
+
+5. Dejar de hacer.
+   Dejar la retrospectiva para el final.
+
 #### Sprint 2:
 1. Comenzar a hacer.
    Agarrar tareas del Trello y preguntar si otro lo este haciendo.

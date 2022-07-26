@@ -4,21 +4,21 @@
 #### ¿Que hiciste esta semana?
 Matías Alonso: Corregimos la carga de archivos, cambié la ubicación de las imagenes y empecé a filtrar y ordenar los productos en la vista index. Dejé funcional el edit y el put.
 
-Agustín Collados: 
+Agustín Collados: Quedaron definidos los campos de productos y cree el products.json, idem para los users. Quedo funcional el /products, products/:id levantando datos desde el json.
 
 Matías Issa:
 
 #### ¿Que problemas encontraste?
 Matías Alonso: Tuvimos problemas con la carga de archivos.
 
-Agustín Collados: 
+Agustín Collados: inicialmente hubo problemas para levantar datos desde el .json.
 
 Matías Issa:
 
 #### ¿Que vamos a hacer esta semana?
 Matías Alonso: Tener el feedback para saber que hay que corregir del sprint 3 y lo que quede pendiente del sprint 4.
 
-Agustín Collados: 
+Agustín Collados: Idem Mati A.
 
 Matías Issa:
 

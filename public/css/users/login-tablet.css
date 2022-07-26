@@ -10,6 +10,8 @@
 
   #login_caja {
     max-width: 800px;
+  }  #login_caja {
+    max-width: 800px;
   }
 
   #login_crear-cuenta {
@@ -40,8 +42,6 @@
     text-align: center;
     height: 55px;
   }
-
-
 
   #login_botonera {
     height: 100px;
