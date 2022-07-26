@@ -41,4 +41,29 @@
   #header_icono-texto {
     display: flex;
   }
+
+  #header_inicio:hover {
+    transform: scale(1.1);
+  }
+
+  #header_inicio {
+    transition: all 0.8s;
+  }
+
+  #header_productos:hover {
+    transform: scale(1.1);
+  }
+
+  #header_productos {
+    transition: all 0.8s;
+  }
+
+  #header_contacto:hover {
+    transform: scale(1.1);
+  }
+
+  #header_contacto {
+    transition: all 0.8s;
+  }
+
 }
