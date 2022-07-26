@@ -1,12 +1,13 @@
 <section id="header_superior">
+  
   <img
     id="header_logo-grande"
     src="/logo/CAVA-WINES-LOGO-GRANDE-BLANCO.svg"
     alt="CW Cava Wines blanco"
   />
 
-  <form id="header_searchbar" action="/products/" method="get">
-    <fieldset id="header_searchbar-items">
+  <form id="header_searchbar" action="/search" method="get">
+    <div id="header_searchbar-items">
       <input
         id="header_searchbar-recuadro"
         type="text"
@@ -14,29 +15,24 @@
         placeholder="¡Busca tus vinos!"
       />
       <i id="header_searchbar-icono" class="fa-solid fa-magnifying-glass"></i>
-    </fieldset>
+    </div>
   </form>
 
   <nav id="header_navbar">
     <div>
       <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-      <a href="/products/cart" id="header_icono-texto">Mi Carrito</a>
+      <a href="/products/cart" id="header_icono-texto" >Mi Carrito</a>
     </div>
     <div>
       <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-      <a href="/users/login" id="header_icono-texto">Mi Cuenta</a>
+      <a href="/users/login" id="header_icono-texto" >Mi Cuenta</a>
     </div>
   </nav>
+
 </section>
 
 <nav id="main_navbar">
-<<<<<<< HEAD
   <a id="header_inicio" href="/">Inicio</a>
   <a id="header_productos" href="/products">Productos</a>
   <a id="header_contacto" href="/contact">Contacto</a>
-=======
-  <a href="/">Inicio</a>
-  <a href="/products/">Productos</a>
-  <a href="/contact">Contacto</a>
->>>>>>> 0e13362845b8155bd1215ea6c18592516e5fb529
 </nav>
