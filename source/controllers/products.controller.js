@@ -1,5 +1,10 @@
 const { index, one, create, write } = require("../models/products.model");
 const searchCategorias = require("../modules/searchCategorias");
+const {
+  compareName,
+  comparePrice,
+  compareCategory,
+} = require("../modules/compare");
 
 module.exports = {
   detail: (req, res) => {
@@ -39,22 +44,26 @@ module.exports = {
 
   products: (req, res) => {
     let product = index();
-    const comparePrice = (a, b) => {
-      a.price - b.price;
-    };
 
-    const compareName = (a, b) => {
-      if (a.nameProduct > b.nameProduct) {
-        return 1;
-      }
-      if (a.nameProduct < b.nameProduct) {
-        return -1;
-      }
-      return 0; // a must be equal to b
-    };
+    //Buscador
+    if (req.query.search && req.query) {
+      req.query.search = req.query.search.toLowerCase();
+      product = product.filter((p) =>
+        (p.nameProduct + "" + p.type).toLowerCase().includes(req.query.search)
+      );
+    }
 
+    //Filtro lista
+    if (req.query && req.query.lista) {
+      product = product.filter((p) => p.type.includes(req.query.lista));
+    }
+
+    //Orden
     if (req.query && req.query.orden) {
       switch (req.query.orden) {
+        case "vacio":
+          product = product;
+          break;
         case "precioAsc":
           product = product.sort(comparePrice).reverse();
           break;
@@ -64,7 +73,9 @@ module.exports = {
         case "marca":
           product = product.sort(compareName);
           break;
-
+        case "categoria":
+          product = product.sort(compareCategory);
+          break;
         default:
           product = product;
           break;

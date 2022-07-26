@@ -1,10 +1,8 @@
 module.exports = [
   "Malbec",
   "Cabernet Sauvignon",
-  "Cabernet Franc",
-  "Merlot",
+  "Rosé",
+  "Bonarda",
+  "Torrontés",
   "Syrah",
-  "Pinot Noir",
-  "Chardonnay",
-  "Sauvignon Blanc",
 ];
