@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <%- include('../partials/head.ejs') %>
-</head>
+  </head>
   <body>
-    <header>
-      <%- include('../partials/header.ejs') %>
-    </header>
+    <header><%- include('../partials/header.ejs') %></header>
     <main>
       <section id="login_caja">
         <h1 id="login_caja-titulo">INICIAR SESION</h1>
-        <div id="login_caja-cuerpo">      
-          <form id="login_formulario-ingreso" action="/users/login" method="post">
-            <div id="login_campos"> <!--Cambiar div por fieldset-->
+        <div id="login_caja-cuerpo">
+          <form
+            id="login_formulario-ingreso"
+            action="/users/enter"
+            method="post"
+          >
+            <div id="login_campos">
+              <!--Cambiar div por fieldset-->
               <div class="login_linea-form">
                 <label for="nombre" class="login_texto">E-mail: </label>
                 <input type="text" name="nombre" class="login_campo" />
               </div>
               <div class="login_linea-form">
                 <label for="clave" class="login_texto">Contraseña: </label>
-                <input type="password" name="clave" class="login_campo"/>
+                <input type="password" name="clave" class="login_campo" />
               </div>
-              <a id="login_olvidaste-contraseña" href="/">Olvidaste tu contraseña?</a>
+              <a id="login_olvidaste-contraseña" href="/"
+                >Olvidaste tu contraseña?</a
+              >
               <div id="login_recordar-contraseña">
-                <input type="checkbox" name="recordar-contraseña" value="recordar-contraseña"/>
-                <label id="login_checkbox-recordar-user">Recordar contraseña</label>
+                <input
+                  type="checkbox"
+                  name="recordar-contraseña"
+                  value="recordar-contraseña"
+                />
+                <label id="login_checkbox-recordar-user"
+                  >Recordar contraseña</label
+                >
               </div>
             </div>
             <div id="login_botonera">
-              <button id="login_botonera-ingresar" type="submit">Ingresar</button>
-              <a id="login_botonera-crear-cuenta" href="/users/register">Crear cuenta</a>
+              <button id="login_botonera-ingresar" type="submit">
+                Ingresar
+              </button>
+              <a id="login_botonera-crear-cuenta" href="/users/register"
+                >Crear cuenta</a
+              >
             </div>
           </form>
           <section id="login_crear-cuenta">
             <p id="login_frase">
               Te invitamos a crear una cuenta en nuestro sitio para poder
-              comprar, hacer un seguimiento de pedidos, recibir novedades 
-              y mucho más!
+              comprar, hacer un seguimiento de pedidos, recibir novedades y
+              mucho más!
             </p>
-            <a id="login_botonera-crear-cuenta-tablet" href="/users/register">Crear cuenta</a>
+            <a id="login_botonera-crear-cuenta-tablet" href="/users/register"
+              >Crear cuenta</a
+            >
           </section>
         </div>
       </section>
     </main>
-    <footer>
-        <%- include('../partials/footer.ejs') %>
-    </footer>
+    <footer><%- include('../partials/footer.ejs') %></footer>
   </body>
 </html>

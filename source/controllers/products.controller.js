@@ -109,8 +109,7 @@ module.exports = {
   },
 
   save: (req, res) => {
-    //return res.send(req.files);
-    req.body.image = req.files[0].filename; // Linea comentada hasta que encontremos el error con las imagenes
+    req.body.image = req.files[0].filename;
     let newProduct = create(req.body);
     let products = index();
     products.push(newProduct);
