@@ -1056,5 +1056,15 @@
     "avatar": "avatar-1659133431562-42017697.jpg",
     "password": "$2a$10$TnzGlKgsypiRMUAFI/usfOznswhn84oZLkXBrD450JiRr3yku.MOe",
     "category": "user"
+  },
+  {
+    "id": 107,
+    "nombre": "Sergio",
+    "apellido": "Massa",
+    "email": "collados_agustin@hotmail.com",
+    "fechaNacimiento": "1986-06-18",
+    "avatar": "avatar-1659192059857-326741252.jpg",
+    "password": "$2a$10$ZpniTheiKq8IhExO./EGbutKPvozcCmLPf0Mr6DcVdWItHEei0QQC",
+    "category": "user"
   }
 ]

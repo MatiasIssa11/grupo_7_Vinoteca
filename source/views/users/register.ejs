@@ -23,7 +23,13 @@
                 class="register_campo"
                 minlength="4"
               />
+              <% if(locals.errors && errors.nombre) { %>
+                <div>
+                  <%= errors.nombre.msg %>
+                </div>
+                <% } %>
             </div>
+
             <div class="register_caja-linea-form">
               <label for="apellido" class="register_texto">Apellido: </label>
               <input
@@ -32,6 +38,11 @@
                 class="register_campo"
                 minlength="4"
               />
+              <% if(locals.errors && errors.apellido) { %>
+                <div>
+                  <%= errors.apellido.msg %>
+                </div>
+                <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -54,7 +65,13 @@
                 class="register_campo"
                 minlength="6"
               />
+              <% if(locals.errors && errors.email) { %>
+                <div>
+                  <%= errors.email.msg %>
+                </div>
+                <% } %>
             </div>
+
             <div class="register_caja-linea-form">
               <label for="fecha-nacimiento" class="register_texto"
                 >Fecha de nacimiento:
@@ -65,7 +82,13 @@
                 id="fecha-nacimiento"
                 class="register_campo"
               />
+              <% if(locals.errors && fechaNacimiento.nombre) { %>
+                <div>
+                  <%= errors.fechaNacimiento.msg %>
+                </div>
+                <% } %>
             </div>
+
             <div class="register_caja-linea-form">
               <label for="clave" class="register_texto">Contraseña: </label>
               <input
@@ -74,7 +97,13 @@
                 class="register_campo"
                 minlength="8"
               />
+              <% if(locals.errors && password.nombre) { %>
+                <div>
+                  <%= errors.password.msg %>
+                </div>
+                <% } %>
             </div>
+
             <div class="register_caja-linea-form">
               <label for="clave-confirmada" class="register_texto"
                 >Confirmar contraseña:
@@ -86,6 +115,7 @@
                 minlength="8"
               />
             </div>
+
             <div id="register_botonera">
               <button id="register_botonera-crear-cuenta" type="submit">
                 Crear cuenta
@@ -94,6 +124,7 @@
                 Iniciar sesion
               </a>
             </div>
+
           </fieldset>
         </form>
       </section>
