@@ -32,7 +32,7 @@ module.exports = {
     let users = index(); // Trae user.json como obj. literal
     users.push(newUser); // Agrega nuevo usuario al final del objeto literal users
     write(users); // Actualiza el user.json con el nuevo user
-    return res.redirect("/users/register");
+    return res.redirect("/users/login");
   },
 
   login: (req, res) => {

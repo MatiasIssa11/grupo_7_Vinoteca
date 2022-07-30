@@ -1066,5 +1066,15 @@
     "avatar": "avatar-1659192059857-326741252.jpg",
     "password": "$2a$10$ZpniTheiKq8IhExO./EGbutKPvozcCmLPf0Mr6DcVdWItHEei0QQC",
     "category": "user"
+  },
+  {
+    "id": 108,
+    "nombre": "Alan",
+    "apellido": "Bareiro",
+    "email": "collados.agustin.86@gmail.com",
+    "fechaNacimiento": "2022-06-29",
+    "avatar": "avatar-1659211078174-653131316.jpg",
+    "password": "$2a$10$J0Q6BmQ9E05YWHMlUuhS3uE7YGyfTzTEJEjyaffMlprj2I5kZUaDu",
+    "category": "user"
   }
 ]
