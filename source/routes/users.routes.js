@@ -9,8 +9,7 @@ const {
   procesRegister,
 } = require("../controllers/users.controller");
 
-///////////////// Validacion incompleta - No funca:
-
+///////////////// Validacion incompleta - No funca (no estan todos los campos, falta avatar):
 const validations = [
   check('nombre').notEmpty().withMessage('Este campo es obligatorio'),
   check('apellido').notEmpty().withMessage('Este campo es obligatorio'),
@@ -18,7 +17,6 @@ const validations = [
   check('fechaNacimiento').notEmpty().withMessage('Este campo es obligatorio'),
   check('password').notEmpty().withMessage('Este campo es obligatorio')
 ];
-
 /////////////////
 
 const multer = require("multer");
@@ -26,7 +24,7 @@ const storage = require("../modules/storage");
 const upload = multer({ storage: storage("users") });
 
 routes.get("/register", register);
-routes.post("/save", [upload.any()], validations, save, procesRegister); //Guardado de datos en el registro
+routes.post("/save", [upload.any()], validations, save, procesRegister); //Guardado de datos en el registro - ver como y donde se implementa el proces register
 
 routes.get("/login", login);
 routes.post("/enter", enter); //Actualmente solo redirige al index
