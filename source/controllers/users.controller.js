@@ -1,7 +1,8 @@
-const { index, one, create, write } = require("../models/users.model");
 const { validationResult } = require('express-validator');
+const { index, one, create, write } = require("../models/users.model");
 
 module.exports = {
+
   register: (req, res) => {
     return res.render("./users/register", {
       title: "Cava Wines-Registro",
@@ -13,20 +14,22 @@ module.exports = {
     });
   },
 
-  ////////////////////////////////////// Validacion - mensajes de error - No funca:
-  procesRegister: (req, res) => {
-      
-    const resultValidation = validationResult(req);
+  process: (req, res) => {
+    let validaciones = validationResult(req);
+    let { errors } = validaciones;
 
-    if (resultValidation.errors.lenght > 0) {
+    if (errors && errors.lenght > 0) {
       return res.render("./users/register", {
-        errors: resultValidation.mapped()
+        styles: [
+          "users/register-mobile",
+          "users/register-tablet",
+          "users/register-desktop",
+        ],
+        oldData: req.body,
+        errors: validaciones.mapped()
       });
     }
-  },
-/////////////////////////////////////
 
-  save: (req, res) => {
     req.body.avatar = req.files[0].filename; // Levanta archivo del multer (el primero cargado)
     let newUser = create(req.body); // Crea nuevo usuario
     let users = index(); // Trae user.json como obj. literal

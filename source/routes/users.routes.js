@@ -1,32 +1,18 @@
 const { Router } = require("express");
-const { check } = require("express-validator"); //Función del express validator para verificar como middleware
 const routes = Router();
+const middlewares = require('../middlewares/register'); // Trae todos los middlewares que estan en middlewares/register.js
 const {
   register,
   login,
   save,
   enter,
-  procesRegister,
+  process,
 } = require("../controllers/users.controller");
 
-///////////////// Validacion incompleta - No funca (no estan todos los campos, falta avatar):
-const validations = [
-  check('nombre').notEmpty().withMessage('Este campo es obligatorio'),
-  check('apellido').notEmpty().withMessage('Este campo es obligatorio'),
-  check('email').notEmpty().withMessage('Este campo es obligatorio'),
-  check('fechaNacimiento').notEmpty().withMessage('Este campo es obligatorio'),
-  check('password').notEmpty().withMessage('Este campo es obligatorio')
-];
-/////////////////
-
-const multer = require("multer");
-const storage = require("../modules/storage");
-const upload = multer({ storage: storage("users") });
-
 routes.get("/register", register);
-routes.post("/save", [upload.any()], validations, save, procesRegister); //Guardado de datos en el registro - ver como y donde se implementa el proces register
+routes.post("/save", middlewares, process);
 
 routes.get("/login", login);
-routes.post("/enter", enter); //Actualmente solo redirige al index
+routes.post("/enter", enter); // Actualmente solo redirige al index
 
 module.exports = routes;

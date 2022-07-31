@@ -15,18 +15,17 @@
           enctype="multipart/form-data"
         >
           <fieldset>
+
             <div class="register_caja-linea-form">
               <label for="nombre" class="register_texto">Nombre: </label>
               <input
                 type="text"
                 name="nombre"
                 class="register_campo"
-                minlength="4"
-              />
-              <% if(locals.errors && errors.nombre) { %>
-                <div>
-                  <%= errors.nombre.msg %>
-                </div>
+                placeholder="Juan"
+                value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="msg-error"> <%= errors.nombre.msg %> </p>
                 <% } %>
             </div>
 
@@ -36,15 +35,13 @@
                 type="text"
                 name="apellido"
                 class="register_campo"
-                minlength="4"
-              />
-              <% if(locals.errors && errors.apellido) { %>
-                <div>
-                  <%= errors.apellido.msg %>
-                </div>
+                placeholder="Perez"
+                value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <p class="msg-error"> <%= errors.apellido.msg %> </p>
                 <% } %>
             </div>
-
+            
             <div class="register_caja-linea-form">
               <label for="avatar" class="register_texto"
                 >Imagen de usuario:
@@ -52,9 +49,10 @@
               <input
                 class="register_campo-imagen"
                 type="file"
-                name="avatar"
-                accept=".jpg"
-              />
+                name="avatar">
+                <% if (locals.errors && errors.avatar) { %>
+                    <p class="msg-error"> <%= errors.avatar.msg %> </p>
+                <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -63,12 +61,10 @@
                 type="email"
                 name="email"
                 class="register_campo"
-                minlength="6"
-              />
-              <% if(locals.errors && errors.email) { %>
-                <div>
-                  <%= errors.email.msg %>
-                </div>
+                placeholder="juan@example.com"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="msg-error"> <%= errors.email.msg %> </p>
                 <% } %>
             </div>
 
@@ -81,11 +77,9 @@
                 name="fechaNacimiento"
                 id="fecha-nacimiento"
                 class="register_campo"
-              />
-              <% if(locals.errors && fechaNacimiento.nombre) { %>
-                <div>
-                  <%= errors.fechaNacimiento.msg %>
-                </div>
+                value="<%= locals.oldData ? oldData.fechaNacimiento : null %>">
+                <% if (locals.errors && errors.fechaNacimiento) { %>
+                    <p class="msg-error"> <%= errors.fechaNacimiento.msg %> </p>
                 <% } %>
             </div>
 
@@ -95,12 +89,10 @@
                 type="password"
                 name="password"
                 class="register_campo"
-                minlength="8"
-              />
-              <% if(locals.errors && password.nombre) { %>
-                <div>
-                  <%= errors.password.msg %>
-                </div>
+                placeholder="Minimo 4 caracteres"
+                value="<%= locals.oldData ? oldData.password : null %>">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="msg-error"> <%= errors.password.msg %> </p>
                 <% } %>
             </div>
 
@@ -112,8 +104,10 @@
                 type="password"
                 name="password-confirmada"
                 class="register_campo"
-                minlength="8"
-              />
+                value="<%= locals.oldData ? oldData.password-confirmada : null %>">
+                <% if (locals.errors && errors.password-confirmada) { %>
+                    <p class="msg-error"> <%= errors.password-confirmada.msg %> </p>
+                <% } %>
             </div>
 
             <div id="register_botonera">
