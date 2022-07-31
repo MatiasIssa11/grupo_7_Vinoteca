@@ -1073,48 +1073,8 @@
     "apellido": "",
     "email": "",
     "fechaNacimiento": "",
-    "avatar": "avatar-1659291706325-535001286.jpg",
-    "password": "$2a$10$ti18NkF1F4xcTlReC.5bw.m/DxbZ.7A3G9I3v9HV.noW3paT4EPJe",
-    "category": "user"
-  },
-  {
-    "id": 109,
-    "nombre": "sdasda",
-    "apellido": "",
-    "email": "",
-    "fechaNacimiento": "",
-    "avatar": "avatar-1659291748674-726368611.jpg",
-    "password": "$2a$10$S8mZTo4lA4McPCMJV8b04u3fPkIksVN909Bcwcj632tiwt5xoALyi",
-    "category": "user"
-  },
-  {
-    "id": 110,
-    "nombre": "",
-    "apellido": "",
-    "email": "",
-    "fechaNacimiento": "",
-    "avatar": "avatar-1659292262494-187773746.jpg",
-    "password": "$2a$10$iZlM2rly9q5.2v4uU5ZlwuHQnu.EoRPSJ34JuWGvnEke7c69RXkLu",
-    "category": "user"
-  },
-  {
-    "id": 111,
-    "nombre": "",
-    "apellido": "",
-    "email": "",
-    "fechaNacimiento": "",
-    "avatar": "avatar-1659292357038-831009142.jpg",
-    "password": "$2a$10$HDdE4AE1v3S/QlwdsQD55Ol4dUEzSq1AB00ocuyIuBArR7MQwKEnu",
-    "category": "user"
-  },
-  {
-    "id": 112,
-    "nombre": "Sergio",
-    "apellido": "Collados",
-    "email": "",
-    "fechaNacimiento": "",
-    "avatar": "avatar-1659292937650-439533003.jpg",
-    "password": "$2a$10$hHey6I3FaCAU8uNSyftRPeel09pIt0dlr2TgJpk3ibvreW5OspQWy",
+    "avatar": "avatar-1659295152076-806250069.jpg",
+    "password": "$2a$10$l9xv.p/ViR9cdFBDClI/7.GuumFGqtkUDmmfHeKnnlcJs1SgrZaN6",
     "category": "user"
   }
 ]
