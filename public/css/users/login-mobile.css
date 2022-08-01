@@ -147,3 +147,10 @@ main {
   border: none;
   font-family: Alegreya Sans, sans-serif;
 }
+
+.login_msg-error {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
+}

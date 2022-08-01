@@ -50,6 +50,25 @@ module.exports = {
   },
 
   enter: (req, res) => {
+    let validaciones = validationResult(req);
+    let { errors } = validaciones;
+
+    if (errors && errors.length > 0) {
+      return res.render("./users/login", {
+        title: "Cava Wines-Acceso",
+        styles: [
+          "users/login-mobile",
+          "users/login-tablet",
+          "users/login-desktop",
+        ],
+        errors: validaciones.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    let users = index();
+    let user = users.find((u) => u.email === req.body.email);
+    req.session.user = user;
     return res.redirect("/");
   },
 };

@@ -1,6 +1,9 @@
 const { Router } = require("express");
 const routes = Router();
-const middlewares = require("../middlewares/register"); // Trae todos los middlewares que estan en middlewares/register.js
+
+const registerValidations = require("../middlewares/register"); // Trae todos los middlewares que estan en middlewares/register.js
+const loginValidations = require("../middlewares/login"); // Trae todos los middlewares que estan en middlewares/login.js
+
 const {
   register,
   process,
@@ -9,9 +12,9 @@ const {
 } = require("../controllers/users.controller");
 
 routes.get("/register", register);
-routes.post("/register", middlewares, process);
+routes.post("/register", [registerValidations], process);
 
 routes.get("/login", login);
-routes.post("/enter", enter); // Actualmente solo redirige al index
+routes.post("/login", [loginValidations], enter); // Actualmente solo redirige al index
 
 module.exports = routes;
