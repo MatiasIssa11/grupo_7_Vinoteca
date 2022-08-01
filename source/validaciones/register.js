@@ -44,10 +44,11 @@ const register = [
     .withMessage("La fecha de nacimiento debe tener formato de fecha.")
     .bail()
     .custom((value) => {
-      let diferenciaFecha =
-        new Date.now().getTime() - new Date(value).getTime();
-      let mayoriaEdad = 1000 * 60 * 60 * 24 * 365 * 18; //18 años en milisegundos
-      if (diferenciaFecha.getFullYear() < 18) {
+      let diferenciaFecha = new Date() - new Date(value).getTime();
+      //let mayoriaEdad = 1000 * 60 * 60 * 24 * 365 * 18; //18 años en milisegundos
+      let diferenciaAnos = new Date(diferenciaFecha).getUTCFullYear() - 1970;
+      if (diferenciaAnos < 18) {
+        //if (new Date(diferenciaFecha) < mayoriaEdad) {
         throw new Error("El usuario debe ser mayor de 18 años.");
       }
       return true;
@@ -61,7 +62,7 @@ const register = [
     .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
     .bail(),
 
-  body("password-confirmada")
+  body("passwordConfirmada")
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
@@ -81,7 +82,7 @@ const register = [
       throw new Error("No se subio ninguna imagen");
     }
 
-    let extensiones = [".svg", ".png", ".jpg", ".jpeg"];
+    let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
     let avatar = archivos[0];
     let extension = extname(avatar.filename);
 
@@ -89,16 +90,15 @@ const register = [
       unlinkSync(
         resolve(__dirname, "../../uploads/", "users", avatar.filename)
       );
-      throw new Error("La imagen no tiene una extension valida");
+      throw new Error("La imagen no tiene una extension valida.");
     }
 
     if (avatar.size > 2097152) {
       unlinkSync(
         resolve(__dirname, "../../uploads/", "users", avatar.filename)
       );
-      throw new Error("La imagen supera el peso de 2MB");
+      throw new Error("La imagen supera el peso de 2MB.");
     }
-
     return true;
   }),
 ];

@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const routes = Router();
-const middlewares = require('../middlewares/register'); // Trae todos los middlewares que estan en middlewares/register.js
+const middlewares = require("../middlewares/register"); // Trae todos los middlewares que estan en middlewares/register.js
 const {
   register,
   process,

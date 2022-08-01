@@ -1,7 +1,11 @@
 const { validationResult } = require("express-validator");
-const { resolve } = require("path");
-const usersModel = require("../models/users.model");
-const { index, one, create, write } = require("../models/users.model");
+const {
+  index,
+  one,
+  create,
+  write,
+  findEmail,
+} = require("../models/users.model");
 
 module.exports = {
   register: (req, res) => {
@@ -19,7 +23,7 @@ module.exports = {
     let validaciones = validationResult(req);
     let { errors } = validaciones;
 
-    if (errors && errors.lenght > 0) {
+    if (errors && errors.length > 0) {
       return res.render("./users/register", {
         title: "Cava Wines-Registro",
         styles: [
@@ -31,8 +35,8 @@ module.exports = {
         oldData: req.body,
       });
     }
-
-    let userExistente = usersModel.findEmail(req.body.email);
+    /*
+    let userExistente = findEmail(req.body.email);
 
     if (userExistente) {
       return res.render("./users/register", {
@@ -45,7 +49,7 @@ module.exports = {
         errors: { msg: "Este email ya se encuentra registrado" },
         oldData: req.body,
       }); // Valida si el email ya existe
-    }
+    }*/
 
     req.body.avatar = req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
     let newUser = create(req.body); // Crea nuevo usuario

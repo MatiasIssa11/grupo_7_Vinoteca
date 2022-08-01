@@ -15,7 +15,6 @@
           enctype="multipart/form-data"
         >
           <fieldset>
-
             <div class="register_caja-linea-form">
               <label for="nombre" class="register_texto">Nombre: </label>
               <input
@@ -23,10 +22,11 @@
                 name="nombre"
                 class="register_campo"
                 placeholder="Juan"
-                value="<%= locals.oldData ? oldData.nombre : null %>">
-                <% if (locals.errors && errors.nombre) { %>
-                    <p class="msg-error"> <%= errors.nombre.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.nombre : null %>"
+              />
+              <% if (locals.errors && errors.nombre) { %>
+              <p class="register_msg-error"><%= errors.nombre.msg %></p>
+              <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -36,23 +36,21 @@
                 name="apellido"
                 class="register_campo"
                 placeholder="Perez"
-                value="<%= locals.oldData ? oldData.apellido : null %>">
-                <% if (locals.errors && errors.apellido) { %>
-                    <p class="msg-error"> <%= errors.apellido.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.apellido : null %>"
+              />
+              <% if (locals.errors && errors.apellido) { %>
+              <p class="register_msg-error"><%= errors.apellido.msg %></p>
+              <% } %>
             </div>
-            
+
             <div class="register_caja-linea-form">
               <label for="avatar" class="register_texto"
                 >Imagen de usuario:
               </label>
-              <input
-                class="register_campo-imagen"
-                type="file"
-                name="avatar">
-                <% if (locals.errors && errors.avatar) { %>
-                    <p class="msg-error"> <%= errors.avatar.msg %> </p>
-                <% } %>
+              <input class="register_campo-imagen" type="file" name="avatar" />
+              <% if (locals.errors && errors.avatar) { %>
+              <p class="register_msg-error"><%= errors.avatar.msg %></p>
+              <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -62,10 +60,11 @@
                 name="email"
                 class="register_campo"
                 placeholder="juan@example.com"
-                value="<%= locals.oldData ? oldData.email : null %>">
-                <% if (locals.errors && errors.email) { %>
-                    <p class="msg-error"> <%= errors.email.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.email : null %>"
+              />
+              <% if (locals.errors && errors.email) { %>
+              <p class="register_msg-error"><%= errors.email.msg %></p>
+              <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -77,10 +76,13 @@
                 name="fechaNacimiento"
                 id="fecha-nacimiento"
                 class="register_campo"
-                value="<%= locals.oldData ? oldData.fechaNacimiento : null %>">
-                <% if (locals.errors && errors.fechaNacimiento) { %>
-                    <p class="msg-error"> <%= errors.fechaNacimiento.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"
+              />
+              <% if (locals.errors && errors.fechaNacimiento) { %>
+              <p class="register_msg-error">
+                <%= errors.fechaNacimiento.msg %>
+              </p>
+              <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -90,10 +92,11 @@
                 name="password"
                 class="register_campo"
                 placeholder="Minimo 4 caracteres"
-                value="<%= locals.oldData ? oldData.password : null %>">
-                <% if (locals.errors && errors.password) { %>
-                    <p class="msg-error"> <%= errors.password.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.password : null %>"
+              />
+              <% if (locals.errors && errors.password) { %>
+              <p class="register_msg-error"><%= errors.password.msg %></p>
+              <% } %>
             </div>
 
             <div class="register_caja-linea-form">
@@ -105,10 +108,13 @@
                 name="passwordConfirmada"
                 class="register_campo"
                 placeholder="Minimo 4 caracteres"
-                value="<%= locals.oldData ? oldData.passwordConfirmada : null %>">
-                <% if (locals.errors && errors.passwordConfirmadaa) { %>
-                    <p class="msg-error"> <%= errors.passwordConfirmada.msg %> </p>
-                <% } %>
+                value="<%= locals.oldData ? oldData.passwordConfirmada : null %>"
+              />
+              <% if (locals.errors && errors.passwordConfirmada) { %>
+              <p class="register_msg-error">
+                <%= errors.passwordConfirmada.msg %>
+              </p>
+              <% } %>
             </div>
 
             <div id="register_botonera">
@@ -119,7 +125,6 @@
                 Iniciar sesion
               </a>
             </div>
-
           </fieldset>
         </form>
       </section>
