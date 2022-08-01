@@ -78,6 +78,11 @@ const register = [
 
   body("avatar").custom((value, { req }) => {
     let archivos = req.files;
+
+    //Queremos cambiarlo para que si no encuntra una imagen lo deje avanzar y que después se cargue la imagen por default
+
+    //if (archivos && archivos.length > 0) { //Propuesta variante
+
     if (!archivos || archivos.length == 0) {
       throw new Error("No se subio ninguna imagen");
     }
@@ -100,6 +105,8 @@ const register = [
       throw new Error("La imagen supera el peso de 2MB.");
     }
     return true;
+
+    //} Cierre del if posible
   }),
 ];
 
