@@ -1076,5 +1076,55 @@
     "avatar": "avatar-1659320677723-589065913.jpg",
     "password": "$2a$10$Iy5XpUT7KG2dFdN7HszoEeRkAHcqZVVtYwiLgL3gzjuC95wCZnnNy",
     "category": "user"
+  },
+  {
+    "id": 109,
+    "nombre": "asd",
+    "apellido": "efasdf",
+    "email": "adsasd@cavawines.com",
+    "fechaNacimiento": "1988-03-25",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$JGpK1oRtFXXv7Zre9bhmzueitIsCE9e.6mA9XbdEqAoA24nqeNEue",
+    "category": "admin"
+  },
+  {
+    "id": 110,
+    "nombre": "asdasd",
+    "apellido": "dfdf",
+    "email": "asdsd@123.com",
+    "fechaNacimiento": "2222-02-25",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$er9GsvbUf3N8i9LhdBZpH.gB1QOY6MbX2qisy2YZkDBD8tKwRazpm",
+    "category": "user"
+  },
+  {
+    "id": 111,
+    "nombre": "Matías Adrián",
+    "apellido": "Alonso",
+    "email": "m_cabe88@12.com",
+    "fechaNacimiento": "2022-02-22",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$5DkXbPyq/hPgO.OqqP9pduYbJok5c.KyEXMWFZ19UQO7eMJ33Xkcy",
+    "category": "user"
+  },
+  {
+    "id": 112,
+    "nombre": "Matías Adrián",
+    "apellido": "Alonso",
+    "email": "m_cabe88@789.com",
+    "fechaNacimiento": "2222-02-22",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$Bk5qBazlbP7q/XvGrFL.c.DRvxwRodZaa3oPJ3DSkjaWnI18SKAl.",
+    "category": "user"
+  },
+  {
+    "id": 113,
+    "nombre": "Matías Adrián",
+    "apellido": "Alonso",
+    "email": "m_cabe88@456.com",
+    "fechaNacimiento": "2022-02-22",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$slicwRjUAi5/j4MXnhxqQulLd90hjUSaRWIcBrc15QBnf35bAyMGq",
+    "category": "user"
   }
 ]
