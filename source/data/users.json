@@ -1066,5 +1066,15 @@
     "avatar": "avatar-1659192059857-326741252.jpg",
     "password": "$2a$10$ZpniTheiKq8IhExO./EGbutKPvozcCmLPf0Mr6DcVdWItHEei0QQC",
     "category": "user"
+  },
+  {
+    "id": 108,
+    "nombre": "",
+    "apellido": "",
+    "email": "",
+    "fechaNacimiento": "",
+    "avatar": "avatar-1659320677723-589065913.jpg",
+    "password": "$2a$10$Iy5XpUT7KG2dFdN7HszoEeRkAHcqZVVtYwiLgL3gzjuC95wCZnnNy",
+    "category": "user"
   }
 ]
