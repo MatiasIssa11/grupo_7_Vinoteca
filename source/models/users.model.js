@@ -16,6 +16,13 @@ const usersModel = {
     return users.find((user) => user.id === id);
   }, // Trae el detalle del users.json del id indicado. La info la toma el user.controller.js.
 
+  findEmail: function (email) {
+    let file = resolve(__dirname, "../data", "users.json");
+    let data = readFileSync(file);
+    let users = JSON.parse(data);
+    return users.find((user) => user.email === email);
+  }, // Trae el detalle del users.json del email indicado. La info la toma el user.controller.js.
+
   create: function (data) {
     let file = resolve(__dirname, "../data", "users.json");
     let info = readFileSync(file);
@@ -38,6 +45,7 @@ const usersModel = {
     let info = JSON.stringify(data, null, 2);
     return writeFileSync(file, info);
   }, // "Edita" el users.json pisandolo con un nuevo archivo modificado.
+
 };
 
 module.exports = usersModel;

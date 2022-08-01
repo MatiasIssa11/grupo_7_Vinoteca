@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator');
+const usersModel = require('../models/users.model');
 const { index, one, create, write } = require("../models/users.model");
 
 module.exports = {
@@ -20,14 +21,30 @@ module.exports = {
 
     if (errors && errors.lenght > 0) {
       return res.render("./users/register", {
+        title: "Cava Wines-Registro",
         styles: [
           "users/register-mobile",
           "users/register-tablet",
           "users/register-desktop",
         ],
-        oldData: req.body,
-        errors: validaciones.mapped()
+        errors: validaciones.mapped(),
+        oldData: req.body
       });
+    }
+
+    let userExistente = usersModel.findEmail(req.body.email);
+
+   if (userExistente) {
+      return res.render("./users/register", {
+        title: "Cava Wines-Registro",
+        styles: [
+          "users/register-mobile",
+          "users/register-tablet",
+          "users/register-desktop",
+        ],
+        errors: { msg: 'Este email ya se encuentra registrado' },
+        oldData: req.body
+      }); // Valida si el email ya existe
     }
 
     req.body.avatar = req.files[0].filename; // Levanta archivo del multer (el primero cargado)

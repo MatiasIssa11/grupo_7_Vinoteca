@@ -97,16 +97,16 @@
             </div>
 
             <div class="register_caja-linea-form">
-              <label for="clave-confirmada" class="register_texto"
+              <label for="passwordConfirmada" class="register_texto"
                 >Confirmar contraseña:
               </label>
               <input
                 type="password"
-                name="password-confirmada"
+                name="passwordConfirmada"
                 class="register_campo"
-                value="<%= locals.oldData ? oldData.password-confirmada : null %>">
-                <% if (locals.errors && errors.password-confirmada) { %>
-                    <p class="msg-error"> <%= errors.password-confirmada.msg %> </p>
+                value="<%= locals.oldData ? oldData.passwordConfirmada : null %>">
+                <% if (locals.errors && errors.passwordConfirmadaa) { %>
+                    <p class="msg-error"> <%= errors.passwordConfirmada.msg %> </p>
                 <% } %>
             </div>
 
