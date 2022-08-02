@@ -15,17 +15,35 @@
             method="post"
           >
             <div id="login_campos">
-              <!--Cambiar div por fieldset-->
               <div class="login_linea-form">
-                <label for="nombre" class="login_texto">E-mail: </label>
-                <input type="text" name="nombre" class="login_campo" />
+                <label for="email" class="login_texto">E-mail: </label>
+                <input
+                  type="email"
+                  name="email"
+                  class="login_campo"
+                  placeholder="juan@example.com"
+                  value="<%= locals.oldData ? oldData.email : null %>"
+                />
+                <% if (locals.errors && errors.email) { %>
+                <p class="login_msg-error"><%= errors.email.msg %></p>
+                <% } %>
               </div>
+
               <div class="login_linea-form">
-                <label for="clave" class="login_texto">Contraseña: </label>
-                <input type="password" name="clave" class="login_campo" />
+                <label for="password" class="login_texto">Contraseña: </label>
+                <input
+                  type="password"
+                  name="password"
+                  class="login_campo"
+                  placeholder="Minimo 4 caracteres"
+                />
+                <% if (locals.errors && errors.password) { %>
+                <p class="login_msg-error"><%= errors.password.msg %></p>
+                <% } %>
               </div>
+
               <a id="login_olvidaste-contraseña" href="/"
-                >Olvidaste tu contraseña?</a
+                >¿Olvidaste tu contraseña?</a
               >
               <div id="login_recordar-contraseña">
                 <input

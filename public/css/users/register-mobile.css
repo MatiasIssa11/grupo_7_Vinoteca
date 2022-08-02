@@ -34,6 +34,7 @@
   padding: 0 0 10px 0;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .register_campo {
@@ -84,4 +85,11 @@
   height: 25px;
   text-align: center;
   border: none;
+}
+
+.register_msg-error {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
 }
