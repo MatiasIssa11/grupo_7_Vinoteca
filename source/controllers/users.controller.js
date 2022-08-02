@@ -19,7 +19,7 @@ module.exports = {
     let validaciones = validationResult(req);
     let { errors } = validaciones;
 
-    if (errors && errors.lenght > 0) {
+    if (errors && errors.length > 0) {
       return res.render("./users/register", {
         title: "Cava Wines-Registro",
         styles: [
