@@ -30,7 +30,8 @@ module.exports = {
       });
     }
 
-    req.body.avatar = req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
+    req.body.avatar =
+      req.files && req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
     let newUser = create(req.body); // Crea nuevo usuario
     let users = index(); // Trae user.json como obj. literal
     users.push(newUser); // Agrega nuevo usuario al final del objeto literal users
