@@ -22,6 +22,11 @@ module.exports = {
     });
   },
 
+  ageRedirect: (req, res) => {
+    req.session.ageCheck = true;
+    return res.redirect("/");
+  },
+
   contact: (req, res) => {
     return res.render("contact", {
       title: "Cava Wines-Contacto",

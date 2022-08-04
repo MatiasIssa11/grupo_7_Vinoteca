@@ -7,6 +7,8 @@ const method = require("method-override");
 const upload = require("./modules/upload");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const ageCheckMiddleware = require("./middlewares/ageCheck");
+const { ageCheck, ageRedirect } = require("./controllers/main.controller");
 
 app.listen(port, callback);
 
@@ -30,6 +32,11 @@ app.use(cookieParser());
 app.use(public); //Public static
 app.use(upload); //Upload static
 
+app.get("/agecheck", ageCheck);
+app.post("/agecheck", ageRedirect);
+
+app.use(ageCheckMiddleware); //Middleware de chequeo de edad
 app.use(require("./routes/main.routes"));
+
 app.use("/products", require("./routes/products.routes"));
 app.use("/users", require("./routes/users.routes"));
