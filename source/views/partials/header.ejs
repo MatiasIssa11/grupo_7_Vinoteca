@@ -30,7 +30,17 @@
     </div>
     <div>
       <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+      <% if (!user) { %>
       <a href="/users/login" class="header_icono-texto">Mi Cuenta</a>
+      <% } else if (user && user.category == "admin") { %>
+      <a href="/users/login" class="header_icono-texto"
+        >Hola admin <%= user.nombre %></a
+      >
+      <% } else { %>
+      <a href="/users/login" class="header_icono-texto"
+        >Hola <%= user.nombre %></a
+      >
+      <% } %>
     </div>
   </nav>
 </section>

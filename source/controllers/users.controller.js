@@ -70,6 +70,7 @@ module.exports = {
     let users = index();
     let user = users.find((u) => u.email === req.body.email);
     req.session.user = user;
+    req.session.ageCheck = true;
     return res.redirect("/");
   },
 };

@@ -1,4 +1,4 @@
-const middleware = (req, res, next) => {
+const users = (req, res, next) => {
   let user = null;
 
   if (req.session && req.session.user) {
@@ -9,4 +9,4 @@ const middleware = (req, res, next) => {
   return next();
 };
 
-module.exports = middleware;
+module.exports = users;
