@@ -29,17 +29,20 @@
       <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
     </div>
     <div>
-      <a href="/users/login"><i class="fa-solid fa-user"></i></a>
       <% if (!user) { %>
-      <a href="/users/login" class="header_icono-texto">Mi Cuenta</a>
+      <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+      <a href="/users/login" class="header_icono-texto">Ingresar a mi cuenta</a>
+
       <% } else if (user && user.category == "admin") { %>
-      <a href="/users/login" class="header_icono-texto"
-        >Hola admin <%= user.nombre %></a
-      >
+      <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
+      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta</a>
+      <p class="header_icono-texto">Hola admin <%= user.nombre %></p>
+
       <% } else { %>
-      <a href="/users/login" class="header_icono-texto"
-        >Hola <%= user.nombre %></a
-      >
+      <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
+      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta</a>
+      <p class="header_icono-texto">Hola <%= user.nombre %></p>
+
       <% } %>
     </div>
   </nav>

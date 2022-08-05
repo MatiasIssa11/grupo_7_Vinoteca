@@ -9,6 +9,7 @@ const {
   process,
   login,
   enter,
+  logout,
 } = require("../controllers/users.controller");
 
 routes.get("/register", register);
@@ -16,5 +17,6 @@ routes.post("/register", [registerValidations], process);
 
 routes.get("/login", login);
 routes.post("/login", [loginValidations], enter);
+routes.get("/logout", logout); //Logout del usuario
 
 module.exports = routes;

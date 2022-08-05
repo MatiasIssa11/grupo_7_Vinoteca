@@ -73,4 +73,9 @@ module.exports = {
     req.session.ageCheck = true;
     return res.redirect("/");
   },
+
+  logout: (req, res) => {
+    req.session.user = null;
+    return res.redirect("/");
+  },
 };
