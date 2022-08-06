@@ -46,6 +46,7 @@ main {
 
 #producto_compra-precio {
   margin: 2px 0;
+  font-size: 35px;
   width: 100%;
 }
 
@@ -62,7 +63,7 @@ main {
 
 #producto_compra-boton-sumaResta input {
   background-color: transparent;
-  margin: 0 4px;
+  margin: 0 4px 0 10px;
   font-size: 16px;
 }
 
@@ -86,5 +87,9 @@ main {
 }
 
 #producto_compra-descripcion h4 {
-  margin: 5px 0;
+  margin: 15px 0 10px 0;
+}
+
+#producto_compra-descripcion p {
+  margin: 5px 0 5px 0;
 }

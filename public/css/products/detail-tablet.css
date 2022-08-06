@@ -39,4 +39,12 @@
     padding: 8px 5px;
     margin: 5px auto;
   }
+
+  #producto_compra-descripcion {
+    margin: 10px 0;
+    text-align: left;
+  }
+
+
+
 }

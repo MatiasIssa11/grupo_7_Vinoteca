@@ -29,7 +29,7 @@
   }
 
   #producto_compra-precio {
-    width: auto;
+    width: 100%;
     font-size: 48px;
     text-align: left;
     margin-right: 10px;
@@ -40,12 +40,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 0.4;
-    width: 20%;
+    flex-grow: 0.2;
+    width: 50px;
   }
 
   #producto_compra-boton-sumaResta {
-    width: 100%;
+    width: 100px;
   }
 
   #producto_compra-boton-carrito {
@@ -69,10 +69,12 @@
 
   #producto_descripcion {
     width: 45%;
+    text-align: left;
   }
 
   #producto_compra-boton-resta {
     transition: all 0.5s;
+    margin: 0 5px 0 0;
   }
 
   #producto_compra-boton-resta:hover {
@@ -81,9 +83,15 @@
 
   #producto_compra-boton-suma {
     transition: all 0.5s;
+    margin: 0 0 0 5px;
   }
 
   #producto_compra-boton-suma:hover {
     transform: scale(1.4) rotate(270deg);
   }
+
+  #producto_compra-boton-cantidad {
+    text-align: right;
+  }
+
 }
