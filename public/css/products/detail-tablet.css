@@ -45,6 +45,12 @@
     text-align: left;
   }
 
+  #producto_compra-descripcion h4 {
+    font-size: 20px;
+}
 
+  #producto_compra-nombre {
+    font-size: 26px;
+  }
 
 }
