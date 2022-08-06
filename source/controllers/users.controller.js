@@ -71,6 +71,15 @@ module.exports = {
     let user = users.find((u) => u.email === req.body.email);
     req.session.user = user;
     req.session.ageCheck = true;
+
+    if (req.body.recordame != undefined) {
+      res.cookie('recordame-email', user.email, {maxAge: 60000})
+    }
+
+    if (req.body.recordame != undefined) {
+      res.cookie('recordame-password', user.password, {maxAge: 60000})
+    }
+
     return res.redirect("/");
   },
 
