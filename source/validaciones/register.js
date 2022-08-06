@@ -77,36 +77,34 @@ const register = [
     }),
 
   body("avatar").custom((value, { req }) => {
-    let archivos = req.files;
-
     //Queremos cambiarlo para que si no encuntra una imagen lo deje avanzar y que después se cargue la imagen por default
 
-    //if (archivos && archivos.length > 0) { //Propuesta variante
-
-    if (!archivos || archivos.length == 0) {
+    if (req.files && req.files[0]) {
+      /*if (!archivos || archivos.length == 0) {
       throw new Error("No se subio ninguna imagen");
+    }*/
+      let archivos = req.files;
+
+      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
+      let avatar = archivos[0];
+      let extension = extname(avatar.filename);
+
+      if (!extensiones.includes(extension)) {
+        unlinkSync(
+          resolve(__dirname, "../../uploads/", "users", avatar.filename)
+        );
+        throw new Error("La imagen no tiene una extension valida.");
+      }
+
+      if (avatar.size > 2097152 /*2MB*/) {
+        unlinkSync(
+          resolve(__dirname, "../../uploads/", "users", avatar.filename)
+        );
+        throw new Error("La imagen supera el peso de 2MB.");
+      }
+      return true;
     }
-
-    let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
-    let avatar = archivos[0];
-    let extension = extname(avatar.filename);
-
-    if (!extensiones.includes(extension)) {
-      unlinkSync(
-        resolve(__dirname, "../../uploads/", "users", avatar.filename)
-      );
-      throw new Error("La imagen no tiene una extension valida.");
-    }
-
-    if (avatar.size > 2097152) {
-      unlinkSync(
-        resolve(__dirname, "../../uploads/", "users", avatar.filename)
-      );
-      throw new Error("La imagen supera el peso de 2MB.");
-    }
-    return true;
-
-    //} Cierre del if posible
+    return true; //Este caso es para cuando no se carga imagen, tiene que retornar un true
   }),
 ];
 
