@@ -25,9 +25,17 @@
 
   <nav id="header_navbar">
     <div>
-      <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-      <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
+  
+
+
+      <% if (user && user.category == "user") { %>
+        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
+        <% } %>
+
     </div>
+    
+    
     <div>
       <% if (!user) { %>
       <a href="/users/login"><i class="fa-solid fa-user"></i></a>
@@ -35,13 +43,11 @@
 
       <% } else if (user && user.category == "admin") { %>
       <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
-      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta</a>
-      <p class="header_icono-texto">Hola admin <%= user.nombre %></p>
+      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta ADMIN <%= user.nombre %></a>
 
       <% } else { %>
       <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
-      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta</a>
-      <p class="header_icono-texto">Hola <%= user.nombre %></p>
+      <a href="/users/logout" class="header_icono-texto">Cerrar sesion de <%= user.nombre %></a>
 
       <% } %>
     </div>

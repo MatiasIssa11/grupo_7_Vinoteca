@@ -43,11 +43,11 @@
     "id": 5,
     "nombre": "Agustin",
     "apellido": "Collados",
-    "email": "collados_agustin@hotmail.com",
+    "email": "collados_agustin@pepe.com",
     "fechaNacimiento": "18.06.1986",
     "avatar": "user_101.jpg",
-    "password": "123",
-    "category": "admin"
+    "password": "1234",
+    "category": "user"
   },
   {
     "id": 6,
@@ -67,6 +67,26 @@
     "fechaNacimiento": "1988-03-25",
     "avatar": "default-user.svg",
     "password": "$2a$10$LUpyOX6h37uK23MEHYCQWu46x5vqYopkVVQA0spicoFD.91O5wtym",
+    "category": "admin"
+  },
+  {
+    "id": 8,
+    "nombre": "Sergio",
+    "apellido": "Massa",
+    "email": "sergio.massa@hotmail.com",
+    "fechaNacimiento": "1999-12-26",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6",
+    "category": "user"
+  },
+  {
+    "id": 9,
+    "nombre": "Agustin",
+    "apellido": "Collados",
+    "email": "agustin.collados@cavawines.com",
+    "fechaNacimiento": "1986-06-18",
+    "avatar": "default-user.svg",
+    "password": "$2a$10$qOaH9Ymh3LUuXhIPiQLyheGkCUGdVBG08d0WpjhpNeiS9ZxkbapTe",
     "category": "admin"
   }
 ]
