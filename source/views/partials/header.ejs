@@ -26,29 +26,37 @@
   <nav id="header_navbar">
     <div>
       <% if (user && user.category == "user") { %>
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
-        <% } %>
+      <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
+      <% } %>
     </div>
-    
+
     <div>
       <% if (!user) { %>
       <a href="/users/login"><i class="fa-solid fa-user"></i></a>
       <a href="/users/login" class="header_icono-texto">Ingresar a mi cuenta</a>
       <% } else if (user && user.category == "admin") { %>
       <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
-      <a href="/users/logout" class="header_icono-texto">Cerrar cuenta ADMIN <%= user.nombre %></a>
+      <a href="/users/logout" class="header_icono-texto"
+        >Cerrar cuenta ADMIN <%= user.nombre %></a
+      >
       <% } else { %>
       <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
-      <a href="/users/logout" class="header_icono-texto">Cerrar sesion de <%= user.nombre %></a>
+      <a href="/users/logout" class="header_icono-texto"
+        >Cerrar sesion de <%= user.nombre %></a
+      >
       <% } %>
     </div>
-    
   </nav>
 </section>
 
 <nav id="main_navbar">
   <a id="header_inicio" href="/">Inicio</a>
   <a id="header_productos" href="/products">Productos</a>
+
+  <% if (user && user.category == "admin") { %>
+  <a id="header_contacto" href="/products/create">Nuevo producto</a>
+  <% } else { %>
   <a id="header_contacto" href="/contact">Contacto</a>
+  <% } %>
 </nav>

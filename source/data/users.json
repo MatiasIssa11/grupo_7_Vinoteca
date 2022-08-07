@@ -41,16 +41,6 @@
   },
   {
     "id": 5,
-    "nombre": "Agustin",
-    "apellido": "Collados",
-    "email": "collados_agustin@pepe.com",
-    "fechaNacimiento": "18.06.1986",
-    "avatar": "user_101.jpg",
-    "password": "1234",
-    "category": "user"
-  },
-  {
-    "id": 6,
     "nombre": "Matias",
     "apellido": "Issa",
     "email": "matias.issa@gmail.com",
@@ -60,7 +50,7 @@
     "category": "admin"
   },
   {
-    "id": 7,
+    "id": 6,
     "nombre": "Matías Adrián",
     "apellido": "Alonso",
     "email": "mati.alonso88@cavawines.com",
@@ -70,7 +60,7 @@
     "category": "admin"
   },
   {
-    "id": 8,
+    "id": 7,
     "nombre": "Sergio",
     "apellido": "Massa",
     "email": "sergio.massa@hotmail.com",
@@ -80,7 +70,7 @@
     "category": "user"
   },
   {
-    "id": 9,
+    "id": 8,
     "nombre": "Agustin",
     "apellido": "Collados",
     "email": "agustin.collados@cavawines.com",
