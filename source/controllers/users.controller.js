@@ -73,11 +73,7 @@ module.exports = {
     req.session.ageCheck = true;
 
     if (req.body.recordame != undefined) {
-      res.cookie('recordame-email', user.email, {maxAge: 60000})
-    }
-
-    if (req.body.recordame != undefined) {
-      res.cookie('recordame-password', user.password, {maxAge: 60000})
+      res.cookie('emailCookie', user.email, {maxAge: 60000})
     }
 
     return res.redirect("/");
@@ -85,6 +81,7 @@ module.exports = {
 
   logout: (req, res) => {
     req.session.user = null;
+    res.clearCookie('emailCookie');
     return res.redirect("/");
   },
 };
