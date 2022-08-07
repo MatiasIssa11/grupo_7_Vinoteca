@@ -1,98 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
 
-<head>
-  <%- include('../partials/head.ejs') %>
-</head>
+  <body>
+    <header><%- include('../partials/header.ejs') %></header>
+    <main>
+      <nav class="search_secundary-navbar">
+        <p id="search_burgermenu"><i class="fa fa-bars fa-2x"></i></p>
+      </nav>
 
-<body>
-  <header>
-    <%- include('../partials/header.ejs') %>
-  </header>
-  <main>
-    <nav class="search_secundary-navbar">
-      <p id="search_burgermenu"><i class="fa fa-bars fa-2x"></i></p>
-    </nav>
+      <!--Barra de filtros-->
+      <aside id="search_lateral">
+        <h3 class="search_titulos">Ordenar segun:</h3>
+        <form action="/products/" method="GET">
+          <fieldset class="search_parametros">
+            <select class="search_ordenar" name="orden">
+              <option value="vacio"></option>
+              <option value="precioAsc">Precio Ascendente</option>
+              <option value="precioDesc">Precio Descendente</option>
+              <option value="marca">Marca</option>
+              <option value="categoria">Categoria</option>
+            </select>
+          </fieldset>
 
-    <!--Barra de filtros-->
-    <aside id="search_lateral">
-      <h3 class="search_titulos">Ordenar segun:</h3>
-      <form action="/products/" method="GET">
-        <fieldset class="search_parametros">
-          <select class="search_ordenar" name="orden">
-            <option value="vacio"></option>
-            <option value="precioAsc">Precio Ascendente</option>
-            <option value="precioDesc">Precio Descendente</option>
-            <option value="marca">Marca</option>
-            <option value="categoria">Categoria</option>
-          </select>
-        </fieldset>
-
-        <h3 class="search_titulos">Categorias</h3>
-        <fieldset class="search_parametros">
-          <% searchCategorias.forEach(element=> { %>
+          <h3 class="search_titulos">Categorias</h3>
+          <fieldset class="search_parametros">
+            <% searchCategorias.forEach(element=> { %>
             <div class="search_categorias">
               <input type="radio" name="lista" value="<%= element %>" />
-              <label for="lista">
-                <%= element %>
-              </label>
+              <label for="lista"> <%= element %> </label>
             </div>
             <% }) %>
-        </fieldset>
-        <button type="submit" id="search_boton"> MOSTRAR SELECCION </button>
+          </fieldset>
+          <button type="submit" id="search_boton">MOSTRAR SELECCION</button>
 
-        <% if (user && user.category=="admin" ) { %>
+          <% if (user && user.category=="admin" ) { %>
           <div id="search_boton">
             <a href="/products/create"> NUEVO PRODUCTO </a>
           </div>
           <% } %>
-      </form>
+        </form>
+      </aside>
 
-    </aside>
-
-    <!--Listado de productos-->
-    <section class="main_grilla">
-      <% product.forEach(product=> { %>
+      <!--Listado de productos-->
+      <section class="main_grilla">
+        <% product.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
             <img src="/products/<%= product.image %>" />
           </figure>
           <h4 class="main_articulos-texto">
-            <%= product.nameProduct %>
-              <%= product.type %>
+            <%= product.nameProduct %> <%= product.type %>
           </h4>
-          <h4 class="main_articulos-texto">$<%= product.price %>
-          </h4>
+          <h4 class="main_articulos-texto">$<%= product.price %></h4>
 
           <% if (user && user.category=="admin" ) { %>
 
-            <form action="/products/delete/<%= product.id %>?m=DELETE" method="post"
-              >
-              <button class="articulos_boton" type="submit"> Eliminar </button>
+          <form
+            action="/products/delete/<%= product.id %>?m=DELETE"
+            method="post"
+          >
+            <button class="articulos_boton" type="submit">Eliminar</button>
+          </form>
 
-              <% } else { %>
+          <% } else { %>
+          <form action="/products/cart" method="post">
+            <button class="articulos_boton" value="<%= product.id %>">
+              Comprar
+            </button>
+          </form>
+          <% } %> <% if (user && user.category=="admin" ) { %>
+          <a href="/products/edit/<%= product.id %>" class="articulos_boton">
+            Editar
+          </a>
 
-                <form action="/products/cart" method="post">
-                  <button class="articulos_boton" value="<%= product.id %>"> Comprar </button>
-                  <% } %>
-
-            </form>
-
-            <% if (user && user.category=="admin" ) { %>
-                  <a href="/products/edit/<%= product.id %>" class="articulos_boton"> Editar </a>
-
-                  <% } else { %>
-                    <a href="/products/<%= product.id %>" class="articulos_boton"> +Info </a>
-                    <% } %>
-
+          <% } %>
+          <a href="/products/<%= product.id %>" class="articulos_boton">
+            +Info
+          </a>
         </article>
 
         <% }) %>
-    </section>
-  </main>
-  <footer>
-    <%- include('../partials/footer.ejs') %>
-  </footer>
-</body>
-
+      </section>
+    </main>
+    <footer><%- include('../partials/footer.ejs') %></footer>
+  </body>
 </html>

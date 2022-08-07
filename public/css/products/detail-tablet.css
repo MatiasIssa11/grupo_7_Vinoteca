@@ -30,7 +30,7 @@
     margin: 3px auto;
   }
 
-  #producto_compra-boton-carrito-texto {
+  .producto_compra-boton-carrito-texto {
     display: block;
     width: 80%;
     color: #fff;

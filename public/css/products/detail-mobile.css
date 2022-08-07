@@ -78,7 +78,7 @@ main {
   padding: 2px 10%;
 }
 
-#producto_compra-boton-carrito-texto {
+.producto_compra-boton-carrito-texto {
   display: none;
 }
 

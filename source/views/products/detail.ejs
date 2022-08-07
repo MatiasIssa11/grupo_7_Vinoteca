@@ -39,7 +39,7 @@
           <section id="producto_compra-descripcion">
             <h4>DATOS ANALITICOS:</h4>
             <p><strong> Alcohol: </strong><%= product.alcohol %></p>
-            <p></p><strong> Acidez total: </strong><%= product.acidez %></p>
+            <p><strong> Acidez total: </strong><%= product.acidez %></p>
             <p><strong> Azucar total: </strong><%= product.azucar %></p>
 
             <h4>CARACTERISTICAS DEGUSTATIVAS:</h4>
@@ -52,20 +52,38 @@
           </section>
 
           <% if (user && user.category == "user") { %>
-            <form
-              action="/products/cart"
-              id="producto_compra-boton-carrito"
-              method="post"
+          <form
+            action="/products/cart"
+            class="producto_compra-boton-carrito"
+            method="post"
+          >
+            <button id="producto_compra-boton-carrito-mobile">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="producto_compra-boton-carrito-texto">
+              AGREGAR AL CARRITO
+            </button>
+          </form>
+          <% } else if (user && user.category == "admin") { %>
+          <form
+            action="/products/delete/<%= product.id %>?m=DELETE"
+            method="post"
+            class="producto_compra-boton-carrito"
+          >
+            <button class="producto_compra-boton-carrito-texto">
+              ELIMINAR
+            </button>
+          </form>
+          <div class="producto_compra-boton-carrito">
+            <a
+              href="/products/edit/<%= product.id %>"
+              class="producto_compra-boton-carrito-texto"
             >
-              <button id="producto_compra-boton-carrito-mobile">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-              <button id="producto_compra-boton-carrito-texto">
-                AGREGAR AL CARRITO
-              </button>
-            </form>
-          <% } %>
+              EDITAR
+            </a>
+          </div>
 
+          <% } %>
         </section>
       </article>
     </main>

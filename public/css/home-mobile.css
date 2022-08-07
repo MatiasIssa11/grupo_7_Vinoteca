@@ -38,6 +38,7 @@ main {
   justify-content: center;
   background-color: #423e03;
   column-gap: 10%;
+  align-items: center;
 }
 
 .main_articulos figure {
