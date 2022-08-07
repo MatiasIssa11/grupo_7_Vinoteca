@@ -153,4 +153,6 @@ main {
   width: 100%;
   text-align: center;
   padding: 3px 0;
+  text-align: right;
+  font-weight: bold;
 }
