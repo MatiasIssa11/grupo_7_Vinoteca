@@ -24,10 +24,10 @@
                   placeholder="juan@example.com"
                   value="<%= locals.oldData ? oldData.email : null %>"
                 />
-                <% if (locals.errors && errors.email) { %>
-                <p class="login_msg-error"><%= errors.email.msg %></p>
-                <% } %>
               </div>
+              <% if (locals.errors && errors.email) { %>
+                <p class="login_msg-error"><%= errors.email.msg %></p>
+              <% } %>
 
               <div class="login_linea-form">
                 <label for="password" class="login_texto">Contraseña: </label>
@@ -37,10 +37,10 @@
                   class="login_campo"
                   placeholder="Minimo 4 caracteres"
                 />
-                <% if (locals.errors && errors.password) { %>
-                <p class="login_msg-error"><%= errors.password.msg %></p>
-                <% } %>
               </div>
+              <% if (locals.errors && errors.password) { %>
+                <p class="login_msg-error"><%= errors.password.msg %></p>
+              <% } %>
 
               <a id="login_olvidaste-contraseña" href="/"
                 >¿Olvidaste tu contraseña?</a
