@@ -57,6 +57,12 @@ main {
   color: #fff;
 }
 
+.main_articulos-texto-tachado {
+  text-decoration: line-through;
+  color: #d3d3d3;
+  font-size: 14px;
+}
+
 .articulos_boton {
   background-color: #fff;
   border-radius: 6px;

@@ -25,6 +25,7 @@ const productModel = {
       nameProduct: data.nameProduct,
       type: data.type,
       price: parseInt(data.price),
+      discountPrice: parseInt(data.discountPrice),
       image: data.image,
       alcohol: data.alcohol,
       acidez: data.acidez,

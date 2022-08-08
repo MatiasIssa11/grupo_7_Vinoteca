@@ -3,8 +3,11 @@ const { index } = require("../models/products.model");
 module.exports = {
   home: (req, res) => {
     let product = index();
-    const comparePrice = (a, b) => a.price - b.price;
-    let sales = product.sort(comparePrice).filter((r, i) => i <= 3); //Muestra los 4 primeros productos, ordenados por el más barato
+    const comparePrice = (a, b) => a.discountPrice - b.discountPrice;
+    let sales = product
+      .filter((p) => p.discountPrice) //Filtra que tengan precio de descuento
+      .sort(comparePrice) //ordena por precio de descuento
+      .filter((r, i) => i <= 3); //Muestra los 4 primeros productos, ordenados por el más barato
     let releases = product.reverse().filter((r, i) => i <= 3); //Muestra los 4 primeros productos, empezando por el último agregado
 
     return res.render("index", {

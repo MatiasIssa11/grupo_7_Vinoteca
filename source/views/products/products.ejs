@@ -54,10 +54,14 @@
           <h4 class="main_articulos-texto">
             <%= product.nameProduct %> <%= product.type %>
           </h4>
+          <% if (product.discountPrice) { %>
+          <h4 class="main_articulos-texto-tachado">$<%= product.price %></h4>
+          <h4 class="main_articulos-texto">$<%= product.discountPrice %></h4>
+          <% } else { %>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
+          <% } %>
 
           <% if (user && user.category=="admin" ) { %>
-
           <form
             action="/products/delete/<%= product.id %>?m=DELETE"
             method="post"

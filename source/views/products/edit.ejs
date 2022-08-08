@@ -48,6 +48,17 @@
                 autocomplete="off"
               />
             </div>
+            <div class="edit_linea-form">
+              <label for="discountPrice" class="edit_texto">Precio: </label>
+              <input
+                type="text"
+                name="discountPrice"
+                class="edit_campo"
+                minlength="4"
+                value="<%= product.discountPrice %>"
+                autocomplete="off"
+              />
+            </div>
             <figure id="edit_caja-imagen">
               <img src="/products/<%= product.image %>" alt="" />
               <p>Imagen previa</p>

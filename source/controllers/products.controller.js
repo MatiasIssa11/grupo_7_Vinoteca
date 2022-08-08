@@ -39,7 +39,7 @@ module.exports = {
   },
 
   buy: (req, res) => {
-    return res.redirect("/products/cart");
+    return res.redirect("/products/cart"); //Por ahora solo redirecciona
   },
 
   products: (req, res) => {
@@ -142,6 +142,7 @@ module.exports = {
         p.nameProduct = req.body.nameProduct;
         p.type = req.body.type;
         p.price = parseInt(req.body.price);
+        p.discountPrice = parseInt(req.body.discountPrice);
         p.image =
           req.files && req.files.length > 0 ? req.files[0].filename : p.image;
         p.alcohol = req.body.alcohol;
