@@ -38,7 +38,7 @@ Matías Issa:
 
 #### ¿Que problemas encontraste?
 
-Matías Alonso:
+Matías Alonso: Tuve problemas para mantener el filtro de busqueda cuando ordenaba por algún criterio, todavía no esta resuelto.
 
 Agustín Collados:
 
@@ -46,7 +46,7 @@ Matías Issa:
 
 #### ¿Que vamos a hacer esta semana?
 
-Matías Alonso:
+Matías Alonso: Empezar con los middleware.
 
 Agustín Collados:
 
