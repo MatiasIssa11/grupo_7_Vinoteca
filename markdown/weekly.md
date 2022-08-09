@@ -6,7 +6,7 @@
 
 Matías Alonso: Coloqué los middlewares, verificando su funcionamiento y posibildad de no cargar imagen de como usuario.
 
-Agustín Collados:
+Agustín Collados: Implementacion de cookie recordar usuario y avance sobre vistas segun categoria de usuario.
 
 Matías Issa:
 
@@ -14,7 +14,7 @@ Matías Issa:
 
 Matías Alonso: Tuve problemas con el middleware de verificación de edad.
 
-Agustín Collados:
+Agustín Collados: Tarde en entender donde y como implementar la cookie.
 
 Matías Issa:
 
@@ -22,7 +22,7 @@ Matías Issa:
 
 Matías Alonso: Dar detalles finales y lanzar el sprint 6.
 
-Agustín Collados:
+Agustín Collados: Revision y lanzamiento sprint 6.
 
 Matías Issa:
 
@@ -32,7 +32,7 @@ Matías Issa:
 
 Matías Alonso: Lanzamos el sprint 5, correcciones del css. Filtro y buscadores funcionales.
 
-Agustín Collados:
+Agustín Collados: Implementacion validaciones register. Arreglos vista detalle producto.
 
 Matías Issa:
 
@@ -40,7 +40,7 @@ Matías Issa:
 
 Matías Alonso: Tuve problemas para mantener el filtro de busqueda cuando ordenaba por algún criterio, todavía no esta resuelto.
 
-Agustín Collados:
+Agustín Collados: No funcionaban las validaciones por un error de tipeo.
 
 Matías Issa:
 
@@ -48,7 +48,7 @@ Matías Issa:
 
 Matías Alonso: Empezar con los middleware.
 
-Agustín Collados:
+Agustín Collados: Avanzar con el sprint 5.
 
 Matías Issa:
 
@@ -58,7 +58,7 @@ Matías Issa:
 
 Matías Alonso: Agregué transiciones, corregí todos los post "vacios" para que redireccionen y links. Quedó funcional el delete.
 
-Agustín Collados:
+Agustín Collados: Arreglos varios vistas, efectos header.
 
 Matías Issa:
 
@@ -66,7 +66,7 @@ Matías Issa:
 
 Matías Alonso: Tuve problemas con la barra de busquedas, que quedó pendiente para terminar.
 
-Agustín Collados:
+Agustín Collados: No recordaba como implementar los efectos visuales como por ejemplo las transiciones.
 
 Matías Issa:
 
@@ -74,7 +74,7 @@ Matías Issa:
 
 Matías Alonso: Terminar cualquier detalle pendiente del sprint 4 y preparar el buscador.
 
-Agustín Collados:
+Agustín Collados: Cerrar pendientes sprints anteriores.
 
 Matías Issa:
 
