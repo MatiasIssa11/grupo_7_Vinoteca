@@ -1,5 +1,31 @@
 ## Weekly
 
+### 14/08/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso: Terminamos el sprint 5, lanzamos el sprint 6 y armamos el DER.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: Tuvimos problemas con algunas relaciones del DER y tipo de variables de los datos.
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: Empezar los modelos e implementar las migraciones.
+
+Agustín Collados: 
+
+Matías Issa:
+
 ### 07/08/2022
 
 #### ¿Que hiciste esta semana?
