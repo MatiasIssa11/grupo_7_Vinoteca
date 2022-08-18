@@ -1,5 +1,31 @@
 ## Weekly
 
+### 21/08/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso: 
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: 
+
+Agustín Collados: 
+
+Matías Issa:
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: 
+
+Agustín Collados: 
+
+Matías Issa:
+
 ### 14/08/2022
 
 #### ¿Que hiciste esta semana?

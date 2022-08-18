@@ -17,8 +17,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon source/app.js -e json,js,mjs,ejs",
-    "start": "node source/app.js"
+    "test": "clear && nodemon source/app.js -e json,js,mjs,ejs",
+    "start": "node source/app.js",
+    "sq-i": "sequelize init",
+    "sq-ms": "sequelize init:migrations && sequelize init:seeders",
+    "sq-mg": "sequelize migration:generate --name images"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
   },
   "homepage": "https://github.com/elpibe12/grupo_7_Vinoteca#readme",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1"
   }
 }
