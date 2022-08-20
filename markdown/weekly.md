@@ -32,7 +32,7 @@ Matías Issa:
 
 Matías Alonso: Terminamos el sprint 5, lanzamos el sprint 6 y armamos el DER.
 
-Agustín Collados: 
+Agustín Collados: Se armo el DER, se corrigio luego de comentarios de Edu.
 
 Matías Issa:
 
@@ -40,7 +40,7 @@ Matías Issa:
 
 Matías Alonso: Tuvimos problemas con algunas relaciones del DER y tipo de variables de los datos.
 
-Agustín Collados: 
+Agustín Collados: Dificultades con el armado de la tabla del cart y tabla pivot.
 
 Matías Issa:
 
@@ -48,7 +48,7 @@ Matías Issa:
 
 Matías Alonso: Empezar los modelos e implementar las migraciones.
 
-Agustín Collados: 
+Agustín Collados: Empezar los modelos e implementar las migraciones.
 
 Matías Issa:
 
