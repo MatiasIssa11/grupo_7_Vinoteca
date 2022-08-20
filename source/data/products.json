@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Malbec Roble Organico",
     "price": 10000,
     "discountPrice": 9000,
@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Cabernet Sauvignon",
     "price": 5072,
     "discountPrice": 4000,
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Malbec",
     "price": 5072,
     "discountPrice": 4500,
@@ -46,7 +46,7 @@
   },
   {
     "id": 4,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Rosé",
     "price": 6550,
     "discountPrice": 5250,
@@ -61,7 +61,7 @@
   },
   {
     "id": 5,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Bonarda",
     "price": 4860,
     "discountPrice": null,
@@ -76,7 +76,7 @@
   },
   {
     "id": 6,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Torrontés",
     "price": 3500,
     "discountPrice": null,
@@ -91,7 +91,7 @@
   },
   {
     "id": 7,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Syrah",
     "price": 9200,
     "discountPrice": null,
@@ -106,7 +106,7 @@
   },
   {
     "id": 8,
-    "nameProduct": "Terravita",
+    "brand": "Terravita",
     "type": "Malbec sin sulfito",
     "price": 8700,
     "discountPrice": null,
