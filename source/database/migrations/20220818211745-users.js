@@ -5,25 +5,25 @@ module.exports = {
     try {
       await queryInterface.createTable("users", {
         id: {
-          type: Sequelize.SMALLINT,
+          type: Sequelize.INTEGER,
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
         },
         nombre: {
-          type: Sequelize.VARCHAR,
+          type: Sequelize.STRING,
           allowNull: false,
         },
         apellido: {
-          type: Sequelize.VARCHAR,
+          type: Sequelize.STRING,
           allowNull: false,
         },
         email: {
-          type: Sequelize.VARCHAR,
+          type: Sequelize.STRING,
           allowNull: false,
           unique: true,
         },
-        discountPrice: {
+        fechaNaciemiento: {
           type: Sequelize.DATE,
           allowNull: false,
         },

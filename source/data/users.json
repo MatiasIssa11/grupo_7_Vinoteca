@@ -7,7 +7,7 @@
     "fechaNacimiento": "10.11.1971",
     "avatar": "user_97.jpg",
     "password": "UXCLDtHO",
-    "category": "user"
+    "isAdmin": false
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "fechaNacimiento": "11.12.1966",
     "avatar": "user_98.jpg",
     "password": "lEVshY6SO",
-    "category": "user"
+    "isAdmin": false
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "fechaNacimiento": "03.05.1974",
     "avatar": "user_99.jpg",
     "password": "JdRU3Hui",
-    "category": "user"
+    "isAdmin": false
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "fechaNacimiento": "19.10.1988",
     "avatar": "user_100.jpg",
     "password": "zyMXdL3Yll",
-    "category": "user"
+    "isAdmin": false
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "fechaNacimiento": "01.01.1900",
     "avatar": "user_103.jpg",
     "password": "123",
-    "category": "admin"
+    "isAdmin": false
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "fechaNacimiento": "1988-03-25",
     "avatar": "default-user.svg",
     "password": "$2a$10$LUpyOX6h37uK23MEHYCQWu46x5vqYopkVVQA0spicoFD.91O5wtym",
-    "category": "admin"
+    "isAdmin": true
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "fechaNacimiento": "1999-12-26",
     "avatar": "default-user.svg",
     "password": "$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6",
-    "category": "user"
+    "isAdmin": false
   },
   {
     "id": 8,
@@ -77,6 +77,6 @@
     "fechaNacimiento": "1986-06-18",
     "avatar": "default-user.svg",
     "password": "$2a$10$qOaH9Ymh3LUuXhIPiQLyheGkCUGdVBG08d0WpjhpNeiS9ZxkbapTe",
-    "category": "admin"
+    "isAdmin": true
   }
 ]

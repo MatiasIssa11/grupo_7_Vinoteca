@@ -5,7 +5,7 @@ module.exports = {
     try {
       await queryInterface.createTable("cart", {
         id: {
-          type: Sequelize.SMALLINT,
+          type: Sequelize.INTEGER,
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
