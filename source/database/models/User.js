@@ -20,8 +20,13 @@ module.exports = (sequelize, DataTypes) => {
          allowNull: false,
          unique: true,
       },
+<<<<<<< HEAD
       fechaNaciemiento: {
          type: DataTypes.DATE,
+=======
+      fechaNacimiento: {
+         type: Sequelize.DATE,
+>>>>>>> 80b907c2bc3ec9dbf43414bb158b770e899ee6ff
          allowNull: false,
       },
       avatar: {
