@@ -5,13 +5,13 @@ module.exports = {
     try {
       await queryInterface.createTable("products", {
         id: {
-          type: Sequelize.SMALLINT,
+          type: Sequelize.INTEGER,
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
         },
         brand: {
-          type: Sequelize.SMALLINT,
+          type: Sequelize.INTEGER,
           allowNull: false,
         },
         type: {
