@@ -21,7 +21,7 @@
     "start": "node source/app.js",
     "sq-i": "sequelize init",
     "sq-ms": "sequelize init:migrations && sequelize init:seeders",
-    "sq-mg": "sequelize migration:generate --name images"
+    "sq-mg": "sequelize migration:generate --name cartProducts"
   },
   "repository": {
     "type": "git",
