@@ -2,13 +2,13 @@ module.exports = (sequelize, DataTypes) => {
    let alias = "images";
    let cols = {
       id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
       path: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
     };

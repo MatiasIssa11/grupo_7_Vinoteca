@@ -2,38 +2,38 @@ module.exports = (sequelize, DataTypes) => {
    let alias = "user";
    let cols = {
       id: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          allowNull: false,
          autoIncrement: true,
          primaryKey: true,
       },
       nombre: {
-         type: Sequelize.STRING,
+         type: DataTypes.STRING,
          allowNull: false,
       },
       apellido: {
-         type: Sequelize.STRING,
+         type: DataTypes.STRING,
          allowNull: false,
       },
       email: {
-         type: Sequelize.STRING,
+         type: DataTypes.STRING,
          allowNull: false,
          unique: true,
       },
       fechaNaciemiento: {
-         type: Sequelize.DATE,
+         type: DataTypes.DATE,
          allowNull: false,
       },
       avatar: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          allowNull: false,
       },
       password: {
-         type: Sequelize.TEXT,
+         type: DataTypes.TEXT,
          allowNull: false,
       },
       isAdmin: {
-         type: Sequelize.BOOLEAN,
+         type: DataTypes.BOOLEAN,
          allowNull: false,
          defaultValue: false
       
