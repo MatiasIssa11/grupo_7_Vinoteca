@@ -1,38 +1,35 @@
 module.exports = (sequelize, DataTypes) => {
-   let alias = "images";
-   let cols = {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-      },
-      path: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-      },
-    };
-      
-    let config = {
-        timestamps: false,
-        deletedAt: false
-    };
+  let alias = "images";
+  let cols = {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    path: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+  };
 
-   const Images = sequelize.define(alias, cols, config);
+  let config = {
+    timestamps: false,
+    deletedAt: false,
+  };
 
-   Images.associate = function (models) {
-       
-      Images.hasMany(models.user, {
-         as: 'users',
-         foreignKey: 'avatar'
-      }),
-         
+  const Images = sequelize.define(alias, cols, config);
+
+  Images.associate = function (models) {
+    Images.hasMany(models.user, {
+      as: "users",
+      foreignKey: "avatar",
+    }),
       Images.hasOne(models.product, {
-         as: 'product',
-         foreignKey: 'image'
-      })
-         
-    }
+        as: "product",
+        foreignKey: "image",
+      });
+  };
 
-    return Images;
-}
+  return Images;
+};
