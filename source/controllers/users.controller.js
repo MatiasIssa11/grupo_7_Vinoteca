@@ -1,8 +1,9 @@
+const { hashSync } = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const { index, one, create, write } = require("../models/users.model");
+const { User } = require("../database/models/index");
 
 module.exports = {
-  register: (req, res) => {
+  register: async (req, res) => {
     return res.render("./users/register", {
       title: "Cava Wines-Registro",
       styles: [
@@ -13,7 +14,7 @@ module.exports = {
     });
   },
 
-  process: (req, res) => {
+  process: async (req, res) => {
     let validaciones = validationResult(req);
     let { errors } = validaciones;
 
@@ -30,16 +31,24 @@ module.exports = {
       });
     }
 
+    req.body.password = hashSync(req.body.password, 10);
+    req.body.isAdmin = String(req.body.email)
+      .toLowerCase()
+      .includes("@cavawines.com");
+
     req.body.avatar =
       req.files && req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
-    let newUser = create(req.body); // Crea nuevo usuario
-    let users = index(); // Trae user.json como obj. literal
-    users.push(newUser); // Agrega nuevo usuario al final del objeto literal users
-    write(users); // Actualiza el user.json con el nuevo user
+
+    await User.create(req.body);
+
+    //let newUser = create(req.body); // Crea nuevo usuario
+    //let users = index(); // Trae user.json como obj. literal
+    //users.push(newUser); // Agrega nuevo usuario al final del objeto literal users
+    //write(users); // Actualiza el user.json con el nuevo user
     return res.redirect("/users/login");
   },
 
-  login: (req, res) => {
+  login: async (req, res) => {
     return res.render("./users/login", {
       title: "Cava Wines-Acceso",
       styles: [
@@ -50,7 +59,7 @@ module.exports = {
     });
   },
 
-  enter: (req, res) => {
+  enter: async (req, res) => {
     let validaciones = validationResult(req);
     let { errors } = validaciones;
 
@@ -67,21 +76,21 @@ module.exports = {
       });
     }
 
-    let users = index();
+    let users = await User.findAll();
     let user = users.find((u) => u.email === req.body.email);
     req.session.user = user;
     req.session.ageCheck = true;
 
     if (req.body.recordame != undefined) {
-      res.cookie('emailCookie', user.email, {maxAge: 60000})
+      res.cookie("emailCookie", user.email, { maxAge: 60000 });
     }
 
     return res.redirect("/");
   },
 
-  logout: (req, res) => {
+  logout: async (req, res) => {
     req.session.user = null;
-    res.clearCookie('emailCookie');
+    res.clearCookie("emailCookie");
     return res.redirect("/");
   },
 };
