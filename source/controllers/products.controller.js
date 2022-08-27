@@ -3,13 +3,12 @@ const { index, one, create, write } = require("../models/products.model"); // Mo
 const searchCategorias = require("../modules/searchCategorias");
 const { compareName, comparePrice, compareCategory } = require("../modules/compare");
 
-const {products, image, nameProduct, productType} = require('../database/models/index') // Models NUEVOS
+const {Product, Image, NameProduct, ProductType} = require('../database/models/index') // Models NUEVOS
 
 module.exports = {
 
   detail: async (req, res) => {
-        let product = await products.findByPk(req.params.id,{include:{all:true}}) // Que hace el include aca?
-
+    let product = await Product.findByPk(req.params.id,{include:{all:true}})
     if (!product) {
       return res.redirect("/");
     }
@@ -25,7 +24,7 @@ module.exports = {
   },
 
   cart: async (req, res) => { 
-    let product = await products.findAll({include:{all:true}});
+    let product = await Product.findAll({include:{all:true}});
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
       styles: [
@@ -42,9 +41,9 @@ module.exports = {
   },
 
   products: async (req, res) => {
-    let product = await products.findAll({include:{all:true}});
+    let product = await Product.findAll({include:{all:true}});
 
-    //Buscador
+    //Buscador - PENDIENTE MODIFICAR
     if (req.query.search && req.query) {
       req.query.search = req.query.search.toLowerCase();
       product = product.filter((p) =>
@@ -52,12 +51,12 @@ module.exports = {
       );
     }
 
-    //Filtro lista
+    //Filtro lista - PENDIENTE MODIFICAR
     if (req.query && req.query.lista) {
       product = product.filter((p) => p.type.includes(req.query.lista));
     }
 
-    //Orden
+    //Orden - PENDIENTE MODIFICAR
     if (req.query && req.query.orden) {
       switch (req.query.orden) {
         case "vacio":
@@ -107,18 +106,19 @@ module.exports = {
     });
   },
 
-  save: async (req, res) => { // Pendiente!!!
-
-    // req.body.image = req.files[0].filename;
-    // let products = await products.findAll({ include: { all: true } });
-
-    let newProduct = await products.create(req.body)
-    
+  save: async (req, res) => {
+    if(req.files && req.files.length > 0){
+      let image = await Image.create({
+        path: req.files[0].filename
+      })
+      req.body.image = image.id;
+    }
+    await Product.create(req.body);
     return res.redirect("/products/");
   },
 
   edit: async (req, res) => {
-    let product = await products.findByPk(req.params.id,{include:{all:true}})
+    let product = await Product.findByPk(req.params.id,{include:{all:true}})
     if (!product) {
       return res.redirect("/products/");
     }
@@ -134,7 +134,7 @@ module.exports = {
   },
 
   modify: async (req, res) => {
-    let product = await products.findByPk(req.params.id, { include: { all: true } });
+    let product = await Product.findByPk(req.params.id, { include: { all: true } });
     await product.update({
       brand: req.body.brand,
       type: req.body.type,
@@ -153,7 +153,7 @@ module.exports = {
   },
 
   destroy: async (req, res) => {
-    let product = await products.findByPk(req.params.id,{include:{all:true}})
+    let product = await Product.findByPk(req.params.id,{include:{all:true}})
     if (!product) {
       return res.redirect("/products/");
     }
