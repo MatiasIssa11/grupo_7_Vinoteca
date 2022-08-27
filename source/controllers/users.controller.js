@@ -1,6 +1,6 @@
 const { hashSync } = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const { User } = require("../database/models/index");
+const { user } = require("../database/models/index");
 
 module.exports = {
   register: async (req, res) => {
@@ -39,7 +39,7 @@ module.exports = {
     req.body.avatar =
       req.files && req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
 
-    await User.create(req.body);
+    await user.create(req.body);
 
     //let newUser = create(req.body); // Crea nuevo usuario
     //let users = index(); // Trae user.json como obj. literal
@@ -76,7 +76,7 @@ module.exports = {
       });
     }
 
-    let users = await User.findAll();
+    let users = await user.findAll();
     let user = users.find((u) => u.email === req.body.email);
     req.session.user = user;
     req.session.ageCheck = true;

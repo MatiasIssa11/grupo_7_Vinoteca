@@ -1,5 +1,5 @@
 const { body } = require("express-validator");
-const { User } = require("../database/models/index");
+const { user } = require("../database/models/index");
 const { compareSync } = require("bcryptjs");
 
 const login = [
@@ -20,7 +20,7 @@ const login = [
     .bail()
     .custom(async (value, { req }) => {
       let { email } = req.body;
-      let users = await User.findAll();
+      let users = await user.findAll();
       let user = users.find((u) => u.email === email);
 
       if (!compareSync(value, user.password)) {
