@@ -1,14 +1,14 @@
-const { index, one, create, write } = require("../models/products.model");
+const { index, one, create, write } = require("../models/products.model"); // Models VIEJOS
+
 const searchCategorias = require("../modules/searchCategorias");
-const {
-  compareName,
-  comparePrice,
-  compareCategory,
-} = require("../modules/compare");
+const { compareName, comparePrice, compareCategory } = require("../modules/compare");
+
+const {products, image, nameProduct, productType} = require('../database/models/index') // Models NUEVOS
 
 module.exports = {
-  detail: (req, res) => {
-    let product = one(parseInt(req.params.id));
+
+  detail: async (req, res) => {
+        let product = await products.findByPk(req.params.id,{include:{all:true}}) // Que hace el include aca?
 
     if (!product) {
       return res.redirect("/");
@@ -24,9 +24,8 @@ module.exports = {
     });
   },
 
-  cart: (req, res) => {
-    let product = index();
-
+  cart: async (req, res) => { 
+    let product = await products.findAll({include:{all:true}});
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
       styles: [
@@ -39,11 +38,11 @@ module.exports = {
   },
 
   buy: (req, res) => {
-    return res.redirect("/products/cart"); //Por ahora solo redirecciona
+    return res.redirect("/products/cart"); // Solo redirecciona
   },
 
-  products: (req, res) => {
-    let product = index();
+  products: async (req, res) => {
+    let product = await products.findAll({include:{all:true}});
 
     //Buscador
     if (req.query.search && req.query) {
@@ -97,7 +96,7 @@ module.exports = {
     });
   },
 
-  create: (req, res) => {
+  create: async (req, res) => {
     return res.render("./products/create", {
       title: "Cava Wines-Carga Producto",
       styles: [
@@ -108,18 +107,18 @@ module.exports = {
     });
   },
 
-  save: (req, res) => {
-    req.body.image = req.files[0].filename;
-    let newProduct = create(req.body);
-    let products = index();
-    products.push(newProduct);
-    write(products);
+  save: async (req, res) => { // Pendiente!!!
+
+    // req.body.image = req.files[0].filename;
+    // let products = await products.findAll({ include: { all: true } });
+
+    let newProduct = await products.create(req.body)
+    
     return res.redirect("/products/");
   },
 
-  edit: (req, res) => {
-    let product = one(parseInt(req.params.id));
-
+  edit: async (req, res) => {
+    let product = await products.findByPk(req.params.id,{include:{all:true}})
     if (!product) {
       return res.redirect("/products/");
     }
@@ -134,39 +133,31 @@ module.exports = {
     });
   },
 
-  modify: (req, res) => {
-    let product = one(parseInt(req.params.id));
-    let products = index();
-    let productsModified = products.map((p) => {
-      if (p.id == product.id) {
-        p.nameProduct = req.body.nameProduct;
-        p.type = req.body.type;
-        p.price = parseInt(req.body.price);
-        p.discountPrice = parseInt(req.body.discountPrice);
-        p.image =
-          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
-        p.alcohol = req.body.alcohol;
-        p.acidez = req.body.acidez;
-        p.azucar = req.body.azucar;
-        p.vista = req.body.vista;
-        p.nariz = req.body.nariz;
-        p.boca = req.body.boca;
-        p.otros = req.body.otros;
-      }
-      return p;
-    });
-    write(productsModified);
+  modify: async (req, res) => {
+    let product = await products.findByPk(req.params.id, { include: { all: true } });
+    await product.update({
+      brand: req.body.brand,
+      type: req.body.type,
+      price: parseInt(req.body.price),
+      discountPrice: parseInt(req.body.discountPrice),
+      image: parseInt(req.body.image), //                VER!!!
+      alcohol: req.body.alcohol,
+      acidez: req.body.acidez,
+      azucar: req.body.azucar,
+      vista: req.body.vista,
+      nariz: req.body.nariz,
+      boca: req.body.boca,
+      otros: req.body.otros,
+    })
     return res.redirect("/products/" + product.id);
   },
 
-  destroy: (req, res) => {
-    let product = one(parseInt(req.params.id));
+  destroy: async (req, res) => {
+    let product = await products.findByPk(req.params.id,{include:{all:true}})
     if (!product) {
       return res.redirect("/products/");
     }
-    let products = index();
-    let productsDeleted = products.filter((p) => p.id !== product.id);
-    write(productsDeleted);
+    await product.destroy() 
     return res.redirect("/products/");
   },
 };
