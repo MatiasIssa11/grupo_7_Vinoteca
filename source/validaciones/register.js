@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 const { extname, resolve } = require("path");
 const { unlinkSync } = require("fs");
-const { index } = require("../models/users.model");
+const { User } = require("../database/models/index");
 
 const register = [
   body("nombre")
@@ -27,8 +27,8 @@ const register = [
     .isEmail()
     .withMessage("El formato de email no es válido.")
     .bail()
-    .custom((value) => {
-      let users = index();
+    .custom(async (value) => {
+      let users = await User.findAll();
       users = users.map((u) => u.email);
       if (users.includes(value)) {
         throw new Error("El email ya esta registrado.");
@@ -43,7 +43,7 @@ const register = [
     .isDate()
     .withMessage("La fecha de nacimiento debe tener formato de fecha.")
     .bail()
-    .custom((value) => {
+    .custom(async (value) => {
       let diferenciaFecha = new Date() - new Date(value).getTime();
       //let mayoriaEdad = 1000 * 60 * 60 * 24 * 365 * 18; //18 años en milisegundos
       let diferenciaAnos = new Date(diferenciaFecha).getUTCFullYear() - 1970;
@@ -69,22 +69,16 @@ const register = [
     .isLength({ min: 4 })
     .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
     .bail()
-    .custom((value, { req }) => {
+    .custom(async (value, { req }) => {
       if (value !== req.body.password) {
         throw new Error("Las contraseñas deben ser identicas.");
       }
       return true;
     }),
 
-  body("avatar").custom((value, { req }) => {
-    //Queremos cambiarlo para que si no encuntra una imagen lo deje avanzar y que después se cargue la imagen por default
-
+  body("avatar").custom(async (value, { req }) => {
     if (req.files && req.files[0]) {
-      /*if (!archivos || archivos.length == 0) {
-      throw new Error("No se subio ninguna imagen");
-    }*/
       let archivos = req.files;
-
       let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
       let avatar = archivos[0];
       let extension = extname(avatar.filename);
