@@ -61,5 +61,17 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: false,
   };
   const Product = sequelize.define(alias, cols, config);
+
+  Product.associate = function (models) {
+    Product.belongsTo(models.nameProducts, {
+      as: "nameProducts",
+      foreignKey: "brand",
+    }),
+    Product.belongsTo(models.productType, {
+      as: "productType",
+      foreignKey: "type",
+    })
+  };
+
   return Product;
 };

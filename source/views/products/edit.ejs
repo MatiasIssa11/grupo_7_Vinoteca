@@ -16,13 +16,13 @@
         >
           <fieldset>
             <div class="edit_linea-form">
-              <label for="nameProduct" class="edit_texto">Marca: </label>
+              <label for="brand" class="edit_texto">Marca: </label>
               <input
                 type="text"
-                name="nameProduct"
+                name="brand"
                 class="edit_campo"
                 minlength="4"
-                value="<%= product.nameProduct %>"
+                value="<%= product.brand %>"
                 autocomplete="off"
               />
             </div>
@@ -60,7 +60,7 @@
               />
             </div>
             <figure id="edit_caja-imagen">
-              <img src="/products/<%= product.image %>" alt="" />
+              <img src="/products/<%= product.images[0].path %>" alt="" />
               <p>Imagen previa</p>
             </figure>
             <div class="edit_linea-form">

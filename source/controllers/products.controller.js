@@ -1,9 +1,8 @@
-const { index, one, create, write } = require("../models/products.model"); // Models VIEJOS
+/* const { index, one, create, write } = require("../models/products.model"); Models VIEJOS*/ ``
 
 const searchCategorias = require("../modules/searchCategorias");
 const { compareName, comparePrice, compareCategory } = require("../modules/compare");
-
-const {Product, Image, NameProduct, ProductType} = require('../database/models/index') // Models NUEVOS
+const {Product, Image} = require('../database/models/index') // Models NUEVOS
 
 module.exports = {
 
@@ -140,7 +139,7 @@ module.exports = {
       type: req.body.type,
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      image: parseInt(req.body.image), //                VER!!!
+      image: parseInt(req.body.image),
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,
