@@ -1,5 +1,5 @@
 const { body } = require("express-validator");
-const { index } = require("../models/users.model");
+const { User } = require("../database/models/index");
 const { compareSync } = require("bcryptjs");
 
 const login = [
@@ -18,9 +18,9 @@ const login = [
     .isLength({ min: 4 })
     .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
     .bail()
-    .custom((value, { req }) => {
+    .custom(async (value, { req }) => {
       let { email } = req.body;
-      let users = index();
+      let users = await User.findAll();
       let user = users.find((u) => u.email === email);
 
       if (!compareSync(value, user.password)) {

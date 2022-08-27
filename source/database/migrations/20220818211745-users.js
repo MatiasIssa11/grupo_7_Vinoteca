@@ -29,7 +29,7 @@ module.exports = {
         },
         avatar: {
           type: Sequelize.INTEGER,
-          //allowNull: false, //Comentado hasta que solucionemos las tablas intermedias
+          allowNull: false, //Comentado hasta que solucionemos las tablas intermedias
         },
         password: {
           type: Sequelize.TEXT,

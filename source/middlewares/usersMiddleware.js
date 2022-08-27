@@ -1,21 +1,20 @@
-const { index } = require("../models/users.model");
+const { User } = require("../database/models/index");
 
-const users = (req, res, next) => {
-
+const users = async (req, res, next) => {
   let user = null;
-  let users = index();
+  let users = await User.findAll();
 
   let emailCookie = req.cookies.emailCookie;
   let userCookie = users.find((u) => u.email === emailCookie);
 
   if (userCookie) {
-    req.session.user = userCookie
-    req.session.ageCheck = true
-  };
+    req.session.user = userCookie;
+    req.session.ageCheck = true;
+  }
 
   if (req.session && req.session.user) {
     user = req.session.user;
-  };
+  }
 
   res.locals.user = user;
 
