@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "idUser",
     }),
       Cart.hasMany(models.product, {
-        through: cartProducts,
+        through: 'cartProducts',
         foreignKey: "idCart",
       });
   };
