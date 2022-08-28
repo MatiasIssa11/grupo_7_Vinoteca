@@ -50,36 +50,36 @@ module.exports = {
     //Buscador - PENDIENTE MODIFICAR
     if (req.query.search && req.query) {
       req.query.search = req.query.search.toLowerCase();
-      product = product.filter((p) =>
+      products = products.filter((p) =>
         (p.nameProduct + "" + p.type).toLowerCase().includes(req.query.search)
       );
     }
 
     //Filtro lista - PENDIENTE MODIFICAR
     if (req.query && req.query.lista) {
-      product = product.filter((p) => p.type.includes(req.query.lista));
+      products = products.filter((p) => p.type.includes(req.query.lista));
     }
 
     //Orden - PENDIENTE MODIFICAR
     if (req.query && req.query.orden) {
       switch (req.query.orden) {
         case "vacio":
-          product = product;
+          products = products;
           break;
         case "precioAsc":
-          product = product.sort(comparePrice).reverse();
+          products = products.sort(comparePrice).reverse();
           break;
         case "precioDesc":
-          product = product.sort(comparePrice);
+          products = products.sort(comparePrice);
           break;
         case "marca":
-          product = product.sort(compareName);
+          products = products.sort(compareName);
           break;
         case "categoria":
-          product = product.sort(compareCategory);
+          products = products.sort(compareCategory);
           break;
         default:
-          product = product;
+          products = products;
           break;
       }
     }
@@ -94,7 +94,7 @@ module.exports = {
         "/home-tablet",
         "/home-desktop",
       ],
-      product: product,
+      product: products,
       searchCategorias: searchCategorias,
     });
   },
