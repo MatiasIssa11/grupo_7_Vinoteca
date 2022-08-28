@@ -13,14 +13,26 @@ module.exports = {
         idCart: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          references: {
+            model: "carts",
+            key: "id",
+          },
         },
         idProducts: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          references: {
+            model: "products",
+            key: "id",
+          },
         },
         priceProducts: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          references: {
+            model: "products",
+            key: "id",
+          },
         },
         cantidad: {
           type: Sequelize.INTEGER,

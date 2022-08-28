@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     try {
-      await queryInterface.createTable("cart", {
+      await queryInterface.createTable("carts", {
         id: {
           type: Sequelize.INTEGER,
           allowNull: false,
@@ -13,6 +13,10 @@ module.exports = {
         idUser: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          references: {
+            model: "users",
+            key: "id",
+          },
         },
         envio: {
           type: Sequelize.BOOLEAN,
@@ -29,6 +33,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("cart");
+    await queryInterface.dropTable("carts");
   },
 };

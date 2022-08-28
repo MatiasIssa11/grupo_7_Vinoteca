@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  let alias = "nameProducts";
+  let alias = "nameProduct";
   let cols = {
     id: {
       type: DataTypes.INTEGER,
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     NameProducts.hasMany(models.product, {
       as: "product",
       foreignKey: "brand",
-    })
+    });
   };
 
   return NameProducts;

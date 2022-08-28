@@ -29,8 +29,9 @@ module.exports = {
         },
         avatar: {
           type: Sequelize.INTEGER,
+          allowNull: false,
           references: {
-            model: "images", //Pruebo si lo toma en plural
+            model: "images",
             key: "id",
           },
         },
