@@ -13,18 +13,18 @@ module.exports = {
         brand: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          references: {
+          /*references: {
             model: "nameProducts",
             key: "id",
-          },
+          },*/
         },
         type: {
           type: Sequelize.TINYINT,
           allowNull: false,
-          references: {
+          /*references: {
             model: "productTypes",
             key: "id",
-          },
+          },*/
         },
         price: {
           type: Sequelize.INTEGER,
@@ -37,10 +37,10 @@ module.exports = {
         image: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          references: {
+          /*references: {
             model: "images",
             key: "id",
-          },
+          },*/
         },
         alcohol: {
           type: Sequelize.STRING,
