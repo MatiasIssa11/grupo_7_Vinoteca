@@ -5,7 +5,7 @@
     "apellido": "Syne",
     "email": "csyne2o@washington.edu",
     "fechaNacimiento": "10.11.1971",
-    "avatar": 1,
+    "avatar": "default-user.svg",
     "password": "UXCLDtHO",
     "isAdmin": false
   },
@@ -15,7 +15,7 @@
     "apellido": "Milby",
     "email": "amilby2p@nsw.gov.au",
     "fechaNacimiento": "11.12.1966",
-    "avatar": 2,
+    "avatar": "default-user.svg",
     "password": "lEVshY6SO",
     "isAdmin": false
   },
@@ -25,7 +25,7 @@
     "apellido": "Josovich",
     "email": "fjosovich2q@who.int",
     "fechaNacimiento": "03.05.1974",
-    "avatar": 3,
+    "avatar": "default-user.svg",
     "password": "JdRU3Hui",
     "isAdmin": false
   },
@@ -35,7 +35,7 @@
     "apellido": "Lugden",
     "email": "slugden2r@wufoo.com",
     "fechaNacimiento": "19.10.1988",
-    "avatar": 4,
+    "avatar": "default-user.svg",
     "password": "zyMXdL3Yll",
     "isAdmin": false
   },
@@ -45,7 +45,7 @@
     "apellido": "Issa",
     "email": "matias.issa@gmail.com",
     "fechaNacimiento": "01.01.1900",
-    "avatar": 5,
+    "avatar": "default-user.svg",
     "password": "123",
     "isAdmin": false
   },
@@ -55,7 +55,7 @@
     "apellido": "Alonso",
     "email": "mati.alonso88@cavawines.com",
     "fechaNacimiento": "1988-03-25",
-    "avatar": 6,
+    "avatar": "default-user.svg",
     "password": "$2a$10$LUpyOX6h37uK23MEHYCQWu46x5vqYopkVVQA0spicoFD.91O5wtym",
     "isAdmin": true
   },
@@ -65,7 +65,7 @@
     "apellido": "Massa",
     "email": "sergio.massa@hotmail.com",
     "fechaNacimiento": "1999-12-26",
-    "avatar": 7,
+    "avatar": "default-user.svg",
     "password": "$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6",
     "isAdmin": false
   },
@@ -75,7 +75,7 @@
     "apellido": "Collados",
     "email": "agustin.collados@cavawines.com",
     "fechaNacimiento": "1986-06-18",
-    "avatar": 8,
+    "avatar": "default-user.svg",
     "password": "$2a$10$qOaH9Ymh3LUuXhIPiQLyheGkCUGdVBG08d0WpjhpNeiS9ZxkbapTe",
     "isAdmin": true
   }

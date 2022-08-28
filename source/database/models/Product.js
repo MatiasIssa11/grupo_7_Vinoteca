@@ -67,10 +67,14 @@ module.exports = (sequelize, DataTypes) => {
       as: "nameProducts",
       foreignKey: "brand",
     }),
-    Product.belongsTo(models.productType, {
-      as: "productType",
-      foreignKey: "type",
-    })
+      Product.belongsTo(models.productType, {
+        as: "productType",
+        foreignKey: "type",
+      }),
+      Product.belongsTo(models.image, {
+        as: "images",
+        foreignKey: "image",
+      });
   };
 
   return Product;

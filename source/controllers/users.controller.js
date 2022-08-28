@@ -38,13 +38,8 @@ module.exports = {
 
     req.body.avatar =
       req.files && req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
-
     await user.create(req.body);
 
-    //let newUser = create(req.body); // Crea nuevo usuario
-    //let users = index(); // Trae user.json como obj. literal
-    //users.push(newUser); // Agrega nuevo usuario al final del objeto literal users
-    //write(users); // Actualiza el user.json con el nuevo user
     return res.redirect("/users/login");
   },
 
@@ -76,13 +71,15 @@ module.exports = {
       });
     }
 
-    let users = await user.findAll();
-    let user = users.find((u) => u.email === req.body.email);
-    req.session.user = user;
+    let oneUser = await user.findOne({
+      include: { all: true },
+      where: { email: req.body.email },
+    });
+    req.session.user = oneUser;
     req.session.ageCheck = true;
 
     if (req.body.recordame != undefined) {
-      res.cookie("emailCookie", user.email, { maxAge: 60000 });
+      res.cookie("emailCookie", oneUser.email, { maxAge: 60000 });
     }
 
     return res.redirect("/");

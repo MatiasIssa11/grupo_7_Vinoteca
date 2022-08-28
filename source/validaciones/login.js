@@ -20,10 +20,9 @@ const login = [
     .bail()
     .custom(async (value, { req }) => {
       let { email } = req.body;
-      let users = await user.findAll();
-      let user = users.find((u) => u.email === email);
+      let oneUser = await user.findOne({ where: { email: email } });
 
-      if (!compareSync(value, user.password)) {
+      if (!compareSync(value, oneUser.password)) {
         throw new Error("El usuario o contraseña es incorrecto");
       }
 

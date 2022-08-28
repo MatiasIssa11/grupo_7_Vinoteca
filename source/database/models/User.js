@@ -49,7 +49,6 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = function (models) {
     User.belongsTo(models.image, {
-      as: "images",
       foreignKey: "avatar",
     }),
       User.hasMany(models.cart, {
