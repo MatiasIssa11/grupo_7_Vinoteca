@@ -37,10 +37,10 @@ module.exports = {
         image: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          /*references: {
+          references: {
             model: "images",
             key: "id",
-          },*/
+          },
         },
         alcohol: {
           type: Sequelize.STRING,
