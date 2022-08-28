@@ -3,10 +3,13 @@ const routes = Router();
 
 const registerValidations = require("../middlewares/registerMiddleware"); // Trae todos los middlewares que estan en middlewares/register.js
 const loginValidations = require("../middlewares/loginMiddleware"); // Trae todos los middlewares que estan en middlewares/login.js
+const isAdmin = require("../middlewares/isAdminMiddleware");
 
 const {
   register,
   process,
+  edit,
+  modify,
   login,
   enter,
   logout,
@@ -16,7 +19,7 @@ routes.get("/register", register);
 routes.post("/register", [registerValidations], process);
 
 routes.get("/edit/:id", [isAdmin], edit); // Formulario de edicion de productos
-routes.put("/edit/:id", [upload.any()], modify); // Formulario de edicion de productos - Envio
+routes.put("/edit/:id", [registerValidations], modify); // Formulario de edicion de productos - Envio
 
 routes.get("/login", login);
 routes.post("/login", [loginValidations], enter);

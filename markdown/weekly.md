@@ -1,10 +1,30 @@
 ## Weekly
 
+### 28/08/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso: Migraciones, seeders y modelos varios, modificación CRUD y nuevas vistas para usuarios
+
+Agustín Collados: 
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: Las migraciones del product no corren por las FK.
+
+Agustín Collados: 
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: Terminar el sprint 6.
+
+Agustín Collados: 
+
 ### 21/08/2022
 
 #### ¿Que hiciste esta semana?
 
-Matías Alonso: 
+Matías Alonso: Crear algunas tablas y migraciones, sin los seeders.
 
 Agustín Collados: 
 
@@ -12,7 +32,7 @@ Matías Issa:
 
 #### ¿Que problemas encontraste?
 
-Matías Alonso: 
+Matías Alonso: Falta de tiempo.
 
 Agustín Collados: 
 
@@ -20,7 +40,7 @@ Matías Issa:
 
 #### ¿Que vamos a hacer esta semana?
 
-Matías Alonso: 
+Matías Alonso: Todo lo faltante del sprint 6.
 
 Agustín Collados: 
 

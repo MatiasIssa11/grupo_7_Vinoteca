@@ -64,11 +64,11 @@ module.exports = (sequelize, DataTypes) => {
 
   Product.associate = function (models) {
     Product.belongsTo(models.nameProduct, {
-      //as: "nameProduct",
+      as: "nameProduct",
       foreignKey: "brand",
     }),
       Product.belongsTo(models.productType, {
-        //as: "productType",
+        as: "productType",
         foreignKey: "type",
       }),
       Product.belongsToMany(models.cart, {
@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "idCart",
       }),
       Product.belongsTo(models.image, {
-        //as: "images",
+        as: "images",
         foreignKey: "image",
       });
   };
