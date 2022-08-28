@@ -1,0 +1,23 @@
+@media (min-width: 650px) {
+  .edit_caja-linea-form {
+    display: flex;
+    padding: 10px 0 10px 0;
+    justify-content: space-around;
+  }
+
+  .edit_texto {
+    width: 150px;
+  }
+
+  #edit_caja-titulo {
+    width: 60%;
+  }
+
+  #edit {
+    width: 60%;
+  }
+
+  .edit_campo {
+    width: 230px;
+  }
+}

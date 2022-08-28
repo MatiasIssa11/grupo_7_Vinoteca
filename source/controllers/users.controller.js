@@ -43,6 +43,62 @@ module.exports = {
     return res.redirect("/users/login");
   },
 
+  edit: async (req, res) => {
+    let oneUser = await user.findByPk(req.params.id, {
+      include: { all: true },
+    });
+    if (!oneUser) {
+      return res.redirect("/products/");
+    }
+    return res.render("./users/edit", {
+      title: "Cava Wines-Edicion Usuario",
+      styles: [
+        "/users/edit-mobile",
+        "/users/edit-tablet",
+        "/users/edit-desktop",
+      ],
+      user: oneUser,
+    });
+  },
+
+  modify: async (req, res) => {
+    let oneUser = await user.findByPk(req.params.id, {
+      include: { all: true },
+    });
+
+    let validaciones = validationResult(req);
+    let { errors } = validaciones;
+
+    if (errors && errors.length > 0) {
+      return res.render("./users/edit", {
+        title: "Cava Wines-Edicion Usuario",
+        styles: [
+          "users/edit-mobile",
+          "users/edit-tablet",
+          "users/edit-desktop",
+        ],
+        errors: validaciones.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    req.body.password = hashSync(req.body.password, 10);
+    req.body.isAdmin = String(req.body.email)
+      .toLowerCase()
+      .includes("@cavawines.com");
+
+    await oneUser.update({
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
+      email: req.body.email,
+      fechaNacimiento: req.body.fechaNacimiento,
+      avatar: req.body.avatar,
+      password: req.body.password,
+      isAdmin: req.body.isAdmin,
+    });
+    return res.redirect("/products/");
+  },
+
   login: async (req, res) => {
     return res.render("./users/login", {
       title: "Cava Wines-Acceso",

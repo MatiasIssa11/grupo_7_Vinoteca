@@ -1,0 +1,97 @@
+#edit_caja {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#edit_caja-titulo {
+  background-color: #401909;
+  color: white;
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+  border: solid 1px black;
+  font-family: Alegreya Sans, sans-serif;
+  width: 90%;
+}
+
+#edit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #742d1c;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  border: solid 1px black;
+  font-size: 12px;
+  width: 90%;
+  font-family: Bitter, serif;
+}
+
+.edit_caja-linea-form {
+  display: block;
+  padding: 0 0 10px 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.edit_campo {
+  border-radius: 10px;
+  width: 250px;
+  height: 25px;
+  text-align: center;
+  border: none;
+}
+
+.edit_texto {
+  display: flex;
+  color: #fff;
+  font-size: 15px;
+  font-family: Alegreya Sans, sans-serif;
+}
+
+#edit_botonera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#edit_botonera-crear-cuenta {
+  width: 80%;
+  padding: 10px;
+  margin: 20px 0 25px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  font-family: Alegreya Sans, sans-serif;
+}
+
+#edit_botonera-iniciar-sesion {
+  width: 50%;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  font-family: Alegreya Sans, sans-serif;
+  background-color: white;
+  text-align: center;
+}
+
+.edit_campo-imagen {
+  width: 280px;
+  height: 25px;
+  text-align: center;
+  border: none;
+}
+
+.edit_msg-error {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  padding: 3px 0;
+  font-family: Alegreya Sans, sans-serif;
+}

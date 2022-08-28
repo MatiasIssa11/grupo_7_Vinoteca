@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <header><%- include('../partials/header.ejs') %></header>
+    <main>
+      <section id="edit_caja">
+        <h1 id="edit_caja-titulo">EDICION DE USUARIO</h1>
+        <form
+          id="edit"
+          action="/users/edit/<%= user.id %>?m=PUT"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <div class="edit_caja-linea-form">
+              <label for="nombre" class="edit_texto">Nombre: </label>
+              <input
+                type="text"
+                name="nombre"
+                class="edit_campo"
+                value="<%= locals.oldData ? oldData.nombre : user.nombre %>"
+              />
+              <% if (locals.errors && errors.nombre) { %>
+              <p class="edit_msg-error"><%= errors.nombre.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="apellido" class="edit_texto">Apellido: </label>
+              <input
+                type="text"
+                name="apellido"
+                class="edit_campo"
+                value="<%= locals.oldData ? oldData.apellido : user.apellido %>"
+              />
+              <% if (locals.errors && errors.apellido) { %>
+              <p class="edit_msg-error"><%= errors.apellido.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="avatar" class="edit_texto">Imagen de usuario: </label>
+              <input class="edit_campo-imagen" type="file" name="avatar" />
+              <% if (locals.errors && errors.avatar) { %>
+              <p class="edit_msg-error"><%= errors.avatar.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="email" class="edit_texto">E-Mail: </label>
+              <input
+                type="email"
+                name="email"
+                class="edit_campo"
+                value="<%= locals.oldData ? oldData.email : user.email %>"
+              />
+              <% if (locals.errors && errors.email) { %>
+              <p class="edit_msg-error"><%= errors.email.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="fecha-nacimiento" class="edit_texto"
+                >Fecha de nacimiento:
+              </label>
+              <input
+                type="date"
+                name="fechaNacimiento"
+                id="fecha-nacimiento"
+                class="edit_campo"
+                value="<%= locals.oldData ? oldData.fechaNacimiento : user.fechaNacimiento %>"
+              />
+              <% if (locals.errors && errors.fechaNacimiento) { %>
+              <p class="edit_msg-error"><%= errors.fechaNacimiento.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="clave" class="edit_texto">Contraseña: </label>
+              <input
+                type="password"
+                name="password"
+                class="edit_campo"
+                placeholder="Minimo 4 caracteres"
+                value="<%= locals.oldData ? oldData.password : user.password %>"
+              />
+              <% if (locals.errors && errors.password) { %>
+              <p class="edit_msg-error"><%= errors.password.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="edit_caja-linea-form">
+              <label for="passwordConfirmada" class="edit_texto"
+                >Confirmar contraseña:
+              </label>
+              <input
+                type="password"
+                name="passwordConfirmada"
+                class="edit_campo"
+                placeholder="Minimo 4 caracteres"
+                value="<%= locals.oldData ? oldData.passwordConfirmada : user.passwordConfirmada %>"
+              />
+              <% if (locals.errors && errors.passwordConfirmada) { %>
+              <p class="edit_msg-error"><%= errors.passwordConfirmada.msg %></p>
+              <% } %>
+            </div>
+
+            <div id="edit_botonera">
+              <button id="edit_botonera-crear-cuenta" type="submit">
+                Crear cuenta
+              </button>
+              <a id="edit_botonera-iniciar-sesion" href="/users/login">
+                Iniciar sesion
+              </a>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer><%- include('../partials/footer.ejs') %></footer>
+  </body>
+</html>

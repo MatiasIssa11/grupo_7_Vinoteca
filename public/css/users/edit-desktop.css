@@ -1,0 +1,54 @@
+@media (min-width: 720px) {
+  .edit_caja-linea-form {
+    display: flex;
+    padding: 10px 0 10px 0;
+    justify-content: space-around;
+  }
+
+  .edit_texto {
+    width: 160px;
+  }
+
+  #edit_caja-titulo {
+    width: 60%;
+  }
+
+  #edit {
+    width: 60%;
+  }
+
+  .edit_campo {
+    width: 280px;
+  }
+
+  #edit_caja {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  #edit_botonera-crear-cuenta {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  #edit_botonera-crear-cuenta:hover {
+    transform: scale(1.1);
+  }
+
+  #edit_botonera-crear-cuenta:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
+
+  #edit_botonera-iniciar-sesion {
+    transition: transform 0.5s, background-color 0.2s, color 0.2s;
+  }
+
+  #edit_botonera-iniciar-sesion:hover {
+    transform: scale(1.1);
+  }
+
+  #edit_botonera-iniciar-sesion:focus {
+    background-color: hsla(0, 0%, 70%, 0.9);
+    color: #ffffff;
+  }
+}

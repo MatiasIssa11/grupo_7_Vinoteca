@@ -6,14 +6,14 @@ const {
   comparePrice,
   compareCategory,
 } = require("../modules/compare");
-const { Product, Image } = require("../database/models/index"); // Models NUEVOS
+const { product, image } = require("../database/models/index"); // Models NUEVOS
 
 module.exports = {
   detail: async (req, res) => {
-    let product = await Product.findByPk(req.params.id, {
+    let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
-    if (!product) {
+    if (!oneProduct) {
       return res.redirect("/");
     }
     return res.render("./products/detail", {
@@ -23,12 +23,12 @@ module.exports = {
         "/products/detail-tablet",
         "/products/detail-desktop",
       ],
-      product: product,
+      product: oneProduct,
     });
   },
 
   cart: async (req, res) => {
-    let product = await Product.findAll({ include: { all: true } });
+    let products = await product.findAll({ include: { all: true } });
     return res.render("./products/cart", {
       title: "Cava Wines-Carrito",
       styles: [
@@ -36,7 +36,7 @@ module.exports = {
         "/products/cart-tablet",
         "/products/cart-desktop",
       ],
-      product: product,
+      product: products,
     });
   },
 
@@ -45,7 +45,7 @@ module.exports = {
   },
 
   products: async (req, res) => {
-    let product = await Product.findAll({ include: { all: true } });
+    let products = await product.findAll({ include: { all: true } });
 
     //Buscador - PENDIENTE MODIFICAR
     if (req.query.search && req.query) {
@@ -112,20 +112,20 @@ module.exports = {
 
   save: async (req, res) => {
     if (req.files && req.files.length > 0) {
-      let image = await Image.create({
+      let newImage = await image.create({
         path: req.files[0].filename,
       });
-      req.body.image = image.id;
+      req.body.image = newImage.id;
     }
-    await Product.create(req.body);
+    await product.create(req.body);
     return res.redirect("/products/");
   },
 
   edit: async (req, res) => {
-    let product = await Product.findByPk(req.params.id, {
+    let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
-    if (!product) {
+    if (!oneProduct) {
       return res.redirect("/products/");
     }
     return res.render("./products/edit", {
@@ -135,20 +135,20 @@ module.exports = {
         "/products/edit-tablet",
         "/products/edit-desktop",
       ],
-      product: product,
+      product: oneProduct,
     });
   },
 
   modify: async (req, res) => {
-    let product = await Product.findByPk(req.params.id, {
+    let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
-    await product.update({
+    await oneProduct.update({
       brand: req.body.brand,
       type: req.body.type,
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      image: parseInt(req.body.image),
+      image: req.body.image,
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,
@@ -161,13 +161,13 @@ module.exports = {
   },
 
   destroy: async (req, res) => {
-    let product = await Product.findByPk(req.params.id, {
+    let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
-    if (!product) {
+    if (!oneProduct) {
       return res.redirect("/products/");
     }
-    await product.destroy();
+    await oneProduct.destroy();
     return res.redirect("/products/");
   },
 };
