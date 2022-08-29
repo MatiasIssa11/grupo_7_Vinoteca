@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     type: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     price: {
@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "brand",
     }),
       Product.belongsTo(models.productType, {
-        as: "productType",
+        //as: "productType",
         foreignKey: "type",
       }),
       Product.belongsToMany(models.cart, {

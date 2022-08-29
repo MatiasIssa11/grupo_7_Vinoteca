@@ -18,14 +18,14 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: false,
   };
 
-  const NameProducts = sequelize.define(alias, cols, config);
+  const NameProduct = sequelize.define(alias, cols, config);
 
-  NameProducts.associate = function (models) {
-    NameProducts.hasMany(models.product, {
+  NameProduct.associate = function (models) {
+    NameProduct.hasMany(models.product, {
       //as: "product",
       foreignKey: "brand",
     });
   };
 
-  return NameProducts;
+  return NameProduct;
 };

@@ -1,6 +1,6 @@
 const { hashSync } = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const { user } = require("../database/models/index");
+const { user, image } = require("../database/models/index");
 
 module.exports = {
   register: async (req, res) => {
@@ -36,8 +36,16 @@ module.exports = {
       .toLowerCase()
       .includes("@cavawines.com");
 
-    req.body.avatar =
-      req.files && req.files[0] ? req.files[0].filename : "default-user.svg"; // Levanta archivo del multer (el primero cargado)
+    let avatar;
+    if (req.files && req.files.length > 0) {
+      avatar = await image.create({
+        path: req.files[0].filename,
+      });
+    } else {
+      avatar = "default-user.svg";
+    }
+    req.body.avatar = avatar.id;
+
     await user.create(req.body);
 
     return res.redirect("/users/login");
@@ -92,10 +100,21 @@ module.exports = {
       apellido: req.body.apellido,
       email: req.body.email,
       fechaNacimiento: req.body.fechaNacimiento,
-      avatar: req.body.avatar,
+      //avatar: req.body.avatar,     //No se debe actualizar asi este, tengo que actualizar el path
       password: req.body.password,
       isAdmin: req.body.isAdmin,
     });
+
+    let oneImage = await image.findByPk(oneUser.avatar, {
+      include: { all: true },
+    });
+
+    if (req.files && req.files.length > 0) {
+      await oneImage.update({
+        path: req.files[0].filename,
+      });
+    }
+
     return res.redirect("/products/");
   },
 

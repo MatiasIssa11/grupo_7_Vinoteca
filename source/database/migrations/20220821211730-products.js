@@ -13,18 +13,18 @@ module.exports = {
         brand: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          /*references: {
+          references: {
             model: "nameProducts",
             key: "id",
-          },*/
+          },
         },
         type: {
-          type: Sequelize.TINYINT,
+          type: Sequelize.INTEGER,
           allowNull: false,
-          /*references: {
+          references: {
             model: "productTypes",
             key: "id",
-          },*/
+          },
         },
         price: {
           type: Sequelize.INTEGER,
