@@ -6,13 +6,13 @@ module.exports = {
     let sales = await product.findAll({
       include: { all: true }, //Relaciones
       where: { discountPrice: { [Op.ne]: null } }, //Filtrado de los precios que no son nulos
-      order: ["discountPrice", "ASC"], // Orden según precio de descuento más barato
+      order: [["discountPrice", "ASC"]], // Orden según precio de descuento más barato
       limit: 4, //Muestra solo los 4 primeros
     });
 
     let releases = await product.findAll({
       include: { all: true }, //Relaciones
-      sort: ["id", "DESC"], //Muestra primero los ultimos subidos, considerados los más recientes
+      order: [["id", "DESC"]], //Muestra primero los ultimos subidos, considerados los más recientes
       limit: 4, //Muestra solo los 4 primeros
     });
 
