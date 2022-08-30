@@ -152,7 +152,7 @@ module.exports = {
       type: req.body.type,
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      //image: req.body.image,              //No tiene que modificar este valor
+      //image: req.body.image,              //No tiene que modificarse el id
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,
@@ -161,6 +161,17 @@ module.exports = {
       boca: req.body.boca,
       otros: req.body.otros,
     });
+
+    let oneImage = await image.findByPk(oneProduct.avatar, {
+      include: { all: true },
+    });
+
+    if (req.files && req.files.length > 0) {
+      await oneImage.update({
+        path: req.files[0].filename,
+      });
+    }
+
     return res.redirect("/products/" + product.id);
   },
 

@@ -1,7 +1,7 @@
 const { user } = require("../database/models/index");
 
 const users = async (req, res, next) => {
-  //let user = null;
+  let userSession = null;
   let users = await user.findAll();
 
   let emailCookie = req.cookies.emailCookie;
@@ -16,7 +16,7 @@ const users = async (req, res, next) => {
     userSession = req.session.user;
   }
 
-  res.locals.user = user;
+  res.locals.user = userSession;
 
   return next();
 };
