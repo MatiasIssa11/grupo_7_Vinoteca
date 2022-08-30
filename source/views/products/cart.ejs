@@ -17,11 +17,12 @@
           <% product.forEach(product => { %>
           <article class="cart_products">
             <figure>
-              <img src="/products/<%= product.images[0].path %>" />
+              <img src="/products/<%= product.images.path %>" />
             </figure>
             <section class="cart_products_text">
-              <h4><%= product.brand %></h4>
-              <p><%= product.type %></p>
+              <h4><%= product.nameProduct.nameProduct %></h4>
+              <p><%= product.productType.type %></p>
+
               <form
                 action="/products/cart"
                 class="cart_products-button"
