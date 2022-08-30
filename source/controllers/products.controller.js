@@ -152,7 +152,7 @@ module.exports = {
       type: req.body.type,
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      image: req.body.image,
+      //image: req.body.image,              //No tiene que modificar este valor
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,

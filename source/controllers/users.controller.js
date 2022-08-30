@@ -42,7 +42,9 @@ module.exports = {
         path: req.files[0].filename,
       });
     } else {
-      avatar = "default-user.svg";
+      avatar = await image.create({
+        path: "default-user.svg",
+      });
     }
     req.body.avatar = avatar.id;
 
