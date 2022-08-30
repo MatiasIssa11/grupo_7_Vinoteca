@@ -25,7 +25,7 @@
           <h4 class="main_articulos-texto">$<%= product.discountPrice %></h4>
           <% } else { %>
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
-          <% } %> <% if (user && user.category == "admin") { %>
+          <% } %> <% if (user && user.isAdmin == true) { %>
           <form
             action="/products/delete/<%= product.id %>?m=DELETE"
             method="post"
