@@ -6,7 +6,12 @@ const {
   comparePrice,
   compareCategory,
 } = require("../modules/compare");
-const { product, image } = require("../database/models/index"); // Models NUEVOS
+const {
+  product,
+  image,
+  nameProduct,
+  productType,
+} = require("../database/models/index"); // Models NUEVOS
 
 module.exports = {
   detail: async (req, res) => {
@@ -121,6 +126,19 @@ module.exports = {
       });
       req.body.image = newImage.id;
     }
+
+    let newType = await productType.create({
+      type: req.body.type,
+    });
+
+    req.body.type = newType.id;
+
+    let newBrand = await nameProduct.create({
+      nameProduct: req.body.brand,
+    });
+
+    req.body.brand = newBrand.id;
+
     await product.create(req.body);
     return res.redirect("/products/");
   },
