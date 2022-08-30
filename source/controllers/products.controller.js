@@ -51,13 +51,17 @@ module.exports = {
     if (req.query.search && req.query) {
       req.query.search = req.query.search.toLowerCase();
       products = products.filter((p) =>
-        (p.nameProduct + "" + p.type).toLowerCase().includes(req.query.search)
+        (p.brand.nameProduct + "" + p.type.type)
+          .toLowerCase()
+          .includes(req.query.search)
       );
     }
 
     //Filtro lista - PENDIENTE MODIFICAR
     if (req.query && req.query.lista) {
-      products = products.filter((p) => p.type.includes(req.query.lista));
+      products = products.filter((p) =>
+        p.productTgitype.type.includes(req.query.lista)
+      );
     }
 
     //Orden - PENDIENTE MODIFICAR
