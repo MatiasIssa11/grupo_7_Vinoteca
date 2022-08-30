@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  let alias = "cartProduct";
+  let alias = "cartProducts";
   let cols = {
     id: {
       type: DataTypes.INTEGER,
@@ -32,16 +32,17 @@ module.exports = (sequelize, DataTypes) => {
 
   const CartProducts = sequelize.define(alias, cols, config);
 
+  /*
   CartProducts.associate = function (models) {
-    CartProducts.belongsTo(models.cart, {
-      as: "cart",
-      foreignKey: "id",
-    }),
+      CartProducts.belongsTo(models.cart, {
+        as: "cart",
+        foreignKey: "id",
+      }),
       CartProducts.belongsTo(models.product, {
         as: "product",
         foreignKey: "id",
       });
-  };
+  };*/
 
   return CartProducts;
 };
