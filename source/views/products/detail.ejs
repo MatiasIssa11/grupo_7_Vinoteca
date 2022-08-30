@@ -7,14 +7,13 @@
       <figure>
         <img src="/images/banner.jpg" alt="banner" id="main_banner" />
       </figure>
-
       <article id="main_producto">
         <figure>
           <img src="/products/<%= product.images.path %>" />
         </figure>
         <section id="producto_compra">
           <h3 id="producto_compra-nombre">
-            <%= product.nameProduct.nameProduct %> <%= product.productType.type %>
+          <%= product.nameProduct.nameProduct %> <%= product.productType.type %>
           </h3>
           <h2 id="producto_compra-precio">$ <%= product.price %> .-</h2>
           <form
