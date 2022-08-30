@@ -13,7 +13,7 @@ const users = async (req, res, next) => {
   }
 
   if (req.session && req.session.user) {
-    user = req.session.user;
+    userSession = req.session.user;
   }
 
   res.locals.user = user;
