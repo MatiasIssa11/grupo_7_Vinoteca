@@ -15,10 +15,10 @@
         <% sales.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/products/<%= product.image %> " />
+            <img src="/products/<%= product.images.path %> " />
           </figure>
           <h4 class="main_articulos-texto">
-            <%= product.nameProduct %> <%= product.type %>
+            <%= product.nameProduct.nameProduct %> <%= product.productType.type %>
           </h4>
           <% if (product.discountPrice) { %>
           <h4 class="main_articulos-texto-tachado">$<%= product.price %></h4>
@@ -54,10 +54,10 @@
         <% releases.forEach(product=> { %>
         <article class="main_articulos">
           <figure>
-            <img src="/products/<%= product.image %>" />
+            <img src="/products/<%= product.images.path %>" />
           </figure>
           <h4 class="main_articulos-texto">
-            <%= product.nameProduct %> <%= product.type %>
+            <%= product.nameProduct.nameProduct %> <%= product.productType.type %>
           </h4>
           <% if (product.discountPrice) { %>
           <h4 class="main_articulos-texto-tachado">$<%= product.price %></h4>
