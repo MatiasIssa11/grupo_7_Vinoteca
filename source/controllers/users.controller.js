@@ -54,7 +54,7 @@ module.exports = {
   },
 
   edit: async (req, res) => {
-    let oneUser = await user.findByPk(req.params.id, {
+    let oneUser = await user.findByPk(req.session.user.id, {
       include: { all: true },
     });
     if (!oneUser) {
