@@ -18,8 +18,8 @@ const {
 routes.get("/register", register);
 routes.post("/register", [registerValidations], process);
 
-routes.get("/edit/:id", [isAdmin], edit); // Formulario de edicion de productos
-routes.put("/edit/:id", [registerValidations], modify); // Formulario de edicion de productos - Envio
+routes.get("/edit/:id", [isAdmin], edit); // Formulario de edicion de usuarios
+routes.put("/edit/:id", [registerValidations], modify); // Formulario de edicion de usuario - Envio
 
 routes.get("/login", login);
 routes.post("/login", [loginValidations], enter);

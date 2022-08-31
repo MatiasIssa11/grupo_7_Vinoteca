@@ -36,7 +36,7 @@
           </fieldset>
           <button type="submit" id="search_boton">MOSTRAR SELECCION</button>
 
-          <% if (user && user.category=="admin" ) { %>
+          <% if (user && user.isAdmin == true) { %>
           <div id="search_boton">
             <a href="/products/create"> NUEVO PRODUCTO </a>
           </div>
@@ -61,7 +61,7 @@
           <h4 class="main_articulos-texto">$<%= product.price %></h4>
           <% } %>
 
-          <% if (user && user.category=="admin" ) { %>
+          <% if (user && user.isAdmin == true ) { %>
           <form
             action="/products/delete/<%= product.id %>?m=DELETE"
             method="post"
@@ -75,7 +75,7 @@
               Comprar
             </button>
           </form>
-          <% } %> <% if (user && user.category=="admin" ) { %>
+          <% } %> <% if (user && user.isAdmin == true) { %>
           <a href="/products/edit/<%= product.id %>" class="articulos_boton">
             Editar
           </a>
