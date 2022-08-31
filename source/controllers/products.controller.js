@@ -65,7 +65,7 @@ module.exports = {
     //Filtro lista - PENDIENTE MODIFICAR
     if (req.query && req.query.lista) {
       products = products.filter((p) =>
-        p.productTgitype.type.includes(req.query.lista)
+        p.productType.type.includes(req.query.lista)
       );
     }
 
