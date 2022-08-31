@@ -26,11 +26,17 @@
   <nav id="header_navbar">
     <div>
       <% if (user && user.isAdmin == false) { %>
-      <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-      <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
+        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
+        <% } %>
+      </div>
+
+      <div>
+      <% if (user) { %>
+        <a href="/users/edit/<%= user.id %>"></a><i class="fa-solid fa-user-pen"></i></a>
+        <a href="/users/edit/<%= user.id %>" class="header_icono-texto"> Editar usuario </a>
       <% } %>
- 
-    </div>
+      </div>
 
     <div>
       <% if (!user) { %>
