@@ -50,19 +50,6 @@
             </div>
 
             <div class="edit_caja-linea-form">
-              <label for="email" class="edit_texto">E-Mail: </label>
-              <input
-                type="email"
-                name="email"
-                class="edit_campo"
-                value="<%= locals.oldData ? oldData.email : user.email %>"
-              />
-              <% if (locals.errors && errors.email) { %>
-              <p class="edit_msg-error"><%= errors.email.msg %></p>
-              <% } %>
-            </div>
-
-            <div class="edit_caja-linea-form">
               <label for="fecha-nacimiento" class="edit_texto"
                 >Fecha de nacimiento:
               </label>

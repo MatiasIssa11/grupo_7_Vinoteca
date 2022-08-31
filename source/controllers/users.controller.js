@@ -92,20 +92,24 @@ module.exports = {
       });
     }
 
+    //Actualización del usuario
+
+    await oneUser.update({
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
+      //email: req.body.email,       //No se debe actualizar el mail
+      fechaNacimiento: req.body.fechaNacimiento,
+      //avatar: req.body.avatar,     //No se debe actualizar aca, se actualiza el path
+      password: req.body.password,
+      //isAdmin: req.body.isAdmin,   //No se cambia el mail
+    });
+
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email)
       .toLowerCase()
       .includes("@cavawines.com");
 
-    await oneUser.update({
-      nombre: req.body.nombre,
-      apellido: req.body.apellido,
-      email: req.body.email,
-      fechaNacimiento: req.body.fechaNacimiento,
-      //avatar: req.body.avatar,     //No se debe actualizar asi este, tengo que actualizar el path
-      password: req.body.password,
-      isAdmin: req.body.isAdmin,
-    });
+    //Actualización de imagenes
 
     let oneImage = await image.findByPk(oneUser.avatar, {
       include: { all: true },
