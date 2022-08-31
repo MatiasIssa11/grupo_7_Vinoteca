@@ -19,7 +19,7 @@
 #edit_caja-imagen {
   margin: 5px auto;
   width: 40%;
-  background-color: black;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

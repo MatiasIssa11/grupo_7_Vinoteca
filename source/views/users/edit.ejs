@@ -10,7 +10,7 @@
         <h1 id="edit_caja-titulo">EDICION DE USUARIO</h1>
         <form
           id="edit"
-          action="/users/edit/<%= user.id %>?m=PUT"
+          action="/users/edit?m=PUT"
           method="post"
           enctype="multipart/form-data"
         >
@@ -42,7 +42,11 @@
             </div>
 
             <figure>
-              <img id="edit_caja-imagen" src="/users/<%= user.image.path %>" alt="" />
+              <img
+                id="edit_caja-imagen"
+                src="/users/<%= user.image.path %>"
+                alt=""
+              />
             </figure>
             <div class="edit_caja-linea-form">
               <label for="avatar" class="edit_texto">Imagen de usuario: </label>
@@ -68,7 +72,7 @@
               <% } %>
             </div>
 
-<!-- EDICION DE PASSWORD - PARA VER:
+            <!-- EDICION DE PASSWORD - PARA VER: -->
 
             <div class="edit_caja-linea-form">
               <label for="clave" class="edit_texto">Contraseña: </label>
@@ -93,13 +97,13 @@
                 name="passwordConfirmada"
                 class="edit_campo"
                 placeholder="Minimo 4 caracteres"
-                value="<%= locals.oldData ? oldData.passwordConfirmada : user.passwordConfirmada %>"
+                value="<%= locals.oldData ? oldData.passwordConfirmada : user.password %>"
               />
               <% if (locals.errors && errors.passwordConfirmada) { %>
               <p class="edit_msg-error"><%= errors.passwordConfirmada.msg %></p>
               <% } %>
             </div>
--->
+            <!-- -->
 
             <div id="edit_botonera">
               <button id="edit_botonera-crear-cuenta" type="submit">

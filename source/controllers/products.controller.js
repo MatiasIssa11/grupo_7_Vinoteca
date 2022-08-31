@@ -1,5 +1,3 @@
-/* const { index, one, create, write } = require("../models/products.model"); Models VIEJOS*/ ``;
-
 const searchCategorias = require("../modules/searchCategorias");
 const {
   compareName,
@@ -130,13 +128,11 @@ module.exports = {
     let newType = await productType.create({
       type: req.body.type,
     });
-
     req.body.type = newType.id;
 
     let newBrand = await nameProduct.create({
       nameProduct: req.body.brand,
     });
-
     req.body.brand = newBrand.id;
 
     await product.create(req.body);
@@ -165,12 +161,14 @@ module.exports = {
     let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
+
+    //Edición de producto
     await oneProduct.update({
-      brand: req.body.brand,
-      type: req.body.type,
+      //brand: req.body.brand,      //No tiene que modificarse el id de la brand
+      //type: req.body.type,        //No tiene que modificarse el id del type
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      //image: req.body.image,              //No tiene que modificarse el id
+      //image: req.body.image,      //No tiene que modificarse el id de la imagen
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,
@@ -180,6 +178,25 @@ module.exports = {
       otros: req.body.otros,
     });
 
+    //Edición de brand
+    let oneBrand = await nameProduct.findByPk(oneProduct.brand, {
+      include: { all: true },
+    });
+
+    await oneBrand.update({
+      nameProduct: req.body.brand,
+    });
+
+    //Edición del type
+    let oneType = await productType.findByPk(oneProduct.type, {
+      include: { all: true },
+    });
+
+    await oneType.update({
+      type: req.body.type,
+    });
+
+    //Edición de imagen
     let oneImage = await image.findByPk(oneProduct.avatar, {
       include: { all: true },
     });

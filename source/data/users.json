@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "nombre": "Flor",
-    "apellido": "Syne",
+    "nombre": "Anibal",
+    "apellido": "Fernandez",
     "email": "csyne2o@washington.edu",
-    "fechaNacimiento": "10.11.1971",
-    "avatar": "default-user.svg",
+    "fechaNacimiento": "1971-11-10",
+    "avatar": "avatar-1661957618700-892612406.jpg",
     "password": "UXCLDtHO",
     "isAdmin": false
   },
   {
     "id": 2,
-    "nombre": "Annie",
-    "apellido": "Milby",
+    "nombre": "Heaven",
+    "apellido": "Music",
     "email": "amilby2p@nsw.gov.au",
-    "fechaNacimiento": "11.12.1966",
-    "avatar": "default-user.svg",
+    "fechaNacimiento": "1966-12-11",
+    "avatar": "avatar-1661900921910-165863048.jpg",
     "password": "lEVshY6SO",
     "isAdmin": false
   },
   {
     "id": 3,
-    "nombre": "Fredek",
-    "apellido": "Josovich",
+    "nombre": "Kemetira",
+    "apellido": "Cubilla",
     "email": "fjosovich2q@who.int",
-    "fechaNacimiento": "03.05.1974",
-    "avatar": "default-user.svg",
+    "fechaNacimiento": "1974-05-03",
+    "avatar": "avatar-1661900328424-501517819.jpg",
     "password": "JdRU3Hui",
     "isAdmin": false
   },
@@ -34,7 +34,7 @@
     "nombre": "Shelton",
     "apellido": "Lugden",
     "email": "slugden2r@wufoo.com",
-    "fechaNacimiento": "19.10.1988",
+    "fechaNacimiento": "1988-10-19",
     "avatar": "default-user.svg",
     "password": "zyMXdL3Yll",
     "isAdmin": false
@@ -44,7 +44,7 @@
     "nombre": "Matias",
     "apellido": "Issa",
     "email": "matias.issa@gmail.com",
-    "fechaNacimiento": "01.01.1900",
+    "fechaNacimiento": "1900-01-01",
     "avatar": "default-user.svg",
     "password": "123",
     "isAdmin": false
@@ -65,7 +65,7 @@
     "apellido": "Massa",
     "email": "sergio.massa@hotmail.com",
     "fechaNacimiento": "1999-12-26",
-    "avatar": "default-user.svg",
+    "avatar": "avatar-1661968137427-662879373.jpg",
     "password": "$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6",
     "isAdmin": false
   },

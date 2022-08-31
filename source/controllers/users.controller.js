@@ -72,7 +72,7 @@ module.exports = {
   },
 
   modify: async (req, res) => {
-    let oneUser = await user.findByPk(req.params.id, {
+    let oneUser = await user.findByPk(req.session.user.id, {
       include: { all: true },
     });
 
@@ -94,6 +94,14 @@ module.exports = {
 
     //Actualización del usuario
 
+    if (!req.body.fechaNacimiento) {
+      req.body.fechaNacimiento = req.session.user.fechaNacimiento;
+    }
+
+    if (req.body.password != req.session.user.password) {
+      req.body.password = hashSync(req.body.password, 10);
+    }
+
     await oneUser.update({
       nombre: req.body.nombre,
       apellido: req.body.apellido,
@@ -103,11 +111,6 @@ module.exports = {
       password: req.body.password,
       //isAdmin: req.body.isAdmin,   //No se cambia el mail
     });
-
-    req.body.password = hashSync(req.body.password, 10);
-    req.body.isAdmin = String(req.body.email)
-      .toLowerCase()
-      .includes("@cavawines.com");
 
     //Actualización de imagenes
 

@@ -21,8 +21,8 @@ const {
 routes.get("/register", register);
 routes.post("/register", [registerValidations], process);
 
-routes.get("/edit/:id", [isLogged], edit); // Formulario de edicion de usuarios
-routes.put("/edit/:id", [editValidations], modify); // Formulario de edicion de usuario - Envio
+routes.get("/edit", [isLogged], edit); // Formulario de edicion de usuarios
+routes.put("/edit", [editValidations], modify); // Formulario de edicion de usuario - Envio
 
 routes.get("/login", login);
 routes.post("/login", [loginValidations], enter);
