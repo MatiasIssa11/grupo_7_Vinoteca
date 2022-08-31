@@ -16,6 +16,16 @@
   width: 90%;
 }
 
+#edit_caja-imagen {
+  margin: 5px auto;
+  width: 40%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
 #edit {
   display: flex;
   flex-wrap: wrap;

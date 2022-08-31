@@ -62,8 +62,9 @@
   border: none;
 }
 #edit_caja-imagen {
-  margin: 5px auto;
-  width: 90%;
+  margin: 0 0 5px 0 auto;
+  width: 250px;
+  height: 250px;
   background-color: #fff;
   display: flex;
   justify-content: center;
