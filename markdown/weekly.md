@@ -6,19 +6,19 @@
 
 Matías Alonso: Migraciones, seeders y modelos varios, modificación CRUD y nuevas vistas para usuarios
 
-Agustín Collados: 
+Agustín Collados: Arreglar problemas que fueron presentandose, completar tablas, CRUD, arreglos en vistas.
 
 #### ¿Que problemas encontraste?
 
 Matías Alonso: Las migraciones del product no corren por las FK.
 
-Agustín Collados: 
+Agustín Collados: Errores varios al intentar modificar CRUD. 
 
 #### ¿Que vamos a hacer esta semana?
 
 Matías Alonso: Terminar el sprint 6.
 
-Agustín Collados: 
+Agustín Collados: Terminar el sprint 6.
 
 ### 21/08/2022
 
@@ -26,7 +26,7 @@ Agustín Collados:
 
 Matías Alonso: Crear algunas tablas y migraciones, sin los seeders.
 
-Agustín Collados: 
+Agustín Collados: Istalar lo referido a sequelize, sql, crear tablas.
 
 Matías Issa:
 
@@ -34,7 +34,7 @@ Matías Issa:
 
 Matías Alonso: Falta de tiempo.
 
-Agustín Collados: 
+Agustín Collados: Armar correctamente las relaciones entre tablas.
 
 Matías Issa:
 
@@ -42,7 +42,7 @@ Matías Issa:
 
 Matías Alonso: Todo lo faltante del sprint 6.
 
-Agustín Collados: 
+Agustín Collados: Continuar con el sprint 6.
 
 Matías Issa:
 

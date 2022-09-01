@@ -15,26 +15,36 @@
 #### Sprint 6:
 
 1. Comenzar a hacer.
+   A esta altura del proyecto no vemos nuevas acciones para comenzar a realizar.
 
 2. Hacer más.
+   A esta altura del proyecto no vemos nuevas acciones para comenzar a realizar.
 
 3. Continuar haciendo.
+   Reuniones rápidas de lanzamiento de sprint.
 
 4. Hacer menos.
+   A esta altura del proyecto no vemos acciones que deberiamos realizar en menor medida.
 
 5. Dejar de hacer.
+   Completar el weekly a ultimo momento.
 
 #### Sprint 5:
 
 1. Comenzar a hacer.
+   A esta altura del proyecto no vemos nuevas acciones para comenzar a realizar.
 
 2. Hacer más.
+   Reuniones en caso de ser necesario para destrabar algun punto en particular.
 
 3. Continuar haciendo.
+   Reuniones rápidas de lanzamiento de sprint.
 
 4. Hacer menos.
+   Olvidar de subir algun commit.
 
 5. Dejar de hacer.
+   Completar el weekly a ultimo momento.
 
 #### Sprint 4:
 
