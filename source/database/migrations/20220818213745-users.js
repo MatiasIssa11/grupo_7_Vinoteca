@@ -24,7 +24,7 @@ module.exports = {
           unique: true,
         },
         fechaNacimiento: {
-          type: Sequelize.DATE,
+          type: Sequelize.DATEONLY,
           allowNull: false,
         },
         avatar: {
