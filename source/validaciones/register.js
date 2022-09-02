@@ -45,10 +45,8 @@ const register = [
     .bail()
     .custom(async (value) => {
       let diferenciaFecha = new Date() - new Date(value).getTime();
-      //let mayoriaEdad = 1000 * 60 * 60 * 24 * 365 * 18; //18 años en milisegundos
       let diferenciaAnos = new Date(diferenciaFecha).getUTCFullYear() - 1970;
       if (diferenciaAnos < 18) {
-        //if (new Date(diferenciaFecha) < mayoriaEdad) {
         throw new Error("El usuario debe ser mayor de 18 años.");
       }
       return true;
@@ -58,16 +56,40 @@ const register = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 4 })
-    .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe contener mínimo 8 caracteres.")
+    .bail()
+    .isStrongPassword({
+      //Verifica si cumple las condiciones de condicion fuerte
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1,
+      returnScore: false,
+    })
+    .withMessage(
+      "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+    )
     .bail(),
 
   body("passwordConfirmada")
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 4 })
-    .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe contener mínimo 8 caracteres.")
+    .bail()
+    .isStrongPassword({
+      //Verifica si cumple las condiciones de condicion fuerte
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1,
+      returnScore: false,
+    })
+    .withMessage(
+      "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+    )
     .bail()
     .custom(async (value, { req }) => {
       if (value !== req.body.password) {
@@ -79,7 +101,7 @@ const register = [
   body("avatar").custom(async (value, { req }) => {
     if (req.files && req.files[0]) {
       let archivos = req.files;
-      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
+      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp", ".gif"];
       let avatar = archivos[0];
       let extension = extname(avatar.filename);
 

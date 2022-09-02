@@ -40,16 +40,41 @@ const editUser = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 4 })
-    .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe contener mínimo 8 caracteres.")
+    .bail()
+    .isStrongPassword({
+      //Verifica si cumple las condiciones de condicion fuerte
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1,
+      returnScore: false,
+    })
+    .withMessage(
+      "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+    )
     .bail(),
 
+  ,
   body("passwordConfirmada")
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 4 })
-    .withMessage("La contraseña debe contener mínimo cuatro caracteres.")
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe contener mínimo 8 caracteres.")
+    .bail()
+    .isStrongPassword({
+      //Verifica si cumple las condiciones de condicion fuerte
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1,
+      returnScore: false,
+    })
+    .withMessage(
+      "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+    )
     .bail()
     .custom(async (value, { req }) => {
       if (value !== req.body.password) {
@@ -61,7 +86,7 @@ const editUser = [
   body("avatar").custom(async (value, { req }) => {
     if (req.files && req.files[0]) {
       let archivos = req.files;
-      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp"];
+      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp", ".gif"];
       let avatar = archivos[0];
       let extension = extname(avatar.filename);
 
