@@ -15,13 +15,14 @@ const {
 const multer = require("multer");
 const storage = require("../modules/storage");
 const isLogged = require("../middlewares/isLoggedMiddleware");
-const upload = multer({ storage: storage("products") });
+const createMiddleware = require("../middlewares/createProductMiddleware");
+const upload = multer({ storage: storage("products") }); //Eliminar cuando agreguemos el middleware de edicion
 const isAdmin = require("../middlewares/isAdminMiddleware");
 
 routes.get("/", products); // Listado de productos
 
 routes.get("/create", [isAdmin], create); // Formulario de creacion de productos "Create"
-routes.post("/save", [upload.any()], save); // Crea el producto
+routes.post("/save", [createMiddleware], save); // Crea el producto
 
 routes.get("/cart", [isLogged], cart); // Carrito de compras
 routes.post("/cart", buy); // Comprar con el carrito, por ahora solo redirecciona

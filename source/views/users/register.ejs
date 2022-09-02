@@ -91,7 +91,7 @@
                 type="password"
                 name="password"
                 class="register_campo"
-                placeholder="Minimo 4 caracteres"
+                placeholder="Minimo 8 caracteres, 1 mayuscula, 1 minuscula, 1 caracter especial y 1 número"
                 value="<%= locals.oldData ? oldData.password : null %>"
               />
               <% if (locals.errors && errors.password) { %>
@@ -107,7 +107,7 @@
                 type="password"
                 name="passwordConfirmada"
                 class="register_campo"
-                placeholder="Minimo 4 caracteres"
+                placeholder="Minimo 8 caracteres"
                 value="<%= locals.oldData ? oldData.passwordConfirmada : null %>"
               />
               <% if (locals.errors && errors.passwordConfirmada) { %>
