@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-09-2022 a las 01:20:57
+-- Tiempo de generación: 02-09-2022 a las 02:06:15
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -196,7 +196,7 @@ CREATE TABLE `users` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `fechaNacimiento` datetime NOT NULL,
+  `fechaNacimiento` date NOT NULL,
   `avatar` int(11) NOT NULL,
   `password` text NOT NULL,
   `isAdmin` tinyint(1) NOT NULL
@@ -207,14 +207,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nombre`, `apellido`, `email`, `fechaNacimiento`, `avatar`, `password`, `isAdmin`) VALUES
-(1, 'Anibal', 'Fernandez', 'csyne2o@washington.edu', '1971-11-10 00:00:00', 9, 'UXCLDtHO', 0),
-(2, 'Heaven', 'Music', 'amilby2p@nsw.gov.au', '1966-12-11 00:00:00', 10, 'lEVshY6SO', 0),
-(3, 'Kemetira', 'Cubilla', 'fjosovich2q@who.int', '1974-05-03 00:00:00', 11, 'JdRU3Hui', 0),
-(4, 'Shelton', 'Lugden', 'slugden2r@wufoo.com', '1988-10-19 00:00:00', 12, 'zyMXdL3Yll', 0),
-(5, 'Matias', 'Issa', 'matias.issa@gmail.com', '1900-01-01 00:00:00', 13, '123', 0),
-(6, 'Matías Adrián', 'Alonso', 'mati.alonso88@cavawines.com', '1988-03-25 00:00:00', 14, '$2a$10$LUpyOX6h37uK23MEHYCQWu46x5vqYopkVVQA0spicoFD.91O5wtym', 1),
-(7, 'Sergio', 'Massa', 'sergio.massa@hotmail.com', '1999-12-26 00:00:00', 15, '$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6', 0),
-(8, 'Agustin', 'Collados', 'agustin.collados@cavawines.com', '1986-06-18 00:00:00', 16, '$2a$10$qOaH9Ymh3LUuXhIPiQLyheGkCUGdVBG08d0WpjhpNeiS9ZxkbapTe', 1);
+(1, 'Anibal', 'Fernandez', 'csyne2o@washington.edu', '1971-11-10', 9, 'UXCLDtHO', 0),
+(2, 'Heaven', 'Music', 'amilby2p@nsw.gov.au', '1966-12-11', 10, 'lEVshY6SO', 0),
+(3, 'Kemetira', 'Cubilla', 'fjosovich2q@who.int', '1974-05-03', 11, 'JdRU3Hui', 0),
+(4, 'Shelton', 'Lugden', 'slugden2r@wufoo.com', '1988-10-19', 12, 'zyMXdL3Yll', 0),
+(5, 'Matias', 'Issa', 'matias.issa@gmail.com', '1900-01-01', 13, '123', 0),
+(6, 'Matías Adrián', 'Alonso', 'mati.alonso88@cavawines.com', '1988-03-25', 14, '$2a$10$LUpyOX6h37uK23MEHYCQWu46x5vqYopkVVQA0spicoFD.91O5wtym', 1),
+(7, 'Sergio', 'Massa', 'sergio.massa@hotmail.com', '1999-12-26', 15, '$2a$10$LLr9pROcmjd4/juyLIIgze1yiINc2IdftqXwXs96AbyT3LVHhvh/6', 0),
+(8, 'Agustin', 'Collados', 'agustin.collados@cavawines.com', '1986-06-18', 16, '$2a$10$qOaH9Ymh3LUuXhIPiQLyheGkCUGdVBG08d0WpjhpNeiS9ZxkbapTe', 1);
 
 --
 -- Índices para tablas volcadas

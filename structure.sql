@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-09-2022 a las 01:05:51
+-- Tiempo de generación: 02-09-2022 a las 02:05:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -126,7 +126,7 @@ CREATE TABLE `users` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `fechaNacimiento` datetime NOT NULL,
+  `fechaNacimiento` date NOT NULL,
   `avatar` int(11) NOT NULL,
   `password` text NOT NULL,
   `isAdmin` tinyint(1) NOT NULL
