@@ -12,8 +12,6 @@ const {
   buy,
 } = require("../controllers/products.controller");
 
-const multer = require("multer");
-const storage = require("../modules/storage");
 const isLogged = require("../middlewares/isLoggedMiddleware");
 const createMiddleware = require("../middlewares/createProductMiddleware");
 const editMiddleware = require("../middlewares/editProductMiddleware");
