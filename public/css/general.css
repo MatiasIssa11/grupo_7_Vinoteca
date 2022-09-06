@@ -25,6 +25,10 @@
   color: inherit;
 }
 
+* body {
+  min-height: 100vh;
+}
+
 /*Colores a usar 
 verde: #423e03
 violetaOscuro: #401909;

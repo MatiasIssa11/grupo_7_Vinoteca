@@ -15,6 +15,12 @@
   referrerpolicy="no-referrer"
 />
 
+<!-- Scripts -->
+<% if (script) { %>
+<script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+<script defer src="/scripts/<%= script %> "></script>
+<% } %>
+
 <!-- Estilos de CSS generales-->
 
 <link rel="stylesheet" href="/css/general.css" />

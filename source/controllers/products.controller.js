@@ -197,7 +197,7 @@ module.exports = {
     });
 
     //Edición de imagen
-    let oneImage = await image.findByPk(oneProduct.avatar, {
+    let oneImage = await image.findByPk(oneProduct.image, {
       include: { all: true },
     });
 

@@ -11,6 +11,7 @@ module.exports = {
         "users/register-tablet",
         "users/register-desktop",
       ],
+      script: "register.js",
     });
   },
 
@@ -28,6 +29,7 @@ module.exports = {
         ],
         errors: validaciones.mapped(),
         oldData: req.body,
+        script: "register.js",
       });
     }
 
@@ -68,6 +70,7 @@ module.exports = {
         "/users/edit-desktop",
       ],
       user: oneUser,
+      script: "editUser.js",
     });
   },
 
@@ -89,6 +92,7 @@ module.exports = {
         ],
         errors: validaciones.mapped(),
         oldData: req.body,
+        script: "editUser.js",
       });
     }
 
@@ -135,6 +139,7 @@ module.exports = {
         "users/login-tablet",
         "users/login-desktop",
       ],
+      script: "login.js",
     });
   },
 
@@ -152,6 +157,7 @@ module.exports = {
         ],
         errors: validaciones.mapped(),
         oldData: req.body,
+        script: "login.js",
       });
     }
 
