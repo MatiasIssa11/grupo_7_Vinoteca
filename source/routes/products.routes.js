@@ -1,16 +1,6 @@
 const { Router } = require("express");
 const routes = Router();
-const {
-  cart,
-  products,
-  detail,
-  create,
-  save,
-  edit,
-  modify,
-  destroy,
-  buy,
-} = require("../controllers/products.controller");
+const {  cart,  products,  detail,  create,  save,  edit,  modify,  destroy,  buy,} = require("../controllers/products.controller");
 
 const isLogged = require("../middlewares/isLoggedMiddleware");
 const createMiddleware = require("../middlewares/createProductMiddleware");

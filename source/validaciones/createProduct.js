@@ -7,7 +7,7 @@ const createProduct = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 4 })
+    .isLength({ min: 5 })
     .withMessage("La marca del vino debe contener como mínimo 4 caracteres.")
     .bail(),
 
@@ -26,7 +26,7 @@ const createProduct = [
     .isNumeric()
     .withMessage("El precio debe ser un número.")
     .bail()
-    .isLength({ min: 4 })
+    .isLength({ min: 3 })
     .withMessage("El precio del vino debe contener como mínimo 4 números.")
     .bail(),
 
@@ -34,7 +34,7 @@ const createProduct = [
     .isNumeric()
     .withMessage("El precio del descuento debe ser un número.")
     .bail()
-    .isLength({ min: 4 })
+    .isLength({ min: 3 })
     .withMessage(
       "El precio del descuento del vino debe contener como mínimo 4 números."
     )
@@ -127,6 +127,17 @@ const createProduct = [
       "La caracteristica degustativa del vino debe contener como mínimo 4 caracteres."
     )
     .bail(),
+  
+    /*
+    body("otros")
+    .notEmpty()
+    .withMessage("Este campo es obligatorio.")
+    .bail()
+    .isLength({ min: 4 })
+    .withMessage(
+      "La caracteristica degustativa del vino debe contener como mínimo 4 caracteres."
+    )
+    .bail(),*/
 ];
 
 module.exports = createProduct;
