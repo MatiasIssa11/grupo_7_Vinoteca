@@ -7,15 +7,7 @@ const editValidations = require("../middlewares/editUserMiddleware"); // Trae el
 const loginValidations = require("../middlewares/loginMiddleware"); // Trae todos los middlewares que estan en middlewares/login.js
 const isLogged = require("../middlewares/isLoggedMiddleware");
 
-const {
-  register,
-  process,
-  edit,
-  modify,
-  login,
-  enter,
-  logout,
-} = require("../controllers/users.controller");
+const {register,process,edit,modify,login,enter,logout,} = require("../controllers/users.controller");
 
 routes.get("/register", register);
 routes.post("/register", [registerValidations], process);

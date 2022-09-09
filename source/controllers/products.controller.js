@@ -4,6 +4,7 @@ const {
   comparePrice,
   compareCategory,
 } = require("../modules/compare");
+const { validationResult } = require("express-validator");
 const {
   product,
   image,
@@ -118,6 +119,24 @@ module.exports = {
   },
 
   save: async (req, res) => {
+
+    let validaciones = validationResult(req);
+    let { errors } = validaciones;
+
+    if (errors && errors.length > 0) {
+      return res.render("./products/create", {
+        title: "Cava Wines-Carga Producto",
+        styles: [
+          "/products/create-mobile",
+          "/products/create-tablet",
+          "/products/create-desktop",
+        ],
+        errors: validaciones.mapped(),
+        oldData: req.body,
+        script: "createProducts.js",
+      });
+    }
+
     if (req.files && req.files.length > 0) {
       let newImage = await image.create({
         path: req.files[0].filename,
