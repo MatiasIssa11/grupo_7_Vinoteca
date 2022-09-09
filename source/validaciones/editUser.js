@@ -56,7 +56,7 @@ const editUser = [
     )
     .bail(),
 
-  ,
+  
   body("passwordConfirmada")
     .notEmpty()
     .withMessage("Este campo es obligatorio.")

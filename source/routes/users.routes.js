@@ -5,7 +5,6 @@ const registerValidations = require("../middlewares/registerMiddleware"); // Tra
 const editValidations = require("../middlewares/editUserMiddleware"); // Trae el middlewares que estan en middlewares/edit.js
 
 const loginValidations = require("../middlewares/loginMiddleware"); // Trae todos los middlewares que estan en middlewares/login.js
-const isAdmin = require("../middlewares/isAdminMiddleware");
 const isLogged = require("../middlewares/isLoggedMiddleware");
 
 const {
