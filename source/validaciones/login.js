@@ -16,7 +16,7 @@ const login = [
     .withMessage("Este campo es obligatorio.")
     .bail()
     .isLength({ min: 8 })
-    .withMessage("La contraseña debe contener mínimo 8 caracteres.")
+    .withMessage("La contraseña debe contener mínimo 8 caracteres.") 
     .bail()
     .custom(async (value, { req }) => {
       let { email } = req.body;
