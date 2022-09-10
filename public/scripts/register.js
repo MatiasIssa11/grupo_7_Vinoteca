@@ -202,7 +202,9 @@ form.addEventListener("submit", (e) => {
   let isCorrect = false;
   let msg = null;
 
-  let feedback = document.querySelector(".register_msg-error-front.fechaNacimiento");
+  let feedback = document.querySelector(
+    ".register_msg-error-front.fechaNacimiento"
+  );
   let box = document.querySelector("#fecha-nacimiento").parentElement;
 
   if (inputs.fechaNacimiento.valueAsDate === null) {
