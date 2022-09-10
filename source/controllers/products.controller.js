@@ -133,7 +133,7 @@ module.exports = {
         ],
         errors: validaciones.mapped(),
         oldData: req.body,
-        script: "createProducts.js",
+        script: "createProduct.js",
       });
     }
 
@@ -177,17 +177,34 @@ module.exports = {
   },
 
   modify: async (req, res) => {
+
     let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
 
+    let validaciones = validationResult(req);
+    let { errors } = validaciones;
+
+    if (errors && errors.length > 0) {
+      return res.render("./products/edit", {
+        title: "Cava Wines-Carga Producto",
+        styles: [
+          "/products/edit-mobile",
+          "/products/edit-tablet",
+          "/products/edit-desktop",
+        ],
+        errors: validaciones.mapped(),
+        oldData: req.body,
+        product: oneProduct, //ver
+        script: "editProduct.js",
+      });
+    }
+
     //Edición de producto
+
     await oneProduct.update({
-      //brand: req.body.brand,      //No tiene que modificarse el id de la brand
-      //type: req.body.type,        //No tiene que modificarse el id del type
       price: parseInt(req.body.price),
       discountPrice: parseInt(req.body.discountPrice),
-      //image: req.body.image,      //No tiene que modificarse el id de la imagen
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,

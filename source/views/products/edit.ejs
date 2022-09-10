@@ -22,10 +22,16 @@
                 name="brand"
                 class="edit_campo"
                 minlength="4"
-                value="<%= locals.oldData ? oldData.nameProduct.nameProduct : product.nameProduct.nameProduct %>"
+                value="<%= product.nameProduct.nameProduct %>"
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.brand) { %>
+                <p class="edit_msg-error"><%= errors.brand.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="type" class="edit_texto">Categoria: </label>
               <input
@@ -33,10 +39,16 @@
                 name="type"
                 class="edit_campo"
                 minlength="4"
-                value="<%= locals.oldData ? oldData.productType.type : product.productType.type %>"
+                value="<%= product.productType.type %>"
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.type) { %>
+                <p class="edit_msg-error"><%= errors.type.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="price" class="edit_texto">Precio: </label>
               <input
@@ -48,6 +60,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.price) { %>
+                <p class="edit_msg-error"><%= errors.price.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="discountPrice" class="edit_texto">Precio con descuento: </label>
               <input
@@ -59,6 +77,13 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.discountPrice) { %>
+                <p class="edit_msg-error"><%= errors.discountPrice.msg %></p>
+              <% } %>
+            </div>
+
+
             <figure>
               <img id="edit_caja-imagen"src="/products/<%= product.images.path %>" alt="" />
             </figure>
@@ -73,6 +98,11 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.image) { %>
+                <p class="edit_msg-error"><%= errors.image.msg %></p>
+              <% } %>
+            </div>
 
             <h3 class="edit_titulos">Datos analiticos:</h3>
             <div class="edit_linea-form">
@@ -86,6 +116,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.alcohol) { %>
+                <p class="edit_msg-error"><%= errors.alcohol.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="acidez" class="edit_texto">Acidez total: </label>
               <input
@@ -97,6 +133,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.acidez) { %>
+                <p class="edit_msg-error"><%= errors.acidez.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="azucar" class="edit_texto">Azucar residual: </label>
               <input
@@ -107,6 +149,11 @@
                 value="<%= locals.oldData ? oldData.azucar : product.azucar %>"
                 autocomplete="off"
               />
+            </div>
+            <div>
+              <% if (locals.errors && errors.azucar) { %>
+                <p class="edit_msg-error"><%= errors.azucar.msg %></p>
+              <% } %>
             </div>
 
             <h3 class="edit_titulos">Caracteristicas degustativas:</h3>
@@ -121,6 +168,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.vista) { %>
+                <p class="edit_msg-error"><%= errors.vista.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="nariz" class="edit_texto">Nariz: </label>
               <input
@@ -132,6 +185,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.nariz) { %>
+                <p class="edit_msg-error"><%= errors.nariz.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="boca" class="edit_texto">Boca: </label>
               <input
@@ -143,6 +202,12 @@
                 autocomplete="off"
               />
             </div>
+            <div>
+              <% if (locals.errors && errors.boca) { %>
+                <p class="edit_msg-error"><%= errors.boca.msg %></p>
+              <% } %>
+            </div>
+
             <div class="edit_linea-form">
               <label for="description" class="edit_texto">Otros: </label>
               <textarea
@@ -154,6 +219,12 @@
                 autocomplete="off"
               >
               </textarea>
+            </div>
+            <div>
+              <!--
+              <% if (locals.errors && errors.otros) { %>
+                <p class="edit_msg-error"><%= errors.otros.msg %></p>
+              <% } %>-->
             </div>
 
             <div class="edit_botonera">
