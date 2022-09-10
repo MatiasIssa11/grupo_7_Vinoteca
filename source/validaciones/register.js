@@ -9,7 +9,7 @@ const register = [
     .withMessage("Este campo es obligatorio.")
     .bail()
     .isLength({ min: 2 })
-    .withMessage("El nombre debe contener mínimo dos caracteres.")
+    .withMessage("El nombre debe contener como mínimo dos caracteres.")
     .bail(),
 
   body("apellido")
@@ -17,7 +17,7 @@ const register = [
     .withMessage("Este campo es obligatorio.")
     .bail()
     .isLength({ min: 2 })
-    .withMessage("El apellido debe contener mínimo dos caracteres.")
+    .withMessage("El apellido debe contener como mínimo dos caracteres.")
     .bail(),
 
   body("email")
@@ -80,7 +80,7 @@ const register = [
     .withMessage("La contraseña debe contener mínimo 8 caracteres.")
     .bail()
     .isStrongPassword({
-      //Verifica si cumple las condiciones de condicion fuerte
+      //Verifica si cumple las condiciones de password fuerte
       minLowercase: 1,
       minUppercase: 1,
       minNumbers: 1,

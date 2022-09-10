@@ -2,6 +2,10 @@ main {
   margin-bottom: 120px;
 }
 
+input {
+  outline: none;
+}
+
 .login_linea-form {
   display: block;
   padding: 0 0 10px 0;

@@ -28,6 +28,7 @@
               <p class="register_msg-error"><%= errors.nombre.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front nombre"></p>
 
             <div class="register_caja-linea-form">
               <label for="apellido" class="register_texto">Apellido: </label>
@@ -42,6 +43,7 @@
               <p class="register_msg-error"><%= errors.apellido.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front apellido"></p>
 
             <div class="register_caja-linea-form">
               <label for="avatar" class="register_texto"
@@ -52,6 +54,7 @@
               <p class="register_msg-error"><%= errors.avatar.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front avatar"></p>
 
             <div class="register_caja-linea-form">
               <label for="email" class="register_texto">E-Mail: </label>
@@ -66,6 +69,7 @@
               <p class="register_msg-error"><%= errors.email.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front email"></p>
 
             <div class="register_caja-linea-form">
               <label for="fecha-nacimiento" class="register_texto"
@@ -84,9 +88,10 @@
               </p>
               <% } %>
             </div>
+            <p class="register_msg-error-front fechaNacimiento"></p>
 
             <div class="register_caja-linea-form">
-              <label for="clave" class="register_texto">Contraseña: </label>
+              <label for="password" class="register_texto">Contraseña: </label>
               <input
                 type="password"
                 name="password"
@@ -98,6 +103,7 @@
               <p class="register_msg-error"><%= errors.password.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front password"></p>
 
             <div class="register_caja-linea-form">
               <label for="passwordConfirmada" class="register_texto"
@@ -116,6 +122,7 @@
               </p>
               <% } %>
             </div>
+            <p class="register_msg-error-front passwordConfirmada"></p>
 
             <div id="register_botonera">
               <button id="register_botonera-crear-cuenta" type="submit">

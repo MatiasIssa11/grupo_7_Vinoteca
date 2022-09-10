@@ -8,8 +8,6 @@ inputs.email.addEventListener("input", (e) => {
   let feedback = fieldset.querySelector(".login_msg-error-front.email");
   let msg = null;
 
-  console.log(value);
-
   if (!validator.isLength(value, { min: 4 })) {
     msg = "El email debe tener como mínimo de 4 caracteres";
   } else if (!validator.isEmail(value)) {
@@ -33,8 +31,6 @@ inputs.password.addEventListener("input", (e) => {
   let value = e.target.value;
   let feedback = fieldset.querySelector(".login_msg-error-front.password");
   let msg = null;
-
-  console.log(value);
 
   if (!validator.isLength(value, { min: 8 })) {
     msg = "La contraseña debe tener como mínimo 8 caracteres";
@@ -70,11 +66,12 @@ form.addEventListener("submit", (e) => {
   if (e.target.querySelectorAll(".login_linea-form.valid").length === 2) {
     isCorrect = true;
   }
-  
-  if(isCorrect) {
-    e.target.submit()
-  } else {
-    window.alert("Algunos datos no son correctos, por favor verificar los errores en los campos")
-  }
 
+  if (isCorrect) {
+    e.target.submit();
+  } else {
+    window.alert(
+      "Algunos datos no son correctos, por favor verificar los errores en los campos"
+    );
+  }
 });
