@@ -62,3 +62,19 @@ inputs.password.addEventListener("input", (e) => {
     feedback.innerText = "";
   }
 });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let isCorrect = false;
+
+  if (e.target.querySelectorAll(".login_linea-form.valid").length === 2) {
+    isCorrect = true;
+  }
+  
+  if(isCorrect) {
+    e.target.submit()
+  } else {
+    window.alert("Algunos datos no son correctos, por favor verificar los errores en los campos")
+  }
+
+});
