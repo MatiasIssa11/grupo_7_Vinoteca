@@ -23,7 +23,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= product.nameProduct.nameProduct %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -40,7 +39,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= product.productType.type %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -57,7 +55,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.price : product.price %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -74,7 +71,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.discountPrice : product.discountPrice %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -82,7 +78,6 @@
                 <p class="edit_msg-error"><%= errors.discountPrice.msg %></p>
               <% } %>
             </div>
-
 
             <figure>
               <img id="edit_caja-imagen"src="/products/<%= product.images.path %>" alt="" />
@@ -93,9 +88,6 @@
                 id="edit_campo-imagen"
                 type="file"
                 name="image"
-                accept=".jpg"
-                multiple
-                autocomplete="off"
               />
             </div>
             <div>
@@ -113,7 +105,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.alcohol : product.alcohol %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -130,7 +121,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.acidez : product.acidez %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -147,7 +137,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.azucar : product.azucar %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -165,7 +154,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.vista : product.vista %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -182,7 +170,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.nariz : product.nariz %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -199,7 +186,6 @@
                 class="edit_campo"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.boca : product.boca %>"
-                autocomplete="off"
               />
             </div>
             <div>
@@ -216,7 +202,6 @@
                 id="edit_campo-descripcion"
                 minlength="4"
                 value="<%= locals.oldData ? oldData.otros : product.otros %>"
-                autocomplete="off"
               >
               </textarea>
             </div>

@@ -40,32 +40,29 @@ const editProduct = [
     )
     .bail(),
 
-  //Cambiar la lógica para que no acepte que no se carguen imagenes
   body("image").custom(async (value, { req }) => {
-    let archivos = req.files;
+    if (req.files && req.files[0]) {
+      let archivos = req.files;
+      let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp", ".gif"];
+      let image = archivos[0];
+      let extension = extname(image.filename);
 
-    if (!archivos || !archivos[0]) {
-      throw new Error("No se cargó ninguna imagen.");
+      if (!extensiones.includes(extension)) {
+        unlinkSync(
+          resolve(__dirname, "../../uploads/", "products", image.filename)
+        );
+        throw new Error("La imagen no tiene una extension valida.");
+      }
+
+      if (image.size > 2097152 /*2MB*/) {
+        unlinkSync(
+          resolve(__dirname, "../../uploads/", "products", image.filename)
+        );
+        throw new Error("La imagen supera el peso de 2MB.");
+      }
+      return true;
     }
-
-    let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp", ".gif"];
-    let imagen = archivos[0];
-    let extension = extname(imagen.filename);
-
-    if (!extensiones.includes(extension)) {
-      unlinkSync(
-        resolve(__dirname, "../../uploads/", "products", imagen.filename)
-      );
-      throw new Error("La imagen no tiene una extension valida.");
-    }
-
-    if (imagen.size > 2097152) {
-      /*2MB*/ unlinkSync(
-        resolve(__dirname, "../../uploads/", "products", imagen.filename)
-      );
-      throw new Error("La imagen supera el peso de 2MB.");
-    }
-    return true;
+    return true; //Este caso es para cuando no se carga imagen, tiene que retornar un true
   }),
 
   body("alcohol")
