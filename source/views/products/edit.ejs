@@ -66,10 +66,10 @@
             <div class="edit_linea-form">
               <label for="discountPrice" class="edit_texto">Precio con descuento: </label>
               <input
-                type="text"
+                type="number"
                 name="discountPrice"
                 class="edit_campo"
-                minlength="4"
+                minlength="3"
                 value="<%= locals.oldData ? oldData.discountPrice : product.discountPrice %>"
               />
             </div>
