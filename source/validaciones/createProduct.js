@@ -23,22 +23,19 @@ const createProduct = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isNumeric()
-    .withMessage("El precio debe ser un número.")
-    .bail()
     .isLength({ min: 3 })
     .withMessage("El precio del vino debe contener como mínimo 4 números.")
     .bail(),
 
-  body("discountPrice")
-    .isNumeric()
-    .withMessage("El precio del descuento debe ser un número.")
-    .bail()
-    .isLength({ min: 3 })
-    .withMessage(
-      "El precio del descuento del vino debe contener como mínimo 4 números."
-    )
-    .bail(),
+    body("discountPrice")
+    .custom(async (value, { req }) => {
+      if (req.body.discountPrice) {
+        if (req.body.discountPrice.length < 3) {
+          throw new Error("El precio del descuento del vino debe contener como mínimo 3 números."
+          );
+        }
+      } return true;
+    }),
 
   //Cambiar la lógica para que no acepte que no se carguen imagenes
   body("image").custom(async (value, { req }) => {

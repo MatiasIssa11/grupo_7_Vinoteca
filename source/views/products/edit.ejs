@@ -66,10 +66,10 @@
             <div class="edit_linea-form">
               <label for="discountPrice" class="edit_texto">Precio con descuento: </label>
               <input
-                type="text"
+                type="number"
                 name="discountPrice"
                 class="edit_campo"
-                minlength="4"
+                minlength="3"
                 value="<%= locals.oldData ? oldData.discountPrice : product.discountPrice %>"
               />
             </div>
@@ -195,21 +195,15 @@
             </div>
 
             <div class="edit_linea-form">
-              <label for="description" class="edit_texto">Otros: </label>
+              <label for="otros" class="edit_texto">Otros: </label>
               <textarea
                 type="text"
-                name="description"
+                name="otros"
                 id="edit_campo-descripcion"
-                minlength="4"
+                minlength="20"
                 value="<%= locals.oldData ? oldData.otros : product.otros %>"
               >
               </textarea>
-            </div>
-            <div>
-              <!--
-              <% if (locals.errors && errors.otros) { %>
-                <p class="edit_msg-error"><%= errors.otros.msg %></p>
-              <% } %>-->
             </div>
 
             <div class="edit_botonera">

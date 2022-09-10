@@ -23,25 +23,22 @@ const editProduct = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isNumeric()
-    .withMessage("El precio debe ser un número.")
-    .bail()
     .isLength({ min: 3 })
     .withMessage("El precio del vino debe contener como mínimo 4 números.")
     .bail(),
 
   body("discountPrice")
-    .isNumeric()
-    .withMessage("El precio del descuento debe ser un número.")
-    .bail()
-    .isLength({ min: 3 })
-    .withMessage(
-      "El precio del descuento del vino debe contener como mínimo 4 números."
-    )
-    .bail(),
+    .custom(async (value, { req }) => {
+      if (req.body.discountPrice) {
+        if (req.body.discountPrice.length < 3) {
+          throw new Error("El precio del descuento del vino debe contener como mínimo 3 números."
+          );
+        }
+      } return true;
+    }),
 
   body("image").custom(async (value, { req }) => {
-    if (req.files && req.files[0]) {
+      if (req.files && req.files[0]) {
       let archivos = req.files;
       let extensiones = [".svg", ".png", ".jpg", ".jpeg", ".bmp", ".gif"];
       let image = archivos[0];

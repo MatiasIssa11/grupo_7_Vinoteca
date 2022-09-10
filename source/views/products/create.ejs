@@ -22,6 +22,7 @@
                 name="brand"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.brand : null %>"
               />
             </div>
             <div>
@@ -37,6 +38,7 @@
                 name="type"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.type : null %>"
               />
             </div>
             <div>
@@ -52,6 +54,7 @@
                 name="price"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.price : null %>"
               />
             </div>
             <div>
@@ -65,7 +68,8 @@
                 type="number"
                 name="discountPrice"
                 class="upload_campo"
-                minlength="4"
+                minlength="3"
+                value="<%= locals.oldData ? oldData.discountPrice : null %>"
               />
             </div>
             <div>
@@ -98,6 +102,7 @@
                 name="alcohol"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.alcohol : null %>"
               />
             </div>
             <div>
@@ -113,6 +118,7 @@
                 name="acidez"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.acidez : null %>"
               />
             </div>
             <div>
@@ -128,6 +134,7 @@
                 name="azucar"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.azucar : null %>"
               />
             </div>
             <div>
@@ -145,6 +152,7 @@
                 name="vista"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.vista : null %>"
               />
             </div>
             <div>
@@ -160,6 +168,7 @@
                 name="nariz"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.nariz : null %>"
               />
             </div>
             <div>
@@ -175,6 +184,7 @@
                 name="boca"
                 class="upload_campo"
                 minlength="4"
+                value="<%= locals.oldData ? oldData.boca : null %>"
               />
             </div>
             <div>
@@ -188,15 +198,10 @@
               <textarea
                 name="otros"
                 class="upload_campo-descripcion"
-                minlength="4"
+                minlength="20"
+                value="<%= locals.oldData ? oldData.otros : null %>"
               >
               </textarea>
-            </div>
-            <div>
-              <!--
-              <% if (locals.errors && errors.otros) { %>
-                <p class="create_msg-error"><%= errors.otros.msg %></p>
-              <% } %>-->
             </div>
 
             <div id="upload_botonera">
