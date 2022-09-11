@@ -115,6 +115,7 @@ module.exports = {
         "/products/create-tablet",
         "/products/create-desktop",
       ],
+      script: "createProduct.js",
     });
   },
 

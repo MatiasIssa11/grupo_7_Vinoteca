@@ -114,12 +114,12 @@
   text-decoration: underline;
 }
 
-.create_linea-form.invalid input {
+.upload_linea-form.invalid input {
   border: yellow 1px solid;
   background-color: rgba(255, 255, 46, 0.7);
 }
 
-.create_linea-form.valid input {
+.upload_linea-form.valid input {
   border: greenyellow 1px solid;
   background-color: hsla(120, 100%, 61%, 0.6);
 }

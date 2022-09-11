@@ -1,4 +1,4 @@
-let form = document.forms[1]; //Por el nombre que tiene el id del formulario, fue la única forma de capturarlo y poder trabajar
+let form = document.forms.upload; //Por el nombre que tiene el id del formulario, fue la única forma de capturarlo y poder trabajar
 let inputs = form.elements;
 
 inputs.brand.addEventListener("input", (e) => {
@@ -96,7 +96,7 @@ inputs.type.addEventListener("input", (e) => {
       e.preventDefault();
       let isCorrect = false;
 
-      if (e.target.querySelectorAll(".login_linea-form.valid").length === 2) {
+      if (e.target.querySelectorAll(".create_linea-form.valid").length === 2) {
          isCorrect = true;
       }
 
@@ -108,6 +108,5 @@ inputs.type.addEventListener("input", (e) => {
          );
       };
    });
-
 
 });
