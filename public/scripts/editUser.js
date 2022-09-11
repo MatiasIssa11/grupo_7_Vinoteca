@@ -55,7 +55,9 @@ inputs.avatar.addEventListener("change", (e) => {
   if (!files.length == 0) {
     if (!validator.isMimeType(files[0].type)) {
       msg = "La imagen no tiene un formato valido";
-    } else if (!["jpg", "svg", "png"].includes(files[0].type.split("/")[1])) {
+    } else if (
+      !["jpg", "jpeg", "png", "gif"].includes(files[0].type.split("/")[1])
+    ) {
       msg = "La imagen no tiene una extension valida";
     }
   }
@@ -190,9 +192,7 @@ form.addEventListener("submit", (e) => {
     feedback.innerText = msg;
   }
 
-  if (
-    e.target.querySelectorAll(".edit_caja-linea-form.valid").length >= 6
-  ) {
+  if (e.target.querySelectorAll(".edit_caja-linea-form.valid").length >= 6) {
     isCorrect = true;
   }
 

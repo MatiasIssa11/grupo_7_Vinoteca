@@ -174,6 +174,7 @@ module.exports = {
         "/products/edit-desktop",
       ],
       product: oneProduct,
+      script: "editProduct.js",
     });
   },
 

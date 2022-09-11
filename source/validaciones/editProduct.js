@@ -7,7 +7,7 @@ const editProduct = [
     .notEmpty()
     .withMessage("Este campo es obligatorio.")
     .bail()
-    .isLength({ min: 5 })
+    .isLength({ min: 2 })
     .withMessage("La marca del vino debe contener como mínimo 4 caracteres.")
     .bail(),
 

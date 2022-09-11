@@ -1,233 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head.ejs') %>
-  </head>
-  <body>
-    <header><%- include('../partials/header.ejs') %></header>
-    <main>
-      <section id="edit_caja">
-        <h1 id="edit_caja-titulo">EDITAR PRODUCTO ID:<%= product.id %></h1>
-        <form
-          id="edit_editar-producto"
-          action="/products/edit/<%= product.id %>?m=PUT"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <fieldset>
-            <div class="edit_linea-form">
-              <label for="brand" class="edit_texto">Marca: </label>
-              <input
-                type="text"
-                name="brand"
-                class="edit_campo"
-                minlength="4"
-                value="<%= product.nameProduct.nameProduct %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.brand) { %>
-                <p class="edit_msg-error"><%= errors.brand.msg %></p>
-              <% } %>
-            </div>
 
-            <div class="edit_linea-form">
-              <label for="type" class="edit_texto">Categoria: </label>
-              <input
-                type="text"
-                name="type"
-                class="edit_campo"
-                minlength="4"
-                value="<%= product.productType.type %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.type) { %>
-                <p class="edit_msg-error"><%= errors.type.msg %></p>
-              <% } %>
-            </div>
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
 
-            <div class="edit_linea-form">
-              <label for="price" class="edit_texto">Precio: </label>
-              <input
-                type="text"
-                name="price"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.price : product.price %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.price) { %>
-                <p class="edit_msg-error"><%= errors.price.msg %></p>
+<body>
+  <header>
+    <%- include('../partials/header.ejs') %>
+  </header>
+  <main>
+    <section id="edit_caja">
+      <h1 id="edit_caja-titulo">EDITAR PRODUCTO ID:<%= product.id %>
+      </h1>
+      <form id="edit" action="/products/edit/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <div class="edit_linea-form">
+            <label for="brand" class="edit_texto">Marca: </label>
+            <input type="text" name="brand" class="edit_campo" minlength="2"
+              value="<%= product.nameProduct.nameProduct %>" />
+          </div>
+          <p class="edit_msg-error-front brand"></p>
+          <div>
+            <% if (locals.errors && errors.brand) { %>
+              <p class="edit_msg-error">
+                <%= errors.brand.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="discountPrice" class="edit_texto">Precio con descuento: </label>
-              <input
-                type="number"
-                name="discountPrice"
-                class="edit_campo"
-                minlength="3"
-                value="<%= locals.oldData ? oldData.discountPrice : product.discountPrice %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.discountPrice) { %>
-                <p class="edit_msg-error"><%= errors.discountPrice.msg %></p>
+          <div class="edit_linea-form">
+            <label for="type" class="edit_texto">Categoria: </label>
+            <input type="text" name="type" class="edit_campo" minlength="4" value="<%= product.productType.type %>" />
+          </div>
+          <p class="edit_msg-error-front type"></p>
+          <div>
+            <% if (locals.errors && errors.type) { %>
+              <p class="edit_msg-error">
+                <%= errors.type.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <figure>
-              <img id="edit_caja-imagen"src="/products/<%= product.images.path %>" alt="" />
-            </figure>
-            <div class="edit_linea-form">
-              <label for="image" class="edit_texto">Imagen: </label>
-              <input
-                id="edit_campo-imagen"
-                type="file"
-                name="image"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.image) { %>
-                <p class="edit_msg-error"><%= errors.image.msg %></p>
+          <div class="edit_linea-form">
+            <label for="price" class="edit_texto">Precio: </label>
+            <input type="text" name="price" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.price : product.price %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.price) { %>
+              <p class="edit_msg-error">
+                <%= errors.price.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <h3 class="edit_titulos">Datos analiticos:</h3>
-            <div class="edit_linea-form">
-              <label for="alcohol" class="edit_texto">Alcohol: </label>
-              <input
-                type="text"
-                name="alcohol"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.alcohol : product.alcohol %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.alcohol) { %>
-                <p class="edit_msg-error"><%= errors.alcohol.msg %></p>
+          <div class="edit_linea-form">
+            <label for="discountPrice" class="edit_texto">Precio con descuento: </label>
+            <input type="number" name="discountPrice" class="edit_campo" minlength="3"
+              value="<%= locals.oldData ? oldData.discountPrice : product.discountPrice %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.discountPrice) { %>
+              <p class="edit_msg-error">
+                <%= errors.discountPrice.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="acidez" class="edit_texto">Acidez total: </label>
-              <input
-                type="text"
-                name="acidez"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.acidez : product.acidez %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.acidez) { %>
-                <p class="edit_msg-error"><%= errors.acidez.msg %></p>
+          <figure>
+            <img id="edit_caja-imagen" src="/products/<%= product.images.path %>" alt="" />
+          </figure>
+          <div class="edit_linea-form">
+            <label for="image" class="edit_texto">Imagen: </label>
+            <input id="edit_campo-imagen" type="file" name="image" />
+          </div>
+          <p class="edit_msg-error-front image"></p>
+          <div>
+            <% if (locals.errors && errors.image) { %>
+              <p class="edit_msg-error">
+                <%= errors.image.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="azucar" class="edit_texto">Azucar residual: </label>
-              <input
-                type="text"
-                name="azucar"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.azucar : product.azucar %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.azucar) { %>
-                <p class="edit_msg-error"><%= errors.azucar.msg %></p>
+          <h3 class="edit_titulos">Datos analiticos:</h3>
+          <div class="edit_linea-form">
+            <label for="alcohol" class="edit_texto">Alcohol: </label>
+            <input type="text" name="alcohol" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.alcohol : product.alcohol %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.alcohol) { %>
+              <p class="edit_msg-error">
+                <%= errors.alcohol.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <h3 class="edit_titulos">Caracteristicas degustativas:</h3>
-            <div class="edit_linea-form">
-              <label for="vista" class="edit_texto">Vista: </label>
-              <input
-                type="text"
-                name="vista"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.vista : product.vista %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.vista) { %>
-                <p class="edit_msg-error"><%= errors.vista.msg %></p>
+          <div class="edit_linea-form">
+            <label for="acidez" class="edit_texto">Acidez total: </label>
+            <input type="text" name="acidez" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.acidez : product.acidez %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.acidez) { %>
+              <p class="edit_msg-error">
+                <%= errors.acidez.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="nariz" class="edit_texto">Nariz: </label>
-              <input
-                type="text"
-                name="nariz"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.nariz : product.nariz %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.nariz) { %>
-                <p class="edit_msg-error"><%= errors.nariz.msg %></p>
+          <div class="edit_linea-form">
+            <label for="azucar" class="edit_texto">Azucar residual: </label>
+            <input type="text" name="azucar" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.azucar : product.azucar %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.azucar) { %>
+              <p class="edit_msg-error">
+                <%= errors.azucar.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="boca" class="edit_texto">Boca: </label>
-              <input
-                type="text"
-                name="boca"
-                class="edit_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.boca : product.boca %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.boca) { %>
-                <p class="edit_msg-error"><%= errors.boca.msg %></p>
+          <h3 class="edit_titulos">Caracteristicas degustativas:</h3>
+          <div class="edit_linea-form">
+            <label for="vista" class="edit_texto">Vista: </label>
+            <input type="text" name="vista" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.vista : product.vista %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.vista) { %>
+              <p class="edit_msg-error">
+                <%= errors.vista.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="edit_linea-form">
-              <label for="otros" class="edit_texto">Otros: </label>
-              <textarea
-                type="text"
-                name="otros"
-                id="edit_campo-descripcion"
-                minlength="20"
-                value="<%= locals.oldData ? oldData.otros : product.otros %>"
-              >
+          <div class="edit_linea-form">
+            <label for="nariz" class="edit_texto">Nariz: </label>
+            <input type="text" name="nariz" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.nariz : product.nariz %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.nariz) { %>
+              <p class="edit_msg-error">
+                <%= errors.nariz.msg %>
+              </p>
+              <% } %>
+          </div>
+
+          <div class="edit_linea-form">
+            <label for="boca" class="edit_texto">Boca: </label>
+            <input type="text" name="boca" class="edit_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.boca : product.boca %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.boca) { %>
+              <p class="edit_msg-error">
+                <%= errors.boca.msg %>
+              </p>
+              <% } %>
+          </div>
+
+          <div class="edit_linea-form">
+            <label for="otros" class="edit_texto">Otros: </label>
+            <textarea type="text" name="otros" id="edit_campo-descripcion" minlength="20"
+              value="<%= locals.oldData ? oldData.otros : product.otros %>">
               </textarea>
-            </div>
+          </div>
+          <p class="edit_msg-error-front otros"></p>
 
-            <div class="edit_botonera">
-              <button class="edit_confirmar-edicion" type="submit">
-                Confirmar modificaciones
-              </button>
-            </div>
-          </fieldset>
-        </form>
-
-        <form
-          id="edit_eliminar-producto"
-          action="/products/delete/<%= product.id %>?m=DELETE"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <fieldset class="edit_botonera">
+          <div class="edit_botonera">
             <button class="edit_confirmar-edicion" type="submit">
-              Eliminar el producto
+              Confirmar modificaciones
             </button>
-          </fieldset>
-        </form>
-      </section>
-    </main>
-    <footer><%- include('../partials/footer.ejs') %></footer>
-  </body>
+          </div>
+        </fieldset>
+      </form>
+
+      <form id="edit_eliminar-producto" action="/products/delete/<%= product.id %>?m=DELETE" method="post"
+        enctype="multipart/form-data">
+        <fieldset class="edit_botonera">
+          <button class="edit_confirmar-edicion" type="submit">
+            Eliminar el producto
+          </button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+</body>
+
 </html>

@@ -1,222 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head.ejs') %>
-  </head>
-  <body>
-    <header><%- include('../partials/header.ejs') %></header>
-    <main>
-      <section id="upload_caja">
-        <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
-        <form
-          id="upload"
-          action="/products/save"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <fieldset>
-            <div class="upload_linea-form">
-              <label for="brand" class="upload_texto">Marca: </label>
-              <input
-                type="text"
-                name="brand"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.brand : null %>"
-              />
-            </div>
-            <p class="create_msg-error-front brand"></p>
-            <div>
-              <% if (locals.errors && errors.brand) { %>
-                <p class="create_msg-error"><%= errors.brand.msg %></p>
+
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/header.ejs') %>
+  </header>
+  <main>
+    <section id="upload_caja">
+      <h1 id="upload_caja-titulo">NUEVO PRODUCTO</h1>
+      <form id="upload" action="/products/save" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <div class="upload_linea-form">
+            <label for="brand" class="upload_texto">Marca: </label>
+            <input type="text" name="brand" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.brand : null %>" />
+          </div>
+          <p class="create_msg-error-front brand"></p>
+          <div>
+            <% if (locals.errors && errors.brand) { %>
+              <p class="create_msg-error">
+                <%= errors.brand.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="type" class="upload_texto">Categoria: </label>
-              <input
-                type="text"
-                name="type"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.type : null %>"
-              />
-            </div>
-            <p class="create_msg-error-front type"></p>
-            <div>
-              <% if (locals.errors && errors.type) { %>
-                <p class="create_msg-error"><%= errors.type.msg %></p>
+          <div class="upload_linea-form">
+            <label for="type" class="upload_texto">Categoria: </label>
+            <input type="text" name="type" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.type : null %>" />
+          </div>
+          <p class="create_msg-error-front type"></p>
+          <div>
+            <% if (locals.errors && errors.type) { %>
+              <p class="create_msg-error">
+                <%= errors.type.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="price" class="upload_texto">Precio: </label>
-              <input
-                type="number"
-                name="price"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.price : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.price) { %>
-                <p class="create_msg-error"><%= errors.price.msg %></p>
+          <div class="upload_linea-form">
+            <label for="price" class="upload_texto">Precio: </label>
+            <input type="number" name="price" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.price : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.price) { %>
+              <p class="create_msg-error">
+                <%= errors.price.msg %>
+              </p>
               <% } %>
-            </div>
-            <div class="upload_linea-form">
-              <label for="discountPrice" class="upload_texto">Precio con descuento: </label>
-              <input
-                type="number"
-                name="discountPrice"
-                class="upload_campo"
-                minlength="3"
-                value="<%= locals.oldData ? oldData.discountPrice : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.discountPrice) { %>
-                <p class="create_msg-error"><%= errors.discountPrice.msg %></p>
+          </div>
+          <div class="upload_linea-form">
+            <label for="discountPrice" class="upload_texto">Precio con descuento: </label>
+            <input type="number" name="discountPrice" class="upload_campo" minlength="3"
+              value="<%= locals.oldData ? oldData.discountPrice : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.discountPrice) { %>
+              <p class="create_msg-error">
+                <%= errors.discountPrice.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="image" class="upload_texto">Imagen: </label>
-              <input
-                class="upload_campo-imagen"
-                type="file"
-                name="image"
-                accept=".jpg"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.image) { %>
-                <p class="create_msg-error"><%= errors.image.msg %></p>
+          <div class="upload_linea-form">
+            <label for="image" class="upload_texto">Imagen: </label>
+            <input class="upload_campo-imagen" type="file" name="image" />
+          </div>
+          <p class="create_msg-error-front image"></p>
+          <div>
+            <% if (locals.errors && errors.image) { %>
+              <p class="create_msg-error">
+                <%= errors.image.msg %>
+              </p>
               <% } %>
-            </div>
-            <p class="register_msg-error-front image"></p>
+          </div>
 
-            <h3 class="upload_titulos">Datos analiticos:</h3>
 
-            <div class="upload_linea-form">
-              <label for="alcohol" class="upload_texto">Alcohol: </label>
-              <input
-                type="text"
-                name="alcohol"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.alcohol : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.alcohol) { %>
-                <p class="create_msg-error"><%= errors.alcohol.msg %></p>
+          <h3 class="upload_titulos">Datos analiticos:</h3>
+
+          <div class="upload_linea-form">
+            <label for="alcohol" class="upload_texto">Alcohol: </label>
+            <input type="text" name="alcohol" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.alcohol : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.alcohol) { %>
+              <p class="create_msg-error">
+                <%= errors.alcohol.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="acidez" class="upload_texto">Acidez total: </label>
-              <input
-                type="text"
-                name="acidez"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.acidez : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.acidez) { %>
-                <p class="create_msg-error"><%= errors.acidez.msg %></p>
+          <div class="upload_linea-form">
+            <label for="acidez" class="upload_texto">Acidez total: </label>
+            <input type="text" name="acidez" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.acidez : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.acidez) { %>
+              <p class="create_msg-error">
+                <%= errors.acidez.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="azucar" class="upload_texto">Azucar residual: </label>
-              <input
-                type="text"
-                name="azucar"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.azucar : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.azucar) { %>
-                <p class="create_msg-error"><%= errors.azucar.msg %></p>
+          <div class="upload_linea-form">
+            <label for="azucar" class="upload_texto">Azucar residual: </label>
+            <input type="text" name="azucar" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.azucar : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.azucar) { %>
+              <p class="create_msg-error">
+                <%= errors.azucar.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <h3 class="upload_titulos">Caracteristicas degustativas:</h3>
+          <h3 class="upload_titulos">Caracteristicas degustativas:</h3>
 
-            <div class="upload_linea-form">
-              <label for="vista" class="upload_texto">Vista: </label>
-              <input
-                type="text"
-                name="vista"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.vista : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.vista) { %>
-                <p class="create_msg-error"><%= errors.vista.msg %></p>
+          <div class="upload_linea-form">
+            <label for="vista" class="upload_texto">Vista: </label>
+            <input type="text" name="vista" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.vista : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.vista) { %>
+              <p class="create_msg-error">
+                <%= errors.vista.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="nariz" class="upload_texto">Nariz: </label>
-              <input
-                type="text"
-                name="nariz"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.nariz : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.nariz) { %>
-                <p class="create_msg-error"><%= errors.nariz.msg %></p>
+          <div class="upload_linea-form">
+            <label for="nariz" class="upload_texto">Nariz: </label>
+            <input type="text" name="nariz" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.nariz : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.nariz) { %>
+              <p class="create_msg-error">
+                <%= errors.nariz.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="boca" class="upload_texto">Boca: </label>
-              <input
-                type="text"
-                name="boca"
-                class="upload_campo"
-                minlength="4"
-                value="<%= locals.oldData ? oldData.boca : null %>"
-              />
-            </div>
-            <div>
-              <% if (locals.errors && errors.boca) { %>
-                <p class="create_msg-error"><%= errors.boca.msg %></p>
+          <div class="upload_linea-form">
+            <label for="boca" class="upload_texto">Boca: </label>
+            <input type="text" name="boca" class="upload_campo" minlength="4"
+              value="<%= locals.oldData ? oldData.boca : null %>" />
+          </div>
+          <div>
+            <% if (locals.errors && errors.boca) { %>
+              <p class="create_msg-error">
+                <%= errors.boca.msg %>
+              </p>
               <% } %>
-            </div>
+          </div>
 
-            <div class="upload_linea-form">
-              <label for="otros" class="upload_texto">Otros: </label>
-              <textarea
-                name="otros"
-                class="upload_campo-descripcion"
-                minlength="20"
-                value="<%= locals.oldData ? oldData.otros : null %>"
-              >
+          <div class="upload_linea-form">
+            <label for="otros" class="upload_texto">Otros: </label>
+            <textarea name="otros" class="upload_campo-descripcion" minlength="20"
+              value="<%= locals.oldData ? oldData.otros : null %>">
               </textarea>
-            </div>
-            <p class="create_msg-error-front otros"></p>
+          </div>
+          <p class="create_msg-error-front otros"></p>
 
-            <div id="upload_botonera">
-              <button id="upload_crear-producto" type="submit">
-                Publicar producto
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-    </main>
-    <footer><%- include('../partials/footer.ejs') %></footer>
-  </body>
+          <div id="upload_botonera">
+            <button id="upload_crear-producto" type="submit">
+              Publicar producto
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+</body>
+
 </html>
