@@ -25,6 +25,7 @@
                 value="<%= locals.oldData ? oldData.brand : null %>"
               />
             </div>
+            <p class="create_msg-error-front brand"></p>
             <div>
               <% if (locals.errors && errors.brand) { %>
                 <p class="create_msg-error"><%= errors.brand.msg %></p>
@@ -41,6 +42,7 @@
                 value="<%= locals.oldData ? oldData.type : null %>"
               />
             </div>
+            <p class="create_msg-error-front type"></p>
             <div>
               <% if (locals.errors && errors.type) { %>
                 <p class="create_msg-error"><%= errors.type.msg %></p>
@@ -92,6 +94,7 @@
                 <p class="create_msg-error"><%= errors.image.msg %></p>
               <% } %>
             </div>
+            <p class="register_msg-error-front image"></p>
 
             <h3 class="upload_titulos">Datos analiticos:</h3>
 
@@ -203,6 +206,7 @@
               >
               </textarea>
             </div>
+            <p class="create_msg-error-front otros"></p>
 
             <div id="upload_botonera">
               <button id="upload_crear-producto" type="submit">
