@@ -1,24 +1,43 @@
 ## Weekly
-
-### 04/08/2022
+### 11/09/2022
 
 #### ¿Que hiciste esta semana?
 
 Matías Alonso:
 
-Agustín Collados: 
+Agustín Collados: Continuar con las validaciones front end de los productos.
 
 #### ¿Que problemas encontraste?
 
 Matías Alonso: 
 
-Agustín Collados:
+Agustín Collados: Inconvenientes con la validacion del formulario antes de realizar el submit. Problemas con nombres de clases e ids que no siguieron la logica adecuada.
 
 #### ¿Que vamos a hacer esta semana?
 
 Matías Alonso: 
 
-Agustín Collados: 
+Agustín Collados: Completar sprint 7.
+
+### 04/09/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso:
+
+Agustín Collados: Cargamos las tareas en trello y trabaje sobre las validaciones back end de los productos.
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: 
+
+Agustín Collados: Errores de tipeo que llevaron horas encontrar.
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: 
+
+Agustín Collados: Continuar con el sprint 7.
 
 ### 28/08/2022
 
