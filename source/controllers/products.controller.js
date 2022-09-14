@@ -144,6 +144,10 @@ module.exports = {
       req.body.image = newImage.id;
     }
 
+    if (req.body.discountPrice == 0) {
+      req.body.discountPrice = null
+    }
+
     let newType = await productType.create({
       type: req.body.type,
     });
@@ -202,9 +206,15 @@ module.exports = {
 
     //Edición de producto
 
+    if (req.body.discountPrice == null || req.body.discountPrice == 0) {
+      req.body.discountPrice = null
+    } else {
+        req.body.discountPrice = parseInt(req.body.discountPrice)
+    }
+
     await oneProduct.update({
       price: parseInt(req.body.price),
-      discountPrice: parseInt(req.body.discountPrice),
+      discountPrice: req.body.discountPrice,
       alcohol: req.body.alcohol,
       acidez: req.body.acidez,
       azucar: req.body.azucar,

@@ -22,6 +22,10 @@ const login = [
       let { email } = req.body;
       let oneUser = await user.findOne({ where: { email: email } });
 
+      if (!oneUser) {
+        throw new Error("El usuario o contraseña es incorrecto");
+      }
+
       if (!compareSync(value, oneUser.password)) {
         throw new Error("El usuario o contraseña es incorrecto");
       }
