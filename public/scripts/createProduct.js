@@ -51,8 +51,10 @@ inputs.type.addEventListener("input", (e) => {
     let feedback = fieldset.querySelector(".create_msg-error-front.otros");
     let msg = null;
 
-    if (!validator.isLength(value, { min: 20 })) {
-      msg = "La descripcion debe tener como mínimo de 20 caracteres";
+    if (value) { //En caso de que exista value
+      if (!validator.isLength(value, { min: 20 })) {
+        msg = "La descripcion debe tener como mínimo de 20 caracteres";
+      }
     }
 
     if (msg) {
@@ -98,7 +100,7 @@ inputs.type.addEventListener("input", (e) => {
     e.preventDefault();
     let isCorrect = false;
 
-    if (e.target.querySelectorAll(".create_linea-form.valid").length === 2) {
+    if (e.target.querySelectorAll(".create_linea-form.valid").length <= 3) {
       isCorrect = true;
     }
 

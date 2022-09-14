@@ -98,7 +98,7 @@ inputs.type.addEventListener("input", (e) => {
     e.preventDefault();
     let isCorrect = false;
 
-    if (e.target.querySelectorAll(".edit_linea-form.valid").length === 2) {
+    if (e.target.querySelectorAll(".edit_linea-form.invalid").length == 0) {
       isCorrect = true;
     }
 

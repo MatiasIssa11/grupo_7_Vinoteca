@@ -192,7 +192,7 @@ form.addEventListener("submit", (e) => {
     feedback.innerText = msg;
   }
 
-  if (e.target.querySelectorAll(".edit_caja-linea-form.valid").length >= 6) {
+  if (e.target.querySelectorAll(".edit_caja-linea-form.invalid").length == 0) {
     isCorrect = true;
   }
 

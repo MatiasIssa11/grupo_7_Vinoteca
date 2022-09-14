@@ -25,7 +25,7 @@
 
   <nav id="header_navbar">
     <div>
-      <% if (user && user.isAdmin == false) { %>
+      <% if (user && !user.isAdmin) { %>
         <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         <a href="/products/cart" class="header_icono-texto">Mi Carrito</a>
         <% } %>
@@ -42,7 +42,7 @@
       <% if (!user) { %>
         <a href="/users/login"><i class="fa-solid fa-user"></i></a>
         <a href="/users/login" class="header_icono-texto">Ingresar a mi cuenta</a>
-        <% } else if (user && user.isAdmin == true) { %>
+        <% } else if (user && user.isAdmin) { %>
           <a href="/users/logout"><i class="fa-solid fa-user-slash"></i></a>
           <a href="/users/logout" class="header_icono-texto">Cerrar cuenta ADMIN <%= user.nombre %></a>
             <% } else { %>
@@ -57,7 +57,7 @@
   <a id="header_inicio" href="/">Inicio</a>
   <a id="header_productos" href="/products">Productos</a>
 
-  <% if (user && user.category == "admin") { %>
+  <% if (user && user.isAdmin) { %>
   <a id="header_contacto" href="/products/create">Nuevo producto</a>
   <% } else { %>
   <a id="header_contacto" href="/contact">Contacto</a>

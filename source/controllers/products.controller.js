@@ -55,13 +55,13 @@ module.exports = {
     if (req.query.search && req.query) {
       req.query.search = req.query.search.toLowerCase();
       products = products.filter((p) =>
-        (p.brand.nameProduct + "" + p.type.type)
+        (p.brand.nameProduct || p.productType.type)
           .toLowerCase()
           .includes(req.query.search)
       );
     }
 
-    //Filtro lista - PENDIENTE MODIFICAR
+    //Filtro lista
     if (req.query && req.query.lista) {
       products = products.filter((p) =>
         p.productType.type.includes(req.query.lista)
@@ -120,7 +120,6 @@ module.exports = {
   },
 
   save: async (req, res) => {
-
     let validaciones = validationResult(req);
     let { errors } = validaciones;
 
@@ -179,7 +178,6 @@ module.exports = {
   },
 
   modify: async (req, res) => {
-
     let oneProduct = await product.findByPk(req.params.id, {
       include: { all: true },
     });
