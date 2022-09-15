@@ -44,9 +44,10 @@
 
           <div class="edit_linea-form">
             <label for="price" class="edit_texto">Precio: </label>
-            <input type="text" name="price" class="edit_campo" 
+            <input type="number" name="price" class="edit_campo" 
               value="<%= locals.oldData ? oldData.price : product.price %>" />
           </div>
+          <p class="edit_msg-error-front price"></p>
           <div>
             <% if (locals.errors && errors.price) { %>
               <p class="edit_msg-error">
@@ -90,6 +91,7 @@
             <input type="text" name="alcohol" class="edit_campo" 
               value="<%= locals.oldData ? oldData.alcohol : product.alcohol %>" />
           </div>
+          <p class="edit_msg-error-front alcohol"></p>
           <div>
             <% if (locals.errors && errors.alcohol) { %>
               <p class="edit_msg-error">
@@ -103,6 +105,7 @@
             <input type="text" name="acidez" class="edit_campo" 
               value="<%= locals.oldData ? oldData.acidez : product.acidez %>" />
           </div>
+          <p class="edit_msg-error-front acidez"></p>
           <div>
             <% if (locals.errors && errors.acidez) { %>
               <p class="edit_msg-error">
@@ -116,6 +119,7 @@
             <input type="text" name="azucar" class="edit_campo" 
               value="<%= locals.oldData ? oldData.azucar : product.azucar %>" />
           </div>
+          <p class="edit_msg-error-front azucar"></p>
           <div>
             <% if (locals.errors && errors.azucar) { %>
               <p class="edit_msg-error">
@@ -130,6 +134,7 @@
             <input type="text" name="vista" class="edit_campo" 
               value="<%= locals.oldData ? oldData.vista : product.vista %>" />
           </div>
+          <p class="edit_msg-error-front vista"></p>
           <div>
             <% if (locals.errors && errors.vista) { %>
               <p class="edit_msg-error">
@@ -143,6 +148,7 @@
             <input type="text" name="nariz" class="edit_campo" 
               value="<%= locals.oldData ? oldData.nariz : product.nariz %>" />
           </div>
+          <p class="edit_msg-error-front nariz"></p>
           <div>
             <% if (locals.errors && errors.nariz) { %>
               <p class="edit_msg-error">
@@ -156,6 +162,7 @@
             <input type="text" name="boca" class="edit_campo" 
               value="<%= locals.oldData ? oldData.boca : product.boca %>" />
           </div>
+          <p class="edit_msg-error-front boca"></p>
           <div>
             <% if (locals.errors && errors.boca) { %>
               <p class="edit_msg-error">
