@@ -40,6 +40,8 @@ app.use(userMiddleware);
 
 app.use("/api/users", require("./routes/apis/usersApis.routes")); //Se puso antes del ageCheck porque sino redirige
 //Colocar acá el api products
+app.use("/api/products", require("./routes/apis/productsApis.routes")); //Se puso antes del ageCheck porque sino redirige
+//Colocar acá el api products
 
 app.use(ageCheckMiddleware); //Middleware de chequeo de edad
 app.use(require("./routes/main.routes"));
