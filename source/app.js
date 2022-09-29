@@ -16,7 +16,7 @@ app.listen(port, callback);
 app.set("views", resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.use(express.urlencoded({ extended: false })); // req.body y el req.query
+app.use(express.urlencoded({ extended: true })); // req.body y el req.query
 app.use(express.json());
 app.use(method("m")); // En la url poner ?m=PUT o ?m=DELETE
 
@@ -37,6 +37,9 @@ app.get("/agecheck", ageCheck);
 app.post("/agecheck", ageRedirect);
 
 app.use(userMiddleware);
+
+app.use("/api/users", require("./routes/apis/usersApis.routes")); //Se puso antes del ageCheck porque sino redirige
+//Colocar acá el api products
 
 app.use(ageCheckMiddleware); //Middleware de chequeo de edad
 app.use(require("./routes/main.routes"));
