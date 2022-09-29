@@ -153,22 +153,21 @@ input {
 }
 
 .login_msg-error {
-  color: #fff;
+  color:  rgba(255, 255, 46, 0.7);
   width: 100%;
   text-align: center;
-  padding: 3px 0;
-  text-align: right;
   font-weight: bold;
+  font-family: Alegreya Sans, sans-serif;
+  font-size: 17px;
 }
 
 .login_msg-error-front {
-  color: snow;
+  color:  rgba(255, 255, 46, 0.7);
   width: 100%;
   text-align: center;
-  padding: 3px 0;
-  text-align: right;
   font-weight: bold;
-  text-decoration: underline;
+  font-family: Alegreya Sans, sans-serif;
+  font-size: 17px;
 }
 
 .login_linea-form.invalid input {
