@@ -29,6 +29,8 @@ input {
   border: solid 1px black;
   font-family: Alegreya Sans, sans-serif;
   width: 90%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #login_caja-cuerpo {
@@ -42,6 +44,8 @@ input {
   font-size: 12px;
   width: 90%;
   height: 300px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #login_formulario-ingreso {

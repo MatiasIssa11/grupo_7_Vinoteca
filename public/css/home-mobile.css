@@ -31,18 +31,22 @@ main {
 
 .main_articulos {
   border: 1px solid #000;
-  font-family: Bitter, serif;
+  font-family:  Alegreya Sans, sans-serif;
+  font-size: 15px;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #423e03;
+  background-color: #260F09;
   column-gap: 10%;
   align-items: center;
+  border-radius: 10px;
 }
 
 .main_articulos figure {
   width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #fff;
 }
 
@@ -55,6 +59,7 @@ main {
   width: 100%;
   padding: 4px 0;
   color: #fff;
+  font-size: 20px;
 }
 
 .main_articulos-texto-tachado {
