@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Product() {
 
   const baseURL = 'http://localhost:3000/api/products'
-  const id = 3;
+  const id = 3; // Falta logica del producto que se requiere
 
   const [productDetail, setProductDetail] = useState("Cargando...");
  
