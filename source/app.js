@@ -39,7 +39,7 @@ app.post("/agecheck", ageRedirect);
 
 app.use(userMiddleware);
 
-app.use(cors)
+app.use(cors())
 
 app.use("/api/users", require("./routes/apis/usersApis.routes")); //Se puso antes del ageCheck porque sino redirige
 //Colocar acá el api products
