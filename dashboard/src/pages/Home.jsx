@@ -1,22 +1,29 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  let [userCount, setUserCount] = useState(null);
-  userCount = "Cargando...";
+  let [userCount, setUserCount] = useState("Cargando...");
 
-  let [productCount, setProductCount] = useState(null);
-  productCount = "Cargando...";
+  let [productCount, setProductCount] = useState("Cargando...");
 
-  let datosUsers = async () => {
-    const info = await fetch("http://localhost:3000/api/users/", {});
-    const data = await info.json(); //dice que hay algo mal con la promesa
-    console.log(data);
+  const datosUsers = async () => {
+    const info = await fetch("http://localhost:3000/api/users");
+    const data = await info.json();
     return data;
   };
 
-  /*useEffect(() => {
+  const datosProducts = async () => {
+    const info = await fetch("http://localhost:3000/api/products");
+    const data = await info.json();
+    return data;
+  };
+
+  useEffect(() => {
     datosUsers().then((data) => setUserCount(data.count));
-  }, []);*/
+  }, []);
+
+  useEffect(() => {
+    datosProducts().then((data) => setProductCount(data.count));
+  }, []);
 
   return (
     <>
