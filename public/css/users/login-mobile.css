@@ -67,7 +67,7 @@ input {
 .login_texto {
   display: flex;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   font-family: Alegreya Sans, sans-serif;
 }
 
@@ -89,7 +89,7 @@ input {
   color: white;
   width: 100%;
   font-size: 12px;
-  margin: 5px 0 10px 0;
+  margin: 10px 0 10px 0;
   font-family: Alegreya Sans, sans-serif;
 }
 
@@ -131,7 +131,7 @@ input {
 
 #login_crear-cuenta {
   display: none;
-  font-size: 15px;
+  font-size: 17px;
   font-family: Alegreya Sans, sans-serif;
   text-align: center;
   width: 60%;
