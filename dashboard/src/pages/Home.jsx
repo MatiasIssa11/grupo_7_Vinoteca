@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   let [userCount, setUserCount] = useState(null);
+  userCount = "Cargando...";
 
-  userCount = "Cargando";
+  let [productCount, setProductCount] = useState(null);
+  productCount = "Cargando...";
 
-  const datosUsers = async () => {
-    const data = await fetch("http://localhost:3000/api/users", {
-      mode: "no-cors", //me tiraba un error de seguridad
-    });
-    const users = await data.json(); //dice que hay algo mal con la promesa
-    return users;
+  let datosUsers = async () => {
+    const info = await fetch("http://localhost:3000/api/users/", {});
+    const data = await info.json(); //dice que hay algo mal con la promesa
+    console.log(data);
+    return data;
   };
 
-  useEffect(() => {
-    datosUsers();
-  }, []);
+  /*useEffect(() => {
+    datosUsers().then((data) => setUserCount(data.count));
+  }, []);*/
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function Home() {
       </article>
       <article>
         <p>Cantidad de productos</p>
-        <h2>A completar</h2>
+        <h2>{productCount}</h2>
       </article>
       <article>
         <p>Cantidad de usuarios</p>

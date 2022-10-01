@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 const ageCheckMiddleware = require("./middlewares/ageCheckMiddleware");
 const { ageCheck, ageRedirect } = require("./controllers/main.controller");
 const userMiddleware = require("./middlewares/usersMiddleware");
+const cors = require("cors");
 
 app.listen(port, callback);
 
@@ -37,6 +38,8 @@ app.get("/agecheck", ageCheck);
 app.post("/agecheck", ageRedirect);
 
 app.use(userMiddleware);
+
+app.use(cors)
 
 app.use("/api/users", require("./routes/apis/usersApis.routes")); //Se puso antes del ageCheck porque sino redirige
 //Colocar acá el api products
