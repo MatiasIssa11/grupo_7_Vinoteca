@@ -13,8 +13,10 @@ module.exports = {
       let previousPage = pages === 0 ? 1 : pages / 4;
       let nextPage = pages / 4 + 2;
 
-      previous = "http://localhost:3000/api/users/?page=" + previousPage;
-      next = "http://localhost:3000/api/users/?page=" + nextPage;
+      let previous = "http://localhost:3000/api/users/?page=" + previousPage;
+      let next = "http://localhost:3000/api/users/?page=" + nextPage;
+
+      //Adecuación de los datos de los usuarios
 
       let users = usersDB.map((u) =>
         Object({
@@ -31,7 +33,7 @@ module.exports = {
 
       let count = await user.count(); //Consulto la cantidad de registros
 
-      let lastPage = count % 4 === 0 ? count / 4 : Math.trunc(count/4) + 1;
+      let lastPage = Math.ceil(count / 4);
 
       let response = {
         count: count,

@@ -13,8 +13,10 @@ module.exports = {
       let previousPage = pages === 0 ? 1 : pages / 4;
       let nextPage = pages / 4 + 2;
 
-      previous = "http://localhost:3000/api/products/?page=" + previousPage;
-      next = "http://localhost:3000/api/products/?page=" + nextPage;
+      let previous = "http://localhost:3000/api/products/?page=" + previousPage;
+      let next = "http://localhost:3000/api/products/?page=" + nextPage;
+
+      //Adecuación de los datos del producto
 
       let products = productsDB.map((u) =>
         Object({
@@ -37,7 +39,44 @@ module.exports = {
 
       let count = await product.count(); //Consulto la cantidad de registros
 
-      let lastPage = count % 4 === 0 ? count / 4 : Math.trunc(count / 4) + 1;
+      let lastPage = Math.ceil(count / 4);
+
+      //Consulta a la base de datos para sacar las categorias
+
+      let categoriesDB = await product.findAll({
+        include: { all: true },
+        atributes: ["id", "productType"],
+      });
+
+      //Adecuación de los datos
+
+      let categories = categoriesDB.map((u) =>
+        Object({
+          id: u.id,
+          type: u.productType.type,
+        })
+      );
+
+      //Filtrado y presentación de los datos según categorias fijas
+
+      let categoriesGrouping = {
+        malbec: categories.filter((c) =>
+          c.type.toLowerCase().includes("malbec")
+        ).length,
+        cabernet: categories.filter((c) =>
+          c.type.toLowerCase().includes("cabernet sauvignon")
+        ).length,
+        rose: categories.filter((c) => c.type.toLowerCase().includes("rosé"))
+          .length,
+        bonarda: categories.filter((c) =>
+          c.type.toLowerCase().includes("bonarda")
+        ).length,
+        torrontes: categories.filter((c) =>
+          c.type.toLowerCase().includes("torrontés")
+        ).length,
+        syrah: categories.filter((c) => c.type.toLowerCase().includes("syrah"))
+          .length,
+      };
 
       let response = {
         count: count,
@@ -45,6 +84,7 @@ module.exports = {
         previous,
         next,
         lastPage,
+        categoriesGrouping,
       };
 
       return res.status(200).json(response);
