@@ -5,10 +5,30 @@ export default function Product() {
   const baseURL = "http://localhost:3000/api/products";
   const { id } = useParams();
 
-  const [productDetail, setProductDetail] = useState("Cargando...");
+  let [productID, setProductID] = useState(parseInt(id));
+
+  const totalProducts = async () => {
+    const endpoint = `${baseURL}`;
+    const response = await fetch(endpoint);
+    const responseJSON = await response.json();
+    return responseJSON;
+  };
+
+  const prev = () => {
+    productID === 1 ? (productID = 1) : setProductID(productID - 1);
+  };
+  const next = () => {
+    totalProducts().then((data) => {
+      productID === data.count
+        ? (productID = data.count)
+        : setProductID(productID + 1);
+    });
+  };
+
+  let [productDetail, setProductDetail] = useState("Cargando...");
 
   const fetchApi = async () => {
-    const endpoint = `${baseURL}/${id}`;
+    const endpoint = `${baseURL}/${productID}`;
     const response = await fetch(endpoint);
     const responseJSON = await response.json();
     return responseJSON;
@@ -16,7 +36,7 @@ export default function Product() {
 
   useEffect(() => {
     fetchApi(id).then((responseJSON) => setProductDetail(responseJSON));
-  }, [id]);
+  }, [productID]);
 
   return (
     <>
@@ -40,6 +60,8 @@ export default function Product() {
       <h4>Vista: {productDetail.vista}</h4>
       <h4>Nariz: {productDetail.nariz}</h4>
       <h4>Boca: {productDetail.boca}</h4>
+      <button onClick={prev}>Anterior producto</button>
+      <button onClick={next}>Próximo producto</button>
     </>
   );
 }
