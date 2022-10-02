@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
+import {Pie} from 'react-chartjs-2'
 
 export default function Home() {
   let [userCount, setUserCount] = useState("Cargando...");
@@ -89,19 +90,45 @@ export default function Home() {
     datosProducts(productPage).then((data) => setProducts(data.products));
   }, [productPage]);
 
+  /*Grafico
+
+  function grafico() {
+
+    const dataGrafico = {
+      labels: ['Tinto', 'Malbec', 'Bonarda', 'Blanco'],
+      datasets: [{
+        data: [10, 30, 25, 35],
+        backgroundcolor: ['blue', 'green', 'red', 'yellow']
+      }]
+    };
+  
+    const opciones = {
+      responsive: true
+    }
+    return (
+      <div>
+      <Pie data={dataGrafico} options={opciones} />
+      </div>
+    )
+  }
+*/
+
   return (
     <>
       <h1>Dashboard CavaWines</h1>
 
       <section id='dashboard_datos-resumen'>
         <article className='dashboard_subcaja-datos'>
-          <p>Cantidad de usuarios: {userCount}</p>
+          <p>Usuarios:</p>
+          <p>{userCount}</p>
         </article>
         <article className='dashboard_subcaja-datos'>
-          <p>Cantidad de productos: {productCount}</p>
+          <p>Productos:</p>
+          <p>{productCount}</p>
         </article>
         <article className='dashboard_subcaja-datos'>
-          <p>Cantidad de categorias: {categoryCount}</p>
+          <p>Categorias:</p>
+          <p>{categoryCount}</p>
         </article>
       </section>
 
