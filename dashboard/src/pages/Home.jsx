@@ -13,11 +13,19 @@ export default function Home() {
   let [products, setProducts] = useState([]);
   let [productPage, setProductPage] = useState(1);
 
+  //Todos los datos de los usuarios
+
   const datosUsers = async (page) => {
     const info = await fetch("http://localhost:3000/api/users/?page=" + page);
     const data = await info.json();
     return data;
   };
+
+  useEffect(() => {
+    datosUsers(1).then((data) => setUserCount(data.count));
+  }, []);
+
+  //Todos los datos de los productos
 
   const datosProducts = async (page) => {
     const info = await fetch(
@@ -27,6 +35,12 @@ export default function Home() {
     return data;
   };
 
+  useEffect(() => {
+    datosProducts(1).then((data) => setProductCount(data.count));
+  }, []);
+
+  //Buscamos el ultimo usuario
+
   const ultimoUsuario = async () => {
     const id = await datosUsers(1);
     const lastID = id.count;
@@ -34,6 +48,12 @@ export default function Home() {
     const data = await info.json();
     return data;
   };
+
+  useEffect(() => {
+    ultimoUsuario().then((data) => setLastUser(data));
+  }, []);
+
+  //Buscamos el ultimo producto
 
   const ultimoProducto = async () => {
     const id = await datosProducts(1);
@@ -44,20 +64,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    datosUsers(1).then((data) => setUserCount(data.count));
-  }, []);
-
-  useEffect(() => {
-    datosProducts(1).then((data) => setProductCount(data.count));
-  }, []);
-
-  useEffect(() => {
-    ultimoUsuario().then((data) => setLastUser(data));
-  }, []);
-
-  useEffect(() => {
     ultimoProducto().then((data) => setLastProduct(data));
   }, []);
+
+  // Paginas de los usuarios
 
   const nextUser = () =>
     userPage < 3 ? setUserPage(userPage + 1) : setUserPage(3);
@@ -67,6 +77,8 @@ export default function Home() {
   useEffect(() => {
     datosUsers(userPage).then((data) => setUsers(data.users));
   }, [userPage]);
+
+  // Paginas de los productos
 
   const nextProduct = () =>
     productPage < 3 ? setProductPage(productPage + 1) : setProductPage(3);
