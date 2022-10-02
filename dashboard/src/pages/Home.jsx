@@ -102,15 +102,18 @@ export default function Home() {
     <>
       <h1>Dashboard CavaWines</h1>
 
-      <section id="dashboard_datos-resumen">
-        <article className="dashboard_subcaja-datos">
-          <p>Cantidad de usuarios: {userCount}</p>
+      <section id='dashboard_datos-resumen'>
+        <article className='dashboard_subcaja-datos'>
+          <p>Usuarios:</p>
+          <p>{userCount}</p>
         </article>
-        <article className="dashboard_subcaja-datos">
-          <p>Cantidad de productos: {productCount}</p>
+        <article className='dashboard_subcaja-datos'>
+          <p>Productos:</p>
+          <p>{productCount}</p>
         </article>
-        <article className="dashboard_subcaja-datos">
-          <p>Cantidad de categorias: {categoryCount}</p>
+        <article className='dashboard_subcaja-datos'>
+          <p>Categorias:</p>
+          <p>{categoryCount}</p>
         </article>
       </section>
 
