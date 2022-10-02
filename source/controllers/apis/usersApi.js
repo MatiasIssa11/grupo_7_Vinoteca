@@ -28,9 +28,10 @@ module.exports = {
           detail: "http://localhost:3000/api/users/" + u.id,
         })
       );
-      
+
       let count = await user.count(); //Consulto la cantidad de registros
-      let lastPage = Math.trunc(count / 4) + 1;
+
+      let lastPage = count % 4 === 0 ? count / 4 : Math.trunc(count/4) + 1;
 
       let response = {
         count: count,

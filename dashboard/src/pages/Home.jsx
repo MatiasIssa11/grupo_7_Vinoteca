@@ -15,7 +15,7 @@ export default function Home() {
 
   //Todos los datos de los usuarios
 
-  const datosUsers = async (page) => {
+  const datosUsers = async (page = 1) => {
     const info = await fetch("http://localhost:3000/api/users/?page=" + page);
     const data = await info.json();
     return data;
@@ -27,7 +27,7 @@ export default function Home() {
 
   //Todos los datos de los productos
 
-  const datosProducts = async (page) => {
+  const datosProducts = async (page = 1) => {
     const info = await fetch(
       "http://localhost:3000/api/products/?page=" + page
     );
@@ -70,7 +70,12 @@ export default function Home() {
   // Paginas de los usuarios
 
   const nextUser = () =>
-    userPage < 3 ? setUserPage(userPage + 1) : setUserPage(3);
+    datosUsers().then((data) =>
+      userPage < data.lastPage
+        ? setUserPage(userPage + 1)
+        : setUserPage(data.lastPage)
+    );
+
   const prevUser = () =>
     userPage > 1 ? setUserPage(userPage - 1) : setUserPage(1);
 
@@ -81,7 +86,11 @@ export default function Home() {
   // Paginas de los productos
 
   const nextProduct = () =>
-    productPage < 3 ? setProductPage(productPage + 1) : setProductPage(3);
+    datosProducts().then((data) =>
+      productPage < data.lastPage
+        ? setProductPage(productPage + 1)
+        : setProductPage(data.lastPage)
+    );
   const prevProduct = () =>
     productPage > 1 ? setProductPage(productPage - 1) : setProductPage(1);
 
@@ -93,70 +102,86 @@ export default function Home() {
     <>
       <h1>Dashboard CavaWines</h1>
 
-      <section id='dashboard_datos-resumen'>
-        <article className='dashboard_subcaja-datos'>
+      <section id="dashboard_datos-resumen">
+        <article className="dashboard_subcaja-datos">
           <p>Cantidad de usuarios: {userCount}</p>
         </article>
-        <article className='dashboard_subcaja-datos'>
+        <article className="dashboard_subcaja-datos">
           <p>Cantidad de productos: {productCount}</p>
         </article>
-        <article className='dashboard_subcaja-datos'>
+        <article className="dashboard_subcaja-datos">
           <p>Cantidad de categorias: {categoryCount}</p>
         </article>
       </section>
 
-      <section id='dashboard_caja-ultimos'>
-        <article className='dashboard_subcaja-ultimo'>
-            <h2>Ultimo usuario: </h2>
-            <p>Usario ID: {lastUser.id}</p>
-            <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
+      <section id="dashboard_caja-ultimos">
+        <article className="dashboard_subcaja-ultimo">
+          <h2>Ultimo usuario: </h2>
+          <p>Usario ID: {lastUser.id}</p>
+          <p>
+            Nombre: {lastUser.nombre} {lastUser.apellido}
+          </p>
         </article>
-        <article className='dashboard_subcaja-ultimo'>
-            <h2>Ultimo producto: </h2>
-            <p>Producto ID: {lastProduct.id}</p>
-            <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
+        <article className="dashboard_subcaja-ultimo">
+          <h2>Ultimo producto: </h2>
+          <p>Producto ID: {lastProduct.id}</p>
+          <p>
+            Producto: {lastProduct.brand} {lastProduct.type}
+          </p>
         </article>
       </section>
 
-      <section id='dashboard_caja-madre-listados'>
-          <section id='dashboard_caja-listado-usuarios'>
-            <h3>Listado de usuarios</h3>
-            {users.map((u) => (
-              <article key={u.id}>
-                <div>
-                  <p>ID: {u.id}</p>
-                  <p>Nombre: {u.nombre} {u.apellido}</p>
-                  <p>Email: {u.email}</p>
-                  <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
-                </div>
-                <picture><img src={u.avatar} alt={u.email} /></picture>
-              </article>
-            ))}
-            <article id='botonera'>
-              <button onClick={prevUser}>Página anterior</button>
-              <p> {userPage} </p>
-              <button onClick={nextUser}>Próxima página</button>
+      <section id="dashboard_caja-madre-listados">
+        <section id="dashboard_caja-listado-usuarios">
+          <h3>Listado de usuarios</h3>
+          {users.map((u) => (
+            <article key={u.id}>
+              <div>
+                <p>ID: {u.id}</p>
+                <p>
+                  Nombre: {u.nombre} {u.apellido}
+                </p>
+                <p>Email: {u.email}</p>
+                <p>
+                  Detalle: <Link to={`/user/${u.id}`}>Link</Link>{" "}
+                </p>
+              </div>
+              <picture>
+                <img src={u.avatar} alt={u.email} />
+              </picture>
             </article>
-          </section>
-          <section id='dashboard_caja-listado-productos'>
-            <h3>Listado de productos</h3>
-            {products.map((p) => (
-              <article key={p.id}>
-                <div>
-                  <p>ID: {p.id}</p>
-                  <p>Nombre: {p.brand} {p.type}</p>
-                  <p>Precio: {p.price}</p>
-                  <p>Detalle: <Link to={`/product/${p.id}`}>Link</Link></p>
-                </div>
-                <picture><img src={p.image} alt={p.type}/></picture>
-              </article>
-            ))}
-            <article id='botonera'>
-              <button onClick={prevProduct}>Página anterior</button>
-              <p> {productPage} </p>
-              <button onClick={nextProduct}>Próxima página</button>
-            </article> 
-          </section> 
+          ))}
+          <article id="botonera">
+            <button onClick={prevUser}>Página anterior</button>
+            <p> {userPage} </p>
+            <button onClick={nextUser}>Próxima página</button>
+          </article>
+        </section>
+        <section id="dashboard_caja-listado-productos">
+          <h3>Listado de productos</h3>
+          {products.map((p) => (
+            <article key={p.id}>
+              <div>
+                <p>ID: {p.id}</p>
+                <p>
+                  Nombre: {p.brand} {p.type}
+                </p>
+                <p>Precio: {p.price}</p>
+                <p>
+                  Detalle: <Link to={`/product/${p.id}`}>Link</Link>
+                </p>
+              </div>
+              <picture>
+                <img src={p.image} alt={p.type} />
+              </picture>
+            </article>
+          ))}
+          <article id="botonera">
+            <button onClick={prevProduct}>Página anterior</button>
+            <p> {productPage} </p>
+            <button onClick={nextProduct}>Próxima página</button>
+          </article>
+        </section>
       </section>
     </>
   );
