@@ -17,8 +17,9 @@ a {
 }
 
 h1 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   line-height: 1.1;
+  text-align: center;
 }
 
 h2 {
@@ -40,6 +41,7 @@ h2 {
 
 #dashboard_caja-ultimos {
   display: flex;
+  justify-content: center;
 }
 
 .dashboard_subcaja-datos {
@@ -55,7 +57,7 @@ h2 {
   background-color: black;
   display: block;
   margin: 10px;
-  width: 50%;
+  width: 30%;
   border-radius: 10px;
 }
 
@@ -78,7 +80,7 @@ h2 {
 #dashboard_caja-madre-listados{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
 }
 
 /* ===== LISTADO USUARIOS ===== */
@@ -123,16 +125,6 @@ h2 {
   margin: 5px 3px 5px 3px;
 }
 
-#botonera button{
-  width: 25%;
-  height: 10%;
-}
-
-#botonera p{
-  padding: 0 20px 0 20px;
-  margin: 0;
-}
-
 /* ===== LISTADO PRODUCTOS ===== */
 
 #dashboard_caja-listado-productos {
@@ -168,6 +160,8 @@ h2 {
   flex-wrap: wrap;
 }
 
+/* ===== BOTONERA LISTADOS ===== */
+
 #botonera{
   display: flex;
   width: 100%;
@@ -176,11 +170,13 @@ h2 {
 }
 
 #botonera button{
-  width: 25%;
-  height: 10%;
+  width: 30%;
+  margin: 5px;
 }
 
 #botonera p{
   padding: 0 20px 0 20px;
-  margin: 0;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 15px;
 }
