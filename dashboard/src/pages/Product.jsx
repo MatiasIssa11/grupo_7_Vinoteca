@@ -44,11 +44,10 @@ export default function Product() {
       <h4>Marca: {productDetail.brand}</h4>
       <h4>Typo: {productDetail.type}</h4>
       <h4>Precio: {productDetail.price}</h4>
-      {productDetail.discountPrice ? (
-        <h4>Precio de descuento: {productDetail.discountPrice}</h4>
-      ) : (
-        <h4>Precio de descuento: No tiene</h4>
-      )}
+      <h4>
+        Precio de descuento:{" "}
+        {productDetail.discountPrice ? productDetail.discountPrice : "No tiene"}
+      </h4>
       <picture>
         <img src={productDetail.image} alt={productDetail.type} />
       </picture>

@@ -45,9 +45,11 @@ export default function User() {
       <h4>Apellido: {userDetail.apellido}</h4>
       <h4>Email: {userDetail.email}</h4>
       <h4>Fecha de nacimiento: {userDetail.fechaNacimiento}</h4>
+      <h4>Administrador: {userDetail.isAdmin ? "Si" : "No"}</h4>
       <picture>
         <img src={userDetail.avatar} alt={userDetail.email} />
       </picture>
+
       <button onClick={prev}>Anterior usuario</button>
       <button onClick={next}>Próximo usuario</button>
     </>
