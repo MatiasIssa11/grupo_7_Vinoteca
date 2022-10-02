@@ -143,9 +143,9 @@ export default function Home() {
             <Link to={`/user/${u.id}`}>Link</Link>
           </article>
         ))}
-        <button onClick={prevUser}>Previous</button>
+        <button onClick={prevUser}>Página anterio</button>
         <p> {userPage} </p>
-        <button onClick={nextUser}>Next</button>
+        <button onClick={nextUser}>Próxima página</button>
       </section>
 
       <section>
@@ -163,9 +163,9 @@ export default function Home() {
             <Link to={`/product/${p.id}`}>Link</Link>
           </article>
         ))}
-        <button onClick={prevProduct}>Previous</button>
+        <button onClick={prevProduct}>Página anterior</button>
         <p> {productPage} </p>
-        <button onClick={nextProduct}>Next</button>
+        <button onClick={nextProduct}>Próxima página</button>
       </section>
     </>
   );

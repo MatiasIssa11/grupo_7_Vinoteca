@@ -5,18 +5,38 @@ export default function User() {
   const baseURL = "http://localhost:3000/api/users";
   const { id } = useParams();
 
-  const [userDetail, setUserDetail] = useState("Cargando...");
+  let [userID, setUserID] = useState(parseInt(id));
+
+  const totalUsers = async () => {
+    const endpoint = `${baseURL}`;
+    const response = await fetch(endpoint);
+    const responseJSON = await response.json();
+    return responseJSON;
+  };
+
+  const prev = () => {
+    userID === 1 ? (userID = 1) : setUserID(userID - 1);
+  };
+  const next = () => {
+    totalUsers().then((data) => {
+      userID === data.count ? (userID = data.count) : setUserID(userID + 1);
+    });
+  };
+
+  //Al no recargar la página, queda extraña la navegacion leyendo un valor anterior en el params
+
+  let [userDetail, setUserDetail] = useState("Cargando...");
 
   const fetchApi = async () => {
-    const endpoint = `${baseURL}/${id}`;
+    const endpoint = `${baseURL}/${userID}`;
     const response = await fetch(endpoint);
     const responseJSON = await response.json();
     return responseJSON;
   };
 
   useEffect(() => {
-    fetchApi(id).then((responseJSON) => setUserDetail(responseJSON));
-  }, [id]);
+    fetchApi(userID).then((responseJSON) => setUserDetail(responseJSON));
+  }, [userID]);
 
   return (
     <>
@@ -28,6 +48,8 @@ export default function User() {
       <picture>
         <img src={userDetail.avatar} alt={userDetail.email} />
       </picture>
+      <button onClick={prev}>Anterior usuario</button>
+      <button onClick={next}>Próximo usuario</button>
     </>
   );
 }
