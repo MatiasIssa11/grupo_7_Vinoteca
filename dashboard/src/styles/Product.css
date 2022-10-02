@@ -1,0 +1,62 @@
+:root {
+   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+   color-scheme: light dark;
+   color: rgba(255, 255, 255, 0.87);
+   background-color: #242424;
+ }
+ 
+#dashboard_product-caja{
+   background-color: black;
+   display: flex;
+   border-radius: 20px;
+}
+
+#dashboard_product-caja div{
+   width: 80%;
+}
+
+#dashboard_product-caja h3{
+   font-size: 25px;
+   padding: 5px 0 5px 20px;
+   margin: 0;
+}
+
+#dashboard_product-caja h4{
+   font-size: 16px;
+   padding: 0 0 0 20px;
+   margin: 0;
+   width: 100%;
+   font-weight: normal;
+}
+
+#dashboard_product-caja img{
+   height: 420px;
+   margin: 10px;
+   border-radius: 20px;
+}
+
+.dashboard_product-subcaja{
+   margin: 20px 0 20px 0;
+}
+
+/* ===== BOTONERA LISTADOS ===== */
+
+#botonera{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   margin: 5px 3px 5px 3px;
+ }
+ 
+ #botonera button{
+   width: 30%;
+   margin: 5px;
+   font-size: 15px;
+ }
+ 
+ #botonera p{
+   padding: 0 20px 0 20px;
+   margin: 5px;
+   font-weight: bold;
+   font-size: 15px;
+ }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../styles/Product.css";
 
 export default function Product() {
   const baseURL = "http://localhost:3000/api/products";
@@ -40,27 +41,40 @@ export default function Product() {
 
   return (
     <>
-      <h3>PRODUCT {productDetail.id}</h3>
-      <h4>Marca: {productDetail.brand}</h4>
-      <h4>Typo: {productDetail.type}</h4>
-      <h4>Precio: {productDetail.price}</h4>
-      <h4>
-        Precio de descuento:{" "}
-        {productDetail.discountPrice ? productDetail.discountPrice : "No tiene"}
-      </h4>
-      <picture>
+      <h1> Detalle producto</h1>
+      <section id="dashboard_product-caja">
+        <div>
+          <div className="dashboard_product-subcaja">
+            <h3>ID Producto: {productDetail.id}</h3>
+            <h4>Marca: {productDetail.brand}</h4>
+            <h4>Tipo: {productDetail.type}</h4>
+            <h4>Precio: ${productDetail.price}.-</h4>
+            <h4> Precio de descuento: ${" "}{productDetail.discountPrice ? productDetail.discountPrice : productDetail.price}.-</h4>
+          </div>
+
+          <div className="dashboard_product-subcaja">
+            <h3>DATOS ANALITICOS:</h3>
+            <h4>Alcohol: {productDetail.alcohol}</h4>
+            <h4>Acidez total: {productDetail.acidez}</h4>
+            <h4>Azucar total: {productDetail.azucar}</h4>
+          </div>
+      
+          <div className="dashboard_product-subcaja">
+            <h3>CARACTERISTICAS DEGUSTATIVAS:</h3>
+            <h4>Vista: {productDetail.vista}</h4>
+            <h4>Nariz: {productDetail.nariz}</h4>
+            <h4>Boca: {productDetail.boca}</h4>
+            <h4> Otros:{" "}{productDetail.otros ? productDetail.otros : "No tiene"}</h4>
+         </div>
+        </div>
+        
         <img src={productDetail.image} alt={productDetail.type} />
-      </picture>
-      <h3>DATOS ANALITICOS:</h3>
-      <h4>Alcohol: {productDetail.alcohol}</h4>
-      <h4>Acidez total: {productDetail.acidez}</h4>
-      <h4>Azucar total: {productDetail.azucar}</h4>
-      <h3>CARACTERISTICAS DEGUSTATIVAS:</h3>
-      <h4>Vista: {productDetail.vista}</h4>
-      <h4>Nariz: {productDetail.nariz}</h4>
-      <h4>Boca: {productDetail.boca}</h4>
-      <button onClick={prev}>Anterior producto</button>
-      <button onClick={next}>Próximo producto</button>
+      
+      </section>
+      <article id="botonera">
+        <button onClick={prev}>Anterior producto</button>
+        <button onClick={next}>Próximo producto</button>
+      </article>
     </>
   );
 }
