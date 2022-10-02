@@ -12,8 +12,8 @@ function App() {
       <h1>Dashboard CavaWines</h1>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/user" element={<User />}></Route>
-        <Route path="/product" element={<Product />}></Route>
+        <Route path="/user/:id" element={<User />}></Route>
+        <Route path="/product/:id" element={<Product />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </div>

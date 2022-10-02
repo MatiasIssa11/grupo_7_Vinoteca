@@ -34,13 +34,16 @@ module.exports = {
           detail: "http://localhost:3000/api/products/" + u.id,
         })
       );
+
       let count = await product.count(); //Consulto la cantidad de registros
+      let lastPage = Math.trunc(count / 4) + 1;
 
       let response = {
         count: count,
         products,
         previous,
         next,
+        lastPage,
       };
 
       return res.status(200).json(response);
