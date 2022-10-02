@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../styles/User.css";
 
 export default function User() {
   const baseURL = "http://localhost:3000/api/users";
@@ -40,18 +41,23 @@ export default function User() {
 
   return (
     <>
-      <h3>USUARIO {userDetail.id}</h3>
-      <h4>Nombre: {userDetail.nombre}</h4>
-      <h4>Apellido: {userDetail.apellido}</h4>
-      <h4>Email: {userDetail.email}</h4>
-      <h4>Fecha de nacimiento: {userDetail.fechaNacimiento}</h4>
-      <h4>Administrador: {userDetail.isAdmin ? "Si" : "No"}</h4>
-      <picture>
-        <img src={userDetail.avatar} alt={userDetail.email} />
-      </picture>
+      <h1> Detalle usuario</h1>
+      <section id="dashboard_user-caja">
+        <div className="dashboard_user-subcaja">
+          <h3>USUARIO {userDetail.id}</h3>
+          <h4>Nombre: {userDetail.nombre}</h4>
+          <h4>Apellido: {userDetail.apellido}</h4>
+          <h4>Email: {userDetail.email}</h4>
+          <h4>Fecha de nacimiento: {userDetail.fechaNacimiento}</h4>
+          <h4>Administrador: {userDetail.isAdmin ? "Si" : "No"}</h4>
+        </div>
+      <img src={userDetail.avatar} alt={userDetail.email} />
+      </section>
 
-      <button onClick={prev}>Anterior usuario</button>
-      <button onClick={next}>Próximo usuario</button>
+      <article id="botonera">
+        <button onClick={prev}>Anterior usuario</button>
+        <button onClick={next}>Próximo usuario</button>
+      </article>
     </>
   );
 }

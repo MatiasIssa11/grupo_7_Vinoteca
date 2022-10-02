@@ -118,43 +118,48 @@ export default function Home() {
   return (
     <>
       <h1>Dashboard CavaWines</h1>
-
-      <section>
-        <PieChart data={categories} />
-      </section>
-
+      
       <section id="dashboard_datos-resumen">
-        <article className="dashboard_subcaja-datos">
-          <p>Usuarios:</p>
-          <p>{userCount}</p>
-        </article>
-        <article className="dashboard_subcaja-datos">
-          <p>Productos:</p>
-          <p>{productCount}</p>
-        </article>
-        <article className="dashboard_subcaja-datos">
-          <p>Categorias:</p>
-          <p>{categoryCount}</p>
-        </article>
-      </section>
 
-      <section id="dashboard_caja-ultimos">
-        <article className="dashboard_subcaja-ultimo">
-          <h2>Ultimo usuario: </h2>
-          <p>Usario ID: {lastUser.id}</p>
-          <p>
-            Nombre: {lastUser.nombre} {lastUser.apellido}
-          </p>
-        </article>
-        <article className="dashboard_subcaja-ultimo">
-          <h2>Ultimo producto: </h2>
-          <p>Producto ID: {lastProduct.id}</p>
-          <p>
-            Producto: {lastProduct.brand} {lastProduct.type}
-          </p>
-        </article>
-      </section>
+        <div>
+          <div id="dashboard_datos-caja-datos">
+            <article className="dashboard_subcaja-datos">
+              <p>Usuarios:</p>
+              <p>{userCount}</p>
+            </article>
+            <article className="dashboard_subcaja-datos">
+              <p>Productos:</p>
+              <p>{productCount}</p>
+            </article>
+            <article className="dashboard_subcaja-datos">
+              <p>Categorias:</p>
+              <p>{categoryCount}</p>
+            </article>
+          </div>
 
+        <section id="dashboard_caja-ultimos">
+          <article className="dashboard_subcaja-ultimo">
+            <h2>Ultimo usuario: </h2>
+            <p>Usario ID: {lastUser.id}</p>
+            <p>
+              Nombre: {lastUser.nombre} {lastUser.apellido}
+            </p>
+          </article>
+          <article className="dashboard_subcaja-ultimo">
+            <h2>Ultimo producto: </h2>
+            <p>Producto ID: {lastProduct.id}</p>
+            <p>
+              Producto: {lastProduct.brand} {lastProduct.type}
+            </p>
+          </article>
+        </section>
+        </div>
+   
+        <div id='grafico'>
+          <PieChart data={categories}/>
+        </div>
+        
+      </section>
       <section id="dashboard_caja-madre-listados">
         <section id="dashboard_caja-listado-usuarios">
           <h3>Listado de usuarios</h3>

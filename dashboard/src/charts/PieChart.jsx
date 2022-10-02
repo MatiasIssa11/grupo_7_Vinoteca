@@ -40,5 +40,5 @@ export default function PieChart(props) {
     ],
   };
 
-  return <Pie data={state} />;
+  return <Pie data={state}/>;
 }
