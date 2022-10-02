@@ -17,7 +17,7 @@ export default function PieChart(props) {
 
     datasets: [
       {
-        label: "Cantidad productos por categoría",
+        label: "Cantidad de productos por categoría",
         data: props.data,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",

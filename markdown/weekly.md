@@ -1,24 +1,65 @@
 ## Weekly
 
+### 04/10/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso: Api de usuarios, react del dashboard y terminamos el sprint 8.
+
+Agustín Collados:
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: Problemas con la bases, los endpoints de la API y entender la logica de react.
+
+Agustín Collados:
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: La presentación del sprint 8 y terminar el curso.
+
+Agustín Collados:
+
+### 25/09/2022
+
+#### ¿Que hiciste esta semana?
+
+Matías Alonso: Lanzamos el sprint 8 y terminamos el sprint 7.
+
+Agustín Collados:
+
+#### ¿Que problemas encontraste?
+
+Matías Alonso: Falta de tiempo para comenzar con el sprint 8.
+
+Agustín Collados:
+
+#### ¿Que vamos a hacer esta semana?
+
+Matías Alonso: Terminar el sprint 8.
+
+Agustín Collados:
+
 ### 18/09/2022
 
 #### ¿Que hiciste esta semana?
 
-Matías Alonso: 
+Matías Alonso: Completamos el sprint 7.
 
-Agustín Collados: 
+Agustín Collados:
 
 #### ¿Que problemas encontraste?
 
-Matías Alonso:
+Matías Alonso: Ninguno.
 
-Agustín Collados: 
+Agustín Collados:
 
 #### ¿Que vamos a hacer esta semana?
 
-Matías Alonso: 
+Matías Alonso: Empezar con el sprint 8.
 
 Agustín Collados:
+
 ### 11/09/2022
 
 #### ¿Que hiciste esta semana?
@@ -71,7 +112,7 @@ Agustín Collados: Arreglar problemas que fueron presentandose, completar tablas
 
 Matías Alonso: Las migraciones del product no corren por las FK.
 
-Agustín Collados: Errores varios al intentar modificar CRUD. 
+Agustín Collados: Errores varios al intentar modificar CRUD.
 
 #### ¿Que vamos a hacer esta semana?
 
