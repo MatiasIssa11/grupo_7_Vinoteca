@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/Home.css";
 
 export default function Home() {
   let [userCount, setUserCount] = useState("Cargando...");
@@ -91,36 +92,40 @@ export default function Home() {
   return (
     <>
       <h1>Home</h1>
-      <section>
-        <article>
-          <p>Cantidad de usuarios</p>
-          <h2>{userCount}</h2>
+
+      <section id='dashboard_datos-resumen'>
+
+        <article class='dashboard_subcaja-datos'>
+          <p>Cantidad de usuarios: {userCount}</p>
+        
         </article>
-        <article>
-          <p>Cantidad de productos</p>
-          <h2>{productCount}</h2>
+        
+        <article class='dashboard_subcaja-datos'>
+          <p>Cantidad de productos: {productCount}</p>
+        
         </article>
-        <article>
-          <p>Cantidad de categorias</p>
-          <h2>{categoryCount}</h2>
+
+        <article class='dashboard_subcaja-datos'>
+          <p>Cantidad de categorias: {categoryCount}</p>
+        
         </article>
+
       </section>
 
-      <section>
-        <article>
-          <p>Ultimo usuario</p>
-          <h2>
-            Nombre: {lastUser.nombre} {lastUser.apellido}
-          </h2>
-          <h2>ID: {lastUser.id}</h2>
+      <section id='dashboard_caja-ultimos'>
+
+      <article class='dashboard_subcaja-ultimo'>
+          <h2>Ultimo usuario: </h2>
+          <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
+          <p>ID: {lastUser.id}</p>
         </article>
-        <article>
-          <p>Ultimo producto</p>
-          <h2>
-            Producto: {lastProduct.brand} {lastProduct.type}
-          </h2>
-          <h2>ID: {lastProduct.id}</h2>
+
+        <article class='dashboard_subcaja-ultimo'>
+          <h2>Ultimo producto: </h2>
+          <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
+          <p>ID: {lastProduct.id}</p>
         </article>
+
       </section>
 
       <section>
