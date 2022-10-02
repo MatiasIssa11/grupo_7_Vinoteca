@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    datosUsers(1).then((data) => setUserCount(data.count));
+    datosUsers().then((data) => setUserCount(data.count));
   }, []);
 
   //Todos los datos de los productos
@@ -36,7 +36,15 @@ export default function Home() {
   };
 
   useEffect(() => {
-    datosProducts(1).then((data) => setProductCount(data.count));
+    datosProducts().then((data) => setProductCount(data.count));
+  }, []);
+
+  //Cantidad de categorias
+
+  useEffect(() => {
+    datosProducts().then((data) =>
+      setCategoryCount(Object.keys(data.categoriesGrouping).length)
+    );
   }, []);
 
   //Buscamos el ultimo usuario
@@ -102,16 +110,16 @@ export default function Home() {
     <>
       <h1>Dashboard CavaWines</h1>
 
-      <section id='dashboard_datos-resumen'>
-        <article className='dashboard_subcaja-datos'>
+      <section id="dashboard_datos-resumen">
+        <article className="dashboard_subcaja-datos">
           <p>Usuarios:</p>
           <p>{userCount}</p>
         </article>
-        <article className='dashboard_subcaja-datos'>
+        <article className="dashboard_subcaja-datos">
           <p>Productos:</p>
           <p>{productCount}</p>
         </article>
-        <article className='dashboard_subcaja-datos'>
+        <article className="dashboard_subcaja-datos">
           <p>Categorias:</p>
           <p>{categoryCount}</p>
         </article>
