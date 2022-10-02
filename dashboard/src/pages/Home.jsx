@@ -91,8 +91,6 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home</h1>
-
       <section id='dashboard_datos-resumen'>
 
         <article className='dashboard_subcaja-datos'>
@@ -116,14 +114,15 @@ export default function Home() {
 
       <article className='dashboard_subcaja-ultimo'>
           <h2>Ultimo usuario: </h2>
+          <p>Usario ID: {lastUser.id}</p>
           <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
-          <p>ID: {lastUser.id}</p>
         </article>
 
         <article className='dashboard_subcaja-ultimo'>
           <h2>Ultimo producto: </h2>
+          <p>Producto ID: {lastProduct.id}</p>
           <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
-          <p>ID: {lastProduct.id}</p>
+
         </article>
 
       </section>
@@ -134,11 +133,13 @@ export default function Home() {
 
         {users.map((u) => (
           <article key={u.id}>
+            <div>
             <p>ID: {u.id}</p>
             <p>Nombre: {u.nombre} {u.apellido}</p>
             <p>Email: {u.email}</p>
+              <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
+            </div>
             <picture><img src={u.avatar} alt={u.email} /></picture>
-            <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
           </article>
         ))}
         
