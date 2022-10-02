@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
-import {Pie} from 'react-chartjs-2'
 
 export default function Home() {
   let [userCount, setUserCount] = useState("Cargando...");
@@ -98,29 +97,6 @@ export default function Home() {
   useEffect(() => {
     datosProducts(productPage).then((data) => setProducts(data.products));
   }, [productPage]);
-
-  /*Grafico
-
-  function grafico() {
-
-    const dataGrafico = {
-      labels: ['Tinto', 'Malbec', 'Bonarda', 'Blanco'],
-      datasets: [{
-        data: [10, 30, 25, 35],
-        backgroundcolor: ['blue', 'green', 'red', 'yellow']
-      }]
-    };
-  
-    const opciones = {
-      responsive: true
-    }
-    return (
-      <div>
-      <Pie data={dataGrafico} options={opciones} />
-      </div>
-    )
-  }
-*/
 
   return (
     <>
