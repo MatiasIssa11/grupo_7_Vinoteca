@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
+import PieChart from '../charts/PieChart';
 
 export default function Home() {
   let [userCount, setUserCount] = useState("Cargando...");
@@ -109,6 +110,8 @@ export default function Home() {
   return (
     <>
       <h1>Dashboard CavaWines</h1>
+
+      <PieChart />
 
       <section id="dashboard_datos-resumen">
         <article className="dashboard_subcaja-datos">

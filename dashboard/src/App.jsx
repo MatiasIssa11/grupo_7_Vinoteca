@@ -15,7 +15,7 @@ function App() {
         <Route path="/product/:id" element={<Product />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
-    </div>
+    </div>    
   );
 }
 
