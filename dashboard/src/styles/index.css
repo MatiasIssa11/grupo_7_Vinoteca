@@ -25,6 +25,8 @@ h2 {
   font-size: 1em;
 }
 
+/* ===== DATOS RESUMEN ===== */
+
 #dashboard_datos-resumen {
   display: flex;
 }
@@ -34,9 +36,10 @@ h2 {
   margin: 5px;
 }
 
+/* ===== DATOS ULTIMOS CREADOS ===== */
+
 #dashboard_caja-ultimos {
   display: flex;
-
 }
 
 .dashboard_subcaja-datos {
@@ -70,31 +73,54 @@ h2 {
   padding: 0 10px 0 10px;
 }
 
+/* ===== LISTADOS CAJA MADRE ===== */
+
+#dashboard_caja-madre-listados{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ===== LISTADO USUARIOS ===== */
+
 #dashboard_caja-listado-usuarios {
   margin: 10px;
-  width: 50%;
+  width: 35%;
+}
+
+#dashboard_caja-listado-usuarios h3{
+  text-align: center;
 }
 
 #dashboard_caja-listado-usuarios p{
   margin: 5px 10px 5px 10px;
+  font-size: 12px;
+}
+
+#dashboard_caja-listado-usuarios div{
+  width: 75%;
 }
 
 #dashboard_caja-listado-usuarios img{
   width: 100px;
-  margin: 2px 10px 2px 10px;
+  height: 100px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
 }
 
 #dashboard_caja-listado-usuarios article{
-  margin: 5px 3px 5px 3px;
+  margin: 5px 0px 5px 0px;
   background-color: black;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #botonera{
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 0 20px 0 20px;
+  margin: 5px 3px 5px 3px;
 }
 
 #botonera button{
@@ -107,3 +133,54 @@ h2 {
   margin: 0;
 }
 
+/* ===== LISTADO PRODUCTOS ===== */
+
+#dashboard_caja-listado-productos {
+  margin: 10px;
+  width: 35%;
+}
+
+#dashboard_caja-listado-productos h3{
+  text-align: center;
+}
+
+#dashboard_caja-listado-productos p{
+  margin: 5px 10px 5px 10px;
+  font-size: 12px;
+}
+
+#dashboard_caja-listado-productos div{
+  width: 90%;
+}
+
+#dashboard_caja-listado-productos img{
+  width: 35px;
+  height: 100px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+#dashboard_caja-listado-productos article{
+  margin: 5px 0px 5px 0px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#botonera{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5px 3px 5px 3px;
+}
+
+#botonera button{
+  width: 25%;
+  height: 10%;
+}
+
+#botonera p{
+  padding: 0 20px 0 20px;
+  margin: 0;
+}

@@ -9,7 +9,6 @@ import Error from "./pages/Error";
 function App() {
   return (
     <div>
-      <h1>Dashboard CavaWines</h1>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/user/:id" element={<User />}></Route>

@@ -91,89 +91,72 @@ export default function Home() {
 
   return (
     <>
-      <section id='dashboard_datos-resumen'>
+      <h1>Dashboard CavaWines</h1>
 
+      <section id='dashboard_datos-resumen'>
         <article className='dashboard_subcaja-datos'>
           <p>Cantidad de usuarios: {userCount}</p>
-        
         </article>
-        
         <article className='dashboard_subcaja-datos'>
           <p>Cantidad de productos: {productCount}</p>
-        
         </article>
-
         <article className='dashboard_subcaja-datos'>
           <p>Cantidad de categorias: {categoryCount}</p>
-        
         </article>
-
       </section>
 
       <section id='dashboard_caja-ultimos'>
-
-      <article className='dashboard_subcaja-ultimo'>
-          <h2>Ultimo usuario: </h2>
-          <p>Usario ID: {lastUser.id}</p>
-          <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
-        </article>
-
         <article className='dashboard_subcaja-ultimo'>
-          <h2>Ultimo producto: </h2>
-          <p>Producto ID: {lastProduct.id}</p>
-          <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
-
+            <h2>Ultimo usuario: </h2>
+            <p>Usario ID: {lastUser.id}</p>
+            <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
         </article>
-
+        <article className='dashboard_subcaja-ultimo'>
+            <h2>Ultimo producto: </h2>
+            <p>Producto ID: {lastProduct.id}</p>
+            <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
+        </article>
       </section>
 
-      <section id='dashboard_caja-listado-usuarios'>
-
-        <h3>Listado de usuarios</h3>
-
-        {users.map((u) => (
-          <article key={u.id}>
-            <div>
-            <p>ID: {u.id}</p>
-            <p>Nombre: {u.nombre} {u.apellido}</p>
-            <p>Email: {u.email}</p>
-              <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
-            </div>
-            <picture><img src={u.avatar} alt={u.email} /></picture>
-          </article>
-        ))}
-        
-        <div id='botonera'>
-          <button onClick={prevUser}>Página anterior</button>
-          <p> {userPage} </p>
-          <button onClick={nextUser}>Próxima página</button>
-        </div>
-
-      </section>
-  
-
-
-
-
-
-      <section id='dashboard_caja-listado-productos'>
-        <h3>Listado de productos</h3>
-        {products.map((p) => (
-          <article key={p.id}>
-            <p>ID: {p.id}</p>
-            <p>
-              Nombre: {p.brand} {p.type}
-            </p>
-            <p>Precio: {p.price}</p>
-            <picture>
-              <img src={p.image} alt={p.type} />
-            </picture>
-            <Link to={`/product/${p.id}`}>Link</Link>
-          </article>
-        ))}
-        <button onClick={prevProduct}>Página anterior</button>
-        <p> {productPage} </p>
-        <button onClick={nextProduct}>Próxima página</button>
+      <section id='dashboard_caja-madre-listados'>
+          <section id='dashboard_caja-listado-usuarios'>
+            <h3>Listado de usuarios</h3>
+            {users.map((u) => (
+              <article key={u.id}>
+                <div>
+                  <p>ID: {u.id}</p>
+                  <p>Nombre: {u.nombre} {u.apellido}</p>
+                  <p>Email: {u.email}</p>
+                  <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
+                </div>
+                <picture><img src={u.avatar} alt={u.email} /></picture>
+              </article>
+            ))}
+            <article id='botonera'>
+              <button onClick={prevUser}>Página anterior</button>
+              <p> {userPage} </p>
+              <button onClick={nextUser}>Próxima página</button>
+            </article>
+          </section>
+          <section id='dashboard_caja-listado-productos'>
+            <h3>Listado de productos</h3>
+            {products.map((p) => (
+              <article key={p.id}>
+                <div>
+                  <p>ID: {p.id}</p>
+                  <p>Nombre: {p.brand} {p.type}</p>
+                  <p>Precio: {p.price}</p>
+                  <p>Detalle: <Link to={`/product/${p.id}`}>Link</Link></p>
+                </div>
+                <picture><img src={p.image} alt={p.type}/></picture>
+              </article>
+            ))}
+            <article id='botonera'>
+              <button onClick={prevProduct}>Página anterior</button>
+              <p> {productPage} </p>
+              <button onClick={nextProduct}>Próxima página</button>
+            </article> 
+          </section> 
       </section>
     </>
   );
