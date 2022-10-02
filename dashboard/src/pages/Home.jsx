@@ -95,17 +95,17 @@ export default function Home() {
 
       <section id='dashboard_datos-resumen'>
 
-        <article class='dashboard_subcaja-datos'>
+        <article className='dashboard_subcaja-datos'>
           <p>Cantidad de usuarios: {userCount}</p>
         
         </article>
         
-        <article class='dashboard_subcaja-datos'>
+        <article className='dashboard_subcaja-datos'>
           <p>Cantidad de productos: {productCount}</p>
         
         </article>
 
-        <article class='dashboard_subcaja-datos'>
+        <article className='dashboard_subcaja-datos'>
           <p>Cantidad de categorias: {categoryCount}</p>
         
         </article>
@@ -114,13 +114,13 @@ export default function Home() {
 
       <section id='dashboard_caja-ultimos'>
 
-      <article class='dashboard_subcaja-ultimo'>
+      <article className='dashboard_subcaja-ultimo'>
           <h2>Ultimo usuario: </h2>
           <p>Nombre: {lastUser.nombre} {lastUser.apellido}</p>
           <p>ID: {lastUser.id}</p>
         </article>
 
-        <article class='dashboard_subcaja-ultimo'>
+        <article className='dashboard_subcaja-ultimo'>
           <h2>Ultimo producto: </h2>
           <p>Producto: {lastProduct.brand} {lastProduct.type}</p>
           <p>ID: {lastProduct.id}</p>
@@ -128,27 +128,34 @@ export default function Home() {
 
       </section>
 
-      <section>
+      <section id='dashboard_caja-listado-usuarios'>
+
         <h3>Listado de usuarios</h3>
+
         {users.map((u) => (
           <article key={u.id}>
             <p>ID: {u.id}</p>
-            <p>
-              Nombre: {u.nombre} {u.apellido}
-            </p>
-            <p>email: {u.email}</p>
-            <picture>
-              <img src={u.avatar} alt={u.email} />
-            </picture>
-            <Link to={`/user/${u.id}`}>Link</Link>
+            <p>Nombre: {u.nombre} {u.apellido}</p>
+            <p>Email: {u.email}</p>
+            <picture><img src={u.avatar} alt={u.email} /></picture>
+            <p>Detalle: <Link to={`/user/${u.id}`}>Link</Link> </p>
           </article>
         ))}
-        <button onClick={prevUser}>Página anterio</button>
-        <p> {userPage} </p>
-        <button onClick={nextUser}>Próxima página</button>
-      </section>
+        
+        <div id='botonera'>
+          <button onClick={prevUser}>Página anterior</button>
+          <p> {userPage} </p>
+          <button onClick={nextUser}>Próxima página</button>
+        </div>
 
-      <section>
+      </section>
+  
+
+
+
+
+
+      <section id='dashboard_caja-listado-productos'>
         <h3>Listado de productos</h3>
         {products.map((p) => (
           <article key={p.id}>
