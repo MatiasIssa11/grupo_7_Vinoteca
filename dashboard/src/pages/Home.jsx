@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-//import PieChart from '../charts/PieChart';
+import PieChart from '../charts/PieChart';
 
 export default function Home() {
   let [userCount, setUserCount] = useState("Cargando...");
   let [productCount, setProductCount] = useState("Cargando...");
   let [categoryCount, setCategoryCount] = useState("Cargando...");
+  let [categories, setCategories] = useState([]);
   let [lastUser, setLastUser] = useState("Cargando...");
   let [lastProduct, setLastProduct] = useState("Cargando...");
   let [users, setUsers] = useState([]);
@@ -45,6 +45,14 @@ export default function Home() {
   useEffect(() => {
     datosProducts().then((data) =>
       setCategoryCount(Object.keys(data.categoriesGrouping).length)
+    );
+  }, []);
+
+  // Categorias
+
+  useEffect(() => {
+    datosProducts().then((data) =>
+      setCategories(Object.values(data.categoriesGrouping))
     );
   }, []);
 
@@ -110,6 +118,10 @@ export default function Home() {
   return (
     <>
       <h1>Dashboard CavaWines</h1>
+
+      <section>
+        <PieChart data={categories} />
+      </section>
 
       <section id="dashboard_datos-resumen">
         <article className="dashboard_subcaja-datos">

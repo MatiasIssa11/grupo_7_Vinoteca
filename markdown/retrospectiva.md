@@ -3,7 +3,7 @@
 #### Sprint 7:
 
 1. Comenzar a hacer.
-   A esta altura del proyecto no vemos nuevas acciones para comenzar a realizar.
+   Buscar un nuevo proyecto para seguir trabajando a futuro.
 
 2. Hacer más.
    A esta altura del proyecto no vemos nuevas acciones para comenzar a realizar.
