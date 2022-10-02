@@ -34,6 +34,10 @@ h2 {
   display: flex;
 }
 
+#dashboard_datos-resumen p{
+  padding: 0 10px 0 10px;
+}
+
 #dashboard_caja-ultimos {
   display: flex;
 }
@@ -43,6 +47,7 @@ h2 {
   display: flex;
   margin: 10px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .dashboard_subcaja-ultimo {
@@ -50,15 +55,44 @@ h2 {
   display: block;
   margin: 10px;
   width: 50%;
+  border-radius: 10px;
 }
 
 .dashboard_subcaja-ultimo h2 {
   color: green;
   font-size: 16px;
+  padding: 0 10px 0 10px;
 }
 
 .dashboard_subcaja-ultimo p {
   color: red;
   font-size: 16px;
+  padding: 0 10px 0 10px;
 }
 
+#dashboard_caja-listado-usuarios {
+  margin: 10px;
+  width: 50%;
+}
+
+#dashboard_caja-listado-usuarios img{
+  width: 100px;
+}
+
+#dashboard_caja-listado-usuarios article{
+  margin: 3px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#botonera{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+}
+
+#botonera button{
+  width: 25%;
+
+}
