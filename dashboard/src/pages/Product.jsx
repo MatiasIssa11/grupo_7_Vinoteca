@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/Product.css";
+import "../styles/Product-mobile.css";
+import "../styles/Product-tablet.css";
 
 export default function Product() {
   const baseURL = "http://localhost:3000/api/products";
@@ -41,11 +42,11 @@ export default function Product() {
 
   return (
     <>
-      <h1> Detalle producto</h1>
+      <h1> DETALLE DE PRODUCTO</h1>
       <section id="dashboard_product-caja">
         <div>
           <div className="dashboard_product-subcaja">
-            <h3>ID Producto: {productDetail.id}</h3>
+            <h3>PRODUCTO {productDetail.id}</h3>
             <h4>Marca: {productDetail.brand}</h4>
             <h4>Tipo: {productDetail.type}</h4>
             <h4>Precio: ${productDetail.price}.-</h4>

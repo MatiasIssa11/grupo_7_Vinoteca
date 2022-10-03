@@ -1,37 +1,40 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Alegreya Sans, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: #742d1c
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
+  font-weight: bold;
   text-decoration: inherit;
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 30px;
   line-height: 1.1;
   text-align: center;
+  margin: 6px;
+  color: white;
 }
 
 h2 {
   font-size: 1em;
 }
 
+link{
+  color:white;
+}
+
 /* ===== DATOS RESUMEN ===== */
 
 #grafico{
-  background-color: black;
-  width: 250px;
-  height: 250px;
+  background-color: #260F09;
+  width: 270px;
+  height: 280px;
   padding: 10px;
   border-radius: 10px;
 }
@@ -40,6 +43,7 @@ h2 {
   display: flex;
   width: 100%;
   justify-content: center;
+  color: white;
 }
 
 #dashboard_datos-caja-datos {
@@ -47,7 +51,7 @@ h2 {
 }
 
 .dashboard_subcaja-datos {
-  background-color: black;
+  background-color: #260F09;
   display: block;
   margin: 0 10px 0 10px;
   width: 110px;
@@ -56,10 +60,18 @@ h2 {
   justify-content: center;
 }
 
-#dashboard_datos-caja-datos p{
+.dashboard_subcaja-datos h4{
   margin: 15px;
-  font-size: 15px;
+  color: white;
+  font-size: 12px;
   text-align: center;
+}
+
+.dashboard_subcaja-datos p{
+  margin: 15px;
+  font-size: 45px;
+  text-align: center;
+  color: white;
 }
 
 /* ===== DATOS ULTIMOS CREADOS ===== */
@@ -69,22 +81,22 @@ h2 {
 }
 
 .dashboard_subcaja-ultimo {
-  background-color: black;
+  background-color: #260F09;
   display: block;
   margin: 13px 10px 7px 10px;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .dashboard_subcaja-ultimo h2 {
-  color: green;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 0;
 }
 
 .dashboard_subcaja-ultimo p {
-  color: red;
-  font-size: 16px;
+  color: white;
+  font-size: 12px;
   margin: 0 0 0 0;
   padding: 0 10px 0 10px;
   justify-content: left;
@@ -103,10 +115,12 @@ h2 {
 #dashboard_caja-listado-usuarios {
   margin: 10px;
   width: 45%;
+  color: white
 }
 
 #dashboard_caja-listado-usuarios h3{
   text-align: center;
+  margin: 3px;
 }
 
 #dashboard_caja-listado-usuarios p{
@@ -127,7 +141,7 @@ h2 {
 
 #dashboard_caja-listado-usuarios article{
   margin: 5px 0px 5px 0px;
-  background-color: black;
+  background-color: #260F09;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -145,10 +159,12 @@ h2 {
 #dashboard_caja-listado-productos {
   margin: 10px;
   width: 45%;
+  color: white
 }
 
 #dashboard_caja-listado-productos h3{
   text-align: center;
+  margin: 3px;
 }
 
 #dashboard_caja-listado-productos p{
@@ -164,12 +180,12 @@ h2 {
   width: 30px;
   height: 100px;
   margin: 10px 0px 0px 0px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 #dashboard_caja-listado-productos article{
   margin: 5px 0px 5px 0px;
-  background-color: black;
+  background-color: #260F09;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -177,21 +193,21 @@ h2 {
 
 /* ===== BOTONERA LISTADOS ===== */
 
-#botonera{
+#botonera {
   display: flex;
   width: 100%;
   justify-content: center;
   margin: 5px 3px 5px 3px;
+  background-color:#742d1c;
 }
 
 #botonera button{
-  width: 30%;
+  width: 40%;
   margin: 5px;
 }
 
 #botonera p{
   padding: 0 20px 0 20px;
   margin: 5px;
-  font-weight: bold;
   font-size: 15px;
 }

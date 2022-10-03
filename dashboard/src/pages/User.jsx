@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/User.css";
+import "../styles/User-mobile.css";
 
 export default function User() {
   const baseURL = "http://localhost:3000/api/users";
@@ -41,7 +41,7 @@ export default function User() {
 
   return (
     <>
-      <h1> Detalle usuario</h1>
+      <h1> DETALLE DE USUARIO</h1>
       <section id="dashboard_user-caja">
         <div className="dashboard_user-subcaja">
           <h3>USUARIO {userDetail.id}</h3>

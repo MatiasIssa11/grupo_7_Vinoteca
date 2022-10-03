@@ -1,43 +1,41 @@
 :root {
    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
    color-scheme: light dark;
-   color: rgba(255, 255, 255, 0.87);
    background-color: #242424;
  }
  
-#dashboard_user-caja{
-   background-color: black;
+#dashboard_product-caja{
+   background-color: #260F09;
    display: flex;
    border-radius: 20px;
-   width: 100%;
-   justify-content: center;
+   color: white;
 }
 
-#dashboard_user-caja div{
+#dashboard_product-caja div{
    width: 80%;
 }
 
-#dashboard_user-caja h3{
+#dashboard_product-caja h3{
    font-size: 25px;
    padding: 5px 0 5px 20px;
    margin: 0;
 }
 
-#dashboard_user-caja h4{
+#dashboard_product-caja h4{
    font-size: 16px;
-   padding: 5px 0 5px 20px;
+   padding: 0 0 0 20px;
    margin: 0;
    width: 100%;
    font-weight: normal;
 }
 
-#dashboard_user-caja img{
-   height: 200px;
-   margin: 10px;
+#dashboard_product-caja img{
+   height: 440px;
+   margin: 30px;
    border-radius: 20px;
 }
 
-.dashboard_user-subcaja{
+.dashboard_product-subcaja{
    margin: 20px 0 20px 0;
 }
 
@@ -51,7 +49,7 @@
  }
  
  #botonera button{
-   width: 30%;
+   width: 20%;
    margin: 5px;
    font-size: 15px;
  }
