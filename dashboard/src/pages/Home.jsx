@@ -166,7 +166,7 @@ export default function Home() {
           {users.map((u) => (
             <article key={u.id}>
               <div>
-                <p>ID: {u.id}</p>
+                <p style={{ fontWeight: "bold", fontSize: '15px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {u.id}</p>
                 <p>
                   Nombre: {u.nombre} {u.apellido}
                 </p>
@@ -175,9 +175,7 @@ export default function Home() {
                 <Link to={`/user/${u.id}`}>Ver detalle</Link>{" "}
                 </p>
               </div>
-              <picture>
                 <img src={u.avatar} alt={u.email} />
-              </picture>
             </article>
           ))}
           <section id="botonera">
@@ -192,18 +190,16 @@ export default function Home() {
           {products.map((p) => (
             <article key={p.id}>
               <div>
-                <p>ID: {p.id}</p>
+                <p style={{ fontWeight: "bold", fontSize: '15px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {p.id}</p>
                 <p>
                   Nombre: {p.brand} {p.type}
                 </p>
-                <p>Precio: {p.price}</p>
+                <p>Precio: ${p.price}.-</p>
                 <p>
                 <Link to={`/product/${p.id}`}>Ver detalle</Link>
                 </p>
               </div>
-              <picture>
                 <img src={p.image} alt={p.type} />
-              </picture>
             </article>
           ))}
           <section id="botonera">

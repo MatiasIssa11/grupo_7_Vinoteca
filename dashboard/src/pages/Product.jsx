@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/Product-mobile.css";
-import "../styles/Product-tablet.css";
+import "../styles/Product.css";
 
 export default function Product() {
   const baseURL = "http://localhost:3000/api/products";

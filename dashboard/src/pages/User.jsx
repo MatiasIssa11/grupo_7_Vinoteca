@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/User-mobile.css";
+import "../styles/User.css";
 
 export default function User() {
   const baseURL = "http://localhost:3000/api/users";
