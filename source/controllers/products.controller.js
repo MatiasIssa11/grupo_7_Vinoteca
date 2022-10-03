@@ -54,10 +54,10 @@ module.exports = {
     //Buscador - PENDIENTE MODIFICAR
     if (req.query.search && req.query) {
       req.query.search = req.query.search.toLowerCase();
-      products = products.filter((p) =>
-        (p.brand.nameProduct || p.productType.type)
-          .toLowerCase()
-          .includes(req.query.search)
+      products = products.filter(
+        (p) =>
+          p.nameProduct.nameProduct.toLowerCase().includes(req.query.search) ||
+          p.productType.type.toLowerCase().includes(req.query.search)
       );
     }
 
@@ -145,7 +145,7 @@ module.exports = {
     }
 
     if (req.body.discountPrice == 0) {
-      req.body.discountPrice = null
+      req.body.discountPrice = null;
     }
 
     let newType = await productType.create({
@@ -207,9 +207,9 @@ module.exports = {
     //Edición de producto
 
     if (req.body.discountPrice == null || req.body.discountPrice == 0) {
-      req.body.discountPrice = null
+      req.body.discountPrice = null;
     } else {
-        req.body.discountPrice = parseInt(req.body.discountPrice)
+      req.body.discountPrice = parseInt(req.body.discountPrice);
     }
 
     await oneProduct.update({

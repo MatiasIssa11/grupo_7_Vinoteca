@@ -51,7 +51,7 @@ export default function User() {
           <h4>Fecha de nacimiento: {userDetail.fechaNacimiento}</h4>
           <h4>Administrador: {userDetail.isAdmin ? "Si" : "No"}</h4>
         </div>
-      <img src={userDetail.avatar} alt={userDetail.email} />
+        <img src={userDetail.avatar} alt={userDetail.email} />
       </section>
 
       <article id="botonera">
