@@ -42,7 +42,7 @@ export default function User() {
 
   return (
     <>
-      <h1> DETALLE DE USUARIO</h1>
+      <h1 style={{ backgroundColor:'#260F09', margin:'0 0 10px 0', padding:'10px', textAlign:'center', borderRadius: '10px'}}> DETALLE DE USUARIO</h1>
       <button id="boton-volver"><Link to={`/`}>Volver</Link></button>
 
       <section id="dashboard_user-caja">

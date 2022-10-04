@@ -117,7 +117,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Dashboard CavaWines</h1>
+      <h1 style={{ backgroundColor:'#260F09', margin:'0 0 10px 0', padding:'10px', textAlign:'center', borderRadius: '10px'}}>Dashboard CavaWines</h1>
       
       <section id="dashboard_datos-resumen">
 
