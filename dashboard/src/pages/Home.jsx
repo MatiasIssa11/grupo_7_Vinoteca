@@ -155,10 +155,13 @@ export default function Home() {
         </section>
         </div>
    
-        <div id='grafico'>
-          <PieChart data={categories}/>
+        <div id='dashboard_caja-grafico'>
+          <h4> VINOS POR CATEGORIA </h4>
+          <div id='grafico'>
+            <PieChart data={categories}/>
+          </div>
         </div>
-        
+      
       </section>
       <section id="dashboard_caja-madre-listados">
         <section id="dashboard_caja-listado-usuarios">
