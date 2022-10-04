@@ -9,7 +9,7 @@
 a {
   font-weight: 500;
   color: white;
-  font-weight: bold;
+
   text-decoration: inherit;
 }
 
@@ -19,6 +19,7 @@ h1 {
   text-align: center;
   margin: 6px;
   color: white;
+  margin: 15px 0 15px 0;
 }
 
 h2 {
@@ -212,6 +213,7 @@ link{
 #botonera button{
   width: 40%;
   margin: 5px;
+  font-weight: normal;
 }
 
 #botonera p{

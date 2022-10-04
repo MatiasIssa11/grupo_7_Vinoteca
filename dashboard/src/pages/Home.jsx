@@ -172,7 +172,7 @@ export default function Home() {
                 </p>
                 <p>Email: {u.email}</p>
                 <p>
-                <Link to={`/user/${u.id}`}>Ver detalle</Link>{" "}
+                <Link style={{ fontWeight: "bold" }} to={`/user/${u.id}`}>Ver detalle</Link>{" "}
                 </p>
               </div>
                 <img src={u.avatar} alt={u.email} />
@@ -196,7 +196,7 @@ export default function Home() {
                 </p>
                 <p>Precio: ${p.price}.-</p>
                 <p>
-                <Link to={`/product/${p.id}`}>Ver detalle</Link>
+                <Link style={{ fontWeight: "bold" }} to={`/product/${p.id}`}>Ver detalle</Link>
                 </p>
               </div>
                 <img src={p.image} alt={p.type} />

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/User.css";
 
 export default function User() {
@@ -42,6 +43,8 @@ export default function User() {
   return (
     <>
       <h1> DETALLE DE USUARIO</h1>
+      <button id="boton-volver"><Link to={`/`}>Volver</Link></button>
+
       <section id="dashboard_user-caja">
         <div className="dashboard_user-subcaja">
           <h3>USUARIO {userDetail.id}</h3>

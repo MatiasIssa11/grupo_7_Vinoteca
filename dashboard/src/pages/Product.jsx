@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Product.css";
 
 export default function Product() {
@@ -41,7 +42,9 @@ export default function Product() {
 
   return (
     <>
-      <h1> DETALLE DE PRODUCTO</h1>
+      <h1>DETALLE DE PRODUCTO</h1>
+      <button id="boton-volver"><Link to={`/`}>Volver</Link></button>
+
       <section id="dashboard_product-caja">
         <div>
           <div className="dashboard_product-subcaja">
