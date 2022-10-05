@@ -169,7 +169,7 @@ export default function Home() {
           {users.map((u) => (
             <article key={u.id}>
               <div>
-                <p style={{ fontWeight: "bold", fontSize: '15px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {u.id}</p>
+                <p style={{ fontWeight: "bold", fontSize: '14px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {u.id}</p>
                 <p>
                   Nombre: {u.nombre} {u.apellido}
                 </p>
@@ -193,7 +193,7 @@ export default function Home() {
           {products.map((p) => (
             <article key={p.id}>
               <div>
-                <p style={{ fontWeight: "bold", fontSize: '15px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {p.id}</p>
+                <p style={{ fontWeight: "bold", fontSize: '14px', backgroundColor:'#742d1c', width:'40px', borderRadius:'5px', textAlign:'center'}}>ID: {p.id}</p>
                 <p>
                   Nombre: {p.brand} {p.type}
                 </p>

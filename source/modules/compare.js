@@ -4,19 +4,19 @@ module.exports = {
   },
 
   compareName: (a, b) => {
-    if (a.nameProduct > b.nameProduct) {
+    if (a.nameProduct.nameProduct > b.nameProduct.nameProduct) {
       return 1;
     }
-    if (a.nameProduct < b.nameProduct) {
+    if (a.nameProduct.nameProduct < b.nameProduct.nameProduct) {
       return -1;
     }
     return 0; // a must be equal to b
   },
   compareCategory: (a, b) => {
-    if (a.type > b.type) {
+    if (a.productType.type > b.productType.type) {
       return 1;
     }
-    if (a.type < b.type) {
+    if (a.productType.type < b.productType.type) {
       return -1;
     }
     return 0; // a must be equal to b
